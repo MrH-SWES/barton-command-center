@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <title>Barton Command Center</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg: #e5e7eb; --ink: #111827;
+      --tray: #3f3f46; --tab: #6b7280; --tab-dim: #9ca3af; --tab-ink: #fff;
+      --shadow: rgba(0,0,0,.25);
+      --tutor-bg: #f8fafc; --tutor-accent: #0f172a;
+    }
+    
+    body { font-family: 'Lexend', sans-serif; height: 100vh; overflow: hidden; display: flex; }
+
+    /* Left Pane: Teleprompter */
+    #teleprompter { width: 40%; height: 100vh; background-color: var(--tutor-bg); border-right: 3px solid #cbd5e1; overflow-y: auto; padding: 30px; box-shadow: 5px 0 15px rgba(0,0,0,0.05); z-index: 50; }
+    .tp-header { color: var(--tutor-accent); border-bottom: 3px solid var(--tutor-accent); padding-bottom: 10px; margin-bottom: 20px; }
+    .tp-section { margin-bottom: 30px; }
+    .tp-section h3 { color: #b91c1c; margin-bottom: 15px; font-size: 1.2rem; }
+    .dialogue { font-weight: 700; color: #0369a1; font-size: 1.1rem; margin-bottom: 10px; }
+    .action { font-style: italic; color: #475569; border-left: 3px solid #cbd5e1; padding-left: 10px; margin: 10px 0; }
+    .tutor-note { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px; margin: 15px 0; font-size: 0.9em; border-radius: 0 4px 4px 0; }
+    
+    .audio-btn { background: #e0f2fe; border: 1px solid #bae6fd; cursor: pointer; border-radius: 50%; width: 30px; height: 30px; margin-left: 10px; font-size: 14px; transition: 0.2s; }
+    .audio-btn:hover { background: #bae6fd; transform: scale(1.1); }
+    .spawn-btn { background: #2563eb; color: white; border: none; padding: 8px 16px; border-radius: 6px; font-weight: 600; cursor: pointer; margin: 10px 0; box-shadow: 0 2px 4px rgba(0,0,0,0.2); transition: 0.2s; }
+    .spawn-btn:hover { background: #1d4ed8; transform: translateY(-2px); }
+    .error-btn { background: #fef08a; color: #854d0e; border: 1px solid #facc15; padding: 6px 12px; border-radius: 4px; font-size: 0.85rem; cursor: pointer; font-weight: 600; margin-top: 5px; }
+    .guided-discovery { display: none; background: #fffbeb; padding: 15px; border: 1px solid #fde68a; border-radius: 6px; margin-top: 10px; font-size: 0.95rem; }
+
+    /* Right Pane: Tile Board */
+    #app { width: 60%; position: relative; height: 100vh; background: var(--bg); color: var(--ink); touch-action: manipulation; }
+    #wordPane { position: absolute; inset: 0 0 24vh 0; background: transparent; overflow: hidden; }
+    .hint { position: absolute; left: 50%; top: 40%; transform: translate(-50%,-50%); color: #6b7280; font-size: 17px; pointer-events: none; }
+    
+    .tile { width: 52px; height: 52px; border: 2px solid #374151; border-radius: 6px; cursor: grab; display: flex; align-items: center; justify-content: center; font-weight: 700; user-select: none; box-shadow: 0 2px 4px rgba(0,0,0,.25); flex-shrink: 0; touch-action: none; background: white; }
+    .tile.blue { background: #60a5fa; color: white; }
+    .tile.yellow { background: #fbbf24; color: #111827; }
+    .word-pane-tile { position: absolute; }
+
+    #controls { position: absolute; top: 8px; left: 8px; display: flex; gap: 6px; z-index: 10; }
+    .btn { background: #111827; color: #fff; border: none; border-radius: 6px; padding: 6px 10px; cursor: pointer; font-weight: 600; font-size: 13px; }
+    .btn.secondary { background: #374151; }
+    .btn.danger { background: #dc2626; }
+  </style>
+</head>
+<body>
+
+  <div id="teleprompter">
+    <div id="tp-content">
+      <h2 class="tp-header">Select a Lesson</h2>
+      <p>Use the dropdown on the right to load a lesson cartridge.</p>
+    </div>
+  </div>
+
+  <div id="app">
+    <div id="wordPane">
+      <div class="hint">Waiting for lesson data...</div>
+      <div id="controls">
+        <select id="lessonSelect" class="btn secondary">
+          <option value="">-- Load Cartridge --</option>
+          <option value="level3_lesson1.json">Level 3, Lesson 1</option>
+          <option value="level3_lesson2.json">Level 3, Lesson 2</option>
+        </select>
+        <button id="resetButton" class="btn danger">Clear Board</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const TILE_SIZE = 52;
+    let tiles = [];
+
+    // ====== CARTRIDGE LOADER (JSON FETCH) ======
+    document.getElementById('lessonSelect').addEventListener('change', async (e) => {
+      const filename = e.target.value;
+      if (!filename) return;
+      
+      try {
+        const response = await fetch(`lessons/${filename}`);
+        if (!response.ok) throw new Error("Could not find " + filename);
+        const lessonData = await response.json();
+        buildTeleprompter(lessonData);
+      } catch (error) {
+        document.getElementById('tp-content').innerHTML = `
+          <h2 class="tp-header">Error Loading Cartridge</h2>
+          <p class="action">Could not load ${filename}. Are you running a local server to bypass CORS?</p>
+          <p style="color:red; margin-top:10px;">${error.message}</p>
+        `;
+      }
+    });
+
+    // ====== DYNAMIC HTML BUILDER ======
+    function buildTeleprompter(data) {
+      const tp = document.getElementById('tp-content');
+      let html = `<h2 class="tp-header">Level ${data.level}, Lesson ${data.lesson}: ${data.title}</h2>`;
+      
+      data.sections.forEach((sec, sIdx) => {
+        html += `<div class="tp-section"><h3>${sec.title}</h3>`;
+        
+        sec.steps.forEach((step, stepIdx) => {
+          const uniqueId = `step_${sIdx}_${stepIdx}`;
+          
+          if (step.type === 'dialogue') {
+            let audioBtn = step.audio ? `<button class="audio-btn" onclick="speakText('${step.audio}')">🔊</button>` : '';
+            html += `<p class="dialogue">"${step.text}" ${audioBtn}</p>`;
+          } 
+          else if (step.type === 'action') {
+            html += `<p class="action">• ${step.text}</p>`;
+          }
+          else if (step.type === 'board_action' && step.command === 'spawn_tiles') {
+            const payloadStr = JSON.stringify(step.payload).replace(/"/g, "'");
+            html += `<button class="spawn-btn" onclick="spawnTiles(${payloadStr})">🚀 Spawn Tiles: ${step.payload.join('-').toUpperCase()}</button>`;
+          }
+          else if (step.type === 'guided_discovery') {
+            html += `
+              <button class="error-btn" onclick="document.getElementById('${uniqueId}').style.display = document.getElementById('${uniqueId}').style.display === 'block' ? 'none' : 'block'">
+                ⚠️ ${step.trigger}
+              </button>
+              <div id="${uniqueId}" class="guided-discovery">
+                <strong>Guided Discovery:</strong><br>
+                ${step.prompts.map((p, i) => `${i+1}. "${p}"`).join('<br>')}
+              </div>
+            `;
+          }
+        });
+        html += `</div>`;
+      });
+      tp.innerHTML = html;
+    }
+
+    // ====== TILE PHYSICS & SPAWNING ======
+    function spawnTiles(letterArray) {
+        tiles = []; 
+        const wp = document.getElementById('wordPane');
+        const startX = (wp.clientWidth / 2) - ((letterArray.length * TILE_SIZE) / 2);
+        const startY = (wp.clientHeight / 2) - (TILE_SIZE / 2);
+
+        letterArray.forEach((letter, index) => {
+            let color = ['a','e','i','o','u'].includes(letter) ? 'yellow' : 'blue';
+            tiles.push({ id: Date.now() + index, text: letter.toUpperCase(), color: color, x: startX + (index * TILE_SIZE), y: startY });
+        });
+        renderWordPane();
+    }
+
+    function renderWordPane(){
+      const wp = document.getElementById('wordPane');
+      wp.querySelectorAll('.word-pane-tile').forEach(el=>el.remove());
+      wp.querySelector('.hint').style.display = tiles.length > 0 ? 'none' : 'block';
+
+      tiles.forEach(tile => {
+        const el = document.createElement('div');
+        el.className = `tile ${tile.color} word-pane-tile`;
+        el.textContent = tile.text;
+        if(tile.text.length > 1) el.style.fontSize = '15px';
+        el.style.left = tile.x + 'px'; 
+        el.style.top = tile.y + 'px';
+        wp.appendChild(el);
+      });
+    }
+
+    function speakText(text) {
+      if(!('speechSynthesis' in window)) return;
+      window.speechSynthesis.cancel();
+      setTimeout(() => {
+        let u = new SpeechSynthesisUtterance(text);
+        u.rate = 0.8; 
+        window.speechSynthesis.speak(u);
+      }, 50);
+    }
+
+    document.getElementById('resetButton').addEventListener('click', ()=>{ tiles=[]; renderWordPane(); });
+  </script>
+</body>
+</html>
