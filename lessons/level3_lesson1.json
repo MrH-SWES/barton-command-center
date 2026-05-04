@@ -39,6 +39,20 @@
       ]
     },
     {
+      "id": "Part_B",
+      "title": "B: Review Extra Practice Page",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's take a look at your extra practice page. Go ahead and read the words to me."
+        },
+        {
+          "type": "action",
+          "text": "Review homework for accuracy."
+        }
+      ]
+    },
+    {
       "id": "Part_C",
       "title": "C: Phonemic Awareness Warmup",
       "steps": [
@@ -225,7 +239,7 @@
         },
         {
           "type": "action",
-          "text": "Dictate: LIFT, LEFT, HELP, HELD, RENT, REST"
+          "text": "Dictate: LIFT, LEFT, HELP, HELD, RENT, REST, LOST, COST, CAST, FELT, MELT, MELD, DAMP, DUMP, THUMP"
         }
       ]
     },
@@ -289,6 +303,62 @@
       ]
     },
     {
+      "id": "Part_I",
+      "title": "I: Read Words Through Word Frame",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to read words using a word frame."
+        },
+        {
+          "type": "action",
+          "text": "Give the Lesson 1: Read These Words page and the word frame to the student."
+        },
+        {
+          "type": "dialogue",
+          "text": "If you know that word for sure, just say it. Otherwise, touch-and-say each sound, then blend them together."
+        },
+        {
+          "type": "action",
+          "text": "Student reads through the lists. Real words in the first two columns, nonsense words in the third."
+        }
+      ]
+    },
+    {
+      "id": "Part_J",
+      "title": "J: Spell Words with Fingers, then Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to spell words on paper. First you'll do finger spelling. Ready? The word is BEND. Repeat that word."
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it again, slowly. Use your fingers to break it into sounds."
+        },
+        {
+          "type": "action",
+          "text": "Student says sounds on fingers."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now make each sound as you write the letter."
+        },
+        {
+          "type": "dialogue",
+          "text": "As a last step, double-check what you wrote. To do that, first blend the sounds together. Now say it fast like a word."
+        },
+        {
+          "type": "action",
+          "text": "Dictate Real Words: BEND, THEFT, HUNT, POND, SHELF, HAND"
+        },
+        {
+          "type": "action",
+          "text": "Dictate Nonsense Words: TASP, SEPT, WHOMP, BIFT, NUST"
+        }
+      ]
+    },
+    {
       "id": "Part_K",
       "title": "K: Read FIRST Sight Word List",
       "steps": [
@@ -303,6 +373,28 @@
         {
           "type": "sight_word_tracker",
           "words": ["I", "of", "to", "the", "was", "what", "is", "his", "this", "has", "do", "said", "are", "from"]
+        }
+      ]
+    },
+    {
+      "id": "Part_L",
+      "title": "L: Create Sight Word Spelling Cards",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now I'm going to ask you to spell those Sight words. I'm hoping there are a few you don't know how to spell...so we'll have something to practice."
+        },
+        {
+          "type": "action",
+          "text": "Dictate each sight word from the list. Stop when the student has misspelled 3 words."
+        },
+        {
+          "type": "dialogue",
+          "text": "OK, I found 3 that are tricky. So let's stop and make cards for them."
+        },
+        {
+          "type": "action",
+          "text": "Create cards with tricky letter in red. Have student practice 'See and spell' on the wall, then 'See and write' on the table, then on paper."
         }
       ]
     },
@@ -333,6 +425,32 @@
       ]
     },
     {
+      "id": "Part_N",
+      "title": "N: Spell Phrases and Sight Words on Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to write three phrases. The first phrase is HAD A DENT. Repeat that phrase."
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and write that phrase. Use finger spelling to help with the tough words."
+        },
+        {
+          "type": "dialogue",
+          "text": "Double check by reading exactly what you wrote. Any word that you want help checking?"
+        },
+        {
+          "type": "action",
+          "text": "Dictate: LEND A HAND, MAN WITH A LIMP"
+        },
+        {
+          "type": "action",
+          "text": "Dictate Sight Words from the Spelling deck."
+        }
+      ]
+    },
+    {
       "id": "Part_O",
       "title": "O: Read Sentences",
       "steps": [
@@ -354,7 +472,39 @@
         },
         {
           "type": "action",
-          "text": "Have student read and mark each ODD-numbered sentence."
+          "text": "Have student read and mark each ODD-numbered sentence on the page."
+        }
+      ]
+    },
+    {
+      "id": "Part_P",
+      "title": "P: Spell Sentences on Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to write three sentences. The first sentence is THE RED VAN HAD A DENT IN IT. Repeat that sentence."
+        },
+        {
+          "type": "dialogue",
+          "text": "Check your sentence by reading exactly what you wrote. Here's the first question I'm always going to ask: does it start with a capital and end with punctuation?"
+        },
+        {
+          "type": "action",
+          "text": "Dictate: DID MEG LEND A HAND?, THE MAN WITH A LIMP RAN FAST."
+        }
+      ]
+    },
+    {
+      "id": "Part_Q",
+      "title": "Q: Read a Story",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're ready to read a story. Preread the story. That means read it to yourself first. Sound out any words you're not sure of. Then read it out loud to me."
+        },
+        {
+          "type": "action",
+          "text": "Student reads 'The Gift', 'Fish', 'The Lump', or 'Dent in His Rig'. Ask comprehension questions."
         }
       ]
     }
