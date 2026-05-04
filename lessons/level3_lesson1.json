@@ -1,0 +1,362 @@
+{
+  "level": 3,
+  "lesson": 1,
+  "title": "Blends at the End",
+  "sections": [
+    {
+      "id": "Part_A",
+      "title": "A: Review Vowel Sounds and Digraphs",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["a", "e", "i", "o", "u", "ch", "th", "sh", "ck", "wh"]
+        },
+        {
+          "type": "dialogue",
+          "text": "In this book, we'll always start by reviewing the vowel sounds. Which ones are the vowels?"
+        },
+        {
+          "type": "action",
+          "text": "Student taps A, E, I, O, U and says sounds."
+        },
+        {
+          "type": "dialogue",
+          "text": "Why are there 2 letters on 1 tile?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Because those 2 letters make just 1 sound."
+        },
+        {
+          "type": "dialogue",
+          "text": "That's right. Two letters that make just 1 sound are called Digraphs. Show me the other digraphs."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the TH, SH, CK, and WH tiles and makes their sounds."
+        }
+      ]
+    },
+    {
+      "id": "Part_C",
+      "title": "C: Phonemic Awareness Warmup",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now I'll say a nonsense word, and you repeat it. Ready? CHUP.",
+          "audio": "chup"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say just the FIRST sound in that word.",
+          "audio": "ch"
+        },
+        {
+          "type": "action",
+          "text": "Dictate: THED, WHOF, SHAV, VIM"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now we're going to switch. This time, I want the LAST sound. Ready? LISH.",
+          "audio": "lish"
+        },
+        {
+          "type": "dialogue",
+          "text": "What's the LAST sound?",
+          "audio": "sh"
+        },
+        {
+          "type": "action",
+          "text": "Dictate: YUTCH, GATH, MOX, NUG"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now for the MIDDLE sound—the vowel. Say both the sound AND its keyword. Ready? CHAM.",
+          "audio": "cham"
+        },
+        {
+          "type": "dialogue",
+          "text": "What's the MIDDLE sound?",
+          "audio": "a"
+        },
+        {
+          "type": "action",
+          "text": "Dictate: MOG, PEZ, THUN, TIB"
+        }
+      ]
+    },
+    {
+      "id": "Part_D",
+      "title": "D: NEW TEACHING #1: Read Words with Blends",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["l", "a", "sh"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Let's start working on words. Touch-and-say each sound. Now slowly blend those sounds together."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /l/ - /a/ - /sh/ -> Lash"
+        },
+        {
+          "type": "guided_discovery",
+          "trigger": "Student error blending LASH",
+          "prompts": [
+            "Touch and say your sounds again.",
+            "Does your vowel match the keyword Apple or Eddy?",
+            "Is there a Digraph at the end?"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "How many sounds in that word?"
+        },
+        {
+          "type": "action",
+          "text": "Answer: 3"
+        },
+        {
+          "type": "dialogue",
+          "text": "But how many actual letters in that word?"
+        },
+        {
+          "type": "action",
+          "text": "Answer: 4"
+        },
+        {
+          "type": "dialogue",
+          "text": "Why are there more letters than sounds?"
+        },
+        {
+          "type": "action",
+          "text": "Answer: SH is a Digraph. Those 2 letters make only 1 sound."
+        },
+        {
+          "type": "dialogue",
+          "text": "But sometimes 4 letters WILL make four separate sounds. Let me show you what I mean."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["l", "a", "s", "t"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Touch-and-say those sounds, then slowly blend them into a word. Is there a Digraph in that word now?"
+        },
+        {
+          "type": "action",
+          "text": "Answer: No."
+        },
+        {
+          "type": "dialogue",
+          "text": "You're right. But there's something new in that word. There are two consonants next to each other... Whenever there are two consonants next to each other, and each makes its own sound, it is called a Blend."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["l", "i", "s", "t"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What is the word now?"
+        },
+        {
+          "type": "action",
+          "text": "Answer: List"
+        },
+        {
+          "type": "dialogue",
+          "text": "And where's the Blend?"
+        },
+        {
+          "type": "action",
+          "text": "Answer: At the end -- the ST"
+        }
+      ]
+    },
+    {
+      "id": "Part_F",
+      "title": "F: Spell Real Words with Fingers, then Tiles",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": []
+        },
+        {
+          "type": "dialogue",
+          "text": "Now it's your turn to build words with tiles. The first word is MUST. Repeat that word."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it again, very slowly. Use your fingers to break it into sounds."
+        },
+        {
+          "type": "action",
+          "text": "Student raises one finger per sound: /m/ /u/ /s/ /t/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Pull down a tile for each finger, while making its sound."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["m", "u", "s", "t"]
+        },
+        {
+          "type": "dialogue",
+          "text": "To double-check, slowly run your finger below those tiles while blending those sounds together."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now change just one letter... to make that word say MIST."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["m", "i", "s", "t"]
+        },
+        {
+          "type": "action",
+          "text": "Dictate: LIFT, LEFT, HELP, HELD, RENT, REST"
+        }
+      ]
+    },
+    {
+      "id": "Part_G",
+      "title": "G: Read Nonsense Words on Tiles",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["r", "o", "p", "t"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Now I'm going to build a nonsense word. Touch-and-say each sound."
+        },
+        {
+          "type": "action",
+          "text": "Student touches R and says /r/, touches O and says /o/, touches P and says /p/, touches T and says /t/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly blend those sounds together. Now say it fast like a word."
+        },
+        {
+          "type": "action",
+          "text": "Tutor builds: THACT, CHIST, ZUND, QUENT"
+        }
+      ]
+    },
+    {
+      "id": "Part_H",
+      "title": "H: Spell Nonsense Words with Fingers, then Tiles",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": []
+        },
+        {
+          "type": "dialogue",
+          "text": "Now you'll spell some nonsense words the same way you spelled real words. Ready? The first word is CHOFT."
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly. Use your fingers to break it into sounds."
+        },
+        {
+          "type": "dialogue",
+          "text": "Pull down a tile for each of those sounds."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["ch", "o", "f", "t"]
+        },
+        {
+          "type": "action",
+          "text": "Dictate: THANT, SHUPT, BISP, JELM"
+        }
+      ]
+    },
+    {
+      "id": "Part_K",
+      "title": "K: Read FIRST Sight Word List",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "You're doing really well on words that you can sound out. But there are some words in our language that you can NOT sound out. These are called Sight words."
+        },
+        {
+          "type": "action",
+          "text": "Student reads down each column. Keep track of correct and incorrect responses."
+        },
+        {
+          "type": "sight_word_tracker",
+          "words": ["I", "of", "to", "the", "was", "what", "is", "his", "this", "has", "do", "said", "are", "from"]
+        }
+      ]
+    },
+    {
+      "id": "Part_M",
+      "title": "M: Read Phrases",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll read some phrases... that tell Who, Did What, or Where."
+        },
+        {
+          "type": "action",
+          "text": "Who phrases: His cast, Kent, The tent, Milt, The ump, The last gal"
+        },
+        {
+          "type": "action",
+          "text": "Did What phrases: has a list, got wet, was lost, did his best, ran fast, went west"
+        },
+        {
+          "type": "action",
+          "text": "Where phrases: at camp, in his hand, to the ramp, on the big test, in the pond, on the sand"
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and pick a WHO and a DID WHAT phrase and make a short sentence."
+        }
+      ]
+    },
+    {
+      "id": "Part_O",
+      "title": "O: Read Sentences",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now let's look at some sentences. Read that first sentence to yourself. Now read it out loud."
+        },
+        {
+          "type": "action",
+          "text": "1. The tent got wet in the pond."
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and mark each phrase. Mark the WHO phrase. Mark the DID WHAT phrase. Mark the WHERE phrase."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now read that sentence with phrasing. That means put a small pause between each phrase."
+        },
+        {
+          "type": "action",
+          "text": "Have student read and mark each ODD-numbered sentence."
+        }
+      ]
+    }
+  ]
+}
