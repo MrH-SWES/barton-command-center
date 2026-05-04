@@ -1,0 +1,172 @@
+{
+  "level": 3,
+  "lesson": 2,
+  "title": "Blends at the Beginning",
+  "sections": [
+    {
+      "id": "Part_A",
+      "title": "A: Review Vowel Sounds and Digraphs",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["a", "e", "i", "o", "u", "ch", "th", "sh", "ck", "wh"]
+        },
+        {
+          "type": "dialogue",
+          "text": "In this book, we'll always start by reviewing the vowel sounds. Which ones are the vowels?"
+        },
+        {
+          "type": "action",
+          "text": "Student taps A, E, I, O, U and says sounds."
+        },
+        {
+          "type": "dialogue",
+          "text": "Why are there 2 letters on 1 tile?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Because those 2 letters make just 1 sound."
+        },
+        {
+          "type": "dialogue",
+          "text": "That's right. Two letters that make just 1 sound are called Digraphs. Show me the other digraphs."
+        }
+      ]
+    },
+    {
+      "id": "Part_C",
+      "title": "C: Phonemic Awareness Warmup",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now I'll say a nonsense word, and you repeat it. Ready? ZOND.",
+          "audio": "zond"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say just the FIRST sound in that word.",
+          "audio": "z"
+        },
+        {
+          "type": "action",
+          "text": "Dictate: DOPT, SUMP, MAND, VISK"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now we're going to switch. This time, I want the LAST sound. Ready? HAMP.",
+          "audio": "hamp"
+        },
+        {
+          "type": "dialogue",
+          "text": "What's the LAST sound?",
+          "audio": "p"
+        },
+        {
+          "type": "action",
+          "text": "Dictate: PEND, DAPT, BELF"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now for the MIDDLE sound—the vowel. Say both the sound AND its keyword. Ready? THANT.",
+          "audio": "thant"
+        },
+        {
+          "type": "action",
+          "text": "Dictate: GUSK, BIST, CHOFT, THEPT"
+        }
+      ]
+    },
+    {
+      "id": "Part_D",
+      "title": "D: NEW TEACHING #1: Read Words with Blends",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["sh", "i", "p"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Let's start working on words. Touch-and-say each sound."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /shhhhh/ - /iiii/ - /p/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it like a word."
+        },
+        {
+          "type": "dialogue",
+          "text": "Is there a Blend in that word?"
+        },
+        {
+          "type": "action",
+          "text": "Answer: No"
+        },
+        {
+          "type": "dialogue",
+          "text": "Is there a Digraph in that word?"
+        },
+        {
+          "type": "action",
+          "text": "Answer: Yes, the SH is a digraph; those 2 letters make only 1 sound."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "l", "i", "p"]
+        },
+        {
+          "type": "dialogue",
+          "text": "As you can see, Blends can also be at the beginning of a word. Touch-and-say these sounds, then blend them into a word."
+        },
+        {
+          "type": "guided_discovery",
+          "trigger": "Student error blending SLIP",
+          "prompts": [
+            "Touch and say your sounds again.",
+            "Does your vowel match the keyword Itchy or Eddy?",
+            "Is there a Blend at the beginning?"
+          ]
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "l", "a", "p"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What is that word now?"
+        },
+        {
+          "type": "action",
+          "text": "Answer: SLAP"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["f", "l", "a", "p"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What is that word now?"
+        },
+        {
+          "type": "action",
+          "text": "Answer: FLAP"
+        },
+        {
+          "type": "dialogue",
+          "text": "And where's the Blend?"
+        },
+        {
+          "type": "action",
+          "text": "Answer: At the beginning the F-L"
+        }
+      ]
+    }
+  ]
+}
