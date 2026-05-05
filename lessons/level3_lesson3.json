@@ -1,0 +1,1026 @@
+{
+  "level": 3,
+  "lesson": 3,
+  "title": "Blends at Both Ends",
+  "sections": [
+    {
+      "id": "Part_A",
+      "title": "A: Review Vowel Sounds and Digraphs",
+      "steps": [
+        {
+          "type": "action",
+          "text": "Tutor sets out all the tiles taught so far."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["a", "e", "i", "o", "u", "ch", "th", "sh", "ck", "wh"]
+        },
+        {
+          "type": "dialogue",
+          "text": "In this book, we'll always start by reviewing the vowel sounds. Which ones are the vowels?"
+        },
+        {
+          "type": "action",
+          "text": "Student taps A, E, I, O, U."
+        },
+        {
+          "type": "dialogue",
+          "text": "How did you know?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: They're yellow."
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and tap each vowel."
+        },
+        {
+          "type": "action",
+          "text": "Student taps Apple Apple /a/ /a/ /a/, then Eddy Eddy /e/ /e/ /e/, etc."
+        },
+        {
+          "type": "action",
+          "text": "Tutor points to CH tile."
+        },
+        {
+          "type": "dialogue",
+          "text": "Why are there 2 letters on 1 tile?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Because those 2 letters make just 1 sound."
+        },
+        {
+          "type": "dialogue",
+          "text": "That's right. Two letters that make just 1 sound are called Digraphs. Show me the other digraphs."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the TH, SH, CK, and WH tiles."
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to each Digraph and tell me the sound it makes."
+        },
+        {
+          "type": "action",
+          "text": "Student points to each Digraph and makes its sound."
+        }
+      ]
+    },
+    {
+      "id": "Part_B",
+      "title": "B: Review Extra Practice Page",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's take a look at your extra practice page."
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and read the words to me."
+        },
+        {
+          "type": "action",
+          "text": "Review extra practice page for accuracy. If student has difficulty, repeat the last lesson."
+        }
+      ]
+    },
+    {
+      "id": "Part_C",
+      "title": "C: Phonemic Awareness Warmup",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Repeat this nonsense word, then make just its FIRST sound. Ready? PLOS.",
+          "audio": "plos"
+        },
+        {
+          "type": "action",
+          "text": "Student: Plos, /p/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to the tile that makes that sound."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the P tile."
+        },
+        {
+          "type": "action",
+          "text": "Dictate: GRAT, ORIS, BLIT"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now I want the LAST sound. GLUN.",
+          "audio": "glun"
+        },
+        {
+          "type": "action",
+          "text": "Student: Glun, /n/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to that tile."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the N tile."
+        },
+        {
+          "type": "action",
+          "text": "Dictate: FRAB, SPOL, BLISH"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now for the MIDDLE sound-the vowel. Say both the sound AND its keyword. Ready? PRIS.",
+          "audio": "pris"
+        },
+        {
+          "type": "action",
+          "text": "Student: Pris, /i/-Itchy"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to that tile."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the I tile."
+        },
+        {
+          "type": "action",
+          "text": "Dictate: SMAP, FLET, GRUS, SCON"
+        }
+      ]
+    },
+    {
+      "id": "Part_D",
+      "title": "D: NEW TEACHING #1: Read Words with Blends",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's start working on words."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "t", "a", "n"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Touch-and-say each sound."
+        },
+        {
+          "type": "action",
+          "text": "Student uses index finger to touch S and say /s/, touch T and say /t/, touch A and say /a/, touch N and say /n/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly blend those sounds together."
+        },
+        {
+          "type": "action",
+          "text": "Student: /ssss/-/t/-/aaaa/-/nnnn/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it like a word."
+        },
+        {
+          "type": "action",
+          "text": "Student: Stan"
+        },
+        {
+          "type": "dialogue",
+          "text": "Where is the Blend in that word?"
+        },
+        {
+          "type": "action",
+          "text": "Student: At the beginning"
+        },
+        {
+          "type": "action",
+          "text": "Tutor puts a D tile at the end to make STAND."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "t", "a", "n", "d"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Now what does it say?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Stand"
+        },
+        {
+          "type": "dialogue",
+          "text": "How many Blends are in that word?"
+        },
+        {
+          "type": "action",
+          "text": "Student: 2"
+        },
+        {
+          "type": "dialogue",
+          "text": "And where are the Blends?"
+        },
+        {
+          "type": "action",
+          "text": "Student: At the beginning AND at the end"
+        },
+        {
+          "type": "dialogue",
+          "text": "Exactly. And that's the type of word we'll be working with today."
+        },
+        {
+          "type": "action",
+          "text": "Tutor removes S and T, drags in G and R"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["g", "r", "a", "n", "d"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Touch-and-say these sounds, then blend them into a word."
+        },
+        {
+          "type": "action",
+          "text": "Student uses index finger to touch G and say /g/, touch R and say /r/, touch A and say /a/, touch N and say /n/, touch D and say /d/. Then student slowly blends, /g/-/rrrr/-/aaaa/-/nnnn/-/d/, then says it like a word: GRAND."
+        },
+        {
+          "type": "action",
+          "text": "Tutor removes D, drags in T."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["g", "r", "a", "n", "t"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What is that word now?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Grant"
+        },
+        {
+          "type": "dialogue",
+          "text": "And how many Blends are in that word?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Two-G-R at the beginning, and N-T at the end."
+        },
+        {
+          "type": "action",
+          "text": "Tutor builds the words: CRAFT, DRAFT, DRIFT, SWIFT, RUST, CRUST, CREST, CREPT, STAMP, STUMP, CLUMP, CLAMP, SPEND, BLEND, BLOND."
+        }
+      ]
+    },
+    {
+      "id": "Part_E",
+      "title": "E: NEW TEACHING #2: Read Words with Blends",
+      "steps": [
+        {
+          "type": "action",
+          "text": "There is no New Teaching #2 in this lesson."
+        }
+      ]
+    },
+    {
+      "id": "Part_F",
+      "title": "F: Spell Real Words with Fingers, then Tiles",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": []
+        },
+        {
+          "type": "dialogue",
+          "text": "Now you're going to finger spell. The first word is GRUMP. Repeat that word."
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly."
+        },
+        {
+          "type": "dialogue",
+          "text": "Use your fingers to break it into sounds."
+        },
+        {
+          "type": "dialogue",
+          "text": "Pull down a tile for each of those sounds."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["g", "r", "u", "m", "p"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Double check by blending those sounds."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now change one of the Blends ... to make that word say GRUNT."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["g", "r", "u", "n", "t"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Nice work. Put those tiles away and let's try another word."
+        },
+        {
+          "type": "action",
+          "text": "Dictate: GLAND, GRAND, SPENT, BRENT, SWIFT, DRIFT, TRAMP, STAMP"
+        }
+      ]
+    },
+    {
+      "id": "Part_G",
+      "title": "G: Read Nonsense Words on Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Here's a nonsense word."
+        },
+        {
+          "type": "dialogue",
+          "text": "Touch-and-say each sound."
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly blend those sounds."
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it fast like a word."
+        },
+        {
+          "type": "dialogue",
+          "text": "Excellent. Here's another one."
+        },
+        {
+          "type": "action",
+          "text": "Build Words: CREND, FRINT, BLAMP, PLUND, GLOST, FRANT, GLEST, DRUMP, BLIFT, FLOMP."
+        }
+      ]
+    },
+    {
+      "id": "Part_H",
+      "title": "H: Spell Nonsense Words with Fingers, then Tiles",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": []
+        },
+        {
+          "type": "dialogue",
+          "text": "Now you'll finger spell some nonsense words."
+        },
+        {
+          "type": "dialogue",
+          "text": "The first word is SMAFT. Repeat that word."
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly."
+        },
+        {
+          "type": "dialogue",
+          "text": "Finger spell."
+        },
+        {
+          "type": "dialogue",
+          "text": "Pull down a tile for each of those sounds."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "m", "a", "f", "t"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Double-check by blending those sounds together."
+        },
+        {
+          "type": "dialogue",
+          "text": "Excellent. Put those tiles back."
+        },
+        {
+          "type": "action",
+          "text": "Dictate: DRIMP, GROST, SLUND, FLESP."
+        }
+      ]
+    },
+    {
+      "id": "Part_I",
+      "title": "I: Read Words Through Word Frame",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll read words through the word frame."
+        },
+        {
+          "type": "dialogue",
+          "text": "If you know that word for sure, just say it."
+        },
+        {
+          "type": "dialogue",
+          "text": "Otherwise, touch-and-say."
+        },
+        {
+          "type": "action",
+          "text": "Student reads through the lists. Real words in the first two columns, nonsense words in the third: blast, squint, spant, twist, trend, crint, clamp, grand, floft, swept, swift, clusk, grunt, blend, slend, brisk, slump, brust, stunt, plosp, crisp."
+        }
+      ]
+    },
+    {
+      "id": "Part_J",
+      "title": "J: Spell Words with Fingers, then Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "After you finger spell these words, you'll write them on paper."
+        },
+        {
+          "type": "action",
+          "text": "Tutor hands student a piece of paper and a pencil."
+        },
+        {
+          "type": "dialogue",
+          "text": "Ready? The first word is PRINT. Repeat that word."
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly."
+        },
+        {
+          "type": "dialogue",
+          "text": "Finger spell."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now make each sound as you write the letter."
+        },
+        {
+          "type": "dialogue",
+          "text": "Double check what you wrote."
+        },
+        {
+          "type": "action",
+          "text": "Dictate Real Words: PRINT, SLEPT, TRUST, SLUMP, FROST."
+        },
+        {
+          "type": "action",
+          "text": "Dictate Nonsense Words: GLEST, BRONT, SLAND, FLIST, GRUSP."
+        }
+      ]
+    },
+    {
+      "id": "Part_K",
+      "title": "K: Read NEW Sight Word List",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's look at some more common Sight words to see which ones we need to practice."
+        },
+        {
+          "type": "action",
+          "text": "Tutor pulls out the Lesson 3: Read These Sight Words #2 page and gives it to the student, then pulls out a word frame and places frame around the first word. Student reads down each column."
+        },
+        {
+          "type": "action",
+          "text": "Tutor keeps track of correct and incorrect responses on the Book 3: Sight Word Tracking List."
+        },
+        {
+          "type": "dialogue",
+          "text": "Wow. I'm impressed. You knew most of those words. I'm going to write the ones you didn't know on index cards so we can practice."
+        },
+        {
+          "type": "action",
+          "text": "Tutor says each unknown Sight word as she writes it on an index card."
+        },
+        {
+          "type": "dialogue",
+          "text": "I want you to put a picture or a clue down here in this corner to remind you of this word."
+        },
+        {
+          "type": "action",
+          "text": "Student puts a clue in lower left-hand corner of each card."
+        },
+        {
+          "type": "dialogue",
+          "text": "These cards will be added to our Reading Deck. Let's review these new words and our old words."
+        },
+        {
+          "type": "action",
+          "text": "Tutor brings out any existing Sight Word Reading Deck cards and merges them into one deck."
+        },
+        {
+          "type": "dialogue",
+          "text": "Put your thumb over the clue and read the word."
+        },
+        {
+          "type": "dialogue",
+          "text": "If you're not sure of the word, lift your thumb and look at your clue. Try it."
+        },
+        {
+          "type": "action",
+          "text": "Student puts thumb over clue and reads each word in the deck out loud."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now do it one more time, without looking at the clues, as fast as you can."
+        },
+        {
+          "type": "action",
+          "text": "Student flips through the deck quickly, reading each word out loud."
+        },
+        {
+          "type": "dialogue",
+          "text": "Great. We'll review this Reading Deck at each lesson."
+        },
+        {
+          "type": "action",
+          "text": "Tutor puts the Sight Word Reading Deck away."
+        },
+        {
+          "type": "sight_word_tracker",
+          "words": ["they", "for", "have", "goes", "Mr.", "your", "want", "you", "does", "were", "as", "Mrs.", "some", "says"]
+        }
+      ]
+    },
+    {
+      "id": "Part_L",
+      "title": "L: Create Sight Word Spelling Cards",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now I'm going to ask you to spell those Sight words. I'm hoping there are a few you don't know how to spell ... so we'll have something to practice."
+        },
+        {
+          "type": "action",
+          "text": "Tutor dictates each sight word in the Lesson 3 column on Book 3: Sight Word Tracking List."
+        },
+        {
+          "type": "action",
+          "text": "Student repeats each word and writes it down."
+        },
+        {
+          "type": "action",
+          "text": "Tutor records spelling on Book 3: Sight Word Tracking List."
+        },
+        {
+          "type": "action",
+          "text": "Tutor stops dictating when student has misspelled 3 sight words or all words have been dictated, whichever comes first."
+        },
+        {
+          "type": "dialogue",
+          "text": "OK, I found 3 that are tricky. So let's stop and make cards for them."
+        },
+        {
+          "type": "action",
+          "text": "Tutor creates a Sight Word Spelling Card for each misspelled word, writing the one difficult letter in red."
+        },
+        {
+          "type": "dialogue",
+          "text": "Let's review these 3 sight words."
+        },
+        {
+          "type": "action",
+          "text": "Tutor holds up the first Sight Word Spelling Card."
+        },
+        {
+          "type": "dialogue",
+          "text": "What's this word?"
+        },
+        {
+          "type": "action",
+          "text": "Student reads the word."
+        },
+        {
+          "type": "dialogue",
+          "text": "Why is that letter in red?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Because it's the tricky letter; it doesn't sound like that, it's silent, etc."
+        },
+        {
+          "type": "dialogue",
+          "text": "Stare at that card until you've got a good picture of it in your mind, and you can see it with your eyes closed. Tell me when you're ready."
+        },
+        {
+          "type": "action",
+          "text": "Student: I'm ready"
+        },
+        {
+          "type": "action",
+          "text": "Tutor removes Sight Word Spelling Card from view."
+        },
+        {
+          "type": "dialogue",
+          "text": "Look at that blank wall and see that word and its red letter. Can you see it?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Yes"
+        },
+        {
+          "type": "dialogue",
+          "text": "How do you spell (sight word here)? When you get to the red letter, say it louder than the rest."
+        },
+        {
+          "type": "action",
+          "text": "Student looks at a blank wall, 'sees' the word, and spells it out loud. Student says red letter louder than the rest. After spelling it, student 'reads' the word while underlining it with his hand."
+        },
+        {
+          "type": "dialogue",
+          "text": "Do that again. How do you spell (sight word here)?"
+        },
+        {
+          "type": "action",
+          "text": "Student repeats the 'see and spell' process."
+        },
+        {
+          "type": "dialogue",
+          "text": "Good. Now using your index and middle fingers as the pen, write (sight word here) on the desk. How do you spell (sight word here)?"
+        },
+        {
+          "type": "action",
+          "text": "Student 'writes' the word on the desktop using big arm movements with his index and middle fingers extended as the pen. He says each letter as he writes it, making the red letter extra loud. After spelling it, he 'reads' the word while underlining it with his hand."
+        },
+        {
+          "type": "dialogue",
+          "text": "Do it again. How do you spell (sight word here)?"
+        },
+        {
+          "type": "action",
+          "text": "Student repeats the 'see and write' step on the table."
+        },
+        {
+          "type": "dialogue",
+          "text": "As a last step, write (sight word here) on paper, saying each letter as you write it. Then underline the red letter. How do you spell (sight word here)?"
+        },
+        {
+          "type": "action",
+          "text": "Student writes the sight word on paper, saying each letter out loud and making the red letter extra loud. Student then underlines the red letter."
+        },
+        {
+          "type": "dialogue",
+          "text": "One more time. How do you spell (sight word here)?"
+        },
+        {
+          "type": "action",
+          "text": "Student repeats the 'see and write' step on paper."
+        },
+        {
+          "type": "action",
+          "text": "Tutor repeats these steps for each Sight Word Spelling Card."
+        }
+      ]
+    },
+    {
+      "id": "Part_M",
+      "title": "M: Read Phrases",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll read some phrases."
+        },
+        {
+          "type": "dialogue",
+          "text": "This group of phrases tell WHO. Read each phrase to me."
+        },
+        {
+          "type": "action",
+          "text": "Student reads each WHO phrase out loud."
+        },
+        {
+          "type": "dialogue",
+          "text": "These phrases tell DID WHAT. Read each phrase to me."
+        },
+        {
+          "type": "action",
+          "text": "Student reads each DID WHAT phrase out loud."
+        },
+        {
+          "type": "dialogue",
+          "text": "A sentence must have a WHO and a DID WHAT phrase."
+        },
+        {
+          "type": "dialogue",
+          "text": "A sentence can have just a WHO and a DID WHAT phrase. Go ahead and make a short sentence."
+        },
+        {
+          "type": "action",
+          "text": "Student verbally says a short sentence."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now read the WHERE phrases."
+        },
+        {
+          "type": "action",
+          "text": "Student reads each WHERE phrase out loud."
+        },
+        {
+          "type": "dialogue",
+          "text": "Create a sentence with 3 phrases."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now read the ADD-ON phrases."
+        },
+        {
+          "type": "action",
+          "text": "Student reads each ADD-ON phrase out loud."
+        },
+        {
+          "type": "dialogue",
+          "text": "Create a sentence with four phrases."
+        },
+        {
+          "type": "action",
+          "text": "Student verbally creates a sentence using phrases from each category."
+        },
+        {
+          "type": "action",
+          "text": "Who phrases: Blond Brent, The swift vet, The brisk wind, Slim Clint"
+        },
+        {
+          "type": "action",
+          "text": "Did What phrases: swept the twig, held the clamp, will grasp a soft quilt, hit a grand slam"
+        },
+        {
+          "type": "action",
+          "text": "Where phrases: On the plump leg, on to the cloth, at the clock shop, past the stump"
+        },
+        {
+          "type": "action",
+          "text": "Add-On phrases: of the limp frog., in the pond., and stick it on a shelf., with a brush."
+        }
+      ]
+    },
+    {
+      "id": "Part_N",
+      "title": "N: Spell Phrases and Sight Words on Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to write some phrases."
+        },
+        {
+          "type": "action",
+          "text": "Tutor hands student a piece of paper and a pencil."
+        },
+        {
+          "type": "dialogue",
+          "text": "The first phrase is THE BEST BRAND. Repeat that phrase."
+        },
+        {
+          "type": "action",
+          "text": "Student: The best brand."
+        },
+        {
+          "type": "dialogue",
+          "text": "Write down that phrase. Use finger spelling for the tough words."
+        },
+        {
+          "type": "action",
+          "text": "Student works on his own with no help from the tutor."
+        },
+        {
+          "type": "dialogue",
+          "text": "Double check by reading exactly what you wrote."
+        },
+        {
+          "type": "action",
+          "text": "Student looks at his paper while reading the phrase."
+        },
+        {
+          "type": "dialogue",
+          "text": "Any word that you want help checking?"
+        },
+        {
+          "type": "action",
+          "text": "Tutor scans written phrase for errors. Use Guided Discovery if needed."
+        },
+        {
+          "type": "dialogue",
+          "text": "That's perfect. Here's the next phrase."
+        },
+        {
+          "type": "action",
+          "text": "Dictate: FELT A DRAFT, THE BLOND CHAMP."
+        },
+        {
+          "type": "action",
+          "text": "Tutor dictates each Sight Word from the Sight Word Spelling deck."
+        },
+        {
+          "type": "action",
+          "text": "Student says each letter as he writes it down, then underlines the red letter."
+        },
+        {
+          "type": "action",
+          "text": "If correct, tutor puts a checkmark on that Spelling Card."
+        }
+      ]
+    },
+    {
+      "id": "Part_O",
+      "title": "O: Read Sentences",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll read some sentences."
+        },
+        {
+          "type": "action",
+          "text": "Tutor pulls out the Lesson 3: Read These Sentences page."
+        },
+        {
+          "type": "dialogue",
+          "text": "Read that first sentence to yourself."
+        },
+        {
+          "type": "action",
+          "text": "Student reads sentence to himself."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now read it out loud."
+        },
+        {
+          "type": "action",
+          "text": "Student: The brisk wind swept the twig past the stump."
+        },
+        {
+          "type": "dialogue",
+          "text": "Let's mark each phrase. Mark the WHO phrase."
+        },
+        {
+          "type": "action",
+          "text": "Student uses pencil to draw under-up The brisk wind."
+        },
+        {
+          "type": "dialogue",
+          "text": "Mark the DID WHAT phrase."
+        },
+        {
+          "type": "action",
+          "text": "Student uses pencil to draw under-up swept the twig."
+        },
+        {
+          "type": "dialogue",
+          "text": "Mark the WHERE phrase."
+        },
+        {
+          "type": "action",
+          "text": "Student uses pencil to draw under-up past the stump."
+        },
+        {
+          "type": "dialogue",
+          "text": "Mark the ADD-ON phrase."
+        },
+        {
+          "type": "action",
+          "text": "Student looks for add-on phrase (none in this sentence)."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now read that sentence with phrasing. Remember, put a small pause ... between each phrase."
+        },
+        {
+          "type": "action",
+          "text": "Student: The brisk wind ... swept the twig ... past the stump."
+        },
+        {
+          "type": "dialogue",
+          "text": "Nice. On to sentence number 3."
+        },
+        {
+          "type": "action",
+          "text": "Have student read and mark each ODD-numbered sentence."
+        },
+        {
+          "type": "action",
+          "text": "1. The brisk wind swept the twig past the stump."
+        },
+        {
+          "type": "action",
+          "text": "3. Blond Brent hit a grand slam past the stump in the pond."
+        },
+        {
+          "type": "action",
+          "text": "5. Meg had jam on a crisp crust with hot milk."
+        },
+        {
+          "type": "action",
+          "text": "7. A twig did drift past the thrift shop in a blast of wind."
+        }
+      ]
+    },
+    {
+      "id": "Part_P",
+      "title": "P: Spell Sentences on Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to write three sentences."
+        },
+        {
+          "type": "action",
+          "text": "Tutor hands student a piece of paper and a pencil."
+        },
+        {
+          "type": "dialogue",
+          "text": "The first sentence is GET THE BEST BRAND OF FISH. Repeat that sentence."
+        },
+        {
+          "type": "action",
+          "text": "Student: Get the best brand of fish."
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and write that sentence. Use finger spelling on the tough words."
+        },
+        {
+          "type": "action",
+          "text": "Student works on his own with no help from the tutor."
+        },
+        {
+          "type": "dialogue",
+          "text": "Check your sentence by reading exactly what you wrote."
+        },
+        {
+          "type": "action",
+          "text": "Student looks at his paper while reading the sentence."
+        },
+        {
+          "type": "dialogue",
+          "text": "Here's the first question I'm always going to ask: Does it start with a capital and end with punctuation?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Yes (or else student fixes sentence)."
+        },
+        {
+          "type": "dialogue",
+          "text": "Any word that you want help checking?"
+        },
+        {
+          "type": "action",
+          "text": "Tutor scans written sentence for errors and uses guided discovery as needed."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now it's perfect. Here's the next sentence."
+        },
+        {
+          "type": "action",
+          "text": "Dictate: BRENT FELT A DRAFT ON HIS LEFT LEG., THE BLOND CHAMP SLEPT ON A SOFT BED."
+        }
+      ]
+    },
+    {
+      "id": "Part_Q",
+      "title": "Q: Read a Story",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're ready to read a story."
+        },
+        {
+          "type": "action",
+          "text": "Tutor pulls out the Lesson 3: Read This Story page and hands it to the student. Tutor also gives student a 5x8 index card to use as a marker."
+        },
+        {
+          "type": "dialogue",
+          "text": "Preread the story and figure out the tough words. Then read it out loud to me. OR Read the entire story to yourself. Then in your own words, tell me what happened."
+        },
+        {
+          "type": "action",
+          "text": "Student reads the story out loud to tutor (or retells it). Tutor asks comprehension questions."
+        }
+      ]
+    }
+  ]
+}
