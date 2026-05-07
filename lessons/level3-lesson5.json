@@ -1,0 +1,1419 @@
+{
+  "level": 3,
+  "lesson": 5,
+  "title": "Spelling: FLOSS Rule & ALL",
+  "sections": [
+    {
+      "id": "Part_A",
+      "title": "A: Review Vowel Sounds and Digraphs",
+      "steps": [
+        {
+          "type": "action",
+          "text": "Discontinued until Lesson 9."
+        }
+      ]
+    },
+    {
+      "id": "Part_B",
+      "title": "B: Review Extra Practice Page",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's take a look at your extra practice page."
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and read the words to me."
+        },
+        {
+          "type": "action",
+          "text": "Review extra practice page for accuracy. If student has difficulty, repeat the last lesson."
+        }
+      ]
+    },
+    {
+      "id": "Part_C",
+      "title": "C: Phonemic Awareness Warmup",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Repeat this nonsense word, then make just its FIRST sound. Ready? CHOND.",
+          "audio": "chond"
+        },
+        {
+          "type": "action",
+          "text": "Student: Chond, /ch/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to the tile that makes that sound."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the CH tile."
+        },
+        {
+          "type": "action",
+          "text": "Dictate: THUNCH, SHRAMP, GLOMPT"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now I want the LAST sound. FONCH",
+          "audio": "fonch"
+        },
+        {
+          "type": "action",
+          "text": "Student: Fonch, /ch/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to that tile."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the CH tile."
+        },
+        {
+          "type": "action",
+          "text": "Dictate: SCRON, JILP, SAZZ"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now for the MIDDLE sound. Say both the sound AND its keyword. Ready? THROD",
+          "audio": "throd"
+        },
+        {
+          "type": "action",
+          "text": "Student: Throd, /o/-Olive"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to that tile."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the O tile."
+        },
+        {
+          "type": "action",
+          "text": "Dictate: STRUP, MANCH, SPLEM, HINCH"
+        }
+      ]
+    },
+    {
+      "id": "Part_D",
+      "title": "D: NEW TEACHING #1: FLOSS Rule",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's start working on words."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["w", "i", "l"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What's that word?"
+        },
+        {
+          "type": "action",
+          "text": "Student: WILL"
+        },
+        {
+          "type": "dialogue",
+          "text": "Its got all the sounds it needs, but does that word look right to you?"
+        },
+        {
+          "type": "action",
+          "text": "Student: No"
+        },
+        {
+          "type": "dialogue",
+          "text": "What do you need to add to make it right?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Another L"
+        },
+        {
+          "type": "dialogue",
+          "text": "You're right. Let's add an L."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["w", "i", "l", "l"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Why does it need another L?"
+        },
+        {
+          "type": "action",
+          "text": "Student: I don't know."
+        },
+        {
+          "type": "dialogue",
+          "text": "Hmmm. That's what we're going to explore today. Let's see if that extra L is needed on other words."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["t", "e", "l"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What do you think? Does it need another L?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Yes"
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and put it on."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["t", "e", "l", "l"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Hmmm. Do you think every word that has only one vowel and ends with an L needs an extra one?"
+        },
+        {
+          "type": "action",
+          "text": "Student: I'm not sure."
+        },
+        {
+          "type": "dialogue",
+          "text": "Yes, it does. Let's look at another word."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "p", "e", "l"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What do you think?"
+        },
+        {
+          "type": "action",
+          "text": "Student: It needs another L."
+        },
+        {
+          "type": "dialogue",
+          "text": "You're right. EVERY word that has only one vowel and ends with an L needs TWO of them ... to be spelled correctly. Go ahead and fix the spelling of that word."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "p", "e", "l", "l"]
+        },
+        {
+          "type": "dialogue",
+          "text": "But do you pronounce both L's? Do you say spel-l?"
+        },
+        {
+          "type": "action",
+          "text": "Student: No"
+        },
+        {
+          "type": "dialogue",
+          "text": "So you need an extra L to be SPELLED correctly, but that extra L is silent. Do you think any OTHER letters need to be doubled at the end of words with just one vowel?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Maybe."
+        },
+        {
+          "type": "dialogue",
+          "text": "Let's find out."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["h", "i", "s"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What's this word?"
+        },
+        {
+          "type": "action",
+          "text": "Student: His"
+        },
+        {
+          "type": "dialogue",
+          "text": "What sound is that final S making in His?"
+        },
+        {
+          "type": "action",
+          "text": "Student: /z/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Good noticing. A single S at the end of a word with only one vowel ... usually makes the /z/ sound -like the word has, as, is, and so on. What do you think we'd have to do to make that word say HISS -that ends in the /s/ sound?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Add an extra S."
+        },
+        {
+          "type": "dialogue",
+          "text": "You're catching on. Go ahead and add that letter."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["h", "i", "s", "s"]
+        },
+        {
+          "type": "dialogue",
+          "text": "So if a word with only one vowel ends in just ONE S, what sound does that S usually make-as in the word HIS?"
+        },
+        {
+          "type": "action",
+          "text": "Student: /z/"
+        },
+        {
+          "type": "dialogue",
+          "text": "And if we want it to make the /s/ sound, what do we have to do?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Add an extra S."
+        },
+        {
+          "type": "dialogue",
+          "text": "So tell me if I've spelled this word right."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["c", "l", "a", "s"]
+        },
+        {
+          "type": "dialogue",
+          "text": "If I want that to say CLASS, is it spelled right?"
+        },
+        {
+          "type": "action",
+          "text": "Student: No"
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and fix it."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["c", "l", "a", "s", "s"]
+        },
+        {
+          "type": "dialogue",
+          "text": "So what two letters have we discovered so far that need to be doubled at the end of a word with only one vowel?"
+        },
+        {
+          "type": "action",
+          "text": "Student: L and S"
+        },
+        {
+          "type": "dialogue",
+          "text": "Those aren't the only two letters. Let's find another one."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "n", "i", "f"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What's that word?"
+        },
+        {
+          "type": "action",
+          "text": "Student: SNIFF"
+        },
+        {
+          "type": "dialogue",
+          "text": "Do you think it is spelled right?"
+        },
+        {
+          "type": "action",
+          "text": "Student: No"
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and fix it."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "n", "i", "f", "f"]
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "t", "a", "f"]
+        },
+        {
+          "type": "dialogue",
+          "text": "How about this word? Is it spelled right?"
+        },
+        {
+          "type": "action",
+          "text": "Student: No"
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and fix it."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "t", "a", "f", "f"]
+        },
+        {
+          "type": "dialogue",
+          "text": "How many vowels in a word that needs 2 F's at the end?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Only one vowel."
+        },
+        {
+          "type": "dialogue",
+          "text": "And what are the three letters that must be doubled at the end of a word with only one vowel?"
+        },
+        {
+          "type": "action",
+          "text": "Student: F, L, and S"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now let me show you a trick to remembering those 3 letters."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["f", "l", "o", "s", "s"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What's that word?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Floss"
+        },
+        {
+          "type": "dialogue",
+          "text": "Does it need the extra S at the end?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Yes"
+        },
+        {
+          "type": "dialogue",
+          "text": "Why?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: It's one of those letters."
+        },
+        {
+          "type": "dialogue",
+          "text": "Right. In fact, it follows the FLOSS rule. I call it the FLOSS rule --because that word helps me remember the 3 letters. What are the 3 blue tiles in the word FLOSS?"
+        },
+        {
+          "type": "action",
+          "text": "Student: F, L, and S."
+        },
+        {
+          "type": "dialogue",
+          "text": "And what are the three letters you have to double at the end of a word with only one vowel?"
+        },
+        {
+          "type": "action",
+          "text": "Student: F, L and S."
+        },
+        {
+          "type": "dialogue",
+          "text": "So it helps to call it the FLOSS rule."
+        },
+        {
+          "type": "dialogue",
+          "text": "By the way, there is one more letter that is doubled, but it doesn't occur at the end of many words. That's why they didn't make it part of the word FLOSS. Let me show you that letter."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["j", "a", "z", "z"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What's that word?"
+        },
+        {
+          "type": "action",
+          "text": "Student: JAZZ"
+        },
+        {
+          "type": "dialogue",
+          "text": "Does it have only one vowel?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Yes"
+        },
+        {
+          "type": "dialogue",
+          "text": "So a Z at the end must also be doubled. But there are only 4 more words that end with a Z. Let me show them to you."
+        },
+        {
+          "type": "action",
+          "text": "Tutor builds BUZZ, changes it to FUZZ, changes it to FIZZ, then inserts an R tile to make FRIZZ."
+        },
+        {
+          "type": "dialogue",
+          "text": "So tell me one last time. What's the name of the rule we just learned?"
+        },
+        {
+          "type": "action",
+          "text": "Student: The FLOSS rule."
+        },
+        {
+          "type": "dialogue",
+          "text": "By the way, there are 3 common words that don't follow the FLOSS rule, and I'll bet you know what they are. What's that stuff you put in your car to make it go?"
+        },
+        {
+          "type": "action",
+          "text": "Student: GAS"
+        },
+        {
+          "type": "dialogue",
+          "text": "Here's how it is spelled."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["g", "a", "s"]
+        },
+        {
+          "type": "dialogue",
+          "text": "It only needs one S. That's because GAS is part of a longer word-Gasoline. Let's think of another word like that. What's that big yellow thing you ride to school in ... if you live too far to walk?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Bus"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["b", "u", "s"]
+        },
+        {
+          "type": "dialogue",
+          "text": "It only needs one S because it was also part of a longer word. Originally, it was called an Omnibus. Here's the last word that only needs one S. What's the opposite of No?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Yes"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["y", "e", "s"]
+        },
+        {
+          "type": "dialogue",
+          "text": "That word was also part of a longer word. Yes-Sirree-Bob. So those three words end in just one S ... because they were all parts of longer words."
+        },
+        {
+          "type": "action",
+          "text": "Tutor creates a Spelling Rules Page and writes: FLOSS but not: gas, bus, yes"
+        }
+      ]
+    },
+    {
+      "id": "Part_E",
+      "title": "E: NEW TEACHING #2: ALL - a Unit Syllable",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["a", "l", "l"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What's that word?"
+        },
+        {
+          "type": "action",
+          "text": "Student: ALL"
+        },
+        {
+          "type": "dialogue",
+          "text": "Why does it need two L's?"
+        },
+        {
+          "type": "action",
+          "text": "Student: The FLOSS rule."
+        },
+        {
+          "type": "dialogue",
+          "text": "Good noticing. Now tell me-what's the keyword for A?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Apple"
+        },
+        {
+          "type": "dialogue",
+          "text": "So what sound should that A be making?"
+        },
+        {
+          "type": "action",
+          "text": "Student: /a/"
+        },
+        {
+          "type": "dialogue",
+          "text": "But is it? Does that word /a/ /l/ -AL?"
+        },
+        {
+          "type": "action",
+          "text": "Student: No."
+        },
+        {
+          "type": "dialogue",
+          "text": "Hmmm. So the letters A-L-L make an unusual sound. They make the sound ALL."
+        },
+        {
+          "type": "action",
+          "text": "Tutor removes A, L, L tiles and brings in the red ALL Unit tile."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["all"]
+        },
+        {
+          "type": "dialogue",
+          "text": "To remind us that this group of letters, this UNIT, makes an unusual sound, ALL appears on a special tile. This red tile is a Unit tile. It's a reminder that when you see ALL at the end of a word, you should treat it as a Unit."
+        },
+        {
+          "type": "dialogue",
+          "text": "And when you're spelling, you should NOT try to break a Unit into its individual sounds. Instead, treat it like a Unit--do not break it apart. So when you HEAR ALL in a word, how are you going to spell it?"
+        },
+        {
+          "type": "action",
+          "text": "Student: A-L-L"
+        },
+        {
+          "type": "dialogue",
+          "text": "Right. And since A-L-L is on one tile, how many fingers will you raise when you're finger spelling?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Expect various answers."
+        },
+        {
+          "type": "dialogue",
+          "text": "One finger-because you bring down one tile for each finger. Now let's take a look at some words that use this Unit."
+        },
+        {
+          "type": "action",
+          "text": "Student says each word as tutor builds it: TALL, CALL, HALL, MALL, SMALL, SQUALL, STALL."
+        },
+        {
+          "type": "dialogue",
+          "text": "So when ALL comes at the end of a word, you must treat it as a Unit and NOT break it into its separate sounds."
+        },
+        {
+          "type": "dialogue",
+          "text": "By the way, is STALL a Closed syllable?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Yes."
+        },
+        {
+          "type": "dialogue",
+          "text": "Well, it LOOKS like it is Closed. But if it were truly Closed, its vowel would make its Short sound, as in Apple /a/. Does it make that Short sound?"
+        },
+        {
+          "type": "action",
+          "text": "Student: No."
+        },
+        {
+          "type": "dialogue",
+          "text": "So it's not a Closed syllable. Any syllable that has a Unit in it ... is called a Unit Syllable. Here's how you mark a Unit syllable."
+        },
+        {
+          "type": "action",
+          "text": "Tutor writes STALL on a piece of paper, then draws a box around ALL-the Unit."
+        },
+        {
+          "type": "dialogue",
+          "text": "To mark a Unit syllable, just draw a box around its Unit. Now let me show you one Weirdo word."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["d", "o", "l", "l"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What's this word?"
+        },
+        {
+          "type": "action",
+          "text": "Student: DOLL"
+        },
+        {
+          "type": "dialogue",
+          "text": "And how is the ALL sound spelled in this word?"
+        },
+        {
+          "type": "action",
+          "text": "Student: O-L-L"
+        },
+        {
+          "type": "dialogue",
+          "text": "This is the ONLY word in our language where the sound /all/ is spell O-L-L."
+        },
+        {
+          "type": "action",
+          "text": "Tutor brings out the ALL Unit tile."
+        },
+        {
+          "type": "dialogue",
+          "text": "In every other word, when you hear /all/, how will you spell it?"
+        },
+        {
+          "type": "action",
+          "text": "Student: A-L-L"
+        },
+        {
+          "type": "dialogue",
+          "text": "And why does it have two Ls?"
+        },
+        {
+          "type": "action",
+          "text": "Student: The FLOSS rule."
+        },
+        {
+          "type": "action",
+          "text": "Tutor creates a Units Page and writes: ALL but not doll"
+        }
+      ]
+    },
+    {
+      "id": "Part_F",
+      "title": "F: Spell Real Words with Fingers, then Tiles - NEW",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": []
+        },
+        {
+          "type": "dialogue",
+          "text": "Now you're going to finger spell. The first word is STIFF. Repeat that word."
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly."
+        },
+        {
+          "type": "dialogue",
+          "text": "Use your fingers to break it into sounds."
+        },
+        {
+          "type": "dialogue",
+          "text": "But raise only ONE finger for the ALL sound, because you bring down only one tile. (Note: only for NewTeaching#2 words)"
+        },
+        {
+          "type": "dialogue",
+          "text": "Pull down a tile for each of those sounds."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "t", "i", "f", "f"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Double check by blending those sounds."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now change one of those tiles ... to make that word say STUFF."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "t", "u", "f", "f"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Nice work. Put those tiles away and let's try another word."
+        },
+        {
+          "type": "action",
+          "text": "Dictate New Teaching #1 Words: SMELL, SWELL, GLASS, GRASS."
+        },
+        {
+          "type": "action",
+          "text": "Dictate New Teaching #2 Words: STALL, FALL, SMALL, SQUALL."
+        }
+      ]
+    },
+    {
+      "id": "Part_G",
+      "title": "G: Read Nonsense Words on Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Here's a nonsense word."
+        },
+        {
+          "type": "dialogue",
+          "text": "Touch-and-say each sound."
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly blend those sounds."
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it fast like a word."
+        },
+        {
+          "type": "dialogue",
+          "text": "Excellent. Here's another one."
+        },
+        {
+          "type": "action",
+          "text": "Build Words: FRESS, THILL, SPLAFF, VEZZ, GRALL, FLALL."
+        }
+      ]
+    },
+    {
+      "id": "Part_H",
+      "title": "H: Spell Nonsense Words with Fingers, then Tiles",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": []
+        },
+        {
+          "type": "dialogue",
+          "text": "Now you'll finger spell some nonsense words."
+        },
+        {
+          "type": "dialogue",
+          "text": "The first word is TROSS. Repeat that word."
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly."
+        },
+        {
+          "type": "dialogue",
+          "text": "Finger spell. Raise only ONE finger for the ALL sound, as you bring down only one tile."
+        },
+        {
+          "type": "dialogue",
+          "text": "Pull down a tile for each finger."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["t", "r", "o", "s", "s"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Double-check by blending those sounds together."
+        },
+        {
+          "type": "dialogue",
+          "text": "Excellent. Put those tiles back."
+        },
+        {
+          "type": "action",
+          "text": "Dictate Words: CHIFF, SMAZZ, STELL."
+        }
+      ]
+    },
+    {
+      "id": "Part_I",
+      "title": "I: Read Words Through Word Frame",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to read words through the word frame."
+        },
+        {
+          "type": "dialogue",
+          "text": "If you know that word for sure, just say it."
+        },
+        {
+          "type": "dialogue",
+          "text": "Otherwise, sound it out."
+        },
+        {
+          "type": "action",
+          "text": "Student reads through the lists. Real words in the first two columns, nonsense words in the third: fuss, skull, droff, skill, brass, plass, off, frizz, chull, small, cliff, strall, dress, grill, neff, stuff, Nell, triss, squall, stress, thall."
+        }
+      ]
+    },
+    {
+      "id": "Part_J",
+      "title": "J: Spell Words with Fingers, then Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "After you finger spell these words, you'll write them on paper."
+        },
+        {
+          "type": "action",
+          "text": "Tutor hands student a piece of paper and a pencil."
+        },
+        {
+          "type": "dialogue",
+          "text": "Ready? The first word is SPILL. Repeat that word."
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly."
+        },
+        {
+          "type": "dialogue",
+          "text": "Finger spell."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now make each sound as you write the letter."
+        },
+        {
+          "type": "dialogue",
+          "text": "Double check what you wrote."
+        },
+        {
+          "type": "action",
+          "text": "Dictate Real Words: SPILL, FLUFF, CHESS, TALL, JAZZ."
+        },
+        {
+          "type": "action",
+          "text": "Dictate Nonsense Words: DRUFF, TRISS, SHAZZ, ZELL, TRAFF."
+        }
+      ]
+    },
+    {
+      "id": "Part_K",
+      "title": "K: Review Sight Word Reading Deck",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's review the Sight Word Reading Deck we created last time."
+        },
+        {
+          "type": "action",
+          "text": "Tutor pulls out the Sight Word Reading Deck and gives to student."
+        },
+        {
+          "type": "dialogue",
+          "text": "Put your thumb over the clue and read the word."
+        },
+        {
+          "type": "dialogue",
+          "text": "If you're not sure you said the right word, lift up your thumb and look at your clue. Try it."
+        },
+        {
+          "type": "action",
+          "text": "Student puts thumb over clue and reads each word out loud."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now that you're warmed up, keep the clue hidden and read them again ... as fast as you can."
+        },
+        {
+          "type": "action",
+          "text": "Student puts thumb over clue, flips through the deck as fast as he can, reading each word out loud."
+        },
+        {
+          "type": "dialogue",
+          "text": "Good reading. Now give me the deck."
+        },
+        {
+          "type": "action",
+          "text": "Tutor sorts the deck."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now that I've sorted the deck into a different order, let's go through it again. I'll try to flip the cards a little faster than you did."
+        },
+        {
+          "type": "action",
+          "text": "Student reads each word out loud."
+        },
+        {
+          "type": "dialogue",
+          "text": "Nice. Now I'll sort them one more time, then we'll try 'supersonic' speed."
+        },
+        {
+          "type": "action",
+          "text": "Tutor sorts the cards, then flashes them as rapidly as possible."
+        },
+        {
+          "type": "dialogue",
+          "text": "Excellent. That's it for Sight Words for today."
+        },
+        {
+          "type": "action",
+          "text": "Tutor puts the Sight Word Reading Deck away."
+        }
+      ]
+    },
+    {
+      "id": "Part_L",
+      "title": "L: Review Sight Word Spelling Cards",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's review your tricky Sight words."
+        },
+        {
+          "type": "action",
+          "text": "Tutor pulls out the Sight Word Spelling Cards and holds up the first card."
+        },
+        {
+          "type": "dialogue",
+          "text": "What's this word?"
+        },
+        {
+          "type": "action",
+          "text": "Student reads the word."
+        },
+        {
+          "type": "dialogue",
+          "text": "Why is that letter in red?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Because it's the tricky letter; it doesn't sound like that, it's silent, etc."
+        },
+        {
+          "type": "dialogue",
+          "text": "Stare at it until you can see it in your mind with your eyes closed."
+        },
+        {
+          "type": "dialogue",
+          "text": "Look at that blank wall and see that word. How do you spell (sight word here)?"
+        },
+        {
+          "type": "action",
+          "text": "Student looks at a blank wall, 'sees' the word, and spells it out loud."
+        },
+        {
+          "type": "dialogue",
+          "text": "Do that again."
+        },
+        {
+          "type": "action",
+          "text": "Student repeats."
+        },
+        {
+          "type": "dialogue",
+          "text": "Good. Now, using your index and middle finger as the pen, write (sight word here) on the desk."
+        },
+        {
+          "type": "action",
+          "text": "Student 'writes' the word on the desktop."
+        },
+        {
+          "type": "dialogue",
+          "text": "Do it again."
+        },
+        {
+          "type": "action",
+          "text": "Student repeats."
+        },
+        {
+          "type": "dialogue",
+          "text": "As a last step, write (sight word here) on paper, saying each letter as you write it. Then underline the red letter."
+        },
+        {
+          "type": "action",
+          "text": "Student writes the sight word on paper and underlines the red letter."
+        },
+        {
+          "type": "dialogue",
+          "text": "One more time."
+        },
+        {
+          "type": "action",
+          "text": "Student repeats the 'see and write' step on paper."
+        },
+        {
+          "type": "action",
+          "text": "Tutor repeats the process for each card in the Sight Word Spelling Deck, then puts the deck away."
+        }
+      ]
+    },
+    {
+      "id": "Part_M",
+      "title": "M: Read Phrases - NEW",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll read some phrases."
+        },
+        {
+          "type": "dialogue",
+          "text": "This group of phrases tell WHO. Read each phrase to me."
+        },
+        {
+          "type": "action",
+          "text": "Student reads each WHO phrase out loud."
+        },
+        {
+          "type": "dialogue",
+          "text": "These phrases tell DID WHAT. Read each phrase to me."
+        },
+        {
+          "type": "action",
+          "text": "Student reads each DID WHAT phrase out loud."
+        },
+        {
+          "type": "dialogue",
+          "text": "A sentence must have a WHO and a DID WHAT phrase."
+        },
+        {
+          "type": "dialogue",
+          "text": "A sentence can have just a WHO and a DID WHAT phrase. Go ahead and make a short sentence."
+        },
+        {
+          "type": "action",
+          "text": "Student verbally says a short sentence."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now read the WHERE phrases."
+        },
+        {
+          "type": "action",
+          "text": "Student reads each WHERE phrase out loud."
+        },
+        {
+          "type": "dialogue",
+          "text": "Create a sentence with 3 phrases."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now read the ADD-ON phrases."
+        },
+        {
+          "type": "action",
+          "text": "Student reads each ADD-ON phrase out loud."
+        },
+        {
+          "type": "dialogue",
+          "text": "Create a sentence with four phrases."
+        },
+        {
+          "type": "action",
+          "text": "Student verbally creates a sentence using phrases from each category."
+        },
+        {
+          "type": "dialogue",
+          "text": "Here's something new. Find one word that is a Closed syllable, and mark it."
+        },
+        {
+          "type": "action",
+          "text": "Student looks through phrases, finds a Closed syllable, and puts breve (teacup) over the vowel."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now find one word that's a Unit syllable, and mark it."
+        },
+        {
+          "type": "action",
+          "text": "Student finds a Unit syllable and puts a box around the Unit."
+        },
+        {
+          "type": "action",
+          "text": "Who phrases: Jeff and Nell, Jill, The Swiss lass, A small squall"
+        },
+        {
+          "type": "action",
+          "text": "Did What phrases: did thrill to jazz, can miss the drill, will toss the shell, fell"
+        },
+        {
+          "type": "action",
+          "text": "Where phrases: off the hill, in class, in the hall, on-to the sand"
+        },
+        {
+          "type": "action",
+          "text": "Add-On phrases: but does not smell., and hit the wall., and it was swell., but will still pass."
+        }
+      ]
+    },
+    {
+      "id": "Part_N",
+      "title": "N: Spell Phrases and Sight Words on Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to write some phrases."
+        },
+        {
+          "type": "action",
+          "text": "Tutor hands student a piece of paper and a pencil."
+        },
+        {
+          "type": "dialogue",
+          "text": "The first phrase is MISS THE BUS. Repeat that phrase."
+        },
+        {
+          "type": "action",
+          "text": "Student: Miss the bus."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now write it down. Use finger spelling for the tough words."
+        },
+        {
+          "type": "action",
+          "text": "Student works on his own with no help from the tutor."
+        },
+        {
+          "type": "dialogue",
+          "text": "Double check by reading exactly what you wrote."
+        },
+        {
+          "type": "action",
+          "text": "Student looks at his paper while reading the phrase."
+        },
+        {
+          "type": "dialogue",
+          "text": "Any word that you want help checking?"
+        },
+        {
+          "type": "action",
+          "text": "Tutor scans written phrase for errors. Use Guided Discovery if needed."
+        },
+        {
+          "type": "dialogue",
+          "text": "That's perfect. Here's the next phrase."
+        },
+        {
+          "type": "action",
+          "text": "Dictate: SPELL WELL, STALL THE STAFF."
+        },
+        {
+          "type": "action",
+          "text": "Tutor dictates each Sight Word from the Sight Word Spelling deck."
+        },
+        {
+          "type": "action",
+          "text": "Student says each letter as he writes it down, then underlines the red letter."
+        },
+        {
+          "type": "action",
+          "text": "If correct, tutor puts a checkmark on that Spelling Card."
+        }
+      ]
+    },
+    {
+      "id": "Part_O",
+      "title": "O: Read Sentences",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll read some sentences."
+        },
+        {
+          "type": "action",
+          "text": "Tutor pulls out the Lesson 5: Read These Sentences page. Tutor hands student a blank 5x8 card to put under the first sentence."
+        },
+        {
+          "type": "dialogue",
+          "text": "Read that first sentence to yourself."
+        },
+        {
+          "type": "action",
+          "text": "Student reads sentence to himself."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now read it out loud."
+        },
+        {
+          "type": "action",
+          "text": "Student: Jeff and Nell fell off the hill and hit the wall."
+        },
+        {
+          "type": "dialogue",
+          "text": "Let's mark each phrase. Mark the WHO phrase."
+        },
+        {
+          "type": "action",
+          "text": "Student uses pencil to draw under-up Jeff and Nell."
+        },
+        {
+          "type": "dialogue",
+          "text": "Mark the DID WHAT phrase."
+        },
+        {
+          "type": "action",
+          "text": "Student uses pencil to draw under-up fell."
+        },
+        {
+          "type": "dialogue",
+          "text": "Mark the WHERE phrase."
+        },
+        {
+          "type": "action",
+          "text": "Student uses pencil to draw under-up off the hill."
+        },
+        {
+          "type": "dialogue",
+          "text": "Mark the ADD-ON phrase."
+        },
+        {
+          "type": "action",
+          "text": "Student uses pencil to draw under-up and hit the wall."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now read that sentence with phrasing. Remember, put a small pause ... between each phrase."
+        },
+        {
+          "type": "action",
+          "text": "Student: Jeff and Nell ... fell ... off the hill ... and hit the wall."
+        },
+        {
+          "type": "dialogue",
+          "text": "Nice. On to sentence number 3."
+        },
+        {
+          "type": "action",
+          "text": "Have student read and mark each ODD-numbered sentence."
+        },
+        {
+          "type": "action",
+          "text": "1. Jeff and Nell fell off the hill and hit the wall."
+        },
+        {
+          "type": "action",
+          "text": "3. A Swiss lass did thrill to jazz in the hall, and it was swell."
+        },
+        {
+          "type": "action",
+          "text": "5. The skiff has lots of fish but does not smell bad."
+        },
+        {
+          "type": "action",
+          "text": "7. Jeff had to spell \"trench\" in class."
+        },
+        {
+          "type": "action",
+          "text": "9. Bill did not tell the boss that he was ill."
+        }
+      ]
+    },
+    {
+      "id": "Part_P",
+      "title": "P: Spell Sentences on Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to write three sentences."
+        },
+        {
+          "type": "action",
+          "text": "Tutor hands student a piece of paper and a pencil."
+        },
+        {
+          "type": "dialogue",
+          "text": "The first sentence is DID BILL MISS THE BUS? Repeat that sentence."
+        },
+        {
+          "type": "action",
+          "text": "Student: Did Bill miss the bus?"
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and write that sentence. Use finger spelling on the tough words."
+        },
+        {
+          "type": "action",
+          "text": "Student works on his own with no help from the tutor."
+        },
+        {
+          "type": "dialogue",
+          "text": "Check your sentence by reading exactly what you wrote."
+        },
+        {
+          "type": "action",
+          "text": "Student looks at his paper while reading the sentence."
+        },
+        {
+          "type": "dialogue",
+          "text": "Here's the first question I'm always going to ask: Does it start with a capital and end with punctuation?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Yes (or else student fixes sentence)."
+        },
+        {
+          "type": "dialogue",
+          "text": "Any word that you want help checking?"
+        },
+        {
+          "type": "action",
+          "text": "Tutor scans written sentence for errors and uses guided discovery as needed."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now it's perfect. Here's the next sentence."
+        },
+        {
+          "type": "action",
+          "text": "Dictate: THE SWISS MEN SPELL WELL., \"STALL THE STAFF,\" SAID THE BOSS."
+        }
+      ]
+    },
+    {
+      "id": "Part_Q",
+      "title": "Q: Read a Story",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're ready to read a story."
+        },
+        {
+          "type": "action",
+          "text": "Tutor pulls out the Lesson 5: Read This Story page and hands it to the student. Tutor also gives student a 5x8 index card to use as a marker."
+        },
+        {
+          "type": "dialogue",
+          "text": "Preread the story and figure out the tough words. Then read it out loud to me. OR Read the entire story to yourself. Then in your own words, tell me what happened."
+        },
+        {
+          "type": "action",
+          "text": "Student reads the story out loud to tutor (or retells it). Tutor asks comprehension questions."
+        }
+      ]
+    }
+  ]
+}
