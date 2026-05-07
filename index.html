@@ -32,6 +32,47 @@
     .error-btn { background: #fef08a; color: #854d0e; border: 1px solid #facc15; padding: 6px 12px; border-radius: 4px; font-size: 0.85rem; cursor: pointer; font-weight: 600; margin-top: 5px; }
     .guided-discovery { display: none; background: #fffbeb; padding: 15px; border: 1px solid #fde68a; border-radius: 6px; margin-top: 10px; font-size: 0.95rem; }
 
+    /* Sight Word Tracker */
+    .sight-word-tracker { background: #f0fdf4; border: 2px solid #86efac; border-radius: 8px; padding: 12px; margin: 10px 0; }
+    .sight-word-tracker h4 { color: #166534; font-size: 0.85rem; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.05em; }
+    .sight-word-list { display: flex; flex-wrap: wrap; gap: 6px; }
+    .sight-word-pill { background: #dcfce7; border: 1px solid #86efac; border-radius: 20px; padding: 4px 12px; font-weight: 600; font-size: 0.95rem; color: #15803d; }
+
+    /* Student Page */
+    .student-page { border: 3px solid #6366f1; border-radius: 10px; margin: 14px 0; overflow: hidden; }
+    .student-page-header { background: #6366f1; color: white; padding: 6px 14px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; }
+    .student-page-body { padding: 14px; background: #eef2ff; }
+
+    /* word_frame mode */
+    .word-frame-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+    .word-frame-item { background: white; border: 2px solid #6366f1; border-radius: 6px; padding: 6px 14px; font-weight: 700; font-size: 1.05rem; color: #3730a3; }
+
+    /* phrase_builder mode */
+    .phrase-builder { display: grid; gap: 8px; }
+    .phrase-col { background: white; border: 1px solid #a5b4fc; border-radius: 6px; padding: 8px 12px; }
+    .phrase-col-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #6366f1; margin-bottom: 4px; }
+    .phrase-col-items { display: flex; flex-direction: column; gap: 3px; font-size: 0.95rem; }
+
+    /* sentence_marking mode */
+    .sentence-list { display: flex; flex-direction: column; gap: 8px; }
+    .sentence-item { background: white; border: 1px solid #a5b4fc; border-radius: 6px; padding: 8px 12px; font-size: 0.95rem; line-height: 1.5; }
+
+    /* story_reading mode */
+    .story-title { font-weight: 700; font-size: 1.1rem; color: #3730a3; margin-bottom: 8px; }
+    .story-text { font-size: 0.95rem; line-height: 1.7; background: white; padding: 10px; border-radius: 6px; border: 1px solid #a5b4fc; }
+
+    /* matching mode */
+    .matching-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .matching-col { display: flex; flex-direction: column; gap: 6px; }
+    .matching-item { background: white; border: 2px solid #a5b4fc; border-radius: 6px; padding: 6px 12px; font-weight: 700; text-align: center; font-size: 1rem; color: #3730a3; }
+
+    /* fill_blanks mode */
+    .fill-blanks-bank { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+    .fill-blanks-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #6366f1; margin-bottom: 4px; }
+    .fill-bank-item { background: #e0e7ff; border: 1px solid #818cf8; border-radius: 4px; padding: 4px 10px; font-weight: 700; font-size: 0.95rem; color: #3730a3; }
+    .fill-endings-list { display: flex; flex-wrap: wrap; gap: 6px; }
+    .fill-ending-item { background: white; border: 2px dashed #818cf8; border-radius: 4px; padding: 4px 10px; font-weight: 700; font-size: 0.95rem; color: #6366f1; }
+
     /* Right Pane: Tile Board */
     #app { width: 60%; position: relative; height: 100vh; background: var(--bg); color: var(--ink); touch-action: manipulation; }
     #wordPane { position: absolute; inset: 0 0 24vh 0; background: transparent; overflow: hidden; }
@@ -104,7 +145,10 @@
     });
 
     // ====== DYNAMIC HTML BUILDER ======
+    let audioRegistry = {};
+
     function buildTeleprompter(data) {
+      audioRegistry = {};
       const tp = document.getElementById('tp-content');
       let html = `<h2 class="tp-header">Level ${data.level}, Lesson ${data.lesson}: ${data.title}</h2>`;
       
@@ -114,16 +158,34 @@
         sec.steps.forEach((step, stepIdx) => {
           const uniqueId = `step_${sIdx}_${stepIdx}`;
           
-          if (step.type === 'dialogue') {
-            let audioBtn = step.audio ? `<button class="audio-btn" onclick="speakText('${step.audio}')">🔊</button>` : '';
-            html += `<p class="dialogue">"${step.text}" ${audioBtn}</p>`;
+          if (step.type === 'teacher_note') {
+            html += `<div class="tutor-note">📝 ${escHtml(step.text)}</div>`;
+          }
+          else if (step.type === 'dialogue') {
+            let audioBtn = '';
+            if (step.audio) {
+              audioRegistry[uniqueId] = step.audio;
+              audioBtn = `<button class="audio-btn" onclick="speakText(window.audioRegistry['${uniqueId}'])">🔊</button>`;
+            }
+            html += `<p class="dialogue">"${escHtml(step.text)}" ${audioBtn}</p>`;
           } 
           else if (step.type === 'action') {
-            html += `<p class="action">• ${step.text}</p>`;
+            html += `<p class="action">• ${escHtml(step.text)}</p>`;
           }
           else if (step.type === 'board_action' && step.command === 'spawn_tiles') {
             const payloadStr = JSON.stringify(step.payload).replace(/"/g, "'");
-            html += `<button class="spawn-btn" onclick="spawnTiles(${payloadStr})">🚀 Spawn Tiles: ${step.payload.join('-').toUpperCase()}</button>`;
+            html += `<button class="spawn-btn" onclick="spawnTiles(${payloadStr})">🚀 Spawn Tiles: ${escHtml(step.payload.join('-').toUpperCase())}</button>`;
+          }
+          else if (step.type === 'sight_word_tracker') {
+            const pills = step.words.map(w => `<span class="sight-word-pill">${escHtml(w)}</span>`).join('');
+            html += `
+              <div class="sight-word-tracker">
+                <h4>👁️ Sight Word Tracker</h4>
+                <div class="sight-word-list">${pills}</div>
+              </div>`;
+          }
+          else if (step.type === 'student_page') {
+            html += buildStudentPage(step);
           }
           else if (step.type === 'guided_discovery') {
             html += `
@@ -140,6 +202,66 @@
         html += `</div>`;
       });
       tp.innerHTML = html;
+    }
+
+    // ====== HTML ESCAPE HELPER ======
+    function escHtml(str) {
+      return String(str)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+    }
+
+    function toTitleCase(str) {
+      return str.replace(/_/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+
+    // ====== STUDENT PAGE BUILDER ======
+    function buildStudentPage(step) {
+      let modeLabel = toTitleCase(step.mode);
+      let body = '';
+
+      if (step.mode === 'word_frame') {
+        const items = step.payload.map(w => `<span class="word-frame-item">${escHtml(w)}</span>`).join('');
+        body = `<div class="word-frame-grid">${items}</div>`;
+
+      } else if (step.mode === 'phrase_builder') {
+        const cols = Object.entries(step.payload).map(([key, vals]) => {
+          const label = escHtml(toTitleCase(key));
+          const items = vals.map(v => `<div>${escHtml(v)}</div>`).join('');
+          return `<div class="phrase-col"><div class="phrase-col-label">${label}</div><div class="phrase-col-items">${items}</div></div>`;
+        }).join('');
+        body = `<div class="phrase-builder">${cols}</div>`;
+
+      } else if (step.mode === 'sentence_marking') {
+        const sentences = step.payload.map(s => `<div class="sentence-item">${escHtml(s)}</div>`).join('');
+        body = `<div class="sentence-list">${sentences}</div>`;
+
+      } else if (step.mode === 'story_reading') {
+        body = `<div class="story-title">${escHtml(step.payload.title)}</div><div class="story-text">${escHtml(step.payload.text)}</div>`;
+
+      } else if (step.mode === 'matching') {
+        const left = step.payload.left.map(w => `<div class="matching-item">${escHtml(w)}</div>`).join('');
+        const right = step.payload.right.map(w => `<div class="matching-item">${escHtml(w)}</div>`).join('');
+        body = `<div class="matching-cols"><div class="matching-col">${left}</div><div class="matching-col">${right}</div></div>`;
+
+      } else if (step.mode === 'fill_blanks') {
+        const bankItems = step.payload.bank.map(b => `<span class="fill-bank-item">${escHtml(b)}</span>`).join('');
+        const endingItems = step.payload.endings.map(e => `<span class="fill-ending-item">___ ${escHtml(e)}</span>`).join('');
+        body = `
+          <div class="fill-blanks-label">Word Bank</div>
+          <div class="fill-blanks-bank">${bankItems}</div>
+          <div class="fill-blanks-label">Endings</div>
+          <div class="fill-endings-list">${endingItems}</div>`;
+      }
+
+      return `
+        <div class="student-page">
+          <div class="student-page-header">📄 Student Page — ${escHtml(modeLabel)}</div>
+          <div class="student-page-body">${body}</div>
+        </div>`;
     }
 
     // ====== TILE PHYSICS & SPAWNING ======
