@@ -73,6 +73,25 @@
     .fill-endings-list { display: flex; flex-wrap: wrap; gap: 6px; }
     .fill-ending-item { background: white; border: 2px dashed #818cf8; border-radius: 4px; padding: 4px 10px; font-weight: 700; font-size: 0.95rem; color: #6366f1; }
 
+    /* Utility */
+    .hidden { display: none !important; }
+
+    /* Student Page View (right pane interactive overlay) */
+    #student-page-view { position: absolute; inset: 0 0 24vh 0; background: var(--bg); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px; padding: 40px; z-index: 5; }
+
+    /* Word Frame Grid Layout */
+    .word-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; width: 100%; max-width: 800px; font-family: 'Lexend', sans-serif; font-size: 48px; text-align: center; }
+
+    /* Base Word Styling */
+    .word-item { padding: 15px 20px; border: 4px solid transparent; border-radius: 12px; color: #94a3b8; transition: all 0.2s ease-in-out; }
+
+    /* The "Word Frame" Highlight */
+    .word-item.active-frame { border-color: #3b82f6; background-color: #eff6ff; color: #0f172a; font-weight: 600; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); transform: scale(1.05); }
+
+    /* Word Frame Navigation Controls */
+    .word-frame-nav { display: flex; gap: 20px; align-items: center; }
+    .word-frame-counter { color: #475569; font-size: 1rem; min-width: 80px; text-align: center; }
+
     /* Right Pane: Tile Board */
     #app { width: 60%; position: relative; height: 100vh; background: var(--bg); color: var(--ink); touch-action: manipulation; }
     #wordPane { position: absolute; inset: 0 0 24vh 0; background: transparent; overflow: hidden; }
@@ -119,11 +138,16 @@
         <button id="resetButton" class="btn danger">Clear Board</button>
       </div>
     </div>
+    <div id="student-page-view" class="hidden"></div>
   </div>
 
   <script>
     const TILE_SIZE = 52;
     let tiles = [];
+
+    // --- Global State for the Word Frame ---
+    let currentStudentPageWords = [];
+    let currentWordIndex = 0;
 
     // ====== CARTRIDGE LOADER (JSON FETCH) ======
     document.getElementById('lessonSelect').addEventListener('change', async (e) => {
@@ -146,9 +170,11 @@
 
     // ====== DYNAMIC HTML BUILDER ======
     let audioRegistry = {};
+    let wordFrameRegistry = {};
 
     function buildTeleprompter(data) {
       audioRegistry = {};
+      wordFrameRegistry = {};
       const tp = document.getElementById('tp-content');
       let html = `<h2 class="tp-header">Level ${data.level}, Lesson ${data.lesson}: ${data.title}</h2>`;
       
@@ -185,7 +211,7 @@
               </div>`;
           }
           else if (step.type === 'student_page') {
-            html += buildStudentPage(step);
+            html += buildStudentPage(step, uniqueId);
           }
           else if (step.type === 'guided_discovery') {
             html += `
@@ -219,13 +245,16 @@
     }
 
     // ====== STUDENT PAGE BUILDER ======
-    function buildStudentPage(step) {
+    function buildStudentPage(step, uniqueId) {
       let modeLabel = toTitleCase(step.mode);
       let body = '';
 
       if (step.mode === 'word_frame') {
+        wordFrameRegistry[uniqueId] = step.payload;
         const items = step.payload.map(w => `<span class="word-frame-item">${escHtml(w)}</span>`).join('');
-        body = `<div class="word-frame-grid">${items}</div>`;
+        body = `
+          <div class="word-frame-grid">${items}</div>
+          <button class="spawn-btn" onclick="launchWordFrame(window.wordFrameRegistry['${uniqueId}'])">🖼️ Launch Word Frame on Board</button>`;
 
       } else if (step.mode === 'phrase_builder') {
         const cols = Object.entries(step.payload).map(([key, vals]) => {
@@ -262,6 +291,52 @@
           <div class="student-page-header">📄 Student Page — ${escHtml(modeLabel)}</div>
           <div class="student-page-body">${body}</div>
         </div>`;
+    }
+
+    // ====== WORD FRAME ENGINE ======
+    function launchWordFrame(wordsArray) {
+      if (!Array.isArray(wordsArray) || wordsArray.length === 0) return;
+      document.getElementById('wordPane').classList.add('hidden');
+      const pageView = document.getElementById('student-page-view');
+      pageView.classList.remove('hidden');
+
+      currentStudentPageWords = wordsArray;
+      currentWordIndex = 0;
+
+      renderWordGrid();
+    }
+
+    function renderWordGrid() {
+      const pageView = document.getElementById('student-page-view');
+
+      let gridHTML = '<div class="word-grid">';
+      currentStudentPageWords.forEach((word, i) => {
+        const isActive = i === currentWordIndex;
+        gridHTML += `<div class="word-item${isActive ? ' active-frame' : ''}">${escHtml(word)}</div>`;
+      });
+      gridHTML += '</div>';
+
+      gridHTML += `
+        <div class="word-frame-nav">
+          <button class="btn secondary" onclick="moveFrame(-1)">◀ Prev</button>
+          <span class="word-frame-counter">${currentWordIndex + 1} / ${currentStudentPageWords.length}</span>
+          <button class="btn secondary" onclick="moveFrame(1)">Next ▶</button>
+        </div>
+        <button class="btn danger" onclick="closeWordFrame()">✕ Return to Tile Board</button>
+      `;
+
+      pageView.innerHTML = gridHTML;
+    }
+
+    function moveFrame(direction) {
+      if (currentStudentPageWords.length === 0) return;
+      currentWordIndex = Math.max(0, Math.min(currentWordIndex + direction, currentStudentPageWords.length - 1));
+      renderWordGrid();
+    }
+
+    function closeWordFrame() {
+      document.getElementById('student-page-view').classList.add('hidden');
+      document.getElementById('wordPane').classList.remove('hidden');
     }
 
     // ====== TILE PHYSICS & SPAWNING ======
