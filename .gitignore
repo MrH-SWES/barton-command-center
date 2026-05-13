@@ -1,0 +1,10 @@
+_raw_data/
+
+# Video Downloader Tools
+yt-dlp.exe
+urls.txt
+download_all.bat
+
+# Media Assets
+*.mp4
+assets/videos/
