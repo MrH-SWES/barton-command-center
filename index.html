@@ -17,9 +17,18 @@
     body { font-family: 'Lexend', sans-serif; height: 100vh; overflow: hidden; display: flex; }
 
     /* Left Pane: Teleprompter */
-    #teleprompter { width: 40%; height: 100vh; background-color: var(--tutor-bg); border-right: 3px solid #cbd5e1; overflow-y: auto; padding: 30px; box-shadow: 5px 0 15px rgba(0,0,0,0.05); z-index: 50; }
+    #teleprompter { width: 40%; height: 100vh; background-color: var(--tutor-bg); border-right: 3px solid #cbd5e1; overflow-y: auto; padding: 0; box-shadow: 5px 0 15px rgba(0,0,0,0.05); z-index: 50; }
+    #tp-nav { position: sticky; top: 0; z-index: 100; background: #f8fafc; border-bottom: 2px solid #e2e8f0; box-shadow: 0 3px 10px rgba(0,0,0,0.09); padding: 10px 16px; display: flex; gap: 10px; align-items: center; }
+    .tp-nav-btn { background: #4f46e5; color: white; border: none; border-radius: 8px; padding: 10px 0; font-family: 'Lexend', sans-serif; font-size: 0.95rem; font-weight: 700; cursor: pointer; flex: 1; transition: background 0.15s, transform 0.1s; }
+    .tp-nav-btn:hover { background: #4338ca; transform: translateY(-1px); }
+    .tp-nav-btn:active { background: #3730a3; transform: none; }
+    .tp-nav-btn:disabled { background: #c7d2fe; cursor: default; transform: none; }
+    #tp-step-counter { font-size: 0.85rem; color: #64748b; text-align: center; min-width: 70px; font-weight: 600; flex-shrink: 0; }
+    #tp-content { padding: 30px; }
     .tp-header { color: var(--tutor-accent); border-bottom: 3px solid var(--tutor-accent); padding-bottom: 10px; margin-bottom: 20px; }
-    .tp-section { margin-bottom: 30px; }
+    .tp-section { margin-bottom: 20px; border-radius: 10px; padding: 8px; transition: opacity 0.3s ease, filter 0.3s ease; }
+    .active-section { background: #eef2ff; border: 2px solid #c7d2fe; opacity: 1 !important; filter: none !important; }
+    .inactive-section { opacity: 0.3; filter: grayscale(0.5); }
     .tp-section h3 { color: #b91c1c; margin-bottom: 15px; font-size: 1.2rem; }
     .dialogue { font-weight: 700; color: #0369a1; font-size: 1.1rem; margin-bottom: 10px; }
     .action { font-style: italic; color: #475569; border-left: 3px solid #cbd5e1; padding-left: 10px; margin: 10px 0; }
@@ -31,6 +40,18 @@
     .spawn-btn:hover { background: #1d4ed8; transform: translateY(-2px); }
     .error-btn { background: #fef08a; color: #854d0e; border: 1px solid #facc15; padding: 6px 12px; border-radius: 4px; font-size: 0.85rem; cursor: pointer; font-weight: 600; margin-top: 5px; }
     .guided-discovery { display: none; background: #fffbeb; padding: 15px; border: 1px solid #fde68a; border-radius: 6px; margin-top: 10px; font-size: 0.95rem; }
+
+    /* === Step Cards (Progressive Disclosure) === */
+    .tp-step-card { border-radius: 8px; margin-bottom: 8px; padding: 12px 14px; transition: all 0.25s ease; }
+    .active-step { background: #eff6ff; border-left: 5px solid #6366f1; box-shadow: 0 4px 16px rgba(99,102,241,.18), 0 1px 4px rgba(0,0,0,.08); }
+    .inactive-step { background: transparent; border-left: 3px solid #e2e8f0; box-shadow: none; }
+
+    /* === Action-Oriented Icon Labels === */
+    .tp-say-label    { font-weight: 700; color: #4f46e5; margin-right: 4px; font-style: normal; }
+    .tp-listen-label { font-weight: 700; color: #15803d; margin-right: 4px; font-style: normal; }
+    .tp-do-label     { font-weight: 700; color: #64748b; margin-right: 4px; font-style: normal; }
+    .tp-listen { background: #f0fdf4; border-left-color: #4ade80; color: #166534; border-radius: 4px; }
+    .tp-do     { background: #f1f5f9; }
 
     /* Sight Word Tracker */
     .sight-word-tracker { background: #f0fdf4; border: 2px solid #86efac; border-radius: 8px; padding: 12px; margin: 10px 0; }
@@ -53,6 +74,20 @@
     .phrase-col-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #6366f1; margin-bottom: 4px; }
     .phrase-col-items { display: flex; flex-direction: column; gap: 3px; font-size: 0.95rem; }
 
+    /* Phrase Builder Interactive View */
+    .pb-view { display: flex; flex-direction: column; gap: 20px; width: 100%; align-self: stretch; overflow-y: auto; padding-bottom: 20px; }
+    .pb-columns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .pb-column { background: white; border: 2px solid #818cf8; border-radius: 10px; padding: 14px; min-width: 160px; flex: 1; max-width: 260px; }
+    .pb-column-label { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: #6366f1; margin-bottom: 10px; letter-spacing: 0.05em; border-bottom: 2px solid #e0e7ff; padding-bottom: 6px; }
+    .pb-phrase-card { background: #eef2ff; border: 2px solid #a5b4fc; border-radius: 8px; padding: 10px 16px; font-weight: 700; font-size: 1.1rem; color: #3730a3; cursor: pointer; margin-bottom: 8px; text-align: center; transition: all 0.15s; user-select: none; }
+    .pb-phrase-card:last-child { margin-bottom: 0; }
+    .pb-phrase-card:hover { background: #6366f1; color: white; border-color: #4f46e5; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(99,102,241,0.3); }
+    .pb-tray-section { display: flex; flex-direction: column; gap: 10px; width: 100%; }
+    .pb-tray-label { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; color: #475569; letter-spacing: 0.05em; }
+    .pb-tray { background: white; border: 3px solid #6366f1; border-radius: 12px; padding: 20px 24px; font-size: 1.4rem; font-weight: 700; color: #0f172a; min-height: 100px; display: flex; align-items: center; width: 100%; flex-wrap: wrap; line-height: 1.4; }
+    .pb-tray-placeholder { color: #94a3b8; font-weight: 400; font-size: 1.2rem; font-style: italic; }
+    .pb-controls { display: flex; gap: 12px; flex-wrap: wrap; }
+
     /* sentence_marking mode */
     .sentence-list { display: flex; flex-direction: column; gap: 8px; }
     .sentence-item { background: white; border: 1px solid #a5b4fc; border-radius: 6px; padding: 8px 12px; font-size: 0.95rem; line-height: 1.5; }
@@ -66,6 +101,20 @@
     .matching-col { display: flex; flex-direction: column; gap: 6px; }
     .matching-item { background: white; border: 2px solid #a5b4fc; border-radius: 6px; padding: 6px 12px; font-weight: 700; text-align: center; font-size: 1rem; color: #3730a3; }
 
+    /* Static Board Views (story, sentences, matching) */
+    .static-board-view { display: flex; flex-direction: column; gap: 24px; width: 100%; max-width: 800px; }
+    .static-board-label { font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: #475569; }
+    .static-board-title { font-size: 2rem; font-weight: 700; color: #0f172a; line-height: 1.3; }
+    .static-board-text { background: white; border-radius: 12px; padding: 28px 32px; font-size: 1.5rem; line-height: 1.8; color: #0f172a; box-shadow: 0 4px 16px rgba(0,0,0,0.08); white-space: pre-wrap; }
+    .static-sentence-list { display: flex; flex-direction: column; gap: 14px; }
+    .static-board-sentence { background: white; border-radius: 10px; padding: 18px 24px; font-size: 1.5rem; font-weight: 600; line-height: 1.8; color: #0f172a; box-shadow: 0 2px 8px rgba(0,0,0,0.07); border-left: 6px solid #6366f1; }
+    .static-matching-cols { display: flex; gap: 0; align-items: stretch; background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+    .static-match-col { display: flex; flex-direction: column; flex: 1; padding: 20px; gap: 12px; }
+    .static-match-divider { width: 4px; background: #e0e7ff; flex-shrink: 0; }
+    .static-match-item { padding: 14px 20px; border-radius: 8px; font-size: 1.5rem; font-weight: 700; text-align: center; line-height: 1.4; }
+    .static-match-left { background: #eff6ff; color: #1d4ed8; border: 2px solid #bfdbfe; }
+    .static-match-right { background: #fdf4ff; color: #7e22ce; border: 2px solid #e9d5ff; }
+
     /* fill_blanks mode */
     .fill-blanks-bank { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
     .fill-blanks-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: #6366f1; margin-bottom: 4px; }
@@ -73,17 +122,33 @@
     .fill-endings-list { display: flex; flex-wrap: wrap; gap: 6px; }
     .fill-ending-item { background: white; border: 2px dashed #818cf8; border-radius: 4px; padding: 4px 10px; font-weight: 700; font-size: 0.95rem; color: #6366f1; }
 
+    /* Fill Blanks Interactive View */
+    .fb-view { display: flex; flex-direction: column; gap: 24px; width: 100%; max-width: 800px; }
+    .fb-bank-section { background: #f0f9ff; border: 2px solid #38bdf8; border-radius: 12px; padding: 16px 20px; position: sticky; top: 20px; z-index: 50; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
+    .fb-bank-label { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: #0369a1; margin-bottom: 12px; letter-spacing: 0.05em; }
+    .fb-bank { display: flex; flex-wrap: wrap; gap: 10px; min-height: 52px; }
+    .drag-item { background: #0ea5e9; color: white; border: none; border-radius: 8px; padding: 10px 18px; font-family: 'Lexend', sans-serif; font-size: 1.2rem; font-weight: 700; cursor: grab; user-select: none; transition: opacity 0.15s; box-shadow: 0 3px 8px rgba(14,165,233,0.35); }
+    .drag-item:active { cursor: grabbing; }
+    .drag-item.dragging { opacity: 0.35; }
+    .fb-targets { display: flex; flex-direction: column; gap: 14px; }
+    .fb-target-row { display: flex; align-items: center; gap: 14px; background: white; border: 2px solid #e2e8f0; border-radius: 10px; padding: 12px 18px; font-size: 1.3rem; font-weight: 700; color: #0f172a; }
+    .drop-zone { min-width: 90px; min-height: 46px; border: 3px dashed #818cf8; border-radius: 8px; display: flex; align-items: center; justify-content: center; background: #eef2ff; transition: all 0.15s; }
+    .drop-zone.drag-over { border-color: #4f46e5; background: #e0e7ff; transform: scale(1.04); }
+    .drop-zone:empty::before { content: '?'; color: #c7d2fe; font-size: 1.4rem; font-weight: 700; }
+    .fb-controls { display: flex; gap: 12px; flex-wrap: wrap; }
+
     /* Utility */
     .hidden { display: none !important; }
 
     /* Student Page View (right pane interactive overlay) */
-    #student-page-view { position: absolute; inset: 0 0 24vh 0; background: var(--bg); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 30px; padding: 40px; z-index: 5; }
+    /* Student Page View (right pane interactive overlay) */
+    #student-page-view { position: absolute; inset: 0; background: var(--bg); display: flex; flex-direction: column; align-items: center; justify-content: flex-start; gap: 30px; padding: 40px; z-index: 5; overflow-y: auto; }
 
     /* Word Frame Grid Layout */
-    .word-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; width: 100%; max-width: 800px; font-family: 'Lexend', sans-serif; font-size: 48px; text-align: center; }
+    .word-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; width: 100%; max-width: 800px; font-family: 'Lexend', sans-serif; font-size: 32px; text-align: center; }
 
     /* Base Word Styling */
-    .word-item { padding: 15px 20px; border: 4px solid transparent; border-radius: 12px; color: #94a3b8; transition: all 0.2s ease-in-out; }
+    .word-item { padding: 8px 16px; border: 4px solid transparent; border-radius: 12px; color: #94a3b8; transition: all 0.2s ease-in-out; }
 
     /* The "Word Frame" Highlight */
     .word-item.active-frame { border-color: #3b82f6; background-color: #eff6ff; color: #0f172a; font-weight: 600; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1); transform: scale(1.05); }
@@ -111,6 +176,11 @@
 <body>
 
   <div id="teleprompter">
+    <div id="tp-nav">
+      <button class="tp-nav-btn" id="prevBtn" onclick="moveStep(-1)">◀ Prev Step</button>
+      <span id="tp-step-counter">—</span>
+      <button class="tp-nav-btn" id="nextBtn" onclick="moveStep(1)">Next Step ▶</button>
+    </div>
     <div id="tp-content">
       <h2 class="tp-header">Select a Lesson</h2>
       <p>Use the dropdown on the right to load a lesson cartridge.</p>
@@ -171,21 +241,129 @@
     // ====== DYNAMIC HTML BUILDER ======
     let audioRegistry = {};
     let wordFrameRegistry = {};
+    let phraseBuilderRegistry = {};
+    let fillBlanksRegistry = {};
+    let storyRegistry = {};
+    let sentenceRegistry = {};
+    let matchingRegistry = {};
+
+    // --- Global State for the Phrase Builder ---
+    let currentPhrasePayload = {};
+    let currentBuiltSentence = [];
+    let phraseCardPhrases = [];
+
+    // --- Global State for Teleprompter Navigation ---
+    let currentStepIndex = 0;
+    let stepCards = [];
+
+    function updateSectionHighlight(activeCard) {
+      document.querySelectorAll('#tp-content .tp-section').forEach(sec => {
+        sec.classList.remove('active-section');
+        sec.classList.add('inactive-section');
+      });
+      const parentSection = activeCard ? activeCard.closest('.tp-section') : null;
+      if (parentSection) {
+        parentSection.classList.remove('inactive-section');
+        parentSection.classList.add('active-section');
+      }
+    }
+
+    function updateStepCounter() {
+      const counter = document.getElementById('tp-step-counter');
+      if (counter) {
+        counter.textContent = stepCards.length > 0 ? `${currentStepIndex + 1} / ${stepCards.length}` : '—';
+      }
+    }
+
+    function moveStep(direction) {
+      if (!stepCards.length) return;
+      const newIndex = currentStepIndex + direction;
+      if (newIndex < 0 || newIndex >= stepCards.length) return;
+      stepCards[currentStepIndex].classList.remove('active-step');
+      stepCards[currentStepIndex].classList.add('inactive-step');
+      currentStepIndex = newIndex;
+      stepCards[currentStepIndex].classList.remove('inactive-step');
+      stepCards[currentStepIndex].classList.add('active-step');
+      stepCards[currentStepIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      updateSectionHighlight(stepCards[currentStepIndex]);
+      updateStepCounter();
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (!stepCards.length) return;
+      if (e.code === 'Space' || e.code === 'ArrowRight' || e.code === 'ArrowDown') {
+        e.preventDefault();
+        moveStep(1);
+      } else if (e.code === 'ArrowLeft' || e.code === 'ArrowUp') {
+        e.preventDefault();
+        moveStep(-1);
+      }
+    });
 
     function buildTeleprompter(data) {
       audioRegistry = {};
       wordFrameRegistry = {};
+      phraseBuilderRegistry = {};
+      fillBlanksRegistry = {};
+      storyRegistry = {};
+      sentenceRegistry = {};
+      matchingRegistry = {};
+      currentStepIndex = 0;
+      stepCards = [];
+
       const tp = document.getElementById('tp-content');
       let html = `<h2 class="tp-header">Level ${data.level}, Lesson ${data.lesson}: ${data.title}</h2>`;
-      
+      let globalStepIdx = 0;
+
       data.sections.forEach((sec, sIdx) => {
-        html += `<div class="tp-section"><h3>${sec.title}</h3>`;
-        
+        html += `<div class="tp-section inactive-section"><h3>${sec.title}</h3>`;
+
+        // --- Grouped card state for this section ---
+        let cardItems = [];
+        let cardId = null;
+        let cardClass = null;
+
+        function flushCard() {
+          if (cardId === null) return;
+          html += `<div class="tp-step-card ${cardClass}" id="${cardId}">${cardItems.join('')}</div>`;
+          cardItems = [];
+          cardId = null;
+          cardClass = null;
+        }
+
+        function startCard() {
+          flushCard();
+          cardId = `global-step-${globalStepIdx}`;
+          cardClass = globalStepIdx === 0 ? 'active-step' : 'inactive-step';
+          globalStepIdx++;
+        }
+
         sec.steps.forEach((step, stepIdx) => {
           const uniqueId = `step_${sIdx}_${stepIdx}`;
-          
+
+          // Determine whether this step opens a new card or appends to current
+          let opensNewCard;
+          if (step.type === 'dialogue') {
+            opensNewCard = true;
+          } else if (step.type === 'action') {
+            const txt = step.text.trim();
+            opensNewCard = txt.startsWith('Tutor') || txt.startsWith('Dictate');
+          } else if (step.type === 'board_action' || step.type === 'student_page' || step.type === 'sight_word_tracker') {
+            opensNewCard = false;
+          } else {
+            // teacher_note, guided_discovery → own card
+            opensNewCard = true;
+          }
+
+          if (opensNewCard) {
+            startCard();
+          } else if (cardId === null) {
+            startCard(); // fallback: no current card yet
+          }
+
+          // Render this step's HTML and push into the current card
           if (step.type === 'teacher_note') {
-            html += `<div class="tutor-note">📝 ${escHtml(step.text)}</div>`;
+            cardItems.push(`<div class="tutor-note">📝 ${step.text}</div>`);
           }
           else if (step.type === 'dialogue') {
             let audioBtn = '';
@@ -193,41 +371,62 @@
               audioRegistry[uniqueId] = step.audio;
               audioBtn = `<button class="audio-btn" onclick="speakText(window.audioRegistry['${uniqueId}'])">🔊</button>`;
             }
-            html += `<p class="dialogue">"${escHtml(step.text)}" ${audioBtn}</p>`;
-          } 
+            cardItems.push(`<p class="dialogue"><span class="tp-say-label">💬 SAY:</span> "${escHtml(step.text)}" ${audioBtn}</p>`);
+          }
           else if (step.type === 'action') {
-            html += `<p class="action">• ${escHtml(step.text)}</p>`;
+            const txt = step.text.trim();
+            if (txt.startsWith('Expected:')) {
+              cardItems.push(`<p class="action tp-listen"><span class="tp-listen-label">👂 LISTEN FOR:</span> ${escHtml(txt.slice('Expected:'.length).trim())}</p>`);
+            } else {
+              cardItems.push(`<p class="action tp-do"><span class="tp-do-label">✋ DO:</span> ${escHtml(txt)}</p>`);
+            }
           }
           else if (step.type === 'board_action' && step.command === 'spawn_tiles') {
             const payloadStr = JSON.stringify(step.payload).replace(/"/g, "'");
-            html += `<button class="spawn-btn" onclick="spawnTiles(${payloadStr})">🚀 Spawn Tiles: ${escHtml(step.payload.join('-').toUpperCase())}</button>`;
+            cardItems.push(`<button class="spawn-btn" onclick="spawnTiles(${payloadStr})">🚀 Spawn Tiles: ${escHtml(step.payload.join('-').toUpperCase())}</button>`);
           }
           else if (step.type === 'sight_word_tracker') {
+            const payloadStr = JSON.stringify(step.words).replace(/"/g, "'");
             const pills = step.words.map(w => `<span class="sight-word-pill">${escHtml(w)}</span>`).join('');
-            html += `
+            cardItems.push(`
               <div class="sight-word-tracker">
                 <h4>👁️ Sight Word Tracker</h4>
                 <div class="sight-word-list">${pills}</div>
-              </div>`;
+                <button class="spawn-btn" style="margin-top: 10px;" onclick="launchWordFrame(${payloadStr})">🖼️ Launch Sight Words on Board</button>
+              </div>`);
           }
           else if (step.type === 'student_page') {
-            html += buildStudentPage(step, uniqueId);
+            cardItems.push(buildStudentPage(step, uniqueId));
           }
           else if (step.type === 'guided_discovery') {
-            html += `
+            cardItems.push(`
               <button class="error-btn" onclick="document.getElementById('${uniqueId}').style.display = document.getElementById('${uniqueId}').style.display === 'block' ? 'none' : 'block'">
-                ⚠️ ${step.trigger}
+                🆘 STUDENT STRUGGLING? (Guided Discovery)
               </button>
               <div id="${uniqueId}" class="guided-discovery">
                 <strong>Guided Discovery:</strong><br>
                 ${step.prompts.map((p, i) => `${i+1}. "${p}"`).join('<br>')}
-              </div>
-            `;
+              </div>`);
           }
         });
+
+        flushCard(); // close the last open card in this section
         html += `</div>`;
       });
+
       tp.innerHTML = html;
+
+      // Populate the live NodeList for keyboard navigation
+      stepCards = Array.from(tp.querySelectorAll('.tp-step-card'));
+
+      // Initialize first card, section highlight, and counter
+      if (stepCards.length > 0) {
+        stepCards[0].classList.remove('inactive-step');
+        stepCards[0].classList.add('active-step');
+        updateSectionHighlight(stepCards[0]);
+        stepCards[0].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+      updateStepCounter();
     }
 
     // ====== HTML ESCAPE HELPER ======
@@ -254,36 +453,51 @@
         const items = step.payload.map(w => `<span class="word-frame-item">${escHtml(w)}</span>`).join('');
         body = `
           <div class="word-frame-grid">${items}</div>
-          <button class="spawn-btn" onclick="launchWordFrame(window.wordFrameRegistry['${uniqueId}'])">🖼️ Launch Word Frame on Board</button>`;
+          <button class="spawn-btn" onclick="launchWordFrame(wordFrameRegistry['${uniqueId}'])">🖼️ Launch Word Frame on Board</button>`;
 
       } else if (step.mode === 'phrase_builder') {
+        phraseBuilderRegistry[uniqueId] = step.payload;
         const cols = Object.entries(step.payload).map(([key, vals]) => {
           const label = escHtml(toTitleCase(key));
-          const items = vals.map(v => `<div>${escHtml(v)}</div>`).join('');
+          const items = vals.map(v => `<span class="word-frame-item">${escHtml(v)}</span>`).join('');
           return `<div class="phrase-col"><div class="phrase-col-label">${label}</div><div class="phrase-col-items">${items}</div></div>`;
         }).join('');
-        body = `<div class="phrase-builder">${cols}</div>`;
+        body = `
+          <div class="phrase-builder">${cols}</div>
+          <button class="spawn-btn" onclick="launchPhraseBuilder(phraseBuilderRegistry['${uniqueId}'])">🧩 Launch Phrase Builder on Board</button>`;
 
       } else if (step.mode === 'sentence_marking') {
+        sentenceRegistry[uniqueId] = step.payload;
         const sentences = step.payload.map(s => `<div class="sentence-item">${escHtml(s)}</div>`).join('');
-        body = `<div class="sentence-list">${sentences}</div>`;
+        body = `
+          <div class="sentence-list">${sentences}</div>
+          <button class="spawn-btn" onclick="launchSentences(sentenceRegistry['${uniqueId}'])">✏️ Launch Sentences on Board</button>`;
 
       } else if (step.mode === 'story_reading') {
-        body = `<div class="story-title">${escHtml(step.payload.title)}</div><div class="story-text">${escHtml(step.payload.text)}</div>`;
+        storyRegistry[uniqueId] = step.payload;
+        body = `
+          <div class="story-title">${escHtml(step.payload.title)}</div>
+          <div class="story-text">${escHtml(step.payload.text)}</div>
+          <button class="spawn-btn" onclick="launchStory(storyRegistry['${uniqueId}'])">📖 Launch Story on Board</button>`;
 
       } else if (step.mode === 'matching') {
+        matchingRegistry[uniqueId] = step.payload;
         const left = step.payload.left.map(w => `<div class="matching-item">${escHtml(w)}</div>`).join('');
         const right = step.payload.right.map(w => `<div class="matching-item">${escHtml(w)}</div>`).join('');
-        body = `<div class="matching-cols"><div class="matching-col">${left}</div><div class="matching-col">${right}</div></div>`;
+        body = `
+          <div class="matching-cols"><div class="matching-col">${left}</div><div class="matching-col">${right}</div></div>
+          <button class="spawn-btn" onclick="launchMatching(matchingRegistry['${uniqueId}'])">🔗 Launch Matching on Board</button>`;
 
       } else if (step.mode === 'fill_blanks') {
+        fillBlanksRegistry[uniqueId] = step.payload;
         const bankItems = step.payload.bank.map(b => `<span class="fill-bank-item">${escHtml(b)}</span>`).join('');
-        const endingItems = step.payload.endings.map(e => `<span class="fill-ending-item">___ ${escHtml(e)}</span>`).join('');
+        const endingItems = step.payload.endings.map(e => `<span class="fill-ending-item">${escHtml(e)}</span>`).join('');
         body = `
           <div class="fill-blanks-label">Word Bank</div>
           <div class="fill-blanks-bank">${bankItems}</div>
           <div class="fill-blanks-label">Endings</div>
-          <div class="fill-endings-list">${endingItems}</div>`;
+          <div class="fill-endings-list">${endingItems}</div>
+          <button class="spawn-btn" onclick="launchFillBlanks(fillBlanksRegistry['${uniqueId}'])">🧲 Launch Fill-in-the-Blanks on Board</button>`;
       }
 
       return `
@@ -337,6 +551,239 @@
     function closeWordFrame() {
       document.getElementById('student-page-view').classList.add('hidden');
       document.getElementById('wordPane').classList.remove('hidden');
+    }
+
+    // ====== PHRASE BUILDER ENGINE ======
+    function launchPhraseBuilder(payload) {
+      if (!payload || typeof payload !== 'object') return;
+      document.getElementById('wordPane').classList.add('hidden');
+      const pageView = document.getElementById('student-page-view');
+      pageView.classList.remove('hidden');
+      currentPhrasePayload = payload;
+      currentBuiltSentence = [];
+      renderPhraseBuilder();
+    }
+
+    function renderPhraseBuilder() {
+      const pageView = document.getElementById('student-page-view');
+      phraseCardPhrases = [];
+
+      const cols = Object.entries(currentPhrasePayload).map(([key, vals]) => {
+        const label = escHtml(toTitleCase(key));
+        const cards = vals.map(v => {
+          const idx = phraseCardPhrases.length;
+          phraseCardPhrases.push(v);
+          return `<div class="pb-phrase-card" onclick="addPhrase(${idx})">${escHtml(v)}</div>`;
+        }).join('');
+        return `<div class="pb-column"><div class="pb-column-label">${label}</div>${cards}</div>`;
+      }).join('');
+
+      const trayContent = currentBuiltSentence.length > 0
+        ? escHtml(currentBuiltSentence.join(' ') + '.')
+        : `<span class="pb-tray-placeholder">Tap phrases to build a sentence...</span>`;
+
+      pageView.innerHTML = `
+        <div class="pb-view">
+          <div class="pb-columns">${cols}</div>
+          <div class="pb-tray-section">
+            <div class="pb-tray-label">Sentence Tray</div>
+            <div class="pb-tray">${trayContent}</div>
+            <div class="pb-controls">
+              <button class="btn secondary" onclick="clearSentence()">🗑️ Clear Sentence</button>
+              <button class="btn danger" onclick="closePhraseBuilder()">✕ Return to Tile Board</button>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function addPhrase(idx) {
+      currentBuiltSentence.push(phraseCardPhrases[idx]);
+      renderPhraseBuilder();
+    }
+
+    function clearSentence() {
+      currentBuiltSentence = [];
+      renderPhraseBuilder();
+    }
+
+    function closePhraseBuilder() {
+      document.getElementById('student-page-view').classList.add('hidden');
+      document.getElementById('wordPane').classList.remove('hidden');
+      currentBuiltSentence = [];
+      currentPhrasePayload = {};
+    }
+
+    // ====== FILL IN THE BLANKS ENGINE ======
+    let currentFillBlanksPayload = null;
+    let draggedEl = null;
+
+    function launchFillBlanks(payload) {
+      if (!payload || !payload.bank || !payload.endings) return;
+      document.getElementById('wordPane').classList.add('hidden');
+      const pageView = document.getElementById('student-page-view');
+      pageView.classList.remove('hidden');
+      currentFillBlanksPayload = payload;
+      renderFillBlanks(payload);
+    }
+
+    function renderFillBlanks(payload) {
+      const pageView = document.getElementById('student-page-view');
+
+      const bankItems = payload.bank.map((item, i) =>
+        `<div class="drag-item" draggable="true" id="drag-item-${i}">${escHtml(item)}</div>`
+      ).join('');
+
+      const targetRows = payload.endings.map((ending, i) => {
+        const parts = ending.split('___');
+        const leftText = parts[0] ? `<span>${escHtml(parts[0])}</span>` : '';
+        const rightText = parts[1] ? `<span>${escHtml(parts[1])}</span>` : '';
+        return `<div class="fb-target-row">
+          ${leftText}<div class="drop-zone" id="drop-zone-${i}"></div>${rightText}
+        </div>`;
+      }).join('');
+
+      pageView.innerHTML = `
+        <div class="fb-view">
+          <div class="fb-bank-section">
+            <div class="fb-bank-label">Word Bank — drag items into the blanks below</div>
+            <div class="fb-bank" id="fb-bank">${bankItems}</div>
+          </div>
+          <div class="fb-targets">${targetRows}</div>
+          <div class="fb-controls">
+            <button class="btn secondary" onclick="resetFillBlanks()">↺ Reset Board</button>
+            <button class="btn danger" onclick="closeFillBlanks()">✕ Return to Tile Board</button>
+          </div>
+        </div>
+      `;
+
+      initDragAndDrop();
+    }
+
+    function initDragAndDrop() {
+      const pageView = document.getElementById('student-page-view');
+
+      pageView.addEventListener('dragstart', (e) => {
+        const item = e.target.closest('.drag-item');
+        if (!item) return;
+        draggedEl = item;
+        setTimeout(() => item.classList.add('dragging'), 0);
+      });
+
+      pageView.addEventListener('dragend', (e) => {
+        const item = e.target.closest('.drag-item');
+        if (item) item.classList.remove('dragging');
+        draggedEl = null;
+      });
+
+      pageView.addEventListener('dragover', (e) => {
+        const zone = e.target.closest('.drop-zone');
+        const bank = e.target.closest('#fb-bank');
+        if (zone || bank) {
+          e.preventDefault();
+          if (zone) zone.classList.add('drag-over');
+        }
+      });
+
+      pageView.addEventListener('dragleave', (e) => {
+        const zone = e.target.closest('.drop-zone');
+        if (zone && !zone.contains(e.relatedTarget)) zone.classList.remove('drag-over');
+      });
+
+      pageView.addEventListener('drop', (e) => {
+        if (!draggedEl) return;
+        const zone = e.target.closest('.drop-zone');
+        const bank = e.target.closest('#fb-bank');
+        if (!zone && !bank) return;
+        e.preventDefault();
+
+        if (zone) {
+          zone.classList.remove('drag-over');
+          // Evict existing item in this drop zone
+          const existing = zone.querySelector('.drag-item');
+          if (existing && existing !== draggedEl) {
+            existing.remove();
+          }
+          // If dragged from bank, clone it. Otherwise, move it.
+          if (draggedEl.parentElement.id === 'fb-bank') {
+            const clone = draggedEl.cloneNode(true);
+            clone.classList.remove('dragging');
+            zone.appendChild(clone);
+          } else {
+            zone.appendChild(draggedEl);
+          }
+        } else if (bank) {
+          // If dragged from a drop zone back to the bank, delete it (trash can behavior)
+          if (draggedEl.parentElement.id !== 'fb-bank') {
+            draggedEl.remove();
+          }
+        }
+      });
+    }
+
+    function resetFillBlanks() {
+      if (currentFillBlanksPayload) renderFillBlanks(currentFillBlanksPayload);
+    }
+
+    function closeFillBlanks() {
+      document.getElementById('student-page-view').classList.add('hidden');
+      document.getElementById('wordPane').classList.remove('hidden');
+      currentFillBlanksPayload = null;
+    }
+
+    // ====== STATIC PAGE ENGINES (story, sentences, matching) ======
+    function closeStaticPage() {
+      document.getElementById('student-page-view').classList.add('hidden');
+      document.getElementById('wordPane').classList.remove('hidden');
+    }
+
+    function launchStory(payload) {
+      if (!payload) return;
+      document.getElementById('wordPane').classList.add('hidden');
+      const pageView = document.getElementById('student-page-view');
+      pageView.classList.remove('hidden');
+      pageView.innerHTML = `
+        <div class="static-board-view">
+          <div class="static-board-title">${escHtml(payload.title)}</div>
+          <div class="static-board-text">${escHtml(payload.text)}</div>
+          <button class="btn danger" onclick="closeStaticPage()">✕ Return to Tile Board</button>
+        </div>
+      `;
+    }
+
+    function launchSentences(payload) {
+      if (!Array.isArray(payload) || payload.length === 0) return;
+      document.getElementById('wordPane').classList.add('hidden');
+      const pageView = document.getElementById('student-page-view');
+      pageView.classList.remove('hidden');
+      const items = payload.map(s => `<div class="static-board-sentence">${escHtml(s)}</div>`).join('');
+      pageView.innerHTML = `
+        <div class="static-board-view">
+          <div class="static-board-label">✏️ Sentence Marking</div>
+          <div class="static-sentence-list">${items}</div>
+          <button class="btn danger" onclick="closeStaticPage()">✕ Return to Tile Board</button>
+        </div>
+      `;
+    }
+
+    function launchMatching(payload) {
+      if (!payload || !payload.left || !payload.right) return;
+      document.getElementById('wordPane').classList.add('hidden');
+      const pageView = document.getElementById('student-page-view');
+      pageView.classList.remove('hidden');
+      const leftCol = payload.left.map(w => `<div class="static-match-item static-match-left">${escHtml(w)}</div>`).join('');
+      const rightCol = payload.right.map(w => `<div class="static-match-item static-match-right">${escHtml(w)}</div>`).join('');
+      pageView.innerHTML = `
+        <div class="static-board-view">
+          <div class="static-board-label">🔗 Matching</div>
+          <div class="static-matching-cols">
+            <div class="static-match-col">${leftCol}</div>
+            <div class="static-match-divider"></div>
+            <div class="static-match-col">${rightCol}</div>
+          </div>
+          <button class="btn danger" onclick="closeStaticPage()">✕ Return to Tile Board</button>
+        </div>
+      `;
     }
 
     // ====== TILE PHYSICS & SPAWNING ======

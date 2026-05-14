@@ -19,15 +19,37 @@
       "steps": [
         {
           "type": "dialogue",
-          "text": "Let's take a look at your extra practice page."
+          "text": "Let's take a look at your extra practice pages from last lesson."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Lesson 4 EP #1</b> — Closed syllable identification. Student <b>circles</b> each Closed syllable and puts a <b>line through</b> words that are NOT a Closed syllable.<br>• Closed syllables (circle): pinch, shred, lost, tempt, quick, ump, splint, belch<br>• NOT closed (cross out): loop (vowel team OO), shake (magic-e), to (open syllable), bait (vowel team AI)"
         },
         {
           "type": "dialogue",
-          "text": "Go ahead and read the words to me."
+          "text": "Look at the first practice page. Tell me which words are closed syllables."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": ["loop", "pinch", "shred", "lost", "shake", "tempt", "quick", "ump", "to", "bait", "splint", "belch"]
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Lesson 4 EP #2</b> — Vowel-fill activity. Student chooses a vowel (a, e, i, o, u) to fill the blank in each word to make a real word. Sample completed words shown below."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now look at the second practice page. Fill in the correct vowel to make each word real."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": ["ranch", "tenth", "branch", "scram", "splint", "belch", "struck", "shred", "scrub", "scrap", "split"]
         },
         {
           "type": "action",
-          "text": "Review extra practice page for accuracy. If student has difficulty, repeat the last lesson."
+          "text": "Review extra practice pages for accuracy. If student has difficulty, repeat the last lesson."
         }
       ]
     },
@@ -870,8 +892,9 @@
           "text": "Otherwise, sound it out."
         },
         {
-          "type": "action",
-          "text": "Student reads through the lists. Real words in the first two columns, nonsense words in the third: fuss, skull, droff, skill, brass, plass, off, frizz, chull, small, cliff, strall, dress, grill, neff, stuff, Nell, triss, squall, stress, thall."
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": ["fuss", "skull", "skill", "brass", "off", "frizz", "small", "cliff", "dress", "grill", "stuff", "Nell", "squall", "stress", "droff", "plass", "chull", "strall", "neff", "triss", "thall"]
         }
       ]
     },
@@ -1150,20 +1173,14 @@
           "text": "Student finds a Unit syllable and puts a box around the Unit."
         },
         {
-          "type": "action",
-          "text": "Who phrases: Jeff and Nell, Jill, The Swiss lass, A small squall"
-        },
-        {
-          "type": "action",
-          "text": "Did What phrases: did thrill to jazz, can miss the drill, will toss the shell, fell"
-        },
-        {
-          "type": "action",
-          "text": "Where phrases: off the hill, in class, in the hall, on-to the sand"
-        },
-        {
-          "type": "action",
-          "text": "Add-On phrases: but does not smell., and hit the wall., and it was swell., but will still pass."
+          "type": "student_page",
+          "mode": "phrase_builder",
+          "payload": {
+            "who": ["Jeff and Nell", "Jill", "The Swiss lass", "A small squall"],
+            "did_what": ["did thrill to jazz", "can miss the drill", "will toss the shell", "fell"],
+            "where": ["off the hill", "in class", "in the hall", "on-to the sand"],
+            "add_on": ["but does not smell.", "and hit the wall.", "and it was swell.", "but will still pass."]
+          }
         }
       ]
     },
@@ -1310,24 +1327,19 @@
           "text": "Have student read and mark each ODD-numbered sentence."
         },
         {
-          "type": "action",
-          "text": "1. Jeff and Nell fell off the hill and hit the wall."
-        },
-        {
-          "type": "action",
-          "text": "3. A Swiss lass did thrill to jazz in the hall, and it was swell."
-        },
-        {
-          "type": "action",
-          "text": "5. The skiff has lots of fish but does not smell bad."
-        },
-        {
-          "type": "action",
-          "text": "7. Jeff had to spell \"trench\" in class."
-        },
-        {
-          "type": "action",
-          "text": "9. Bill did not tell the boss that he was ill."
+          "type": "student_page",
+          "mode": "sentence_marking",
+          "payload": [
+            "1. Jeff and Nell fell off the hill and hit the wall.",
+            "2. A small squall will toss the shell on to the sand.",
+            "3. A Swiss lass did thrill to jazz in the hall, and it was swell.",
+            "4. Jill will miss the drill in class but still pass.",
+            "5. The skiff has lots of fish but does not smell bad.",
+            "6. The French pen has a brass tip.",
+            "7. Jeff had to spell \"trench\" in class.",
+            "8. I will grill a bass for lunch.",
+            "9. Bill did not tell the boss that he was ill."
+          ]
         }
       ]
     },
@@ -1402,16 +1414,51 @@
           "text": "Now you're ready to read a story."
         },
         {
-          "type": "action",
-          "text": "Tutor pulls out the Lesson 5: Read This Story page and hands it to the student. Tutor also gives student a 5x8 index card to use as a marker."
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "The Grand Gift",
+            "text": "Gramp has a grand gift for Bill and Jill. 'This is not a test or a trick. Can you tell me what is in the bag? You can put your hand in, but you must not crush or smash it.' Bill felt a soft mass of fluff and a thin whip. Jill felt a thump and a damp lick, then a quick sniff of her hand. On a hunch, Bill said, 'Is it a cat?' Jill said, 'I want to call it Mr. Jazz.' Gramp got a kiss and a hug."
+          }
         },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "The Sled",
+            "text": "Bill and Bess are glad they do not have to go to class. Bill has a new sled. They huff and puff as they tramp up the hill. It was bliss to flop on the sled and slip off the hill in a flash. It was not as much fun to drag the sled back up to the top."
+          }
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "Swell Ranch",
+            "text": "Bill has a swell ranch on the top of a cliff. He has a big tract of land and lots of plush stuff. Bill sits in his grand van and says, 'I am rich.' Jeff has a small shack stuck next to a wall. It is a mess and has a bad stench. But he has a Swiss miss to hug and kiss him. She says, 'Bless you, Jeff.' Jeff sits in his pick-up and says, 'I am just as rich as Bill.'"
+          }
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "Big Mac",
+            "text": "Jeff was mad when his Big Mac fell from his grasp to the path. Clem, his pet dog, ran to check on that mess in the grass. The dog did sniff and smell it. Jeff did fuss and yell. 'That is for me, Clem,' Jeff said. But that Big Mac was swell, and Clem snuck off with it."
+          }
+        }
+      ]
+    },
+    {
+      "id": "Part_Extra_Practice",
+      "title": "Extra Practice",
+      "steps": [
         {
           "type": "dialogue",
-          "text": "Preread the story and figure out the tough words. Then read it out loud to me. OR Read the entire story to yourself. Then in your own words, tell me what happened."
+          "text": "Here is your extra practice page. Read each base word and add the correct FLOSS letter to complete it."
         },
         {
-          "type": "action",
-          "text": "Student reads the story out loud to tutor (or retells it). Tutor asks comprehension questions."
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": ["shel", "tug", "whif", "dol", "cam", "bil", "pas", "buz", "bus", "spit", "buf", "mos"]
         }
       ]
     }

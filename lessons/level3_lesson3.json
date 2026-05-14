@@ -79,8 +79,24 @@
           "text": "Let's take a look at your extra practice page."
         },
         {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": ["spill", "stuff", "dress", "class", "sniff", "glass", "chess", "staff", "bluff", "press", "floss", "brass", "gruff", "cliff", "smash", "thrill", "cross", "spell", "fluff", "grass"]
+        },
+        {
           "type": "dialogue",
-          "text": "Go ahead and read the words to me."
+          "text": "Go ahead and read the sentences to me."
+        },
+        {
+          "type": "student_page",
+          "mode": "sentence_marking",
+          "payload": [
+            "1. The brass lock is on the desk.",
+            "2. Brent left his glass on the bench.",
+            "3. The class did a drill in the grass.",
+            "4. Glenn will check the spell.",
+            "5. The wind did toss the fluff in the web."
+          ]
         },
         {
           "type": "action",
@@ -445,8 +461,9 @@
           "text": "Otherwise, touch-and-say."
         },
         {
-          "type": "action",
-          "text": "Student reads through the lists. Real words in the first two columns, nonsense words in the third: blast, squint, spant, twist, trend, crint, clamp, grand, floft, swept, swift, clusk, grunt, blend, slend, brisk, slump, brust, stunt, plosp, crisp."
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": ["blast", "twist", "clamp", "swept", "grunt", "brisk", "stunt", "crisp", "squint", "trend", "grand", "swift", "blend", "slump", "spant", "crint", "floft", "clusk", "slend", "brust", "plosp"]
         }
       ]
     },
@@ -761,20 +778,14 @@
           "text": "Student verbally creates a sentence using phrases from each category."
         },
         {
-          "type": "action",
-          "text": "Who phrases: Blond Brent, The swift vet, The brisk wind, Slim Clint"
-        },
-        {
-          "type": "action",
-          "text": "Did What phrases: swept the twig, held the clamp, will grasp a soft quilt, hit a grand slam"
-        },
-        {
-          "type": "action",
-          "text": "Where phrases: On the plump leg, on to the cloth, at the clock shop, past the stump"
-        },
-        {
-          "type": "action",
-          "text": "Add-On phrases: of the limp frog., in the pond., and stick it on a shelf., with a brush."
+          "type": "student_page",
+          "mode": "phrase_builder",
+          "payload": {
+            "who": ["Blond Brent", "The swift vet", "The brisk wind", "Slim Clint"],
+            "did_what": ["swept the twig", "held the clamp", "will grasp a soft quilt", "hit a grand slam"],
+            "where": ["on the plump leg", "on to the cloth", "at the clock shop", "past the stump"],
+            "add_on": ["of the limp frog.", "in the pond.", "and stick it on a shelf.", "with a brush."]
+          }
         }
       ]
     },
@@ -921,20 +932,17 @@
           "text": "Have student read and mark each ODD-numbered sentence."
         },
         {
-          "type": "action",
-          "text": "1. The brisk wind swept the twig past the stump."
-        },
-        {
-          "type": "action",
-          "text": "3. Blond Brent hit a grand slam past the stump in the pond."
-        },
-        {
-          "type": "action",
-          "text": "5. Meg had jam on a crisp crust with hot milk."
-        },
-        {
-          "type": "action",
-          "text": "7. A twig did drift past the thrift shop in a blast of wind."
+          "type": "student_page",
+          "mode": "sentence_marking",
+          "payload": [
+            "1. The brisk wind swept the twig past the stump.",
+            "2. The swift vet held the clamp on the plump leg of the limp frog.",
+            "3. Blond Brent hit a grand slam past the stump in the pond.",
+            "4. Slim Clint will grasp a soft quilt at the clock shop and stick it on a shelf.",
+            "5. Meg had jam on a crisp crust with hot milk.",
+            "6. Brad will twist the last cap to the left.",
+            "7. A twig did drift past the thrift shop in a blast of wind."
+          ]
         }
       ]
     },
@@ -1009,16 +1017,51 @@
           "text": "Now you're ready to read a story."
         },
         {
-          "type": "action",
-          "text": "Tutor pulls out the Lesson 3: Read This Story page and hands it to the student. Tutor also gives student a 5x8 index card to use as a marker."
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "The Pig",
+            "text": "Gramp goes to the pig pen with a bag of stuff that Gramp says is swill. Gramp says it is fed to the pig. His pig is as fat as a blimp. That pig must be fond of swill. I ask, 'Can I scrub Mrs. Blimp with a bath brush? Your hog has a bad smell.' Gramp had a big grin. 'No, the pig will not stand still for that!' Gramp says."
+          }
         },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "Fran",
+            "text": "Mom was sick. Fran said, 'I can run and get the doc.' Mom said, 'No, but if you can tend Brent, I will rest on the bed for a spell.' Fran did fix lunch for Brent. Then Fran put him in his crib for a nap and did plant a kiss on his chin. Mom slept. When it was six, Mom got up. Mom said, 'It was grand of you to lend me a hand.'"
+          }
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "T.V. Ad",
+            "text": "The blond gal in the T.V. ad said, 'Spend your cash. Do not skimp. You can trust this brand to grant your wish.' 'Your clump of fish will get plump. Your crust will get crisp. And in a flash, you will have a grand dish.' Do you trust this blond gal? Do you want to spend your cash on this?"
+          }
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "The Blimp",
+            "text": "Clint got a cramp in his neck as the blimp swept past. Clint had to squint at the print to grasp what it said. 'Do you have a lock on your gun?' it said. Some men do not want to lock up guns. They want to hunt and have fun. But you can not just stash a gun in the shed. You must lock it."
+          }
+        }
+      ]
+    },
+    {
+      "id": "Part_Extra_Practice",
+      "title": "Extra Practice",
+      "steps": [
         {
           "type": "dialogue",
-          "text": "Preread the story and figure out the tough words. Then read it out loud to me. OR Read the entire story to yourself. Then in your own words, tell me what happened."
+          "text": "Here is your extra practice page. Match each word to its rhyming partner."
         },
         {
-          "type": "action",
-          "text": "Student reads the story out loud to tutor (or retells it). Tutor asks comprehension questions."
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": ["stand", "drift", "swift", "trust", "tramp", "Clint", "crust", "bland", "flint", "blend", "spend", "stamp"]
         }
       ]
     }

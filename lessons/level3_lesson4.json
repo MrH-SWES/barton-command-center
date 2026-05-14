@@ -76,15 +76,40 @@
       "steps": [
         {
           "type": "dialogue",
-          "text": "Let's take a look at your extra practice page."
+          "text": "Let's take a look at your extra practice pages from last lesson."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Lesson 3 EP #1</b> — Rhyming match. Student draws a line between words in Column A and Column B that rhyme.<br>• Rhyme pairs: stand/bland, drift/swift, trust/crust, tramp/stamp, Clint/flint, blend/spend"
         },
         {
           "type": "dialogue",
-          "text": "Go ahead and read the words to me."
+          "text": "Look at the first practice page. Draw a line between the words in each column that rhyme."
+        },
+        {
+          "type": "student_page",
+          "mode": "matching",
+          "payload": {
+            "left": ["stand", "drift", "trust", "tramp", "Clint", "blend"],
+            "right": ["bland", "swift", "crust", "stamp", "flint", "spend"]
+          }
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Lesson 3 EP #2</b> — Fill-blend activity. Student picks one blend from (br, cr, pr, bl, cl, pl) and adds it to each ending to make a real word. Sample completed words shown below."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now look at the second practice page. Add a beginning blend to each ending to make a real word."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": ["brisk", "crust", "cramp", "craft", "print", "blend", "blast", "clamp", "plant", "plump"]
         },
         {
           "type": "action",
-          "text": "Review extra practice page for accuracy. If student has difficulty, repeat the last lesson."
+          "text": "Review extra practice pages for accuracy. If student has difficulty, repeat the last lesson."
         }
       ]
     },
@@ -898,8 +923,9 @@
           "text": "Otherwise, sound it out."
         },
         {
-          "type": "action",
-          "text": "Student reads through the lists. Real words in the first two columns, nonsense words in the third: scrub, lunch, splash, fifth, finch, thrush, prompt, width, depth, shrub, trench, splint, grinch, shrimp, vampt, strunt, thrap, sprift, clunch, sprot, milch."
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": ["scrub", "lunch", "splash", "fifth", "finch", "thrush", "prompt", "width", "depth", "shrub", "trench", "splint", "grinch", "shrimp", "vampt", "strunt", "thrap", "sprift", "clunch", "sprot", "milch"]
         }
       ]
     },
@@ -1170,20 +1196,14 @@
           "text": "Student looks through phrases, finds a Closed syllable, and puts breve (teacup) over the vowel. Student finds one more and marks it."
         },
         {
-          "type": "action",
-          "text": "Who phrases: The French lad, A big branch, The tenth gal, Gramp"
-        },
-        {
-          "type": "action",
-          "text": "Did What phrases: stuck the dog, had a grand sprint, struck Brent, had lunch"
-        },
-        {
-          "type": "action",
-          "text": "Where phrases: in the black truck, at the ranch, on the rump, on a bench"
-        },
-        {
-          "type": "action",
-          "text": "Add-On phrases: and he did flinch., and he did scram., with a grinch., then he had lunch."
+          "type": "student_page",
+          "mode": "phrase_builder",
+          "payload": {
+            "who": ["The French lad", "A big branch", "The tenth gal", "Gramp"],
+            "did_what": ["stuck the dog", "had a grand sprint", "struck Brent", "had lunch"],
+            "where": ["in the black truck", "at the ranch", "on the rump", "on a bench"],
+            "add_on": ["and he did flinch.", "and he did scram.", "with a grinch.", "then he had lunch."]
+          }
         }
       ]
     },
@@ -1330,20 +1350,17 @@
           "text": "Have student read and mark each ODD-numbered sentence."
         },
         {
-          "type": "action",
-          "text": "1. The French lad stuck the dog in the black truck, then he had lunch."
-        },
-        {
-          "type": "action",
-          "text": "3. A big branch struck Brent on the rump, and he did flinch."
-        },
-        {
-          "type": "action",
-          "text": "5. Milt split his brunch of shrimp and squid with Greg."
-        },
-        {
-          "type": "action",
-          "text": "7. Brad had a hunch on the bench as he did munch his lunch."
+          "type": "student_page",
+          "mode": "sentence_marking",
+          "payload": [
+            "1. The French lad stuck the dog in the black truck, then he had lunch.",
+            "2. Gramp had a grand sprint at the ranch, and he did scram.",
+            "3. A big branch struck Brent on the rump, and he did flinch.",
+            "4. The tenth gal had lunch on a bench with a grinch.",
+            "5. Milt split his brunch of shrimp and squid with Greg.",
+            "6. Fran will scrub the fifth bench at the thrift shop.",
+            "7. Brad had a hunch on the bench as he did munch his lunch."
+          ]
         }
       ]
     },
@@ -1418,16 +1435,51 @@
           "text": "Now you're ready to read a story."
         },
         {
-          "type": "action",
-          "text": "Tutor pulls out the Lesson 4: Read This Story page and hands it to the student. Tutor also gives student a 5x8 index card to use as a marker."
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "Mrs. French",
+            "text": "Mrs. French is not a grump. Mrs. French is strict. When Scott and Clint got in a scrap, Mrs. French said, 'Sit on the bench in front of the class!' The class had to sit still and not grin at them. Scott and Clint must not slump when they sit at a desk. Scott and Clint must not squint or grunt when they have a math test. When Mrs. French does ask for a fact, you can not bluff."
+          }
         },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "The Prom",
+            "text": "Beth does want to go to the prom. But Mrs. Finch does not have much cash to spend for a dress. In the midst of lunch, Beth has a hunch. They can shop for a dress at the thrift shop. They did have luck. Mrs. Finch got a black silk dress that just fit Beth, and it did not cost much."
+          }
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "The Pig Ranch",
+            "text": "Ben Branch has a job at the pig ranch. He does not flinch at the stench in the trench. A pig can strut and splash in the muck. A pig can munch his lunch in the midst of the filth. 'Not I,' said Ben. 'I must have lunch on a bench where the mud does not squish.'"
+          }
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "Munch the Lunch",
+            "text": "Beth and Greg went to swim. Greg had a hunch that a tramp did filch his lunch. 'I will thrash the tramp,' Greg said. 'I want to punch him!' Greg was a grump. Beth said, 'You left your bag on that bench. Did that tempt him to munch it?' 'That is a twist!' Greg said, as they sped back to the ranch in his truck."
+          }
+        }
+      ]
+    },
+    {
+      "id": "Part_Extra_Practice",
+      "title": "Extra Practice",
+      "steps": [
         {
           "type": "dialogue",
-          "text": "Preread the story and figure out the tough words. Then read it out loud to me. OR Read the entire story to yourself. Then in your own words, tell me what happened."
+          "text": "Here is your extra practice page. Read each word. Circle each word that is a closed syllable."
         },
         {
-          "type": "action",
-          "text": "Student reads the story out loud to tutor (or retells it). Tutor asks comprehension questions."
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": ["loop", "pinch", "shred", "lost", "shake", "tempt", "quick", "ump"]
         }
       ]
     }

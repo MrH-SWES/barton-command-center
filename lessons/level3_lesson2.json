@@ -76,15 +76,28 @@
       "steps": [
         {
           "type": "dialogue",
-          "text": "Let's take a look at your extra practice page."
+          "text": "Let's take a look at your extra practice pages from last lesson."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Lesson 1 EP #1</b> — Student reads words and <b>circles</b> any word containing a <b>Blend</b>.<br>• Words WITH blends: vent (NT), fact (CT), sent (NT), weld (LD), chimp (MP), and (ND), melt (LT), ask (SK)<br>• Words WITHOUT blends: much (CH digraph), wish (SH digraph), when (WH digraph), with (TH digraph)"
         },
         {
           "type": "dialogue",
-          "text": "Go ahead and read the words to me."
+          "text": "Go ahead and read each word. Tell me if there is a blend in it — two consonants that each make their own sound."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": ["much", "vent", "fact", "wish", "when", "sent", "weld", "chimp", "and", "with", "melt", "ask"]
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Lesson 1 EP #2</b> — A vowel-fill activity. Student puts the vowel shown at the left of each row into the blank in each word to build real words. Sample completed words: sand, chant, bend, sent, wind, lint, fund, runt, shelf, shift, chest, champ."
         },
         {
           "type": "action",
-          "text": "Review extra practice page for accuracy. If student has difficulty, repeat the last lesson."
+          "text": "Review extra practice pages for accuracy. If student has difficulty, repeat the last lesson."
         }
       ]
     },
@@ -555,6 +568,11 @@
         {
           "type": "dialogue",
           "text": "Nice. Now move down to the next word."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": ["stun", "grab", "brick", "plan", "scab", "fled", "Greg", "frog", "flush", "slid", "slot", "truck", "snug", "spot", "frush", "stip", "prem", "blat", "swock", "grun", "drosh"]
         }
       ]
     },
@@ -1023,6 +1041,19 @@
         {
           "type": "action",
           "text": "Have your student read and mark each ODD-numbered sentence."
+        },
+        {
+          "type": "student_page",
+          "mode": "sentence_marking",
+          "payload": [
+            "1. Glen will drag a sled up the hill with Greg.",
+            "2. A big frog had a snack at his shack in the pond.",
+            "3. Bob Smith stuck a drum on a flat rock and then swam.",
+            "4. Glen sped to the P.E. class and had fun.",
+            "5. Fred and Stan did skip class to swim in the pond.",
+            "6. Brad got a squid at the dock and lent it to Kent.",
+            "7. Fran will drop the trash in the back of the truck."
+          ]
         }
       ]
     },
@@ -1097,16 +1128,51 @@
           "text": "Now you're ready to read a story."
         },
         {
-          "type": "action",
-          "text": "Tutor pulls out the Lesson 2: Read This Story #1 page and hands it to the student. Tutor also gives student a 5x8 index card to use as a marker."
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "The Drum",
+            "text": "Fred hit his drum with a stick. Mom said, 'Stop! Do not smash it with such a thud!' But Fred did not stop. Fred put a big crack in the top of the drum. Mom got rid of it. Mom sent his drum to the dump in the back of a trash truck. Fred was glum."
+          }
         },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "The Frog",
+            "text": "Flip, the frog, sat on a pad in the pond. It was dusk and Flip felt smug. This was a plush spot. Flip was quick to snag a big grub. What a swell snack it was! Flip did not wish to get a job. Flip was glad just to swim and jump and rest in the mud."
+          }
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "The Pack Rat",
+            "text": "Fran and Clem had a spat. Fran says Clem is a pack rat. He has a brass drum with a dent, a crock pot with a crack, and a clock that does not tick-tock. Clem says he has to have luck to get such stuff. He is Mr. Fix-It! Fran says, 'That junk goes in the trash truck!'"
+          }
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "The Prom",
+            "text": "Pam went to the prom. The band had class, but the men did not. Glen was glum. Fred was fresh. Stan was stiff. Pam said, 'This prom is a drag!' Then Sam cut in and did a fox-trot with Pam. Sam had skill. With a grin, Pam said, 'Sam, that is fun! This bash is a smash!'"
+          }
+        }
+      ]
+    },
+    {
+      "id": "Part_Extra_Practice",
+      "title": "Extra Practice",
+      "steps": [
         {
           "type": "dialogue",
-          "text": "Preread the story. That means read it to yourself first. Sound out any words you're not sure of. Then you'll read it out loud to me."
+          "text": "Here is your extra practice page. Read each word. If it is a real word, circle it."
         },
         {
-          "type": "action",
-          "text": "Student reads the story out loud to tutor (or retells it in their own words). Tutor asks comprehension questions."
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": ["clip", "tron", "twin", "stub", "prat", "crop", "stom", "blun", "plus", "click", "cred", "glad"]
         }
       ]
     }

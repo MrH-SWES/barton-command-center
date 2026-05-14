@@ -9,7 +9,7 @@
       "steps": [
         {
           "type": "teacher_note",
-          "text": "GOALS: Read and spell words with consonant blends at the end."
+          "text": "<b>Materials Needed:</b><br>• Letter Tiles: A–Z plus CH, TH, CK, SH, WH<br>• Binder Paper and Pencil<br>• Word Frame<br>• Blank Colored 5×8 Index Card<br>• Several Blank 3×5 Index Cards<br><br><b>Lesson Overview:</b><br>No new sounds are introduced. Students begin reading and spelling <b>4-sound words</b>.<br><br><b>Key Concept — Blend vs. Digraph:</b><br>• <b>Digraph</b>: 2 letters on ONE tile — make just <b>1 sound</b> (CH, TH, SH, CK, WH)<br>• <b>Blend</b>: 2 SEPARATE blue tiles — each makes its <b>own sound</b><br>• This lesson: blends at the <b>END</b> of the word (after the vowel)<br>• Note: the letter name L contains two sounds — /e/ and /l/<br><br><b>Sprinkle these questions throughout:</b><br>• Is there a Blend in that word?<br>• Is that a Digraph or a Blend?<br>• Where is the Blend?<br>• How did you know it was a Blend?"
         }
       ]
     },
@@ -562,7 +562,7 @@
         {
           "type": "student_page",
           "mode": "word_frame",
-          "payload": ["must", "mist", "lift", "left", "help", "held", "rent", "rest", "lost", "cost", "cast", "felt", "melt", "meld", "damp", "dump", "thump"]
+          "payload": ["end", "act", "fist", "shelf", "fond", "rust", "mint", "next", "champ", "film", "camp", "pump", "theft", "golf", "chisp", "bant", "shump", "thelf", "vost", "chelp", "quend"]
         }
       ]
     },
@@ -939,10 +939,15 @@
           "mode": "sentence_marking",
           "payload": [
             "1. The tent got wet in the pond.",
+            "2. His cast was lost at camp.",
             "3. The ump ran fast to the ramp.",
+            "4. The last gal went west on the sand.",
             "5. Kent did his best on the big test.",
+            "6. Meg set up the tent in the west.",
             "7. Milt did jump and yell on the raft in the pond.",
-            "9. I will get film on the trip."
+            "8. Ben did tilt the pan.",
+            "9. I will get film on the trip.",
+            "10. Dan held the milk in his left hand."
           ]
         }
       ]
@@ -1022,8 +1027,47 @@
           "mode": "story_reading",
           "payload": {
             "title": "The Gift",
-            "text": "Meg had a gift. She hid it in a red box. Meg left the box on a desk. The desk was in the den. Tom crept in the den. Tom left a mint in the box with the gift. Meg sent a note to Tom."
+            "text": "Dad got the box from the back of the van. Dad said, 'This is a gift.' In the box was a pup. Chuck said, 'Can I hug him?' Rex is the best pet Chuck has had. Rex can jump on the bed. Rex can sit up and beg. It is fun to run and romp with Rex. Chuck is fond of his dog."
           }
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "Fish",
+            "text": "Ben and Don went to the pond to fish. Ben sat on a rock. Don went to the dock. It was hot in the sun; Ben did nod a bit. Don said, 'I quit! Let us jump in the pond!' 'OK,' said Ben. 'I will dash in as if it was a bath tub.'"
+          }
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "The Lump",
+            "text": "Pam and Bob are sad. The doc felt a big lump. Pam bit a lip when the doc said it was bad. Pam had felt fit. Bob has a wish that Pam can get well. Bob did hug Pam and said, 'I will help.' Will Pam win?"
+          }
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "Dent in His Rig",
+            "text": "Jack is a fat man. He has a big rig. It is a nip and tuck job to fit in his cab. When he was in a rush, he went fast in the fog. He felt sad when he hit a big elk and put a dent in his rig. It cost a lot of cash to fix the dent. Jack was not a rich man."
+          }
+        }
+      ]
+    },
+    {
+      "id": "Part_Extra_Practice",
+      "title": "Extra Practice",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Here is your extra practice page. Read each word through the word frame. If the word contains a blend, circle the entire word."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": ["much", "vent", "fact", "wish", "when", "sent", "weld", "chimp", "and", "with", "melt", "ask"]
         }
       ]
     }

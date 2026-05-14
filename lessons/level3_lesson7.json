@@ -1,0 +1,1058 @@
+{
+  "level": 3,
+  "lesson": 7,
+  "title": "Spelling: Milk Truck Rule",
+  "sections": [
+    {
+      "id": "Part_A",
+      "title": "A: Overview for Tutor",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "<b>Materials Needed:</b><br>• Letter Tiles: A–Z + CH, TH, CK, SH, WH + extra F, S, L, Z<br>• ALL unit tile<br>• Binder Paper and Pencil<br>• Word Frame<br>• Blank Colored 5×8 Index Card<br>• Several Blank 3×5 Index Cards<br><br><b>Lesson Overview:</b><br>Students previously learned when to spell /k/ with C vs K near the <b>beginning</b> of a word (Kiss the Cat Rule).<br>This lesson teaches spelling /k/ at the <b>END</b> of a one-vowel word.<br><br><b>The Milk Truck Rule:</b><br>• /k/ at end of a one-vowel word is <b>NEVER</b> a C<br>• Use <b>CK</b> right after a Short vowel — as in T<b>RU</b>CK<br>• Use <b>K</b> everywhere else — as in MI<b>L</b>K<br>• <b>Exception:</b> words ending in /kt/ are always spelled <b>CT</b> (e.g., FACT, ACT, STRICT)<br><br><b>Sprinkle these questions throughout:</b><br>• Why did you spell it C-K?<br>• Why did you spell /k/ with a K?<br>• How will you always spell /kt/?"
+        },
+        {
+          "type": "teacher_note",
+          "text": "NOTE: Part A (Review Vowel Sounds and Digraphs) is discontinued until Lesson 9."
+        }
+      ]
+    },
+    {
+      "id": "Part_B",
+      "title": "B: Review Extra Practice Page",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's take a look at your extra practice pages from last lesson."
+        },
+        {
+          "type": "teacher_note",
+          "text": "If your student didn't do the extra practice pages at home, have them complete one now before continuing.<br><br><b>Lesson 6 EP #1</b> — Fill-in-the-blank: student writes <b>C</b>, <b>K</b>, or <b>CK</b> in each blank to spell the /k/ sound correctly.<br><b>Lesson 6 EP #2</b> — Student reads nonsense words and circles those where C makes the <b>/s/ sound</b> (a Watch Out vowel E or I follows)."
+        },
+        {
+          "type": "dialogue",
+          "text": "Look at the first practice page. Fill in the correct spelling — C, K, or CK — for the /k/ sound in each blank."
+        },
+        {
+          "type": "student_page",
+          "mode": "fill_blanks",
+          "payload": {
+            "bank": ["c", "k", "ck"],
+            "endings": ["fa___t", "___iss", "ra___", "___lip", "s___im", "___elp", "___runch", "___lap", "stri___t", "s___alp", "s___ram", "___eg"]
+          }
+        },
+        {
+          "type": "action",
+          "text": "Answer key — CK: rack | K: kiss, skim, kelp, keg | C: fact, clip, crunch, clap, strict, scalp, scram. Correct any errors before moving on."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now look at the second practice page. Read each nonsense word aloud — which ones have a C that makes the /s/ sound?"
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": ["cep", "cass", "comp", "cith", "clizz", "caft", "cled", "tect", "cen", "cesh", "crad", "cipt", "ceff", "cust"]
+        },
+        {
+          "type": "action",
+          "text": "Student reads each word aloud and identifies: cep, cith, cen, cesh, cipt, ceff = C says /s/ (Watch Out vowels E and I follow). Others = C says /k/."
+        },
+        {
+          "type": "action",
+          "text": "Review extra practice pages for accuracy. If student has difficulty, repeat the last lesson."
+        }
+      ]
+    },
+    {
+      "id": "Part_C",
+      "title": "C: Phonemic Awareness Warmup",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Repeat this nonsense word, then make just its FIRST sound. Ready? VACT.",
+          "audio": "vact"
+        },
+        {
+          "type": "action",
+          "text": "Student: Vact, /v/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to the tile that makes that sound."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the V tile."
+        },
+        {
+          "type": "action",
+          "text": "Dictate First Sound words: FRISS (/f/), YECH (/y/), WEAZZ (/w/)."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now I want the LAST sound. Ready? KEV.",
+          "audio": "kev"
+        },
+        {
+          "type": "action",
+          "text": "Student: /v/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to that tile."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the V tile."
+        },
+        {
+          "type": "action",
+          "text": "Dictate Last Sound words: OLID (/d/), CRANT (/t/)."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now for the MIDDLE sound — the vowel. Say the sound AND its keyword. Ready? OLUH.",
+          "audio": "oluh"
+        },
+        {
+          "type": "action",
+          "text": "Student: /o/ — Olive"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to that tile."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the O tile."
+        },
+        {
+          "type": "action",
+          "text": "Dictate Vowel Sound words: KEB (/e/ — Ed), KILM (/i/ — Igloo)."
+        }
+      ]
+    },
+    {
+      "id": "Part_D",
+      "title": "D: NEW TEACHING #1: K or CK at End of Word",
+      "steps": [
+        {
+          "type": "action",
+          "text": "Tutor brings out the Spelling Rules page."
+        },
+        {
+          "type": "dialogue",
+          "text": "In the last lesson, you learned a spelling rule — the Kiss the Cat rule. What sound does that rule help you spell?"
+        },
+        {
+          "type": "action",
+          "text": "Student: /k/"
+        },
+        {
+          "type": "dialogue",
+          "text": "And what are the two ways to spell /k/?"
+        },
+        {
+          "type": "action",
+          "text": "Student: C or K"
+        },
+        {
+          "type": "dialogue",
+          "text": "Right. When do you spell it with a K?"
+        },
+        {
+          "type": "action",
+          "text": "Student: When a Watch Out vowel comes after it."
+        },
+        {
+          "type": "dialogue",
+          "text": "And what are the 3 Watch Out vowels?"
+        },
+        {
+          "type": "action",
+          "text": "Student: E, I, and Y"
+        },
+        {
+          "type": "dialogue",
+          "text": "If there isn't a Watch Out vowel, how do you spell /k/?"
+        },
+        {
+          "type": "action",
+          "text": "Student: with a C"
+        },
+        {
+          "type": "dialogue",
+          "text": "Excellent. But you need a different rule to spell /k/ at the END of a word. Let me show you what I mean."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["m", "i", "l", "c"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Does that word look right?"
+        },
+        {
+          "type": "action",
+          "text": "Student: No. It should be K instead of C."
+        },
+        {
+          "type": "dialogue",
+          "text": "Here's why it is not right. How many vowels does that word have?"
+        },
+        {
+          "type": "action",
+          "text": "Student: 1"
+        },
+        {
+          "type": "dialogue",
+          "text": "Right. And here's the rule. At the end of a word that has only 1 vowel, /k/ will NEVER be spelled with a C. It can have a C at the beginning or in the middle, but a word with only one vowel will never have a C at the end. So go ahead and fix that word."
+        },
+        {
+          "type": "action",
+          "text": "Student replaces C with K."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["m", "i", "l", "k"]
+        },
+        {
+          "type": "dialogue",
+          "text": "But a /k/ sound at the end won't ALWAYS be spelled with a K. Take a look at this word."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["t", "r", "u", "ck"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What's making the /k/ sound at the end of that word?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Digraph C-K"
+        },
+        {
+          "type": "dialogue",
+          "text": "Right. /k/ at the end of a word can be spelled K or C-K. So I'm going to teach you the Milk Truck rule — so you'll know which one to use. In the word TRUCK, C-K comes after what kind of letter? A vowel or a consonant?"
+        },
+        {
+          "type": "action",
+          "text": "Student: It comes after a vowel."
+        },
+        {
+          "type": "dialogue",
+          "text": "But not just any old vowel. Is the vowel in this word making its Short sound or saying its own name?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Short sound."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now we've got the complete rule. The only time you use C-K is right after a Short vowel. Use K the rest of the time."
+        },
+        {
+          "type": "dialogue",
+          "text": "Let's look at a couple more words and make sure our new rule works."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["t", "r", "i", "ck"]
+        },
+        {
+          "type": "dialogue",
+          "text": "If I wanted to spell TRICK, what would I need at the end — K or C-K?"
+        },
+        {
+          "type": "action",
+          "text": "Student: C-K — it's right after a short vowel."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["r", "i", "s", "k"]
+        },
+        {
+          "type": "dialogue",
+          "text": "If I wanted the word RISK, what would I put next — K or C-K?"
+        },
+        {
+          "type": "action",
+          "text": "Student: K — because it isn't right after a short vowel. /k/ isn't right after the short vowel, so it has to be a K."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["p", "l", "u", "ck"]
+        },
+        {
+          "type": "dialogue",
+          "text": "The word should be PLUCK. Go ahead and finish it. Why C-K?"
+        },
+        {
+          "type": "action",
+          "text": "Student: It's right after a short vowel."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["b", "u", "l", "k"]
+        },
+        {
+          "type": "dialogue",
+          "text": "The word should be BULK. Go ahead and finish it. Why K?"
+        },
+        {
+          "type": "action",
+          "text": "Student: It's not right after a short vowel. A C never comes at the end of a word with only one vowel."
+        },
+        {
+          "type": "dialogue",
+          "text": "I think you've got it! So let's write the Milk Truck rule down on the Spelling Rules page. In a different color, put a breve — a teacup mark — over the U in Truck."
+        },
+        {
+          "type": "action",
+          "text": "Tutor writes 'Milk Truck' on the Spelling Rules page. Adds a breve (teacup) over the U in Truck to remind student that CK only comes right after a short vowel."
+        }
+      ]
+    },
+    {
+      "id": "Part_E",
+      "title": "E: NEW TEACHING #2: Exceptions to Milk Truck (CT = Latin)",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now let me show you one special type of word."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["a", "c", "t"]
+        },
+        {
+          "type": "dialogue",
+          "text": "That word says?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Act"
+        },
+        {
+          "type": "dialogue",
+          "text": "Right. But what letter is making the /k/ sound?"
+        },
+        {
+          "type": "action",
+          "text": "Student: C"
+        },
+        {
+          "type": "dialogue",
+          "text": "It's spelled with a C even though it's right after a short vowel. Here's why. Words that end with /kt/ are Latin words. And the Latins always spelled /kt/ as C-T. So tell me — how will you always spell /kt/?"
+        },
+        {
+          "type": "action",
+          "text": "Student: C-T"
+        },
+        {
+          "type": "dialogue",
+          "text": "Always. /kt/ is always spelled C-T."
+        },
+        {
+          "type": "action",
+          "text": "Tutor clears away the tiles."
+        },
+        {
+          "type": "dialogue",
+          "text": "Let's have you try that new rule on this word. FACT. FACT. Repeat that word."
+        },
+        {
+          "type": "action",
+          "text": "Student: Fact"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly."
+        },
+        {
+          "type": "action",
+          "text": "Student: /f/-/a/-/c/-/t/"
+        },
+        {
+          "type": "dialogue",
+          "text": "On your fingers. Bring down a tile for each finger."
+        },
+        {
+          "type": "action",
+          "text": "Student builds FACT on the board."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["f", "a", "c", "t"]
+        },
+        {
+          "type": "dialogue",
+          "text": "That word says?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Fact"
+        },
+        {
+          "type": "dialogue",
+          "text": "And how will you always spell /kt/ at the end of a word?"
+        },
+        {
+          "type": "action",
+          "text": "Student: C-T"
+        },
+        {
+          "type": "dialogue",
+          "text": "And how would you know, just by looking at that word, that it was a Latin word?"
+        },
+        {
+          "type": "action",
+          "text": "Student: It ends in C-T."
+        },
+        {
+          "type": "dialogue",
+          "text": "Exactly. Let's add that to your Spelling Rules page: CT = Latin word."
+        },
+        {
+          "type": "action",
+          "text": "Tutor writes 'CT = Latin word' on the Spelling Rules page."
+        }
+      ]
+    },
+    {
+      "id": "Part_F",
+      "title": "F: Spell Real Words with Fingers, then Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to finger spell. The first word is QUICK. Repeat that word."
+        },
+        {
+          "type": "action",
+          "text": "Student: Quick"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly. Use your fingers to break it into sounds. Pull down a tile for each finger."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["qu", "i", "ck"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Why did you use a C-K? Double check by blending those sounds."
+        },
+        {
+          "type": "action",
+          "text": "Student: It's right after a short vowel. Blends to confirm QUICK."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now change one of those tiles to make that word say QUACK."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["qu", "a", "ck"]
+        },
+        {
+          "type": "action",
+          "text": "Student changes I tile to A. Blends to confirm QUACK."
+        },
+        {
+          "type": "dialogue",
+          "text": "Nice work. Now the word is TASK. Repeat that word."
+        },
+        {
+          "type": "action",
+          "text": "Student: Task"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["t", "a", "s", "k"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Why K and not CK?"
+        },
+        {
+          "type": "action",
+          "text": "Student: /k/ is not right after a short vowel — S comes between."
+        },
+        {
+          "type": "dialogue",
+          "text": "Change one tile to make that word say MASK."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["m", "a", "s", "k"]
+        },
+        {
+          "type": "action",
+          "text": "Student changes T to M."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now the word is DECK. Repeat it."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["d", "e", "ck"]
+        },
+        {
+          "type": "action",
+          "text": "Student builds DECK. Explains: CK because /k/ is right after short vowel E."
+        },
+        {
+          "type": "dialogue",
+          "text": "Change one tile to make that word say DESK."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["d", "e", "s", "k"]
+        },
+        {
+          "type": "action",
+          "text": "Student rebuilds as D-E-S-K (K, not CK, because S is now between the vowel and K)."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now spell RISK."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["r", "i", "s", "k"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Now spell DUCT — as in an air duct or a tear duct."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["d", "u", "c", "t"]
+        },
+        {
+          "type": "action",
+          "text": "Student builds DUCT. Explains: CT ending = Latin word."
+        }
+      ]
+    },
+    {
+      "id": "Part_G",
+      "title": "G: Read Nonsense Words on Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Here's a nonsense word. Touch-and-say each sound. Slowly blend those sounds. Say it fast like a word."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["f", "r", "a", "ck"]
+        },
+        {
+          "type": "action",
+          "text": "Student: /f/-/r/-/a/-/k/ → frack. CK because /k/ is right after short vowel A."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["c", "o", "s", "k"]
+        },
+        {
+          "type": "action",
+          "text": "Student: /k/-/o/-/s/-/k/ → cosk. K because /k/ is not right after a short vowel."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["d", "i", "l", "k"]
+        },
+        {
+          "type": "action",
+          "text": "Student: dilk"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["g", "l", "e", "ck"]
+        },
+        {
+          "type": "action",
+          "text": "Student: gleck. CK right after short vowel E."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "l", "o", "ck"]
+        },
+        {
+          "type": "action",
+          "text": "Student: slock. CK right after short vowel O."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["h", "i", "l", "k"]
+        },
+        {
+          "type": "action",
+          "text": "Student: hilk."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["d", "a", "s", "k"]
+        },
+        {
+          "type": "action",
+          "text": "Student: dask. K not right after short vowel."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "m", "i", "ck"]
+        },
+        {
+          "type": "action",
+          "text": "Student: smick. CK right after short vowel I."
+        }
+      ]
+    },
+    {
+      "id": "Part_H",
+      "title": "H: Spell Nonsense Words with Fingers, then Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll finger spell some nonsense words. The first word is PRACK. Repeat that word."
+        },
+        {
+          "type": "action",
+          "text": "Student: Prack"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly. Finger spell. Pull down a tile for each finger."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["p", "r", "a", "ck"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Why did you use a C-K?"
+        },
+        {
+          "type": "action",
+          "text": "Student: It's right after the short vowel A."
+        },
+        {
+          "type": "dialogue",
+          "text": "Double-check by blending those sounds together. Excellent. Now BUSK."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["b", "u", "s", "k"]
+        },
+        {
+          "type": "action",
+          "text": "Student: Busk. K because /k/ is not right after a short vowel."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now STECK."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "t", "e", "ck"]
+        },
+        {
+          "type": "action",
+          "text": "Student: Steck. CK right after short vowel E."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now NISK."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["n", "i", "s", "k"]
+        },
+        {
+          "type": "action",
+          "text": "Student: Nisk. K because S comes between the short vowel and /k/."
+        },
+        {
+          "type": "action",
+          "text": "Move tiles out of the way. They will not be needed during the rest of the lesson, but it may help your student to keep them visible."
+        }
+      ]
+    },
+    {
+      "id": "Part_I",
+      "title": "I: Read Words Through Word Frame",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to read words through the word frame. If you know that word for sure, just say it. Otherwise, sound it out."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": ["shock", "bulk", "smick", "dusk", "task", "dask", "brisk", "wick", "gack", "tuck", "desk", "jilk", "slack", "neck", "trock", "snuck", "quack", "chisk", "duct", "silk", "thilk"]
+        },
+        {
+          "type": "teacher_note",
+          "text": "TIP: If your student has to sound out many of the real words, improve his fluency by giving him extra practice. After reading through the word frame, remove it and have him use his finger to keep his place while moving word to word. Then point to various real words in random order and have him read them."
+        }
+      ]
+    },
+    {
+      "id": "Part_J",
+      "title": "J: Spell Words with Fingers, then Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "After you finger spell these words, you'll write them on paper. Ready? The first word is DESK. Repeat that word."
+        },
+        {
+          "type": "action",
+          "text": "Student: Desk"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly. Finger spell. Now say-and-write each sound. Double check what you wrote."
+        },
+        {
+          "type": "action",
+          "text": "Dictate real words: DESK, CLUCK, ELK, THICK, STRICT"
+        },
+        {
+          "type": "action",
+          "text": "Dictate nonsense words: FOSK, ZUCK, SMICK, KILK"
+        }
+      ]
+    },
+    {
+      "id": "Part_K",
+      "title": "K: Review Sight Word Reading Deck",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's review the Sight Word Reading Deck we created last time."
+        },
+        {
+          "type": "teacher_note",
+          "text": "If the student could easily read all Sight Words presented in the last lesson, you will not have a Sight Word Reading Deck. In that case, skip to Part L."
+        },
+        {
+          "type": "action",
+          "text": "Tutor pulls out the Sight Word Reading Deck and gives it to the student."
+        },
+        {
+          "type": "dialogue",
+          "text": "Put your thumb over the clue in the lower left-hand corner and read each word out loud."
+        },
+        {
+          "type": "action",
+          "text": "Student reads each word. May peek at clue if needed."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now that you're warmed up, keep the clue hidden and read them again — as fast as you can."
+        },
+        {
+          "type": "action",
+          "text": "Student flips through deck at speed."
+        },
+        {
+          "type": "dialogue",
+          "text": "Good reading. Now give me the deck."
+        },
+        {
+          "type": "action",
+          "text": "Tutor sorts deck into different order, then flips cards a little faster. Sorts one more time for 'supersonic' speed. Student reads aloud at each pass."
+        }
+      ]
+    },
+    {
+      "id": "Part_L",
+      "title": "L: Review Sight Word Spelling Cards",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's review your tricky sight words."
+        },
+        {
+          "type": "action",
+          "text": "Tutor pulls out the Sight Word Spelling Cards and holds up the first card."
+        },
+        {
+          "type": "dialogue",
+          "text": "What's this word? Why is that letter in red?"
+        },
+        {
+          "type": "action",
+          "text": "Student reads card and explains the red letter."
+        },
+        {
+          "type": "dialogue",
+          "text": "Stare at it until you can see it in your mind with your eyes closed. Look at that blank wall and see that word. How do you spell it?"
+        },
+        {
+          "type": "action",
+          "text": "Student spells from memory twice (wall), writes twice on desk with two fingers, writes twice on paper while saying each letter. Underlines the red letter."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Repeat the see-spell-write process for each card. After Part N, dictate the sight words on paper. If spelled correctly (red letter underlined), put a check mark in the upper right-hand corner. Three check marks = 'retire' the card and replace it with the next unmastered word from the Sight Word Check List."
+        }
+      ]
+    },
+    {
+      "id": "Part_M",
+      "title": "M: Read Phrases",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll read some phrases. This group of phrases tells WHO. Read each phrase to me."
+        },
+        {
+          "type": "student_page",
+          "mode": "phrase_builder",
+          "payload": {
+            "who": ["The slick brick", "The tall man", "Quick Rick", "A duck flock"],
+            "did_what": ["will sell a sack", "will crack", "snuck up", "did peck"],
+            "where": ["at the small dock", "on the back", "on the stuck duck", "at the crust"],
+            "add_on": ["of the black truck", "to Jack", "and did block it", "in the sack"]
+          }
+        },
+        {
+          "type": "action",
+          "text": "Student reads all Who phrases, then Did What phrases, then Where phrases, then Add-On phrases. Creates short sentences combining 2, 3, then 4 phrases."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now find one word that is a Closed syllable, and mark it with a teacup over the vowel."
+        },
+        {
+          "type": "action",
+          "text": "Student marks one Closed syllable (breve over vowel)."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now find one word that's a Unit syllable, and mark it."
+        },
+        {
+          "type": "action",
+          "text": "Student finds a Unit syllable (e.g., 'all' in 'small') and puts a box around the Unit."
+        }
+      ]
+    },
+    {
+      "id": "Part_N",
+      "title": "N: Spell Phrases and Sight Words on Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to write some phrases. The first phrase is THE BLACK MASK. Repeat that phrase."
+        },
+        {
+          "type": "action",
+          "text": "Student: The black mask"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now write it down. Use finger spelling for the tough words. Double check by reading exactly what you wrote."
+        },
+        {
+          "type": "action",
+          "text": "Dictate and student writes: THE BLACK MASK"
+        },
+        {
+          "type": "dialogue",
+          "text": "Any word that you want help checking?"
+        },
+        {
+          "type": "action",
+          "text": "Dictate and student writes: THE SICK DUCK"
+        },
+        {
+          "type": "action",
+          "text": "Dictate and student writes: A THICK BRANCH"
+        },
+        {
+          "type": "action",
+          "text": "Dictate each Sight Word from the Sight Word Spelling Deck. Student says each letter as he writes it, then underlines the red letter. If correct, place a check mark on that Spelling Card."
+        }
+      ]
+    },
+    {
+      "id": "Part_O",
+      "title": "O: Read Sentences",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll read some sentences. Read the first sentence to yourself. Now read it out loud."
+        },
+        {
+          "type": "student_page",
+          "mode": "sentence_marking",
+          "payload": [
+            "1. The slick brick will crack on the back of the black truck.",
+            "2. Quick Rick snuck up on the stuck duck and did block it.",
+            "3. The rich man will sell a sack at the small dock to Jack.",
+            "4. A duck flock did peck at the crust in the sack.",
+            "5. The cost of the deck will shock Nick.",
+            "6. Flick the speck off the desk.",
+            "7. Pack the milk in a cask.",
+            "8. Tuck the snack in the sack.",
+            "9. Kim will trim the silk mask."
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Let's mark each phrase. Mark the WHO phrase. Mark the DID WHAT phrase. Mark the WHERE phrase. Mark the ADD-ON phrase."
+        },
+        {
+          "type": "action",
+          "text": "Student marks each phrase and re-reads the sentence with phrasing — a small pause between each phrase."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Sentences 6, 7, and 8 are Commands. Commands do NOT contain a Who phrase. In a Command, the Who is implied as 'You'. Example: You flick the speck off the desk."
+        }
+      ]
+    },
+    {
+      "id": "Part_P",
+      "title": "P: Spell Sentences on Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to write three sentences. The first sentence is: THE BLACK MASK IS STUCK TO THE WALL. Repeat that sentence."
+        },
+        {
+          "type": "action",
+          "text": "Student repeats the sentence."
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and write that sentence. Use finger spelling on the tough words. Check your sentence by reading exactly what you wrote."
+        },
+        {
+          "type": "action",
+          "text": "Dictate: THE BLACK MASK IS STUCK TO THE WALL."
+        },
+        {
+          "type": "dialogue",
+          "text": "Here's the first question I'm always going to ask: Does it start with a capital and end with punctuation?"
+        },
+        {
+          "type": "action",
+          "text": "Student checks and fixes if needed."
+        },
+        {
+          "type": "action",
+          "text": "Dictate: THE SICK DUCK WENT QUACK, THEN DID SNACK."
+        },
+        {
+          "type": "action",
+          "text": "Dictate: \"PICK A THICK BRANCH,\" SAID CHUCK."
+        }
+      ]
+    },
+    {
+      "id": "Part_Q",
+      "title": "Q: Read a Story",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're ready to read a story. Pre-read the story and figure out the tough words. Then read it out loud to me."
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "Bat and Ball",
+            "text": "Dick has skill. He can put a spin on his fast ball. If Chuck is at bat, Dick will not duck when the ball goes past.\n\nChuck is a whiz and can whack that ball then dash up the track. The bunch on the bench yell and clap.\n\nJack is in back of Chuck. Jack will not flinch. Jack has a mask and pad on. He will thrust out his mitt to grab the ball.\n\nBut I am the \"ump.\" I can tell them all what to do."
+          }
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "Sick Nick",
+            "text": "Nick is sick. A red rash is on his neck and chest. Nick does not want the rash to last.\n\nMom did tuck Nick in to his brass bed. Nick has a sack of stuff to snack on and a bell to punch to call his Mom.\n\nMom was blunt. She said, \"You must not rub your skin or pick at the top of a bump. If you do not stop, I will have to stick a sock on your hand.\""
+          }
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "Snag the Fox",
+            "text": "Jack lit the wick of his lamp. Jack and his dog, Kip, will check the trap. Will they snag that quick red fox?\n\nA fox can grab a small chick as quick as it can cluck. \"That fox is a slick chap,\" Jack said to Kip.\n\nWhen Jack got to the shack, he had a shock. A man had the fox and the trap in his hand. The man did run, but Jack did smash him."
+          }
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "The Chess Champ",
+            "text": "Chad lost to Rick, the chess champ. Chad was glum. Rick said, \"Pick your chin up off your chest. Do not sulk. You just had some bad luck. I am still your chum. Let us skip back to your shack and have a quick snack. Then, you can toss a ball and I will hit it.\"\n\n\"That is swell,\" says Chad with a grin. Chad is glad he can still have fun with his chum."
+          }
+        }
+      ]
+    },
+    {
+      "id": "Part_Extra_Practice",
+      "title": "Optional Extra Practice",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "The Extra Practice pages are optional. Give them to your student only if he asks for a way to practice between tutoring sessions. ALWAYS do the first problem on each page together BEFORE your student takes it home. You can give either EP #1 (fill-in-the-blank: put the correct spelling for /k/ in these nonsense words) or EP #2 (rhyming match), or both. Your student can also take home and practice reading the Lesson 7 Read These Words page."
+        },
+        {
+          "type": "dialogue",
+          "text": "Let's do the first problem on this extra practice page together before you take it home."
+        },
+        {
+          "type": "student_page",
+          "mode": "matching",
+          "payload": {
+            "left": ["silk", "bulk", "stock", "task", "struck", "trick", "dusk"],
+            "right": ["tusk", "hulk", "cluck", "milk", "flock", "mask", "wick"]
+          }
+        },
+        {
+          "type": "action",
+          "text": "Student draws a line between each pair of rhyming words. Hint: words rhyme when the vowel and everything after it matches."
+        }
+      ]
+    }
+  ]
+}
