@@ -1,0 +1,87 @@
+{
+  "level": 1,
+  "lesson": "tips_and_errors",
+  "title": "Tips and Error Correction",
+  "sections": [
+    {
+      "id": "Part_Philosophy",
+      "title": "Correction Philosophy",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "<b>Correction Philosophy</b><br>This is very hard work for your student. It is important that you correct mistakes in as positive a manner as possible.<br><br>• Tell your student what he did <b>right</b> before you tell him what he did wrong.<br>• Accept the blame yourself whenever possible. For instance, 'Oh, I didn't say that very clearly.'<br>• Avoid saying things such as, 'Here's the right way to do it.' A better phrase would be, <b>'Let me show you a trick.'</b>"
+        }
+      ]
+    },
+    {
+      "id": "Part_Errors_Breaking_Blending",
+      "title": "Common Errors: Breaking & Blending",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "<b>Student Repeated Wrong Word</b><br>Accept the blame ('Oh, I didn't say that clearly'). If the word contained a tricky sound, say 'Oops. This word has one of those tricky sounds.' Move your fingers past his eyes to your mouth. Wait until he is watching your mouth before saying the word again."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Student Doesn't Break Sounds Apart</b><br><i>(Student just says the word slowly while touching tiles)</i><br>Return to the slow-down 'swoop in the air' step. Show where in the swoop he can hear each sound distinctly. Start the swoop, but stop the motion when he's saying the first sound cleanly. Assign that sound to the first tile. Repeat for each sound."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Missing One of the Sounds</b><br>Congratulate the student on the sounds he did identify. Explain there's one more fast sound. Have him watch your mouth while you say his sounds, then the target word. Point out your mouth doing something else. If he still struggles, isolate 3 fast sounds (including the target) and see if he can pick the right one."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Sounds Out of Order</b><br>Congratulate the student on hearing all the correct sounds. Tell him two are not quite in the right order. Leave the tiles out, say the word again, and use the slow-down swoop. If he still fails, stop the swoop at each sound and assign it one by one."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Adding /uh/ to a Consonant Sound</b><br><i>(E.g., student says /muh/ instead of /m/)</i><br>Explain that /muh/ is actually two sounds. Ask, 'Can you say just the first part?' Congratulate the cleanly broken-off sound."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Student Breaks Sounds During Slow Down Swoop</b><br>If your student wants to say each sound separately during the Slow Down swoop (instead of a continuous slow word) and can do it accurately, that is fine."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Student Can't Blend Sounds</b><br><i>(Student puts a little break between sounds)</i><br>Explain that when his mouth is changing from one shape to the next, he's stopping the sound. Demonstrate a continuous flow with a hand gesture (coming from under your chin and away from your body). Have the student use the gesture to keep the sound flowing."
+        }
+      ]
+    },
+    {
+      "id": "Part_Errors_Replacing_Comparing",
+      "title": "Common Errors: Replacing & Comparing",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "<b>Student Forgets the Words (Compare Step)</b><br>This task is not a memory test. Point to the appropriate row, repeat its word (as an ENTIRE word) and let the student touch-and-say. Point to the other row and repeat its entire word. Do not break it into sounds for the student."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Student Guessing Which Sound Is Different</b><br>Teach a strategy. Have the student pull out just the first sound of the top word. Do the same for the bottom word. Ask if those two sounds are the same. If yes, isolate the second sounds and compare. Repeat until the different sound is isolated."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Student Can't Let Go / Forgets a Sound (Break-Replace Step)</b><br>Before replacing a tile, partially cover it with your hand. Say 'I'm going to change this sound, but the other sounds will stay the same.' Have the student touch-and-say the sounds that will REMAIN several times. Only then replace the tile."
+        }
+      ]
+    },
+    {
+      "id": "Part_General_Tips",
+      "title": "General Tips & Young Children",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "<b>Pacing & Frequency</b><br>• Tutor at least twice a week for 45-60 minutes. Once a week is not enough.<br>• Try to end every lesson on success. If a student is struggling, back up one step or play a game.<br>• Avoid 'dead time'. Keep the lesson moving. Don't make him sit while you find your place."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Communication</b><br>• Don't talk too much while the student is processing.<br>• Don't over-explain new procedures. Just say 'Now we'll do Break-Replace' and use hand gestures to guide them.<br>• Avoid 'do you remember' questions. Just jump in and start the procedure."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Tips for Young Children</b><br>• Limit tiles on the desk if they are a distraction. Hand them out one by one if necessary.<br>• If they need to fidget, give them a small beanbag or a pipe cleaner to diddle with.<br>• Have the student use his <b>dominant hand</b> to establish dominance (use a sticker on that hand if needed).<br>• If they want to play a game instead of the lesson, make a deal: 'Work hard for XX minutes, then we play a game.'"
+        }
+      ]
+    }
+  ]
+}

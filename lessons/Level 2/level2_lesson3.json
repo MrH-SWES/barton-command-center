@@ -1,0 +1,788 @@
+{
+  "level": 2,
+  "lesson": 3,
+  "title": "O, D, J, K, V, Z",
+  "sections": [
+    {
+      "id": "Part_Intro",
+      "title": "Lesson Overview",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "Materials Needed: New Tiles: O, D, J, K, V, Z. Known Letter Tiles: A, B, C, F, G, H, I, L, M, N, P, R, S, T. Binder paper and pencil, Word Frame, Blank card. Watch for B-D confusion (Balloons go up in the air trick)."
+        }
+      ]
+    },
+    {
+      "id": "Part_A",
+      "title": "A: Review Known Letters and Sounds",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Before teaching the new sounds, let's review the ones you learned last time. Which ones are the vowels?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: A and I"
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and tap each vowel's keyword and sound."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student taps Apple Apple /a/ /a/ /a/, then Itchy Itchy /i/ /i/ /i/"
+        },
+        {
+          "type": "action",
+          "text": "Tutor points to each of the other tiles. Tell me the name and the sound of this letter."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student says the name of each letter and its sound."
+        }
+      ]
+    },
+    {
+      "id": "Part_C",
+      "title": "C: Phonemic Awareness Warm-up",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's try something else. I'll say a nonsense word, you repeat it. Ready? HAP."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Hap"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say just the FIRST sound in that word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /h/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to the letter that makes that sound."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the H tile."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Repeat FIRST sound for: RIT, GAF, NIM, LIF. Then switch to LAST sound for: TIG, HIN, FAC, HAP, LIS. Then MIDDLE sound for: TIF, CAS, HIG, LAN, MIB."
+        }
+      ]
+    },
+    {
+      "id": "Part_D",
+      "title": "D: Teach New Vowel Sound",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "o"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Tell me the name of this letter."
+        },
+        {
+          "type": "action",
+          "text": "Expected: O"
+        },
+        {
+          "type": "dialogue",
+          "text": "Is it a vowel or a consonant?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: A vowel"
+        },
+        {
+          "type": "dialogue",
+          "text": "The most common sound that O makes is /o/. Repeat that sound."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /o/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now I'll help you create a picture in your head to make it easy to remember. Close your eyes. Picture yourself walking into your favorite pizza parlor. You order your pizza... on the very top are my favorite things. They're round black things with a hole in the middle that look like the letter O. Do you know what those are called?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Olives"
+        },
+        {
+          "type": "dialogue",
+          "text": "Right. That's the word we want. OLIVE. Say that word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Olive"
+        },
+        {
+          "type": "dialogue",
+          "text": "Clap to see how many syllables are in the word Olive."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Two"
+        },
+        {
+          "type": "dialogue",
+          "text": "So we need two fingers to tap the word Olive. Like this."
+        },
+        {
+          "type": "action",
+          "text": "Tutor taps her right index finger while saying /o/, then taps her middle finger while saying /live/."
+        },
+        {
+          "type": "dialogue",
+          "text": "You try it. Tap the word Olive."
+        },
+        {
+          "type": "action",
+          "text": "Student taps the word Olive."
+        },
+        {
+          "type": "dialogue",
+          "text": "What sound does your first finger say?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: /o/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Right. That's the sound you should make whenever you see the letter O."
+        },
+        {
+          "type": "action",
+          "text": "Tutor taps while saying: Olive, Olive, /o/ /o/ /o/. Student mimics."
+        }
+      ]
+    },
+    {
+      "id": "Part_E",
+      "title": "E: Teach 5 Consonants",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're ready to learn some consonants. When we find one you don't know, we'll add it to the Keyword page."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "k"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Tell me the name of this letter and the sound it makes."
+        },
+        {
+          "type": "action",
+          "text": "Expected: K, /k/ (Keyword: Kite)"
+        },
+        {
+          "type": "teacher_note",
+          "text": "If student mentions C can also make /k/, acknowledge it. Tell them for now spell /k/ with C since it's more common."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "v"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Tell me the name of this letter and the sound it makes."
+        },
+        {
+          "type": "action",
+          "text": "Expected: V, /v/ (Keyword: Vase)"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "j"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Tell me the name of this letter and the sound it makes."
+        },
+        {
+          "type": "action",
+          "text": "Expected: J, /j/ (Keyword: Jam)"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "d"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Tell me the name of this letter and the sound it makes."
+        },
+        {
+          "type": "action",
+          "text": "Expected: D, /d/ (Keyword: Duck)"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "z"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Tell me the name of this letter and the sound it makes."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Z, /z/ (Keyword: Zebra)"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Trick for b-d confusion: Have student make 'Balloons go up in the air' fist. If the letter matches the fist, it's a B. If it doesn't, it's a D."
+        }
+      ]
+    },
+    {
+      "id": "Part_F",
+      "title": "F: Read Sounds on Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Before you spell with those letters, let's run through them one more time. Tap the A vowel for me."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Apple, Apple, /a/ /a/ /a/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now the I."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Itchy, Itchy, /i/ /i/ /i/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now the O."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Olive, Olive, /o/ /o/ /o/"
+        },
+        {
+          "type": "action",
+          "text": "Tutor points to each consonant tile. Student says the name of the letter and makes its sound."
+        }
+      ]
+    },
+    {
+      "id": "Part_G",
+      "title": "G: Spell Sounds with Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "I'm going to make the sound. You repeat the sound. /v/"
+        },
+        {
+          "type": "action",
+          "text": "Expected: /v/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to the tile that says /v/."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the V tile."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining consonant sounds: /z/, /m/, /p/, /d/, /j/, /r/, /n/, /b/, /k/ (ask for both letters), /g/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now I'm going to make a vowel sound. /o/. Repeat that sound."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /o/"
+        },
+        {
+          "type": "dialogue",
+          "text": "What keyword starts with /o/?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Olive"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to the tile that says /o/."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the O tile."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now try the sound /i/. Repeat that sound."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /i/"
+        },
+        {
+          "type": "dialogue",
+          "text": "What keyword starts with /i/?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Itchy"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to that tile."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the I tile."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now for /a/. Repeat that sound."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /a/"
+        },
+        {
+          "type": "dialogue",
+          "text": "What keyword starts with /a/?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Apple"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to that tile."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the A tile."
+        }
+      ]
+    },
+    {
+      "id": "Part_H",
+      "title": "H: Read Real Words with Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're ready to take those sounds and blend them into words. Here's how that works."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "z",
+            "a",
+            "p"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Let's figure out the vowel first. Tap its keyword, then its sound."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Apple, Apple, /a/ /a/ /a/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now touch-and-say each sound."
+        },
+        {
+          "type": "action",
+          "text": "Student touches first tile and says /z/, touches second tile and says /a/, touches third tile and says /p/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Next, slowly drag your finger underneath that word while you run those sounds together."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /zzzz/-/aaaa/-/p/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it fast like a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Zap"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Change one tile at a time to build these words: ZIP, LIP, LOP, LOT, JOT, ROT, ROD, RID, KID, KIT, KIN, FIN, FIG, DIG, JIG, RIG, RAG, RAN, VAN, VAT."
+        }
+      ]
+    },
+    {
+      "id": "Part_I",
+      "title": "I: Spell Real Words with Fingers, then Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now let's do the opposite. I'll say a word, and YOU break it into the sounds. The first word is ZAP."
+        },
+        {
+          "type": "action",
+          "text": "Expected: ZAP"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it again, very slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /zzzz/-/aaaa/-/p/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Use your fingers to break it into sounds."
+        },
+        {
+          "type": "action",
+          "text": "Student raises thumb while saying /z/, index finger while saying /a/, middle finger while saying /p/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Pull down a tile for each finger, while making its sound."
+        },
+        {
+          "type": "action",
+          "text": "Student pulls down Z, then A, then P."
+        },
+        {
+          "type": "dialogue",
+          "text": "To see if that's right, slowly blend those tiles together."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /zzzz/-/aaaa/-/p/ ... Zap."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining words, having the student change one tile at a time: ZIP, LOG, LAG, DOG, BOG, VAN, VAT, TOP, TAP, TIP, TIM."
+        }
+      ]
+    },
+    {
+      "id": "Part_J",
+      "title": "J: Read Nonsense Words with Tiles",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "t",
+            "o",
+            "z"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Now I'm going to build a nonsense word. Figure out the vowel first. Tap its keyword, then its sound."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Olive, Olive, /o/ /o/ /o/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now touch-and-say each tile."
+        },
+        {
+          "type": "action",
+          "text": "Student touches T and says /t/, touches O and says /o/, touches Z and says /z/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly blend those sounds together."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /t/-/oooo/-/zzzz/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it fast like a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Toz"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Build these words one by one: LOD, VAB, ROJ, KIZ."
+        }
+      ]
+    },
+    {
+      "id": "Part_K",
+      "title": "K: Spell Nonsense Words with Fingers, then Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll spell some nonsense words. The first word is FAZ."
+        },
+        {
+          "type": "action",
+          "text": "Expected: FAZ"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /ffff/-/aaaa/-/zzzz/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Use your fingers to break it into sounds, then pull down a tile for each finger."
+        },
+        {
+          "type": "action",
+          "text": "Student spells on fingers, then pulls down F, A, Z."
+        },
+        {
+          "type": "dialogue",
+          "text": "Double-check by blending those sounds together."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /ffff/-/aaaa/-/zzzz/ ... Faz."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate these words: VOT, JIV, NOZ, DOP."
+        }
+      ]
+    },
+    {
+      "id": "Part_L",
+      "title": "L: Read Words Through Word Frame",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to read words using a word frame. If you know that word for sure, just say it. Otherwise, touch-and-say each sound, then blend them together."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": [
+            "jam",
+            "lid",
+            "dim",
+            "dip",
+            "mob",
+            "bog",
+            "not",
+            "dig",
+            "cop",
+            "kid",
+            "vat",
+            "bid",
+            "Liz",
+            "cob",
+            "fov",
+            "bod",
+            "siv",
+            "jad",
+            "zoo",
+            "kiz",
+            "jat"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Part_M",
+      "title": "M: Spell Words with Fingers, then Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to spell words on paper. The first word is NOD. Repeat that word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Nod"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it again, slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /nnnn/-/oooo/-/d/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Use your fingers to break it into sounds. Then tell me what letter you need."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /n/-N, /o/-Olive-O, /d/-D."
+        },
+        {
+          "type": "dialogue",
+          "text": "Make each sound while you write down its letter."
+        },
+        {
+          "type": "action",
+          "text": "Student writes N, O, D on paper."
+        },
+        {
+          "type": "dialogue",
+          "text": "Double-check what you wrote by blending the sounds together."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate real words: ROB, TOM, JAB, ZIP. Dictate nonsense words: NAV, ZIB, TOV, JOD, GAF."
+        }
+      ]
+    },
+    {
+      "id": "Part_N",
+      "title": "N: Read Phrases",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "You now can read enough words to read phrases. Phrases are one or more words that tell Who, Did What, or Where."
+        },
+        {
+          "type": "student_page",
+          "mode": "phrase_builder",
+          "payload": {
+            "who": [
+              "Mom",
+              "a lad",
+              "Rob",
+              "a van",
+              "a bad dog",
+              "a hot ham"
+            ],
+            "did what": [
+              "got a hat",
+              "can jog",
+              "bit a lad",
+              "ran",
+              "can fit",
+              "sat"
+            ],
+            "where": [
+              "in the fog",
+              "at a hog",
+              "at Ann",
+              "on a big log",
+              "in a cab",
+              "in a pot"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "Part_O",
+      "title": "O: Read Sentences",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now let's look at some sentences that someone else made out of these phrases. Read that first sentence to yourself, then read it out loud."
+        },
+        {
+          "type": "student_page",
+          "mode": "sentence_marking",
+          "payload": [
+            "Mom got a hat.",
+            "A bad dog bit a lad.",
+            "Rob can jog in the fog.",
+            "A lad ran at a hog.",
+            "A hot ham can fit in a pot.",
+            "A bad dog ran at Ann.",
+            "Mom can fit in a cab.",
+            "Rob sat on a big log.",
+            "A van can fit on a big log.",
+            "A bad dog sat on Ann."
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "How many phrases in that sentence? I'd like you to mark each phrase for me. Mom is the WHO, and got a hat is the DID WHAT."
+        },
+        {
+          "type": "action",
+          "text": "Student marks the phrases and reads the sentence with phrasing."
+        }
+      ]
+    },
+    {
+      "id": "Part_P",
+      "title": "P: Read Longer Words Together",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Nonsense words are the first syllables of longer words. Read just the first syllable on your page."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": [
+            "lob",
+            "van",
+            "gob",
+            "nav",
+            "vam",
+            "pov",
+            "zip",
+            "doc",
+            "cop",
+            "rob"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "That's the first syllable in the word Lobster. Say that word. Can you think of any other words that start with LOB?"
+        },
+        {
+          "type": "teacher_note",
+          "text": "If the student struggles to think of words, change the directions to: 'Some of these words are real, some are nonsense. Tell me if it's real or nonsense.'"
+        }
+      ]
+    }
+  ]
+}

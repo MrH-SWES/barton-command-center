@@ -1,0 +1,850 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "level": 4,
+    "lesson": 1,
+    "title": "Open Syllables",
+    "estMinutes": 50,
+    "author": "Barton Command Center",
+    "videoSpeedDefault": 1.5
+  },
+  "materials": [
+    "New yellow Vowel Y tile",
+    "Second set of A through Z tiles",
+    "Letter tiles: A through Z plus CH, TH, CK, SH, WH, TCH",
+    "Unit tiles: ALL, ANG, ING, ONG, UNG, ANK, INK, ONK, UNK, OLL, OLD, OLT, OST, ILD, IND",
+    "Binder paper and pencil",
+    "Word frame",
+    "Blank colored 5x8 index card",
+    "Several blank 3x5 index cards",
+    "Book 4 Lesson 1 student pages"
+  ],
+  "objectives": [
+    "Review Unit sounds and prior extra practice before starting new material",
+    "Identify an Open syllable as one vowel at the end of a syllable",
+    "Read Open syllables with long vowel sounds",
+    "Recognize that final Y is a vowel and says Long I in one-syllable words",
+    "Spell and read real and nonsense Open syllables with tiles and on paper",
+    "Read words, sight words, phrases, sentences, and stories from the Lesson 1 student pages"
+  ],
+  "beats": [
+    {
+      "id": "L4.1.prep.01",
+      "phase": "Prep",
+      "label": "Tutor overview",
+      "do": "Set out the new yellow Vowel Y tile, a second A-Z tile set, all Level 4 review tiles, binder paper, pencil, word frame, and blank index cards.",
+      "note": "Tutor-only overview: the student knows Closed and Unit syllables. This lesson teaches Open syllables. An Open syllable has one vowel at the end, and that vowel says its long sound. Long U can say /ee-oo/ or /oo/. Final Y is a vowel; at the end of a one-syllable word it says Long I. Finger spelling is no longer required unless the student gets stuck."
+    },
+    {
+      "id": "L4.1.review.01",
+      "phase": "Review",
+      "label": "Review Units",
+      "say": {
+        "text": "Can you tell me the sound that each of these Units makes?"
+      },
+      "do": "Point one by one to the red Unit tiles, keeping them in the same order each time.",
+      "listen": {
+        "expect": ["/all/", "/ang/", "/ing/", "/ong/", "/ung/", "/ank/", "/ink/", "/onk/", "/unk/", "/oll/", "/old/", "/olt/", "/ost/", "/ild/", "/ind/"],
+        "hint": "Student gives the unit sound, not letter names."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "units",
+        "prePlace": [],
+        "lock": true
+      },
+      "note": "Consistent order helps the student learn the Units faster.",
+      "recovery": {
+        "trigger": "Student hesitates or gives letter names.",
+        "prompts": [
+          "That is the spelling. What sound does that whole red Unit make?",
+          "Say it with me, then say it by yourself."
+        ]
+      }
+    },
+    {
+      "id": "L4.1.review.02",
+      "phase": "Review",
+      "label": "Review prior extra practice",
+      "say": {
+        "text": "Let's take a look at your extra practice page from Book 3."
+      },
+      "do": "Review the prior extra practice page for accuracy. If it was not done at home, have the student complete one prior extra practice page now and read each word aloud.",
+      "listen": {
+        "expect": ["Student reads the prior words accurately."],
+        "hint": "This is a gate before new teaching."
+      },
+      "note": "If the student has difficulty completing the prior extra practice accurately, do not go on with this lesson. Repeat the last lesson instead.",
+      "recovery": {
+        "trigger": "Student cannot complete the prior extra practice accurately.",
+        "prompts": [
+          "Let's pause here and review the last lesson before we add something new.",
+          "Read this word to me again. What do you notice?"
+        ]
+      }
+    },
+    {
+      "id": "L4.1.warmup.01",
+      "phase": "Phonemic Awareness",
+      "label": "First sounds",
+      "say": {
+        "text": "Repeat this nonsense word, then make just its first sound. Ready? Folt."
+      },
+      "do": "After the student repeats the word and says the first sound, ask the student to point to the tile that makes that sound. Continue with CHOLL, ZILD, and QUIND.",
+      "listen": {
+        "expect": ["Folt, /f/", "Choll, /ch/", "Zild, /z/", "Quind, /kw/"],
+        "hint": "Student repeats the whole nonsense word, isolates the first sound, then points to the matching tile."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [],
+        "lock": true
+      },
+      "recovery": {
+        "trigger": "Student gives the first letter name instead of the sound.",
+        "prompts": [
+          "Say the nonsense word again. What sound starts your mouth?",
+          "Point to the tile that makes that sound."
+        ]
+      }
+    },
+    {
+      "id": "L4.1.warmup.02",
+      "phase": "Phonemic Awareness",
+      "label": "Unit sounds",
+      "say": {
+        "text": "Now I want the Unit sound at the end. Sholl."
+      },
+      "do": "After each response, ask the student to point to that Unit. Continue with NOLT, KILD, VOLD, CHIND, and JOST.",
+      "listen": {
+        "expect": ["Sholl, /oll/", "Nolt, /olt/", "Kild, /ild/", "Vold, /old/", "Chind, /ind/", "Jost, /ost/"],
+        "hint": "Student repeats the nonsense word, isolates the final Unit sound, then points to the matching red Unit."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "units",
+        "lock": true
+      },
+      "recovery": {
+        "trigger": "Student gives individual sounds instead of the Unit sound.",
+        "prompts": [
+          "Listen to the chunk at the end.",
+          "Which red Unit makes that whole ending sound?"
+        ]
+      }
+    },
+    {
+      "id": "L4.1.warmup.03",
+      "phase": "Phonemic Awareness",
+      "label": "Vowel sounds",
+      "say": {
+        "text": "Now for the middle sound, the vowel. Ready? Planch."
+      },
+      "do": "After the student repeats the word and gives the vowel sound, ask the student to point to that vowel tile. Continue with SLOTCH, THITCH, SMUTCH, and METCH.",
+      "listen": {
+        "expect": ["Planch, /a/ as in apple", "Slotch, /o/ as in olive", "Thitch, /i/ as in itchy", "Smutch, /u/ as in upper", "Metch, /e/ as in eddy"],
+        "hint": "Student isolates the short vowel sound in the middle."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "lock": true
+      },
+      "recovery": {
+        "trigger": "Student cannot isolate the vowel sound.",
+        "prompts": [
+          "Say the word slowly with me.",
+          "What sound is in the middle?",
+          "Point to the vowel tile that makes that sound."
+        ]
+      }
+    },
+    {
+      "id": "L4.1.teach.01",
+      "phase": "New Teaching",
+      "label": "Closed syllable review: but",
+      "say": {
+        "text": ["What's this word?", "What kind of syllable is it: Closed syllable or Unit syllable?", "What sound does the vowel make?"]
+      },
+      "listen": {
+        "expect": ["but", "Closed", "Short U"],
+        "hint": "The vowel is closed in, so it is short."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "prePlace": [{ "word": "but", "row": 0 }],
+        "lock": true
+      },
+      "note": "This establishes the contrast before showing the Open syllable."
+    },
+    {
+      "id": "L4.1.teach.02",
+      "phase": "New Teaching",
+      "label": "Open syllable: bu",
+      "say": {
+        "text": ["But what would happen if we took that T away?", "What is that word?", "And what sound is the vowel making?", "You just discovered a new type of syllable. It's called an Open syllable."]
+      },
+      "listen": {
+        "expect": ["bu", "Long U"],
+        "hint": "The vowel is at the end, so it can say its name."
+      },
+      "do": "Remove the T from BUT, leaving BU. Explain that in an Open syllable, the vowel is standing all alone at the end and says its long sound.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "prePlace": [{ "word": "bu", "row": 0 }],
+        "lock": true
+      },
+      "note": "Open syllable: only one vowel, vowel at the end, vowel says its long sound."
+    },
+    {
+      "id": "L4.1.teach.03",
+      "phase": "New Teaching",
+      "label": "Introduce final Y as a vowel",
+      "say": {
+        "text": ["What's this word?", "What's making the vowel sound?", "Right. When Y comes at the end of a word, it's a vowel.", "At the end of a one-syllable word, Y makes the Long I sound."]
+      },
+      "listen": {
+        "expect": ["my", "The Y", "Long I"],
+        "hint": "Use the yellow Y tile because final Y is acting as a vowel."
+      },
+      "do": "Build MY using the yellow Y tile.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "prePlace": [{ "word": "my", "row": 0 }],
+        "lock": true
+      }
+    },
+    {
+      "id": "L4.1.teach.04",
+      "phase": "New Teaching",
+      "label": "Practice final Y words",
+      "say": {
+        "text": ["Now what's this word?", "And this word?", "This word says?", "Is it Open? How do you know?"]
+      },
+      "listen": {
+        "expect": ["why", "cry", "sky", "Open; the only vowel is at the end"],
+        "hint": "Student should notice that final Y says Long I in each one-syllable word."
+      },
+      "do": "Model the final-Y words WHY, CRY, and SKY. Emphasize that American words do not end in I; spell the Long I sound at the end with Y.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "prePlace": [
+          { "word": "why", "row": 0 },
+          { "word": "cry", "row": 1 },
+          { "word": "sky", "row": 2 }
+        ],
+        "lock": true
+      },
+      "note": "Review the new spelling rule: Long I at the end is spelled with Y, as in cry."
+    },
+    {
+      "id": "L4.1.teach.05",
+      "phase": "New Teaching",
+      "label": "Open vs Unit: sod to song",
+      "say": {
+        "text": ["Is this still an Open syllable?", "What kind is it now?", "So it says?", "Is this a Closed, Open, or Unit syllable?", "And it says..."]
+      },
+      "listen": {
+        "expect": ["No", "Closed", "sod", "Unit", "song"],
+        "hint": "Adding D closes the vowel; replacing OD with ONG creates a Unit syllable."
+      },
+      "do": "Show SOD, then replace OD with ONG to make SONG.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "units",
+        "prePlace": [
+          { "word": "sod", "row": 0 },
+          { "word": "song", "row": 1 }
+        ],
+        "lock": true
+      }
+    },
+    {
+      "id": "L4.1.teach.06",
+      "phase": "New Teaching",
+      "label": "Read open syllable: pro",
+      "say": {
+        "text": ["What kind of syllable is this?", "Will the vowel be Long or Short?", "That word says?", "So in an Open syllable, what sound does the vowel make: Long or Short?"]
+      },
+      "listen": {
+        "expect": ["Open", "Long", "pro", "Long"],
+        "hint": "One vowel at the end means Open."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "prePlace": [{ "word": "pro", "row": 0 }],
+        "lock": true
+      }
+    },
+    {
+      "id": "L4.1.teach.07",
+      "phase": "New Teaching",
+      "label": "Long U can say /oo/",
+      "say": {
+        "text": ["What kind of syllable is this?", "And it says?", "What sound does the vowel make: Long or Short?", "Say just the vowel sound in this word."]
+      },
+      "listen": {
+        "expect": ["Open", "flu", "Long", "/oo/"],
+        "hint": "Long U can say /ee-oo/ or /oo/."
+      },
+      "do": "Build FLU. Explain that Long U can make two sounds: /ee-oo/ as in few, or /oo/ as in flu. After L or R, it usually says /oo/.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "prePlace": [{ "word": "flu", "row": 0 }],
+        "lock": true
+      },
+      "recovery": {
+        "trigger": "Student expects Long U to only say /ee-oo/.",
+        "prompts": [
+          "Try saying flu with /ee-oo/. It is hard to say it the wrong way.",
+          "After L or R, Long U usually says /oo/."
+        ]
+      }
+    },
+    {
+      "id": "L4.1.teach.08",
+      "phase": "New Teaching",
+      "label": "Change flub to flu",
+      "say": {
+        "text": ["What's this word?", "Is it an Open, Closed, or Unit syllable?", "Go ahead and make it an Open syllable.", "What's that word?", "What are the two sounds a Long U can make?"]
+      },
+      "listen": {
+        "expect": ["flub", "Closed", "flu", "/oo/ and /ee-oo/"],
+        "hint": "Student removes the final consonant to make an Open syllable."
+      },
+      "do": "Build FLUB, then have the student remove B to make FLU.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [{ "word": "flub", "row": 0 }],
+        "lock": true
+      }
+    },
+    {
+      "id": "L4.1.teach.09",
+      "phase": "New Teaching",
+      "label": "Final Y rule: spy",
+      "say": {
+        "text": ["What's this word?", "Is it Open, Closed, or Unit?", "How did you know?", "So what sound does Vowel-Y make at the end of a one-syllable word?", "Why don't they spell it with an I?"]
+      },
+      "listen": {
+        "expect": ["spy", "Open", "Only one vowel, and it's at the end", "Long I", "American words don't end in I; use Y instead"],
+        "hint": "Final Y is the vowel in this one-syllable Open word."
+      },
+      "do": "Build SPY using the yellow Y tile, then bring out the new Spelling Rules page and review the two new rules.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "prePlace": [{ "word": "spy", "row": 0 }],
+        "lock": true
+      }
+    },
+    {
+      "id": "L4.1.spelltiles.01",
+      "phase": "Tile Spelling",
+      "label": "Spell real words with tiles",
+      "say": {
+        "text": ["Now you're going to spell with tiles, but without finger spelling.", "The first word is MET. Repeat that word.", "Say it slowly.", "Go ahead and pull down the tiles.", "Double check by blending those sounds.", "Is it Open or Closed?"]
+      },
+      "listen": {
+        "expect": ["met", "/m/ /e/ /t/", "Closed"],
+        "hint": "Student spells MET, blends it, and identifies it as Closed."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [],
+        "lock": false
+      },
+      "recovery": {
+        "trigger": "Student reaches for finger spelling automatically.",
+        "prompts": [
+          "For Book 4, say the word slowly instead.",
+          "Pull down the tiles, then double check by blending."
+        ]
+      }
+    },
+    {
+      "id": "L4.1.spelltiles.02",
+      "phase": "Tile Spelling",
+      "label": "Change closed to open",
+      "say": {
+        "text": ["Now remove one of those tiles to make that word say ME.", "Now is it Open or Closed?", "Nice work. Put those tiles away and let's try a new word."]
+      },
+      "listen": {
+        "expect": ["me", "Open"],
+        "hint": "Student removes T from MET to make ME."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.1.spelltiles.03",
+      "phase": "Tile Spelling",
+      "label": "Dictate real tile words",
+      "say": {
+        "text": "Spell each word with tiles. Say it slowly, pull down the tiles, double check by blending, then change one tile when I ask."
+      },
+      "do": "Dictate these lesson words and changes: NOD to NO, SPIT to SPY, SKY, TRIP to TRY, FRY, FLY, FLIP.",
+      "listen": {
+        "expect": ["nod/no", "spit/spy", "sky", "trip/try", "fry", "fly", "flip"],
+        "hint": "Student spells with tiles and identifies Open or Closed when asked."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "lock": false
+      },
+      "note": "Repeat-lesson alternatives from the manual: HOT to HO, HIM to HI, SHIP, SLY, STY."
+    },
+    {
+      "id": "L4.1.readtiles.01",
+      "phase": "Tile Reading",
+      "label": "Read nonsense words on tiles",
+      "say": {
+        "text": ["This nonsense word says DREP.", "Touch and say each sound, slowly blend, then say it fast.", "Now make it an Open syllable.", "Is it Open or Closed? What does it say?"]
+      },
+      "listen": {
+        "expect": ["drep", "dre", "Open"],
+        "hint": "Student reads DREP, removes final P to make DRE, and reads it as an Open syllable."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [{ "word": "drep", "row": 0 }],
+        "lock": true
+      }
+    },
+    {
+      "id": "L4.1.readtiles.02",
+      "phase": "Tile Reading",
+      "label": "Nonsense tile sets",
+      "say": {
+        "text": "Read each nonsense word fast like a word. When I change it, tell me whether it is Open or Closed and read the new word."
+      },
+      "do": "Build and change these sets for the student to read: DREP to DRE to DRO to DROM; THUB to THU; RU to RUY; TASH to TA to CHA to CHY; CHID to CHI; NA to NY; NIM.",
+      "listen": {
+        "expect": ["Student reads each nonsense word and identifies Open or Closed when prompted."],
+        "hint": "Use tile changes as a grouped drill, not one beat per word."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "lock": false
+      },
+      "note": "Repeat-lesson sets from the manual: PRED to PRE to PRU to PRUP; SCOM to SCO to SCAV."
+    },
+    {
+      "id": "L4.1.nonsense.01",
+      "phase": "Tile Spelling",
+      "label": "Spell nonsense words with tiles",
+      "say": {
+        "text": ["Now you'll spell nonsense words with tiles, without finger spelling.", "The first word is RE. Repeat that word.", "Say it slowly.", "Bring down the tiles.", "Double-check by blending those sounds together."]
+      },
+      "listen": {
+        "expect": ["re", "/r/ /ee/"],
+        "hint": "Student spells the nonsense word with tiles and blends it."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "prePlace": [],
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.1.nonsense.02",
+      "phase": "Tile Spelling",
+      "label": "Dictate nonsense tile words",
+      "say": {
+        "text": "Spell each nonsense word with tiles. Say it slowly, bring down the tiles, double check, slowly blend, then say it fast like a word."
+      },
+      "do": "Dictate these nonsense words: BRO, TWY, PRU. If repeating the lesson, use CHE, SLI, ZY, THO, BLA, and FRU.",
+      "listen": {
+        "expect": ["bro", "twy", "pru"],
+        "hint": "Student spells each word with tiles without finger spelling."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      },
+      "note": "Move tiles out of the way after this procedure. They are not needed for the rest of the lesson, but may remain visible if helpful."
+    },
+    {
+      "id": "L4.1.words.01",
+      "phase": "Paper Reading",
+      "label": "Read words through word frame",
+      "say": {
+        "text": ["Now you're going to read words through the word frame.", "If you know that word for sure, just say it.", "Otherwise, sound it out."]
+      },
+      "do": "Put the word frame around each word on Student Page #4. If unsure or inaccurate, have the student touch-and-say, slowly blend, then say it like a word.",
+      "board": {
+        "mode": "word_frame",
+        "words": ["pro", "try", "ty", "sky", "go", "fru", "be", "fly", "plo", "ply", "she", "shra", "ho", "spry", "cho", "we", "cry", "twa"]
+      },
+      "listen": {
+        "expect": ["Student reads the word list accurately."],
+        "hint": "For a repeat lesson, start on the last word and work backwards."
+      },
+      "recovery": {
+        "trigger": "Student is unsure or inaccurate on a word.",
+        "prompts": [
+          "Touch and say each sound.",
+          "Slowly blend it.",
+          "Now say it like a word."
+        ]
+      }
+    },
+    {
+      "id": "L4.1.paper.01",
+      "phase": "Paper Spelling",
+      "label": "Spell real words on paper",
+      "say": {
+        "text": ["Now you're going to spell words on paper.", "Ready? The first word is HE. Repeat that word.", "Say it again, slowly.", "Don't use your fingers. Instead, just say-and-write each sound.", "Double check what you wrote."]
+      },
+      "listen": {
+        "expect": ["he", "/h/ /ee/"],
+        "hint": "Student says each sound and writes each letter."
+      },
+      "do": "Hand the student paper and pencil. Dictate HE, PRY, FLU, and BY.",
+      "board": {
+        "mode": "clear"
+      },
+      "recovery": {
+        "trigger": "Student misspells a word.",
+        "prompts": [
+          "Read exactly what you wrote.",
+          "Say the word slowly.",
+          "Any sound missing or extra?"
+        ]
+      }
+    },
+    {
+      "id": "L4.1.paper.02",
+      "phase": "Paper Spelling",
+      "label": "Spell nonsense words on paper",
+      "say": {
+        "text": "Now spell these nonsense words on paper. Say the word slowly, say-and-write each sound, then double check."
+      },
+      "do": "Dictate TRO, CLY, DRA, and THU. Repeat-lesson alternatives: PRU, SHA, BLY, TRO, DRE.",
+      "listen": {
+        "expect": ["tro", "cly", "dra", "thu"],
+        "hint": "Student spells nonsense words without finger spelling."
+      }
+    },
+    {
+      "id": "L4.1.sightread.01",
+      "phase": "Sight Words",
+      "label": "Read new sight word list",
+      "say": {
+        "text": "Let's look at some more common Sight words to see which ones we need to practice."
+      },
+      "do": "Give Student Page #6, place the word frame around the first word, and have the student read down each column. Track correct and incorrect responses on the Book 4 Sight Word Tracking Sheet.",
+      "board": {
+        "mode": "sight_words",
+        "words": ["put", "pull", "how", "now", "both", "know", "walk", "their", "once", "her", "none", "these", "two", "come"]
+      },
+      "listen": {
+        "expect": ["Student reads each sight word."],
+        "hint": "Unknown words become Reading Deck index cards."
+      },
+      "recovery": {
+        "trigger": "Student misreads a sight word.",
+        "prompts": [
+          "I'll write that one on a card so we can practice it.",
+          "Put a picture or clue in the lower-left corner to remind you of this word."
+        ]
+      }
+    },
+    {
+      "id": "L4.1.sightread.02",
+      "phase": "Sight Words",
+      "label": "Build and review Reading Deck",
+      "say": {
+        "text": ["Wow. I'm impressed. You knew most of those words.", "I'm going to write the ones you didn't know on index cards so we can practice.", "Put your thumb over the clue and read the word.", "Now do it one more time, without looking at the clues, as fast as you can."]
+      },
+      "do": "Make an index card for each misread word. Say the unknown word as you write it. Merge new cards with the existing Sight Word Reading Deck and review.",
+      "listen": {
+        "expect": ["Student reads each Reading Deck card, first with clue access and then quickly without clues."],
+        "hint": "These cards are reviewed at each lesson."
+      },
+      "note": "Bring out any existing Sight Word Reading Deck cards and merge them into one deck."
+    },
+    {
+      "id": "L4.1.sightspell.01",
+      "phase": "Sight Words",
+      "label": "Review Sight Word Spelling Deck",
+      "say": {
+        "text": ["Let's review your tricky Sight words.", "What's this word?", "Why is that letter in red?", "Stare at it until you can see it in your mind with your eyes closed."]
+      },
+      "do": "Hold up each Sight Word Spelling Card. Student reads it, explains the red letter, sees-and-spells twice on the wall, sees-and-writes twice on the table, then writes it twice on paper while saying each letter and underlining the red letter.",
+      "listen": {
+        "expect": ["Student reads the card, explains the red letter, spells and writes the word from memory."],
+        "hint": "Later, after Procedure N, add a check mark if the student spells the practiced sight word correctly."
+      },
+      "note": "Retire a Sight Word Spelling card after it has three check marks from three separate tutoring sessions. Then find a replacement from the Sight Word Check List."
+    },
+    {
+      "id": "L4.1.phrases.01",
+      "phase": "Phrases",
+      "label": "Read phrase groups",
+      "say": {
+        "text": ["Now you'll read some phrases.", "This group of phrases tells WHO. Read each phrase to me.", "These phrases tell DID WHAT. Read each phrase to me.", "Now read the WHERE phrases.", "Now read each of the Add-On phrases."]
+      },
+      "do": "Have the student read all phrase groups from Student Page #7.",
+      "board": {
+        "mode": "sentences",
+        "items": [
+          "Who: The shy fox",
+          "Who: Chet and Jim",
+          "Who: My bold child",
+          "Who: Their wild colt",
+          "Did What: doesn't come",
+          "Did What: had the flu",
+          "Did What: won't cry",
+          "Did What: will try to be",
+          "Where: by the dry bank",
+          "Where: at the mall",
+          "Where: at the pro shop",
+          "Where: in his stall",
+          "Add-On: but could still stroll.",
+          "Add-On: by two.",
+          "Add-On: when he's lost.",
+          "Add-On: if I'm there."
+        ]
+      },
+      "listen": {
+        "expect": ["Student reads each phrase group accurately."],
+        "hint": "These are read and used to compose oral sentences; they are not a drag-and-build activity."
+      },
+      "note": "The current schema has no dedicated phrase-list mode, so this uses sentences mode as a read-list surface."
+    },
+    {
+      "id": "L4.1.phrases.02",
+      "phase": "Phrases",
+      "label": "Create oral sentences",
+      "say": {
+        "text": ["A sentence must have a WHO and a DID WHAT phrase.", "Go ahead and make a short sentence.", "Create a sentence with three phrases.", "Create a sentence with four phrases."]
+      },
+      "listen": {
+        "expect": ["Student combines phrase chunks into complete oral sentences."],
+        "hint": "WHO + DID WHAT, then add WHERE, then add ADD-ON."
+      },
+      "do": "Guide the student to create one or two oral sentences from the phrase groups."
+    },
+    {
+      "id": "L4.1.phrases.03",
+      "phase": "Phrases",
+      "label": "Mark syllable types in phrases",
+      "say": {
+        "text": ["Now find one word that is a Closed syllable, and mark it.", "Find one word that's a Unit syllable, and mark it.", "Find one word that's an Open syllable, and mark it."]
+      },
+      "do": "For a Closed syllable, put a breve over the vowel. For a Unit syllable, box just the Unit portion. For an Open syllable, put a macron over the vowel.",
+      "listen": {
+        "expect": ["Student marks one Closed syllable, one Unit syllable, and one Open syllable."],
+        "hint": "Use guided discovery if the student cannot find examples."
+      },
+      "recovery": {
+        "trigger": "Student cannot find a syllable type.",
+        "prompts": [
+          "Look for one vowel closed in by a consonant.",
+          "Look for a red Unit chunk.",
+          "Look for one vowel at the end of a syllable."
+        ]
+      }
+    },
+    {
+      "id": "L4.1.phrasespell.01",
+      "phase": "Paper Spelling",
+      "label": "Spell phrases on paper",
+      "say": {
+        "text": ["Now you're going to write some phrases.", "The first phrase is GOT TO GO. Repeat that phrase.", "Now write it down. Use finger spelling for the tough words.", "Double check by reading exactly what you wrote.", "Any word that you want help checking?"]
+      },
+      "do": "Dictate GOT TO GO, WHY TRY, and FLY ON THE WALL. Then dictate each current Sight Word Spelling Deck word; if correct, put a check mark on that card.",
+      "listen": {
+        "expect": ["got to go", "why try", "fly on the wall"],
+        "hint": "Student reads exactly what was written to double check."
+      },
+      "note": "Repeat-lesson phrases: HAS THE FLU, IS SO SHY, HID IN A DRY STALL."
+    },
+    {
+      "id": "L4.1.sentread.01",
+      "phase": "Sentences",
+      "label": "Read and mark sentences",
+      "say": {
+        "text": ["Now you'll read these sentences.", "Read that first sentence to yourself.", "Now read it out loud.", "Let's mark each phrase.", "Now read that sentence with phrasing. Remember, put a small pause between each phrase."]
+      },
+      "do": "Have the student read each sentence from Student Page #8, mark WHO, DID WHAT, WHERE, and ADD-ON phrases, then reread with phrasing.",
+      "board": {
+        "mode": "sentences",
+        "items": [
+          "Their wild colt had the flu in his stall but could still stroll.",
+          "My bold child won't cry at the mall when he's lost.",
+          "The shy fox doesn't come by the dry bank if I'm there.",
+          "Chet and Jim will try to be at the pro shop by two.",
+          "\"Don't cry,\" said Frank, \"it's not so bad.\"",
+          "\"Why don't you try?\" Mrs. Smith says, \"I know you can do it.\"",
+          "My cat is so sly that she can pry the lid off the trash can.",
+          "That hot grill is too small to fry all the fish."
+        ]
+      },
+      "listen": {
+        "expect": ["Student reads sentences accurately and rereads with phrase pauses."],
+        "hint": "If the student will need a repeat lesson, save some sentences for that repeat."
+      }
+    },
+    {
+      "id": "L4.1.sentread.02",
+      "phase": "Sentences",
+      "label": "Phrasing suggestions",
+      "do": "Use these phrase breaks if needed: Their wild colt / had the flu / in his stall / but could still stroll. My bold child / won't cry / at the mall / when he's lost. The shy fox / doesn't come / by the dry bank / if I'm there. Chet and Jim / will try to be / at the pro shop / by two.",
+      "note": "For remaining sentences, guide phrasing by meaning and punctuation."
+    },
+    {
+      "id": "L4.1.sentspell.01",
+      "phase": "Paper Spelling",
+      "label": "Spell sentences on paper",
+      "say": {
+        "text": ["Now you're going to write three sentences.", "The first sentence is I'VE GOT TO GO TO THE BANK. Repeat that sentence.", "Go ahead and write that sentence. Use finger spelling on the tough words.", "Check your sentence by reading exactly what you wrote.", "Does it start with a capital and end with punctuation?", "Any word that you want help checking?"]
+      },
+      "do": "Dictate these sentences: I'VE GOT TO GO TO THE BANK. WHY TRY IF IT DOESN'T HELP? IT CAN'T BE A FLY ON THE WALL. Use guided discovery for errors.",
+      "listen": {
+        "expect": ["I've got to go to the bank.", "Why try if it doesn't help?", "It can't be a fly on the wall."],
+        "hint": "Student repeats, writes, checks capitalization/punctuation, and reads exactly what was written."
+      },
+      "note": "Repeat-lesson sentences: HE'LL CRY IF HE HAS THE FLU. MR. SMITH IS SO SHY HE JUST SAYS HI. THE COLD DUCK HID IN A DRY STALL."
+    },
+    {
+      "id": "L4.1.stories.01",
+      "phase": "Stories",
+      "label": "Read story: Gold",
+      "say": {
+        "text": ["Now you're ready to read a story.", "Preread the story and figure out the tough words. Then read it out loud to me."]
+      },
+      "do": "Give the student Basic Story #1.",
+      "board": {
+        "mode": "story",
+        "title": "Gold",
+        "text": "Some bold man had sold Mr. Rich a lot of gold. I didn't want to pry, but I did find that Mr. Rich kept it in a bag by his bed.\n\nMr. Rich wasn't spry. Bad men could try to rob him. I told the old man that he should put all of his gold in a box at the bank.\n\nMr. Rich did thank me."
+      },
+      "listen": {
+        "expect": ["Student prereads, then reads the story aloud."],
+        "hint": "Basic Story #1 was verified against the PDF page image because OCR was damaged."
+      }
+    },
+    {
+      "id": "L4.1.stories.02",
+      "phase": "Stories",
+      "label": "Read story: Day In The Sun",
+      "say": {
+        "text": "Here's another story. Read this one to yourself. Then in your own words, tell me what happened."
+      },
+      "do": "Give the student Basic Story #2 and ask for a retell after silent reading.",
+      "board": {
+        "mode": "story",
+        "title": "Day In The Sun",
+        "text": "Liz and I have been in for a swim. Now we'll sit in the sun and try to get dry. Liz will put some sun block on my back. I bat at a fly as it goes by.\n\nLiz says, \"The sun is so hot. I think we'll both fry if we sit on the sand too long.\"\n\nWe plan to stroll to the Snack Shack to drink some cold pop. Then we will go."
+      },
+      "listen": {
+        "expect": ["Student silently reads and retells the story in their own words."],
+        "hint": "Ask comprehension questions as needed."
+      }
+    },
+    {
+      "id": "L4.1.stories.03",
+      "phase": "Stories",
+      "label": "Advanced story option: The Pox",
+      "say": {
+        "text": "If you're ready for an advanced story, preread this one and then read it out loud to me."
+      },
+      "do": "Use this advanced story if appropriate, or save it for a repeat/extension.",
+      "board": {
+        "mode": "story",
+        "title": "The Pox",
+        "text": "The doc says I've got some kind of pox. It's not the flu. I've got a mild cold. There's a rash on my neck and a bump or two on my chest.\n\nI try my best not to scratch my itch. I'm so hot a fly would fry if he'd land on my skin. I'll have to rest in bed and drink a lot.\n\nMom says no one can come in to be with me. They could catch my pox. \"But Mom,\" I said, \"how did the pox catch me?\""
+      },
+      "listen": {
+        "expect": ["Student reads the advanced story aloud."],
+        "hint": "This is Student Page #11, Advanced."
+      }
+    },
+    {
+      "id": "L4.1.stories.04",
+      "phase": "Stories",
+      "label": "Advanced story option: Get Help",
+      "say": {
+        "text": "Read this story to yourself. Then in your own words, tell me what happened."
+      },
+      "do": "Use this advanced story if appropriate, or save it for a repeat/extension.",
+      "board": {
+        "mode": "story",
+        "title": "Get Help",
+        "text": "Mrs. Hall was spry but she had a fall and couldn't get up. What should she do?\n\nShe could cry for help, but no one was there. So she did pick up a rock. There was a big crash when the rock hit the glass window.\n\nShy Mr. Smith got up in a flash and he did spy Mrs. Hall there on the grass. He put in a call to 911. They'd act fast!\n\nWasn't that the best thing for him to do?"
+      },
+      "listen": {
+        "expect": ["Student silently reads and retells the advanced story."],
+        "hint": "This is Student Page #12, Advanced."
+      }
+    },
+    {
+      "id": "L4.1.close.01",
+      "phase": "Close",
+      "label": "Wrap up",
+      "say": {
+        "text": "You've done a lot of reading and spelling today. Thank you for working so hard."
+      },
+      "do": "Assign extra practice for work between tutoring sessions. Always do the first problem together before sending an extra practice page home.",
+      "board": {
+        "mode": "story",
+        "pageType": "worksheet",
+        "title": "Lesson 1 Extra Practice",
+        "subtitle": "Rendered from the real Book 4 manual pages before Lesson 2",
+        "text": "Show Lesson 1 Extra Practice #1 or #2. The student completes the selected paper copy outside the app.",
+        "images": [
+          {
+            "src": "assets/worksheets/level4/lesson1_extra_practice_1.png",
+            "label": "Lesson 1 Extra Practice #1",
+            "alt": "Lesson 1 Student Page 13 Extra Practice 1"
+          },
+          {
+            "src": "assets/worksheets/level4/lesson1_extra_practice_2.png",
+            "label": "Lesson 1 Extra Practice #2",
+            "alt": "Lesson 1 Student Page 14 Extra Practice 2"
+          }
+        ]
+      },
+      "note": "Default take-home choices: Lesson 1 Extra Practice #1, Lesson 1 Extra Practice #2, or practicing the Lesson 1 Read These Words page. The next lesson should begin by reviewing the assigned extra practice."
+    }
+  ]
+}

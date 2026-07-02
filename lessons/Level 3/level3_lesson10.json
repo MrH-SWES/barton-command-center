@@ -1,0 +1,281 @@
+{
+  "level": 3,
+  "lesson": 10,
+  "title": "Spelling: Contractions",
+  "sections": [
+    {
+      "id": "Part_Intro",
+      "title": "Lesson Overview",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "Materials Needed: New Tile: Apostrophe (green). Letter Tiles: A-Z plus CH, TH, CK, SH, WH. Extra: P, L, S, Z. Units: ALL, ANG, ING, ONG, UNG, ANK, INK, ONK, UNK.\n\nOverview: Students learn that contractions are two words squished together to help us talk faster. Rules: Never change the first word. In the second word, leave out the first vowel and any letters in front of it. Put an apostrophe where the letters were removed, then squish. Teach the 'Weirdo' contractions separately."
+        }
+      ]
+    },
+    {
+      "id": "Part_D",
+      "title": "D: NEW TEACHING #1: Contractions",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Are most adults relaxed with lots of time, or are they in a hurry? Right, we're always in a hurry. Hundreds of years ago, people invented a way to talk faster: Contractions."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["he", "is"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Clap while you say HE IS. Now, run them together into one word. He's. That's a contraction. Clap to see how many syllables are in 'He's'."
+        },
+        {
+          "type": "action",
+          "text": "Expected: One syllable."
+        },
+        {
+          "type": "dialogue",
+          "text": "To change two words into one, we need to get rid of a vowel. Here's the rule: Never change the first word. Take the vowel out of the second word."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["he", "'s"]
+        },
+        {
+          "type": "dialogue",
+          "text": "You put an apostrophe where you left out the letter, then squish them together. What does this say? And what two words does it stand for?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: He's. He is."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Practice with SHE IS -> SHE'S, IT IS -> IT'S. Note: Explain IT'S only means IT IS. If you don't mean 'it is', don't use an apostrophe (like in 'The dog lost its bone'). Practice with WHO IS -> WHO'S."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now, let's try 'I AM'. Which word do we change? Which letter do we leave out?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: The second word (AM). Take out the A (the vowel)."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["i", "'m"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Squish them: I'm."
+        }
+      ]
+    },
+    {
+      "id": "Part_E",
+      "title": "E: NEW TEACHING #2: Contraction Weirdos",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Most follow the rules, but there are a few weirdos. Let's look at CAN NOT."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["can", "not"]
+        },
+        {
+          "type": "dialogue",
+          "text": "If we followed the rules, we would remove the vowel (O). But for CAN'T, we also remove the N. Why? Because the word CAN already has an N at the end."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["can", "'t"]
+        },
+        {
+          "type": "dialogue",
+          "text": "That makes CAN'T. Now look at WILL NOT."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["will", "not"]
+        },
+        {
+          "type": "dialogue",
+          "text": "This is the biggest weirdo. We don't say 'willn't'. We say WON'T."
+        },
+        {
+          "type": "action",
+          "text": "Tutor replaces WILL and NOT with WON'T."
+        },
+        {
+          "type": "dialogue",
+          "text": "Remember, WON'T stands for WILL NOT."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Teach WOULD -> 'D (e.g., I'D, SHE'D). Teach LET US -> LET'S (point out here 'S means US, not IS). Teach WE ARE -> WE'RE, YOU ARE -> YOU'RE, THEY ARE -> THEY'RE."
+        }
+      ]
+    },
+    {
+      "id": "Part_F",
+      "title": "F: Spell Real Words with Fingers, then Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now finger spell. The first contraction is WE'VE. Repeat it."
+        },
+        {
+          "type": "action",
+          "text": "Expected: WE'VE (stands for WE HAVE)."
+        },
+        {
+          "type": "dialogue",
+          "text": "Use your fingers to break the original words into sounds. Pull down a tile for each finger."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate: I'LL, DON'T, HE'D, YOU'VE, I'VE. (Student must build original words first, then convert to contraction)."
+        }
+      ]
+    },
+    {
+      "id": "Part_I",
+      "title": "I: Read Words Through Word Frame",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Read these through the word frame. Say the contraction, then the original two words."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": [
+            "doesn't", "i'm", "let's", "who's", "we're", "can't",
+            "i'll", "she's", "won't", "aren't", "they'll", "they'd",
+            "he'd", "they've", "what's", "that's", "he'll", "wouldn't", "don't"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Part_J",
+      "title": "J: Spell Words with Fingers, then Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now write these on paper. The first contraction is WE'VE. What were the original two words? Write them, then write the contraction."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate: I'M, DON'T, HE'D, YOU'VE, I'VE."
+        }
+      ]
+    },
+    {
+      "id": "Part_M",
+      "title": "M: Read Phrases",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Read these phrases. Identify WHO, DID WHAT, WHERE, and ADD-ON."
+        },
+        {
+          "type": "student_page",
+          "mode": "phrase_builder",
+          "payload": {
+            "who": [
+              "The French duck",
+              "Clem and Hank",
+              "Mr. Smith",
+              "The bad kid"
+            ],
+            "did what": [
+              "can't dunk his wing",
+              "haven't been",
+              "wouldn't pitch",
+              "didn't get"
+            ],
+            "where": [
+              "in the pond",
+              "to Frank",
+              "on the fast truck",
+              "at camp"
+            ],
+            "add-on": [
+              "next to the shack.",
+              "but he wasn't mad",
+              "who couldn't hit.",
+              "for long."
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "Part_N",
+      "title": "N: Spell Phrases and Sight Words on Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "The first phrase is WE'LL GET KENT. Write it down."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate: I HAVEN'T SUNG, DOESN'T A DOG, I CAN'T CATCH, WON'T ROSS GRILL."
+        }
+      ]
+    },
+    {
+      "id": "Part_O",
+      "title": "O: Read Sentences",
+      "steps": [
+        {
+          "type": "student_page",
+          "mode": "sentence_marking",
+          "payload": [
+            "The French duck can't dunk his wing in the pond next to the shack.",
+            "Mr. Smith didn't get on the fast truck but he wasn't mad.",
+            "Clem and Hank haven't been at camp for long.",
+            "The bad kid wouldn't pitch to Frank, who couldn't hit the ball.",
+            "They didn't bring any milk.",
+            "Dick shouldn't miss class again.",
+            "Mr. Chang felt strong.",
+            "She'll smell the shrimp if we don't get rid of it fast.",
+            "The cross gal who's with Bill is Fran."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Part_P",
+      "title": "P: Spell Sentences on Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Write these sentences: WE'LL GET KENT TO TRUST HANK. DOESN'T A DOG SCRATCH THE GRASS? I HAVEN'T SUNG THAT SWELL SONG."
+        }
+      ]
+    },
+    {
+      "id": "Part_Q",
+      "title": "Q: Read a Story",
+      "steps": [
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "The Champ",
+            "text": "Chang Kong is a small chap. He isn't strong. He doesn't run fast. Chang can't catch and Chang won't pitch. You'd think he would flop with a ball. But he can whack a ball. All the gang says, 'There goes Chang Kong—the champ of ping pong and golf!'"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,828 @@
+{
+  "level": 2,
+  "lesson": 1,
+  "title": "1 Vowel, 6 Consonants (A, B, F, M, P, S, T)",
+  "sections": [
+    {
+      "id": "Part_Intro",
+      "title": "Lesson Overview",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "Materials Needed: Letter Tiles: A, B, F, M, P, S, T. Binder paper and pencil. Word Frame. [cite: 572] In this lesson, you'll introduce just one vowel, A, and you will only teach its Short sound. [cite: 573] You'll show your student how to tap the keyword Apple. [cite: 574] You'll also introduce six consonants. [cite: 574] If your student knows the sound the consonant makes, do NOT teach its keyword. [cite: 575] Watch for confusion between the B and P letter or sound. [cite: 579] If you notice confusion, stop and teach the trick of 'Balloons go up in the air, pigs go down in the mud.' [cite: 580]"
+        }
+      ]
+    },
+    {
+      "id": "Part_D",
+      "title": "D: Teach New Vowel Sound",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "You're very good at hearing sounds within a syllable. Today, you're going to learn which letters go with which sounds. And we'll practice reading and spelling with those letters. [cite: 590] There are lots of sounds in our language. I'm not going to teach all of them today. Today, you'll learn the 7 most common sounds. [cite: 591] Ready for the first one? [cite: 592]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Yes [cite: 592]"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["a"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Tell me the name of this letter. [cite: 592]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: A [cite: 593]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Right. The letter A is a vowel. Vowels are important because every word and every syllable MUST contain a vowel. [cite: 593] But vowels can be tricky because they can make several different sounds. The most common sound the letter A makes ... is /a/. [cite: 594] Repeat that sound. /a/ [cite: 595]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: /a/ [cite: 595]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Good sound. Now I'll help you create a picture in your head ... to make it easy to remember that sound. First, close your eyes. [cite: 595]"
+        },
+        {
+          "type": "action",
+          "text": "Student closes his eyes [cite: 596]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Picture yourself walking into your favorite grocery store. Can you picture that? [cite: 596]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Yes [cite: 597]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now walk over to the fruit and vegetable section. [cite: 597] Notice there's a whole row of the same kind of fruit. This fruit is about the size of a baseball. Some of them are shiny and red on the outside; others are green. [cite: 598] But if you took a bite of this fruit, it would be crisp and white inside. And eating this fruit is noisy. You make a crunchy sound each time you take a bite. [cite: 599] What fruit are you seeing in your head? [cite: 600]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: An apple [cite: 600]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Right. Now go ahead and open your eyes. [cite: 601] Now you know what to picture in your head ... whenever you see the letter A. An apple. Here's how that picture will help. [cite: 602] Clap to see how many syllables are in the word Apple. [cite: 602]"
+        },
+        {
+          "type": "action",
+          "text": "Student claps twice while saying the word Apple. [cite: 602]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Right. So you need two fingers to tap that word. [cite: 603] To 'tap' the word Apple, do this. [cite: 603]"
+        },
+        {
+          "type": "action",
+          "text": "Tutor taps her right index finger while saying /a/, then taps her middle finger while saying /ple/. [cite: 604]"
+        },
+        {
+          "type": "dialogue",
+          "text": "You try it. Tap the word Apple several times. [cite: 606]"
+        },
+        {
+          "type": "action",
+          "text": "Student taps the word Apple using index and middle fingers. [cite: 607]"
+        },
+        {
+          "type": "dialogue",
+          "text": "What sound does your first finger say? [cite: 607]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: /a/ [cite: 608]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Right. That's the sound you should make .. . whenever you see the letter A. [cite: 608]"
+        },
+        {
+          "type": "action",
+          "text": "Tutor taps while saying: Apple, Apple, /a/ /a/ /a/. [cite: 609]"
+        },
+        {
+          "type": "dialogue",
+          "text": "You try it. [cite: 609]"
+        },
+        {
+          "type": "action",
+          "text": "Student taps Apple, Apple, /a/ /a/ /a/ [cite: 610]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Whenever I show you this letter and ask you what it says, I want you to tap Apple, Apple /a/ /a/ /a/. Show me how you would do that. [cite: 610]"
+        },
+        {
+          "type": "action",
+          "text": "Student taps Apple, Apple, /a/ /a/ /a/ [cite: 611]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Great. Now let's check the picture in your head. Can you still see it? [cite: 611]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Yes [cite: 612]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Where are you in that picture? Are you in the meat department or the fruit section? [cite: 612]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Fruit [cite: 613]"
+        },
+        {
+          "type": "dialogue",
+          "text": "And what fruit are you looking at? [cite: 613]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Apple [cite: 613]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Are you looking at a red one or a green one? [cite: 613]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: (either answer is fine) [cite: 614]"
+        },
+        {
+          "type": "dialogue",
+          "text": "I'm glad you can still see it. Now tap that keyword for me. [cite: 614]"
+        },
+        {
+          "type": "action",
+          "text": "Student taps Apple, Apple, /a/ /a/ /a/ [cite: 615]"
+        },
+        {
+          "type": "dialogue",
+          "text": "You've got it. [cite: 615]"
+        }
+      ]
+    },
+    {
+      "id": "Part_E",
+      "title": "E: Teach 6 Consonants",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're ready to learn some consonants. You may already know many of these. When we find one you don't know, we'll create a Keyword page. [cite: 619]"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["m"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Tell me the name of this letter and the sound it makes. [cite: 622]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: M, /m/ [cite: 623]"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["p"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Tell me the name of this letter and the sound it makes. [cite: 624]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: P, /p/ [cite: 625]"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["t"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Tell me the name of this letter and the sound it makes. [cite: 626]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: T, /t/ [cite: 627]"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Tell me the name of this letter and the sound it makes. [cite: 628]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: S, /s/ [cite: 629]"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["f"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Tell me the name of this letter and the sound it makes. [cite: 630]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: F, /f/ [cite: 631]"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["b"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Tell me the name of this letter and the sound it makes. [cite: 632]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: B, /b/ [cite: 632]"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Tutor puts the letter tiles across the top of the work area. [cite: 634] Put a dark, thick line along the bottom of your p and b tiles. Teach your student that the dark line goes along the bottom, towards the student. [cite: 618]"
+        }
+      ]
+    },
+    {
+      "id": "Part_F",
+      "title": "F: Read Sounds on Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Before you spell with those letters, let's run through them one more time. [cite: 652] First, tell me why the A is a different color than the rest of the letters? [cite: 652]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: It's a vowel. [cite: 652]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Tap that vowel for me. [cite: 652]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student taps and says Apple Apple /a/ /a/ /a/ [cite: 652]"
+        },
+        {
+          "type": "action",
+          "text": "Tutor points to each of the other 6 tiles. [cite: 652]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Tell me the name and the sound of this letter. [cite: 652]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student responds accurately [cite: 652]"
+        }
+      ]
+    },
+    {
+      "id": "Part_G",
+      "title": "G: Spell Sounds with Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now we're going to do the opposite. I'm going to make the sound. You repeat the sound. /t/ [cite: 657]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: /t/ [cite: 658]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to the tile that says /t/. [cite: 658]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student points to the T tile [cite: 658]"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining consonant sounds: /p/, /s/, /b/, /f/, /m/ [cite: 658]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now I'm going to make a vowel sound. /a/. Repeat that sound. [cite: 658]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: /a/ [cite: 659]"
+        },
+        {
+          "type": "dialogue",
+          "text": "What keyword starts with /a/? [cite: 659]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Apple [cite: 659]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Good memory. Point to the tile that says /a/. [cite: 659]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student points to the A tile [cite: 660]"
+        }
+      ]
+    },
+    {
+      "id": "Part_H",
+      "title": "H: Read Real Words with Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're ready to take those sounds and blend them into words. Here's how that works. [cite: 661]"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["m", "a", "t"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Let's figure out the vowel first. Tap its keyword, then its sound. [cite: 663]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student taps Apple Apple /a/ /a/ /a/ [cite: 663]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Good. Now touch-and-say each sound, like this. [cite: 664]"
+        },
+        {
+          "type": "action",
+          "text": "Tutor uses her index finger and touches the M tile and while saying /m/, touches A tile while saying /a/, then touches the T tile while saying /t/. [cite: 664]"
+        },
+        {
+          "type": "dialogue",
+          "text": "You try it. Touch-and-say each sound. [cite: 665]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student touches and says each sound. [cite: 665]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Next, slowly drag your finger underneath that word while you run those sounds together, like this. [cite: 665]"
+        },
+        {
+          "type": "action",
+          "text": "Tutor drags her index finger below the tiles while slowly saying /mmmm/-/aaaa/-/t/. [cite: 665]"
+        },
+        {
+          "type": "dialogue",
+          "text": "You try it. [cite: 665]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student mimics your slow dragging and blending. [cite: 665]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Good. Now say it fast-like a word. [cite: 666]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Mat [cite: 666]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Have you got the idea? [cite: 666]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Yes [cite: 666]"
+        },
+        {
+          "type": "dialogue",
+          "text": "OK. Now I'll change the last letter. [cite: 667]"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["m", "a", "p"]
+        },
+        {
+          "type": "action",
+          "text": "Student taps the vowel, touch-and-says, slowly blends, then says fast like a word. [cite: 667]"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Continue changing one tile to form: PAM -> PAT -> SAT -> SAM -> TAM -> TAB [cite: 667]"
+        }
+      ]
+    },
+    {
+      "id": "Part_I",
+      "title": "I: Spell Real Words with Fingers, then Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now let's do the opposite. I'll say a word, and YOU break it into the sounds. [cite: 670] The first word is SAP. [cite: 670]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: SAP [cite: 670]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it again, very slowly. [cite: 671]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: /ssss/-/aaaa/-/p/ [cite: 671]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Use your fingers to break it into sounds, like this. [cite: 671]"
+        },
+        {
+          "type": "action",
+          "text": "Tutor uses NON-WRITING hand and raises thumb while saying /s/, raises index finger while saying /a/, and raises middle finger while saying /p/. [cite: 672]"
+        },
+        {
+          "type": "dialogue",
+          "text": "You try it. [cite: 673]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student mimics the finger spelling. [cite: 673]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Pull down a tile for each finger, while making its sound. Pull down the tile that says /s/. [cite: 674]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student pulls down the S tile [cite: 675]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Pull down the tile that says the /a/-Apple sound. [cite: 675]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student pulls down the A tile and places it after the S tile. [cite: 676]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Pull down the tile that says /p/. [cite: 677]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student pulls down the P tile. [cite: 678]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Here's how to double check. First, slowly blend those tiles together. [cite: 678]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student runs index finger below tiles and blends the sounds together: /ssss/-/aaaa/-p. [cite: 678]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it fast like a word. [cite: 678]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Sap [cite: 678]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Is that the word you wanted? [cite: 678]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Yes [cite: 678]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Nice job. Go ahead and put those tiles away. [cite: 678]"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate these words: MAT, PAM, PAT, TAP, FAT [cite: 668]"
+        }
+      ]
+    },
+    {
+      "id": "Part_J",
+      "title": "J: Read Nonsense Words with Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now I'm going to build a nonsense word. [cite: 680]"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["f", "a", "m"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Figure out the vowel first. Tap its keyword, then its sound. [cite: 680]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student taps Apple Apple /a/ /a/ /a/ [cite: 680]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now touch-and-say each tile. [cite: 680]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student touches F and says /f/, touches A and says /a/, touches M and says /m/. [cite: 680]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly blend those sounds together. [cite: 680]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student slowly drags his index finger below the word while saying /ffff/-/aaaa/-/mmmm/ [cite: 680]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it fast like a word. [cite: 680]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Fam [cite: 680]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Nice. Go ahead and put those tiles away. [cite: 681]"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Build these words: SAB, BAP, SAF, FAP [cite: 682]"
+        }
+      ]
+    },
+    {
+      "id": "Part_K",
+      "title": "K: Spell Nonsense Words with Fingers, then Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll spell some nonsense words-the same way you spelled real words. Ready? The first word is FAB. [cite: 685]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: FAB [cite: 685]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly. [cite: 685]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: /ffff/-/aaaa/-/b/ [cite: 685]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Use your fingers to break it into sounds. [cite: 685]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student raises thumb and says /f/, raises index finger and says /a/-Apple, then raises middle finger and says /b/. [cite: 686]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Pull down a tile for each finger, while making its sound. [cite: 687]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student pulls down F, then A, then B. [cite: 688]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now double-check. First blend those sounds together. [cite: 688]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student drags index finger below the tiles while saying /ffff/-/aaaa/-/b/ [cite: 688]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it fast like a word. [cite: 688]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Fab [cite: 688]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Is that the word you wanted? [cite: 688]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Yes [cite: 688]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Excellent. Put those tiles back. [cite: 688]"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate these words: MAF, FAP, PAB [cite: 683]"
+        }
+      ]
+    },
+    {
+      "id": "Part_L",
+      "title": "L: Read Words Through Word Frame",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to read words using a word frame. Here's how that works. [cite: 691]"
+        },
+        {
+          "type": "action",
+          "text": "Tutor gives the Lesson 1: Read These Words page and the word frame to the student. [cite: 691]"
+        },
+        {
+          "type": "action",
+          "text": "Student puts word frame around the first word. [cite: 691]"
+        },
+        {
+          "type": "dialogue",
+          "text": "If you know the word for sure, just say it. [cite: 691] Otherwise, touch-and-say each sound, then blend them together. [cite: 691]"
+        },
+        {
+          "type": "action",
+          "text": "Student either says word, or touches and says each sound, slowly blends them together, then says it fast like a word. [cite: 691]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now move down to the next word and do the same thing. [cite: 691]"
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": [
+            "mat", "mam", "taf",
+            "map", "tap", "saf",
+            "sam", "tam", "hap",
+            "bam", "fat", "fab",
+            "bap", "pat", "pab"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Part_M",
+      "title": "M: Spell Words with Fingers, then Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to spell words on paper. [cite: 695]"
+        },
+        {
+          "type": "action",
+          "text": "Tutor hands student a piece of paper but NOT a pencil. [cite: 695]"
+        },
+        {
+          "type": "dialogue",
+          "text": "The first part will be the same-spelling all the way through finger. [cite: 696] Ready? The first word is TAB. [cite: 696]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: TAB [cite: 696]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it again, slowly. [cite: 697]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: /t/-/aaaa/-/b/ [cite: 697]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Use your fingers to break it into sounds. [cite: 697]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student raises thumb on NON-WRITING hand while saying /t/, raises index finger while saying /a/-Apple, raises middle finger while saying /b/. [cite: 698]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now make each sound and tell me what letter you need. [cite: 699]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student raises fingers again while saying /t/-T, /a/-Apple-A, /b/-B. [cite: 700]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Fine. Here's a pencil. Make each sound while you write down its letter. [cite: 701]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student says /t/ and writes T, says /a/-Apple and writes A, says /b/ and writes B. [cite: 702]"
+        },
+        {
+          "type": "dialogue",
+          "text": "As a last step, double-check what you wrote. [cite: 705] To do that, first blend the sounds together. [cite: 705]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: /t/-/aaaa/-/b/ [cite: 705]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it fast like a word. [cite: 705]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Tab [cite: 706]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Is that the word you wanted? [cite: 706]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Yes [cite: 706]"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate real words: PAT, BAM, PAP, BAT. Dictate nonsense words: FAS, MAB, BAF, SAB, BAP. [cite: 694]"
+        }
+      ]
+    },
+    {
+      "id": "Part_N",
+      "title": "N: Read Longer Words Together",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Nonsense words ... are the first syllables of longer words. So to get ready to read longer words, let's practice reading nonsense words. [cite: 709]"
+        },
+        {
+          "type": "action",
+          "text": "Tutor gives the Lesson 1: Read Longer Words Together page to student. [cite: 709]"
+        },
+        {
+          "type": "dialogue",
+          "text": "You will read just the first syllable, which is on your page. Go ahead and read the first one. [cite: 710]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Fab [cite: 711]"
+        },
+        {
+          "type": "dialogue",
+          "text": "That's the first syllable in the word Fabulous. Say that word. [cite: 711]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Fabulous [cite: 712]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Can you think of any other words ... that start with FAB? [cite: 712]"
+        },
+        {
+          "type": "action",
+          "text": "Expected: accept any word that starts with Fab. [cite: 713]"
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and read the next nonsense syllable on your page. [cite: 714]"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Continue this process using the words in the column. [cite: 715] Older students with good vocabularies enjoy this task. But younger students may NOT be able to think of any words. [cite: 716] If this task is frustrating your student, change the directions. Say, 'Some of these words are real, some are nonsense. Read each word, then tell me if it's real or if it's nonsense.' [cite: 718]"
+        }
+      ]
+    }
+  ]
+}

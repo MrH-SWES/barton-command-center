@@ -1,0 +1,899 @@
+{
+  "level": 4,
+  "lesson": 2,
+  "title": "Syllable Division Rule #1",
+  "sections": [
+    {
+      "id": "Part_Intro",
+      "title": "Lesson Overview",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "Materials Needed: New Tiles: None. Letter Tiles: 2 sets of A through Z plus Vowel Y, CH, TH, CK, SH, WH, TCH. Units: ALL, ANG, ING, ONG, UNG, ANK, INK, ONK, UNK, OLL, OLD, OLT, OST, ILD, IND. Binder Paper and Pencil. Word Frame. Blank Light-Colored 5x8 Index Card. Several Blank 3x5 Index Cards."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Overview: Your student is ready to tackle words with two syllables. You can tell a word has two syllables because it has two vowels that are not next to each other. To divide a word into syllables, first locate the vowels. Drag each vowel into its own syllable. Next, count the number of consonants (blue tiles) between the vowels. In this lesson, there will only be 1 blue tile between the vowels.\n\nStart by moving that tile to the end of the word, which will make the first syllable Open. Your student should try that option first. If that creates a real word, he's done. If it doesn't create a real word, he should move that blue tile the other way, which will close off that first syllable and make its vowel short.\n\nYou'll teach that Y at the end of a multi-syllable word says /ee/ as in Baby. You'll also point out that multi-syllable words don't use the FLOSS spelling rule. And C switches to /s/ whether the Watch Out vowel makes its Short or Long sound."
+        }
+      ]
+    },
+    {
+      "id": "Part_A",
+      "title": "A: Review Units",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Can you tell me the sound that each of these Units makes?"
+        },
+        {
+          "type": "action",
+          "text": "One-by-one, Tutor points to each red Unit tile. Student makes the correct sound."
+        }
+      ]
+    },
+    {
+      "id": "Part_B",
+      "title": "B: Review Extra Practice Page",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's take a look at your extra practice page."
+        },
+        {
+          "type": "action",
+          "text": "Student reads the words out loud from the completed extra practice page."
+        }
+      ]
+    },
+    {
+      "id": "Part_C",
+      "title": "C: Phonemic Awareness Warm-up",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Repeat this nonsense word, then make just its FIRST sound. Ready? SHRA."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Shra, /sh/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to the tile that makes that sound."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the SH tile."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now for the LAST sound—the vowel. Ready? TRO."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Tro, /oe/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to that tile."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the O tile."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate First Sound words: SHRA, CHO, THU, DRE, ZY. Dictate Last Sound words (all vowels): TRO, FRU, BLY, SNO, CHA."
+        }
+      ]
+    },
+    {
+      "id": "Part_D",
+      "title": "D: NEW TEACHING #1: Rule #1, Most Common",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["p", "r", "e", "t", "e", "n", "d"]
+        },
+        {
+          "type": "dialogue",
+          "text": "How many syllables in that word?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: 2"
+        },
+        {
+          "type": "dialogue",
+          "text": "How did you know?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: 2 vowels that are not next to each other"
+        },
+        {
+          "type": "dialogue",
+          "text": "How many letters between the vowels?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: 1"
+        },
+        {
+          "type": "dialogue",
+          "text": "Where will you move it first?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: To the end"
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and divide that word for me."
+        },
+        {
+          "type": "action",
+          "text": "Student drags to make PRE-TEND"
+        },
+        {
+          "type": "dialogue",
+          "text": "And that word says..."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Pretend"
+        },
+        {
+          "type": "dialogue",
+          "text": "Good. So when there's just one letter between the vowels, which way should it go?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: To the end"
+        },
+        {
+          "type": "dialogue",
+          "text": "What if it wasn't a real word? Then what would you do?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Move it the other way."
+        },
+        {
+          "type": "dialogue",
+          "text": "Exactly. You've learned that so well that today I'm going to show you how to apply it."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["b", "o", "n", "u", "s"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Just by LOOKING at that word, how many syllables will it have?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Two"
+        },
+        {
+          "type": "dialogue",
+          "text": "How did you know?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: It has two vowels"
+        },
+        {
+          "type": "dialogue",
+          "text": "Right. Two vowels that are not next to each other. Before you read a word with more than one vowel, you must divide it into syllables. I'll drag each vowel into its own syllable, like this."
+        },
+        {
+          "type": "action",
+          "text": "Tutor drags to make BO-N-US"
+        },
+        {
+          "type": "dialogue",
+          "text": "How many letters are BETWEEN the vowels? 1. And here's the rule. When there is 1 letter between the vowels, move it toward the end of the word—like this."
+        },
+        {
+          "type": "action",
+          "text": "Tutor drags to make BO-NUS"
+        },
+        {
+          "type": "dialogue",
+          "text": "What kind of syllable is this first one—Open or Closed?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Open"
+        },
+        {
+          "type": "dialogue",
+          "text": "So will its vowel be Long or Short?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Long"
+        },
+        {
+          "type": "dialogue",
+          "text": "So that syllable says?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Bo"
+        },
+        {
+          "type": "dialogue",
+          "text": "How about the second syllable. Is it Open or Closed?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Closed"
+        },
+        {
+          "type": "dialogue",
+          "text": "Will its vowel be Long or Short?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Short"
+        },
+        {
+          "type": "dialogue",
+          "text": "So it says..."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Nus"
+        },
+        {
+          "type": "dialogue",
+          "text": "Altogether it says..."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Bonus"
+        },
+        {
+          "type": "dialogue",
+          "text": "Nice. Notice there's something strange about the spelling of this word. What sound is at the end of Bonus?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: /s/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Right. /s/. But how many S's are there?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Only one"
+        },
+        {
+          "type": "dialogue",
+          "text": "That's because the FLOSS spelling rule... only applies to words that have just one vowel. When a word has more than one vowel, you don't use the FLOSS rule."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "t", "u", "d", "e", "n", "t"]
+        },
+        {
+          "type": "dialogue",
+          "text": "How many syllables will it have?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: 2"
+        },
+        {
+          "type": "dialogue",
+          "text": "As a first step, go ahead and move each vowel into its own syllable."
+        },
+        {
+          "type": "action",
+          "text": "Student drags to make STU-D-ENT"
+        },
+        {
+          "type": "dialogue",
+          "text": "How many letters between the vowels?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: 1"
+        },
+        {
+          "type": "dialogue",
+          "text": "So which way should it go?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: To the end"
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and move it."
+        },
+        {
+          "type": "action",
+          "text": "Student drags to make STU-DENT"
+        },
+        {
+          "type": "dialogue",
+          "text": "What kind of syllable is the first one—Open or Closed?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Open"
+        },
+        {
+          "type": "dialogue",
+          "text": "So its vowel will be Long or Short?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Long"
+        },
+        {
+          "type": "dialogue",
+          "text": "Remember, a long-U can make 2 sounds: /ee-oo/ or /oo/. What does that first syllable say?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Stu"
+        },
+        {
+          "type": "dialogue",
+          "text": "What kind of syllable is the second one?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Closed"
+        },
+        {
+          "type": "dialogue",
+          "text": "So what sound will its vowel make?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: /eh/"
+        },
+        {
+          "type": "dialogue",
+          "text": "So that syllable says?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Dent"
+        },
+        {
+          "type": "dialogue",
+          "text": "Altogether the word says?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Have the student divide and read PREDICT in the same way (PRE-DICT). Then build BABY."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["b", "a", "b", "y"]
+        },
+        {
+          "type": "dialogue",
+          "text": "How many syllables in that word? Go ahead and divide it."
+        },
+        {
+          "type": "action",
+          "text": "Student drags to make BA-BY"
+        },
+        {
+          "type": "dialogue",
+          "text": "The first syllable is open, so what will its vowel say?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: /a/ (Ba)"
+        },
+        {
+          "type": "dialogue",
+          "text": "What kind of syllable is the second one?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Open"
+        },
+        {
+          "type": "dialogue",
+          "text": "Hmmm. What sound is the Y making at the end?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: /ee/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Doesn't a Y at the end say I? Yes, but when Y comes at the end of a MULTI-syllable word, it says E. I use the phrase 'CRY BABY' to remember that Y says /eye/ in a one-syllable word like CRY, and /ee/ in a MULTI-syllable word like BABY. What phrase will help you remember the sounds of Y?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Cry Baby"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Have the student divide TINY (TI-NY), BICEPS (BI-CEPS, point out C says /s/ because E is a Watch Out vowel), and CRAZY (CRA-ZY, point out C says /k/)."
+        }
+      ]
+    },
+    {
+      "id": "Part_E",
+      "title": "E: NEW TEACHING #2: Rule #1, The Other Way",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["c", "o", "p", "y"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Now let me show you a trick. Go ahead and divide that word."
+        },
+        {
+          "type": "action",
+          "text": "Student drags to make CO-PY"
+        },
+        {
+          "type": "dialogue",
+          "text": "Is that first syllable Open or Closed?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Open. It says Co."
+        },
+        {
+          "type": "dialogue",
+          "text": "And the second syllable? It says Pee. Altogether it says Co-pee. I've never heard of that word, have you?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: No"
+        },
+        {
+          "type": "dialogue",
+          "text": "Here's the trick. Most of the time, when there is one letter between the vowels, it goes to the end. So you should always try it that way first... which you did. But if moving it to the end doesn't create a real word, then move it the other way."
+        },
+        {
+          "type": "action",
+          "text": "Tutor drags to make COP-Y"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now is that first syllable Open or Closed?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Closed. It says Cop."
+        },
+        {
+          "type": "dialogue",
+          "text": "And the second one says /ee/. Altogether it says?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Copy"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Have the student divide LIMIT. They will first try LI-MIT (Lie-mit). Since it's not a word, they should move the M to make LIM-IT. Do the same for CLOSET (CLO-SET -> CLOS-ET)."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["c", "i", "t", "y"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Divide that word the most common way."
+        },
+        {
+          "type": "action",
+          "text": "Student drags to make CI-TY"
+        },
+        {
+          "type": "dialogue",
+          "text": "Good reading. Notice the C switched to /s/... even though the I is making its Long sound. It doesn't matter what sound the Watch Out vowel is making. It will always switch C to the /s/ sound. But is Ci-ty a real word?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: No. Student moves it to CIT-Y to make City."
+        },
+        {
+          "type": "dialogue",
+          "text": "So let's review. When dividing a word with only one letter between the vowels, what should you do first?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Move the letter to the end of the word."
+        },
+        {
+          "type": "dialogue",
+          "text": "If that doesn't make a real word, what do you do?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Drag it the other way."
+        }
+      ]
+    },
+    {
+      "id": "Part_F",
+      "title": "F: Spell Real Words with Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now that our words are getting longer, let me show you how to spell ... multi-syllable words. The first word is RO-BOT. Repeat that word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Robot"
+        },
+        {
+          "type": "dialogue",
+          "text": "Tap and say each syllable like this."
+        },
+        {
+          "type": "action",
+          "text": "Tutor lightly slaps the table while saying RO, then again while saying BOT. Student mimics this."
+        },
+        {
+          "type": "dialogue",
+          "text": "Say just the first syllable, then bring down its tiles."
+        },
+        {
+          "type": "action",
+          "text": "Student says RO, pulls down R, O."
+        },
+        {
+          "type": "dialogue",
+          "text": "Say the second syllable, and bring down its tiles."
+        },
+        {
+          "type": "action",
+          "text": "Student says BOT, pulls down B, O, T. (Leaves space between syllables)."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now double-check ... by reading each syllable ... exactly as it looks."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining words: NA-VY, PRE-TEND, SOL-ID, PUN-ISH."
+        }
+      ]
+    },
+    {
+      "id": "Part_G",
+      "title": "G: Read Nonsense Words on Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now I'm going to build a nonsense word."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "t", "r", "i", "d", "y"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and divide it into syllables... the most common way."
+        },
+        {
+          "type": "action",
+          "text": "Student drags to make STRI-DY."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say each syllable ... exactly as it looks. Now say it like a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Stri-dy. Stridy."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Build these words for the student to divide and read: STRIDIS (STRI-DIS), STUDISH (STU-DISH), THEPID (THE-PID), MAZY (MA-ZY), SPLENIM (SPLE-NIM)."
+        }
+      ]
+    },
+    {
+      "id": "Part_H",
+      "title": "H: Spell Nonsense Words with Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now it's your turn to spell Nonsense words. The first word is DE-NIT. Repeat that word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: De-nit"
+        },
+        {
+          "type": "dialogue",
+          "text": "Tap each syllable on the table."
+        },
+        {
+          "type": "action",
+          "text": "Student lightly slaps the syllables while saying DE-NIT."
+        },
+        {
+          "type": "dialogue",
+          "text": "Say just the first syllable, then bring down its tiles."
+        },
+        {
+          "type": "action",
+          "text": "Student says DE, pulls down D, E."
+        },
+        {
+          "type": "dialogue",
+          "text": "Say just the second syllable, then bring down its tiles."
+        },
+        {
+          "type": "action",
+          "text": "Student says NIT, pulls down N, I, T."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now double-check... by reading each syllable... exactly as it looks. Now say it fast like a word."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate these words: BLOD-MENT, HUN-CY, PEL-SET, MU-TRIP, THRIK-ID, PHI-GLAT."
+        }
+      ]
+    },
+    {
+      "id": "Part_I",
+      "title": "I: Read Words Through Word Frame",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to read words through the word frame. If you know that word for sure, just say it. If you don't know the word, you need to divide it on paper. First, with a pencil, put a dot below each vowel. Count the letters between the dots. Draw a dividing line. Pronounce each syllable exactly as it is divided. Then say it fast like a word."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": [
+            "navy", "refund", "exam", "spoken", "visit", "planet", "truly",
+            "predict", "pony", "Irish", "vanish", "pity", "protect", "recess",
+            "rodent", "wipid", "hadish", "prenent", "sugon", "valem", "tridy", "rocant"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Part_J",
+      "title": "J: Spell Words on Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Next, you'll spell on paper, but we'll do it syllable by syllable. Let's do the first one together. The first word is O-MIT. Repeat that word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: OMIT"
+        },
+        {
+          "type": "dialogue",
+          "text": "Tap each syllable on the table."
+        },
+        {
+          "type": "action",
+          "text": "Student slaps table while saying O-MIT."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now, say just the first syllable, then write it down."
+        },
+        {
+          "type": "action",
+          "text": "Student writes O."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say just the second syllable, and write it down."
+        },
+        {
+          "type": "action",
+          "text": "Student writes MIT."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now read that word."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate Real Words: BO-GUS, GRA-VY, PUN-ISH, STE-VEN. Dictate Nonsense Words: PRO-LID, TRIV-IS, LAV-IT, RE-VAMP."
+        }
+      ]
+    },
+    {
+      "id": "Part_K",
+      "title": "K: Review Sight Word Reading Deck",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's review your Sight Word Reading Deck. Warm up by reading each card. Check yourself by looking at the clue. Now that you're warmed up, keep the clue hidden and read them again... as fast as you can."
+        },
+        {
+          "type": "action",
+          "text": "Student reads each word in the deck."
+        }
+      ]
+    },
+    {
+      "id": "Part_L",
+      "title": "L: Review Sight Word Spelling Cards",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's review your tricky Sight words."
+        },
+        {
+          "type": "action",
+          "text": "Tutor shows a card. Student reads it, explains why the letter is red. Student 'sees and spells' twice on the wall, 'sees and writes' twice on the table, and writes it on paper underlining the red letter."
+        }
+      ]
+    },
+    {
+      "id": "Part_M",
+      "title": "M: Read Phrases",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll read some phrases."
+        },
+        {
+          "type": "student_page",
+          "mode": "phrase_builder",
+          "payload": {
+            "who": [
+              "The Spanish lady",
+              "Mrs. Helen Davis",
+              "The Roman",
+              "A crazy pilot"
+            ],
+            "did what": [
+              "did her desk duty",
+              "will hijack a camel",
+              "did visit a hotel",
+              "began a trip"
+            ],
+            "where": [
+              "in the humid city",
+              "behind a tiny wall",
+              "in Reno",
+              "in a British city"
+            ],
+            "add-on": [
+              "for his son, David.",
+              "for the navy.",
+              "of Fremont.",
+              "in the spring."
+            ]
+          }
+        },
+        {
+          "type": "dialogue",
+          "text": "Find and divide 2 multi-syllable words by putting dots below each vowel and drawing a dividing line."
+        }
+      ]
+    },
+    {
+      "id": "Part_N",
+      "title": "N: Spell Phrases on Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to write some phrases. The first phrase is BEGAN TO STUDY. Repeat that phrase."
+        },
+        {
+          "type": "action",
+          "text": "Expected: BEGAN TO STUDY."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now write it down. Figure out the tough words syllable by syllable. Double check by reading exactly what you wrote."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate remaining phrases: THE POLO PONY, THE MOTEL TV. Then dictate Sight Words being practiced."
+        }
+      ]
+    },
+    {
+      "id": "Part_O",
+      "title": "O: Read Sentences",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll read these sentences. Read that first sentence to yourself. Now read it out loud. Mark each phrase. Now read that sentence with phrasing. Remember, put a small pause... between each phrase."
+        },
+        {
+          "type": "student_page",
+          "mode": "sentence_marking",
+          "payload": [
+            "Mrs. Helen Davis began a trip in the humid city of Fremont.",
+            "A crazy pilot will hijack a camel behind a tiny wall for his son, David.",
+            "The Roman did visit a hotel in Reno in the spring.",
+            "The Spanish lady did her desk duty in a British city for the navy.",
+            "A fly shouldn't go beyond the hazy sky, or he could vanish.",
+            "The icy drink was so cold that Tony couldn't help but relax.",
+            "We predict he'll get a bonus when his talent rating goes up.",
+            "Venus is a planet, not a comet."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Part_P",
+      "title": "P: Spell Sentences on Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to write three sentences. The first sentence is DAVID BEGAN TO STUDY SPANISH. Repeat that sentence."
+        },
+        {
+          "type": "action",
+          "text": "Expected: DAVID BEGAN TO STUDY SPANISH."
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and write that sentence. On long words, tap each syllable. Check your sentence by reading exactly what you wrote."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate: THE POLO PONY WAS WILD FOR A MOMENT. THE MOTEL TV WAS NOT TIDY."
+        }
+      ]
+    },
+    {
+      "id": "Part_Q",
+      "title": "Q: Read Two Stories",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're ready to read a story. Preread the story and figure out the tough words. Then read it out loud to me."
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "Navy Pilot",
+            "text": "Jason has chosen to be a Navy pilot. He can't be lazy or do any crazy things. It is his duty to focus on his job. We all depend on him to protect and defend us when he does fly the jet."
+          }
+        },
+        {
+          "type": "dialogue",
+          "text": "Here's another story. Read this one to yourself. Then in your own words, tell me what happened."
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "Hazel and the Robot",
+            "text": "Glen said he didn't have any fun with Hazel, so he stuck that old dragon in a trunk in his closet. Glen had a robot. When Glen did wind him up and press a switch, the robot would twist and swivel. Hazel couldn't do that. When he went to bed, Glen held the robot in his hand. But the robot was stiff and cold. Hazel the dragon wasn't stiff. She had a soft body he could hug. Glen was glad he hadn't put Hazel in the trash."
+          }
+        }
+      ]
+    }
+  ]
+}

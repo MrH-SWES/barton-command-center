@@ -1,0 +1,588 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "level": 4,
+    "lesson": 5,
+    "title": "Spelling: Double Letters",
+    "estMinutes": 50,
+    "author": "Barton Command Center",
+    "videoSpeedDefault": 1.5
+  },
+  "materials": [
+    "2 wide rubber bands for accenting",
+    "Level 4 letter tiles: 2 sets of A through Z plus Vowel Y, CH, TH, CK, SH, WH, TCH",
+    "Unit tiles: ALL, ANG, ING, ONG, UNG, ANK, INK, ONK, UNK, OLL, OLD, OLT, OST, ILD, IND",
+    "Binder paper and pencil",
+    "Word frame",
+    "Blank light-colored 5 x 8 index card",
+    "Several blank 3 x 5 index cards",
+    "Book 4 Spelling Rules page"
+  ],
+  "objectives": [
+    "Use the Happy rule to spell a short first syllable when no closing sound is heard.",
+    "Explain when multi-syllable words end with double S using the Campus Confess rule.",
+    "Spell initial /eks/ and /egz/ with EX, not E-X-S or E-G-S.",
+    "Read and spell real and nonsense two-syllable words with double letters.",
+    "Read phrases, sentences, and stories containing Lesson 5 patterns."
+  ],
+  "beats": [
+    {
+      "id": "L4.5.prep.01",
+      "phase": "Prep",
+      "label": "Tutor overview",
+      "do": "Set out rubber bands, the Level 4 tile set, Units, binder paper, pencil, word frame, blank cards, and the Book 4 Spelling Rules page.",
+      "note": "Tutor-only overview: Lesson 5 teaches three spelling rules: Happy, Campus Confess, and EX for /eks/ or /egz/. Units review and phonemic awareness warm-up are discontinued from this lesson forward."
+    },
+    {
+      "id": "L4.5.review.01",
+      "phase": "Review",
+      "label": "Review prior extra practice",
+      "say": {
+        "text": "Let's take a look at your extra practice page. Go ahead and read the words to me."
+      },
+      "do": "Review the prior lesson's extra-practice page for accuracy. If it was not completed at home, have the student complete one prior extra-practice page now.",
+      "board": {
+        "mode": "story",
+        "pageType": "worksheet",
+        "title": "Lesson 4 Extra Practice Review",
+        "subtitle": "Use one of the prior lesson pages if needed.",
+        "text": "Review Lesson 4 Extra Practice before beginning Lesson 5.",
+        "images": [
+          {
+            "src": "assets/worksheets/level4/lesson4_extra_practice_1.png",
+            "label": "Lesson 4 Extra Practice #1",
+            "alt": "Lesson 4 Student Page 46 Extra Practice 1"
+          },
+          {
+            "src": "assets/worksheets/level4/lesson4_extra_practice_2.png",
+            "label": "Lesson 4 Extra Practice #2",
+            "alt": "Lesson 4 Student Page 47 Extra Practice 2"
+          }
+        ]
+      },
+      "recovery": {
+        "trigger": "Student cannot complete the prior extra practice accurately.",
+        "prompts": [
+          "Stop the new lesson.",
+          "Repeat the prior lesson before teaching Lesson 5."
+        ]
+      }
+    },
+    {
+      "id": "L4.5.teach1.01",
+      "phase": "New Teaching 1",
+      "label": "Introduce Happy",
+      "say": {
+        "text": [
+          "Today I'm going to show you a new spelling rule.",
+          "How many syllables does this word have? How did you know? How many letters are between the vowels? Which way should you move it first?",
+          "The word I really want is happy. The A needs to be short, but when I say happy, I hear /p/ in the second syllable."
+        ]
+      },
+      "listen": {
+        "expect": [
+          "Two syllables.",
+          "Two vowels that are not next to each other.",
+          "Move the consonant to the end."
+        ],
+        "hint": "Student divides HAPY as HA-PY, then sees why HAP-Y is not the spoken word."
+      },
+      "do": "Build HAPY. Have the student divide HA-PY, then model HAP-Y and explain why the /p/ belongs in the second syllable. Add another P to make HAP-PY.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [
+          {
+            "word": "HAPY",
+            "row": 0
+          }
+        ],
+        "lock": false
+      },
+      "note": "Rule language: If the vowel in the first syllable is short and you cannot hear anything closing it off, double the next sound you can hear. The two P's are not both heard because the sounds are slopped together in speech."
+    },
+    {
+      "id": "L4.5.teach1.02",
+      "phase": "New Teaching 1",
+      "label": "Practice Happy with tiles",
+      "say": {
+        "text": "Let's practice that rule. Divide each word the most common way, say exactly what you see, then make it say the target word."
+      },
+      "listen": {
+        "expect": [
+          "If a vowel is short and nothing closes it off, double the next sound you can hear."
+        ]
+      },
+      "do": "Build TAFY, HAPEN, COMENT, SHABY, and EDY. The student divides the word, taps the target spoken syllables, adds the needed double letter, and explains the Happy rule.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      },
+      "note": "Target words: Taffy, Happen, Comment, Shabby, Eddy. When there are two consonants, say the sound as part of the second syllable during tapping."
+    },
+    {
+      "id": "L4.5.teach1.03",
+      "phase": "New Teaching 1",
+      "label": "Add Happy to rules",
+      "say": {
+        "text": "That spelling rule is called the Happy rule."
+      },
+      "do": "Bring out the Book 4 Spelling Rules page and point to the new Happy entry.",
+      "board": {
+        "mode": "story",
+        "pageType": "reference_page",
+        "title": "Spelling Rules - Book 4",
+        "text": "Add: Happy.",
+        "images": [
+          {
+            "src": "assets/reference/level4/book4_spelling_rules_student_page_48.png",
+            "label": "Student Page #48: Spelling Rules - Book 4",
+            "alt": "Book 4 Spelling Rules student page 48 showing Happy"
+          }
+        ],
+        "purpose": "reference"
+      }
+    },
+    {
+      "id": "L4.5.teach2.01",
+      "phase": "New Teaching 2",
+      "label": "Almost All",
+      "say": {
+        "text": [
+          "Now let's talk about spelling /all/.",
+          "When you hear /all/ at the end of a one-syllable word, how many L's will it have? But when you hear /all/ anywhere else in a word, how many L's will it have?"
+        ]
+      },
+      "listen": {
+        "expect": [
+          "Two L's at the end of a one-syllable word.",
+          "One L anywhere else."
+        ]
+      },
+      "do": "Use the ALL tile, then build SALT, SALTY, BALTIC, and ALMOST. Reinforce that the Floss rule only applies at the end of a one-vowel word and that /ik/ at the end of a multi-syllable word is IC.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "units",
+        "lock": false
+      },
+      "note": "Almost All is a spelling-rule bridge into Campus Confess: /all/ has two L's only at the end of a one-syllable word."
+    },
+    {
+      "id": "L4.5.teach2.02",
+      "phase": "New Teaching 2",
+      "label": "Campus and Confess",
+      "say": {
+        "text": [
+          "You only use the Floss rule if the word has one vowel.",
+          "But there are a few multi-syllable words that have two S's at the end.",
+          "The syllable that lasts the longest is called accented."
+        ]
+      },
+      "listen": {
+        "expect": [
+          "Campus has one S because the last syllable is not accented.",
+          "Confess has two S's because the last syllable lasts the longest."
+        ]
+      },
+      "do": "Build CAMPUS and CONFESS. Use rubber bands to compare CAM-pus and con-FESS. Teach that final S doubles in a multi-syllable word if the last syllable is accented.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [
+          {
+            "word": "CAMPUS",
+            "row": 0
+          },
+          {
+            "word": "CONFESS",
+            "row": 1
+          }
+        ],
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.5.teach2.03",
+      "phase": "New Teaching 2",
+      "label": "Practice accent for final S",
+      "say": {
+        "text": "Let's practice finding the accent using our rubber bands."
+      },
+      "do": "Use UNLESS and TRELLIS, then oral examples discuss and crisis. Student identifies the accented syllable and decides whether final S should be doubled.",
+      "listen": {
+        "expect": [
+          "Unless has the last syllable accented and ends with two S's.",
+          "Trellis and crisis have the first syllable accented and need one S."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "prePlace": [
+          {
+            "word": "UNLESS",
+            "row": 0
+          },
+          {
+            "word": "TRELLIS",
+            "row": 1
+          }
+        ],
+        "lock": false
+      },
+      "note": "Rule name: Campus Confess. In most two-syllable words, the first syllable is accented, so final double S is uncommon."
+    },
+    {
+      "id": "L4.5.teach2.04",
+      "phase": "New Teaching 2",
+      "label": "No E-X-S",
+      "say": {
+        "text": [
+          "Here's another spelling rule related to /s/.",
+          "If you hear /eks/, it has to be E-X.",
+          "In our language, you will never spell a word E-X-S. The /s/ you hear is coming out of the X."
+        ]
+      },
+      "do": "Pull down X and have the student identify /k/ and /s/. Build EX, EXTENT, and EXPECT. Tap the syllables and show that the /s/ sound is part of X.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [
+          {
+            "word": "EX",
+            "row": 0
+          },
+          {
+            "word": "EXTENT",
+            "row": 1
+          }
+        ],
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.5.teach2.05",
+      "phase": "New Teaching 2",
+      "label": "EX says /egz/ before a vowel",
+      "say": {
+        "text": [
+          "No word in our language starts with E-G-S or E-G-G-S, except eggs.",
+          "When a vowel comes after EX, it will say /egz/. When a consonant comes after EX, it says /eks/."
+        ]
+      },
+      "do": "Contrast EXAM, EXPECT, and EXACT. Student explains why EX says /egz/ in exam and exact and why E-X-S is never used.",
+      "listen": {
+        "expect": [
+          "EX says /egz/ before a vowel.",
+          "EX says /eks/ before a consonant.",
+          "Never spell a word E-X-S."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "prePlace": [
+          {
+            "word": "EXAM",
+            "row": 0
+          },
+          {
+            "word": "EXPECT",
+            "row": 1
+          },
+          {
+            "word": "EXACT",
+            "row": 2
+          }
+        ],
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.5.teach2.06",
+      "phase": "New Teaching 2",
+      "label": "Update rule page",
+      "do": "Show the Book 4 Spelling Rules page and add Happy, Almost All, Campus Confess, and No E-X-S or E-G-S (use EX).",
+      "board": {
+        "mode": "story",
+        "pageType": "reference_page",
+        "title": "Spelling Rules - Book 4",
+        "text": "New entries: Happy; Almost All; Campus Confess; No E-X-S or E-G-S (use EX).",
+        "images": [
+          {
+            "src": "assets/reference/level4/book4_spelling_rules_student_page_49.png",
+            "label": "Student Page #49: Spelling Rules - Book 4",
+            "alt": "Book 4 Spelling Rules student page 49 showing Happy, Almost All, Campus Confess, and EX rules"
+          }
+        ],
+        "purpose": "reference"
+      }
+    },
+    {
+      "id": "L4.5.spelltiles.01",
+      "phase": "Tile Spelling",
+      "label": "Spell real words with tiles",
+      "say": {
+        "text": "The first word is classic. Repeat that word. Tap each syllable on the table, then build each syllable."
+      },
+      "do": "Dictate the real words for tile spelling. The student repeats, taps, builds each syllable, reads each syllable exactly as built, then puts tiles away.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      },
+      "note": "Words: classic, annex, summit, tennis, exist, also. Repeat-lesson words: extend, hiccup, sloppy, traffic, unless."
+    },
+    {
+      "id": "L4.5.readtiles.01",
+      "phase": "Tile Reading",
+      "label": "Read nonsense words on tiles",
+      "say": {
+        "text": "Divide that word into syllables. Say each syllable exactly as it looks. Now say it like a word."
+      },
+      "do": "Build nonsense words for the student to divide and read.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      },
+      "note": "Words: MEDDY (MEH-dy), FRIPPIC (FRIH-pic), ZIPPACK (ZIH-pack), EXNET (eks-NET), EXAPT (egz-APT), GROMMISS (groh-MISS). Repeat-lesson words: CHONNY, MELLIC, PADDIS, EXIFT, LIMVIS."
+    },
+    {
+      "id": "L4.5.spelltiles.02",
+      "phase": "Tile Spelling",
+      "label": "Spell nonsense words with tiles",
+      "say": {
+        "text": "Now it's your turn to spell nonsense words. Repeat the word, tap each syllable, and build each syllable."
+      },
+      "do": "Dictate nonsense words with new Lesson 5 patterns. Move tiles out of the way afterward.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      },
+      "note": "Words: STOH-dy (Stoddy), MUH-sup (Mussup), SHAH-mock (Shammock), shoh-TISS (Shottiss), eks-TUP (Extup), egz-OT (Exot)."
+    },
+    {
+      "id": "L4.5.words.01",
+      "phase": "Reading",
+      "label": "Read words through word frame",
+      "say": {
+        "text": "Now you're going to read words through the word frame. If you know that word for sure, just say it. If you don't know it, use your pencil to help you divide it."
+      },
+      "do": "Have the student read the Lesson 5 word page through the word frame. Optional: point to words and ask why /k/ is spelled that way.",
+      "board": {
+        "mode": "word_frame",
+        "title": "Lesson 5 Read These Words",
+        "words": [
+          "spotty",
+          "ditto",
+          "gossip",
+          "wedding",
+          "bottom",
+          "messy",
+          "census",
+          "discuss",
+          "attic",
+          "success",
+          "exempt",
+          "stucco",
+          "addict",
+          "Scottish",
+          "whippic",
+          "passum",
+          "expic",
+          "trelly",
+          "rubbin",
+          "hammit",
+          "bissack"
+        ]
+      }
+    },
+    {
+      "id": "L4.5.paper.01",
+      "phase": "Paper Spelling",
+      "label": "Spell words on paper",
+      "say": {
+        "text": "Now you'll spell on paper, syllable by syllable. Repeat the word, tap each syllable, write each syllable, then double-check by reading."
+      },
+      "do": "Dictate real and nonsense words on paper.",
+      "note": "Real words: motto, kitten, discuss, exalt, sudden. Nonsense words: THAH-pit (Thappit), NAH-den (Nadden), poh-FISS (Poffiss), FLIH-pic (Flippic), SPIH-fum (Spiffum)."
+    },
+    {
+      "id": "L4.5.sightread.01",
+      "phase": "Sight Words",
+      "label": "Review sight word reading deck",
+      "say": {
+        "text": "Let's review your Sight Word Reading Deck. Warm up by reading each card. Now keep the clue hidden and read them again as fast as you can."
+      },
+      "do": "Use the student's physical Sight Word Reading Deck. Skip if the student does not have one."
+    },
+    {
+      "id": "L4.5.sightspell.01",
+      "phase": "Sight Words",
+      "label": "Review sight word spelling cards",
+      "say": {
+        "text": "Let's review your tricky sight words."
+      },
+      "do": "For each physical Sight Word Spelling Card: read it, explain the red letter, see and spell twice on the wall, see and write twice on the table, and see and write twice on paper. Later, dictate the three active sight words after phrase spelling.",
+      "note": "Retire a spelling card after three correct sessions, then use the Sight Word Check List to find a replacement."
+    },
+    {
+      "id": "L4.5.phrases.01",
+      "phase": "Phrases",
+      "label": "Read phrases",
+      "say": {
+        "text": "Now you'll read some phrases. Read each group, create sentences, then find and divide two multi-syllable words."
+      },
+      "do": "Student reads Who, Did What, Where, and Add-On phrases; creates short sentences; then marks two multi-syllable words.",
+      "board": {
+        "mode": "sentences",
+        "title": "Lesson 5 Read These Phrases",
+        "items": [
+          "The snippy gals",
+          "Chubby Elvis",
+          "Eddy Tommelli",
+          "regret their gossip",
+          "was so groggy",
+          "did confess",
+          "had salty fish",
+          "on campus",
+          "at the wedding",
+          "at the potluck",
+          "in the Yukon",
+          "which were rotten.",
+          "that he was a sissy.",
+          "about Patty.",
+          "he lost a nugget."
+        ]
+      }
+    },
+    {
+      "id": "L4.5.phrases.02",
+      "phase": "Phrases",
+      "label": "Spell phrases on paper",
+      "say": {
+        "text": "Now you're going to write some phrases. Repeat the phrase, write it down, and figure out the tough words syllable by syllable."
+      },
+      "do": "Dictate phrases, then dictate the three active sight words from the spelling deck.",
+      "note": "Phrases: UNPACK HIS TUNIC; CHUBBY PUPPY; HAVE A SUFFIX. Repeat-lesson phrases: GO TO THE ATTIC; IT'S SUNNY; IT IS A GROGGY HIPPO."
+    },
+    {
+      "id": "L4.5.sentences.01",
+      "phase": "Sentences",
+      "label": "Read sentences",
+      "say": {
+        "text": "Read the first sentence to yourself. Now read it out loud. Mark each phrase, then reread with phrasing."
+      },
+      "do": "Student reads, marks Who/Did What/Where/Add-On phrases, and rereads with phrasing.",
+      "board": {
+        "mode": "sentences",
+        "title": "Lesson 5 Read These Sentences",
+        "items": [
+          "The snippy gals regret their gossip on campus about Patty and Tony.",
+          "Eddy was so groggy at the wedding that he lost his gold nugget.",
+          "Chubby Elvis did confess in the Yukon that he was a sissy.",
+          "Tommy Ellis had salty fish at the potluck that were rotten.",
+          "The pollen made the skin of the Scottish princess itch.",
+          "Her recent trip began with too much traffic in the city.",
+          "My crazy brother did lasso the sluggish puppy.",
+          "The golden sunset should remind me to relax."
+        ]
+      }
+    },
+    {
+      "id": "L4.5.sentences.02",
+      "phase": "Sentences",
+      "label": "Spell sentences on paper",
+      "say": {
+        "text": "Now you're going to write three sentences. Repeat the sentence, write it, tap the syllables on long words, and check your sentence."
+      },
+      "do": "Dictate three sentences and guide correction.",
+      "note": "Sentences: TOMMY WILL PACK HIS TUNIC. BETTY WILL BEGIN TO FORGET. I WILL LEND A TRIPOD TO THE GROGGY HIPPO."
+    },
+    {
+      "id": "L4.5.stories.01",
+      "phase": "Stories",
+      "label": "Read basic stories",
+      "say": {
+        "text": "Now you're ready to read a story. Preread the story and figure out the tough words. Then read it out loud to me."
+      },
+      "do": "Have the student read the first story aloud. For the second story, have the student read silently and retell in their own words.",
+      "board": {
+        "mode": "story",
+        "title": "Lesson 5 Stories - Basic",
+        "stories": [
+          {
+            "title": "Molly",
+            "text": "When it is sunny, Jenny goes for a walk with her small child, Molly. If the wind is snappy, Jenny will put a bonnet on Molly and tuck her in a blanket. Then she will push the buggy up the path to visit Granny.\n\nGranny does love to pick up Molly. She is such a chubby, happy baby. If she has a hiccup, Granny will pat her on the back and sing to her."
+          },
+          {
+            "title": "The Mummy",
+            "text": "Brad and his buddy went with the class to inspect a mummy. They were told that the mummy had once been a king.\n\nBrad did not think that the mummy would be behind glass. Strips of cloth hid the body in the coffin. Nothing about it was very spiffy.\n\nBrad was sure that a king would not want to be shabby even if he was very old."
+          }
+        ],
+        "text": "Read Story #1 aloud. Read Story #2 silently and retell."
+      }
+    },
+    {
+      "id": "L4.5.stories.02",
+      "phase": "Stories",
+      "label": "Read advanced stories",
+      "do": "Use these instead of the basic stories when appropriate for the student.",
+      "board": {
+        "mode": "story",
+        "title": "Lesson 5 Stories - Advanced",
+        "stories": [
+          {
+            "title": "The Potluck",
+            "text": "I admit it's \"iffy\" to go to a potluck and expect a banquet. I don't envy any friend who went to the last one we had. We all bring the best fancy dish we can invent. Father Francis, the one who shouldn't fatten his midriff, had to try them all.\n\nThere was Cajun Capon, Spinach Strudel, Jumbo Shrimp Gumbo, and my Citrus Aspic Salad. It was the Polish Possum in a Skillet that did me in. I'd be glad to pin a medal on the one who snuck in the Nutmeg Brandy Toddy."
+          },
+          {
+            "title": "Granny's Attic",
+            "text": "When I was a small child I was very happy to visit Granny. I must confess that we didn't discuss recent events. We'd stroll up to the attic where Granny kept her secret stuff.\n\nIn a dusty buggy was a chubby teddy that had once been for my daddy. But, best of all, was the trunk from Holland with a padlock. Only Granny could open it. That is where her wedding dress was. She said I could have it when I find a husband. Granny is my link to the past."
+          }
+        ],
+        "text": "Optional advanced connected-text reading."
+      }
+    },
+    {
+      "id": "L4.5.close.01",
+      "phase": "Close",
+      "label": "Wrap up",
+      "say": {
+        "text": "You've done a lot of reading and spelling today. Thank you for working so hard."
+      },
+      "do": "Assign optional extra practice only if the student asks for between-session practice. Always do the first problem together before sending a page home.",
+      "board": {
+        "mode": "story",
+        "pageType": "worksheet",
+        "title": "Lesson 5 Extra Practice",
+        "subtitle": "Rendered from the real Book 4 manual pages before Lesson 6",
+        "text": "Show Lesson 5 Extra Practice #1 or #2. The student completes the selected paper copy outside the app.",
+        "images": [
+          {
+            "src": "assets/worksheets/level4/lesson5_extra_practice_1.png",
+            "label": "Lesson 5 Extra Practice #1",
+            "alt": "Lesson 5 Student Page 57 Extra Practice 1"
+          },
+          {
+            "src": "assets/worksheets/level4/lesson5_extra_practice_2.png",
+            "label": "Lesson 5 Extra Practice #2",
+            "alt": "Lesson 5 Student Page 58 Extra Practice 2"
+          }
+        ]
+      },
+      "note": "Extra Practice #1 answers: be-LONG, re-TRACT, EX-it, LO-go, FIN-ish, SUM-mit, SAV-ing, SON-net, RUB-bish, ex-CEPT, re-QUEST, TREL-lis, JEL-ly, LIM-it. Students may need rubber-band support to see the accented syllable."
+    }
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "level": 1,
+  "lesson": 5,
+  "title": "Working With Real Words",
+  "sections": [
+    {
+      "id": "Part_Intro",
+      "title": "Lesson Overview",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "Materials Needed: Colored tiles, three each of five different colors.\n\nOverview: This is the final lesson of Level 1. You will be creating real words in three ways to give the student significant practice blending sounds. They will learn that changing a single sound creates an entirely different word, and they will learn the mechanics of rhyming."
+        }
+      ]
+    },
+    {
+      "id": "Part_A",
+      "title": "A: Blend 2 and 3 Sounds into Real Words",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Last time, you broke words into sounds. This time, we're going to do the opposite. I'll give you some sounds. You'll blend them together to create a real word. Let me show you what I mean."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "a",
+            "t"
+          ]
+        },
+        {
+          "type": "action",
+          "text": "Tutor touches each tile while saying: \"This tile says /a/, this tile says /t/.\""
+        },
+        {
+          "type": "dialogue",
+          "text": "Now you touch-and-say those sounds."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student touches the first tile while saying /a/, then touches the second tile while saying /t/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly blend them together."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /aaaaa/-/t/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it fast like a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: AT"
+        },
+        {
+          "type": "dialogue",
+          "text": "Perfect. And notice that's a real word. Go ahead and wash off those tiles."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining sounds in the column: /u/ /v/ (OF), /i/ /t/ (IT), /u/ /p/ (UP), /i/ /ch/ (ITCH), /e/ /j/ (EDGE), /a/ /z/ (AS), /m/ /o/ /p/ (MOP), /th/ /i/ /n/ (THIN), /h/ /a/ /m/ (HAM), /k/ /a/ /sh/ (CASH), /sh/ /e/ /d/ (SHED)."
+        }
+      ]
+    },
+    {
+      "id": "Part_B",
+      "title": "B: Blend-Change-Change-Change",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "This time, after I give you the sounds and you've come up with the word, we'll do something a little different. But we'll start the same way. Ready?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Yes"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "m",
+            "e",
+            "t"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Here are the sounds: /m/ /e/ /t/. Touch-and-say."
+        },
+        {
+          "type": "action",
+          "text": "Student touches the first tile and says /m/, touches the second tile and says /e/, then touches the third tile and says /t/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly blend."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /mmmm/-/eeee/-/t/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Fast like a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: MET"
+        },
+        {
+          "type": "dialogue",
+          "text": "Good. Now I'm going to change one of these sounds. Watch carefully. I'm going to change this sound to /p/."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "p",
+            "e",
+            "t"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Touch-and-say."
+        },
+        {
+          "type": "action",
+          "text": "Student touches the first tile and says /p/, touches the second tile and says /e/, then touches the third tile and says /t/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly blend."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /p/-/eeee/-/t/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Fast like a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: PET"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Continue to change one tile at a time to form the following sequence: PEN -> PAN -> FAN -> TAN -> TEN -> TENT (add a 4th tile for /t/) -> SENT -> SEND -> SAND."
+        }
+      ]
+    },
+    {
+      "id": "Part_C",
+      "title": "C: Rhyme Words",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're ready for the last step in this book - the last step before we start using letters. You might already know how to rhyme words. But if not, I want to teach you how to rhyme."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "k",
+            "a",
+            "t"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Here are the sounds: /k/ /a/ /t/. What is the word?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student touches, blends, and says CAT."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now let me show you with tiles how you can tell if a word rhymes with cat. Rhyming means you change just the first sound."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "m",
+            "a",
+            "t"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "That sound is /m/. What does that word say now?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: MAT"
+        },
+        {
+          "type": "dialogue",
+          "text": "Right. So CAT and MAT rhyme because only the first sound changed. The rest of the word was the same. So if that says mat, which tile would you change to create a word that rhymes?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: The first one."
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and change it to a different sound. What does it say?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student changes the first tile and says the new word."
+        },
+        {
+          "type": "dialogue",
+          "text": "Create another one."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Praise the student each time they create a rhyming word, then remove that first tile and encourage them to make another one. Expect: RAT, SAT, FAT, BAT, HAT, NAT, PAT, CHAT."
+        },
+        {
+          "type": "action",
+          "text": "Tutor returns tiles to the pile and dictates: CHOP"
+        },
+        {
+          "type": "dialogue",
+          "text": "Let's try that once more with a different word. The word is CHOP. Repeat that word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: CHOP. Student brings down 3 tiles and touches-and-says /ch/ /o/ /p/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Which tile will you change to create a word that rhymes?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: The first one."
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and see how many rhyming words you can create."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Expect TOP, SHOP, POP, BOP, COP, HOP, MOP, etc.\n\nCONGRATULATIONS! The student has completed Level 1 and has sufficient Phonemic Awareness skills to begin learning letters in Level 2!"
+        }
+      ]
+    }
+  ]
+}

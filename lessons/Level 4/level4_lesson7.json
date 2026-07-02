@@ -1,0 +1,594 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "level": 4,
+    "lesson": 7,
+    "title": "Syllable Division Rule #3",
+    "estMinutes": 50,
+    "author": "Barton Command Center",
+    "videoSpeedDefault": 1.5
+  },
+  "materials": [
+    "2 thick rubber bands",
+    "Franklin Spelling Ace electronic spell checker",
+    "Level 4 letter tiles: 2 sets of A through Z plus Vowel Y, CH, TH, CK, SH, WH, TCH",
+    "Unit tiles: ALL, ANG, ING, ONG, UNG, ANK, INK, ONK, UNK, OLL, OLD, OLT, OST, ILD, IND",
+    "Binder paper and pencil",
+    "Word frame",
+    "Blank light-colored 5 x 8 index card",
+    "Several blank 3 x 5 index cards"
+  ],
+  "objectives": [
+    "Divide words with three letters between vowels using a 1-2 split.",
+    "Avoid splitting digraphs and units during syllable division.",
+    "Identify and divide compound words by pulling the two words apart.",
+    "Spell compound words as one word when the two smaller words refer to one thing.",
+    "Read and spell Lesson 7 word, phrase, sentence, and story material."
+  ],
+  "beats": [
+    {
+      "id": "L4.7.prep.01",
+      "phase": "Prep",
+      "label": "Tutor overview",
+      "do": "Set out rubber bands, the electronic spell checker, the Level 4 tile set, Units, binder paper, pencil, word frame, and blank cards.",
+      "note": "Tutor-only overview: Lesson 7 teaches the third syllable-division rule. When three letters come between vowels, use a 1-2 split, but never split digraphs or Units. Compound words are divided by pulling the two small words apart."
+    },
+    {
+      "id": "L4.7.review.01",
+      "phase": "Review",
+      "label": "Review prior extra practice",
+      "say": {
+        "text": "Let's take a look at your extra practice page. Go ahead and read the words to me."
+      },
+      "do": "Review Lesson 6 extra practice. If it was not completed at home, complete a prior extra-practice page now.",
+      "board": {
+        "mode": "story",
+        "pageType": "worksheet",
+        "title": "Lesson 6 Extra Practice Review",
+        "subtitle": "Use one of the prior lesson pages if needed.",
+        "text": "Review Lesson 6 Extra Practice before beginning Lesson 7.",
+        "images": [
+          {
+            "src": "assets/worksheets/level4/lesson6_extra_practice_1.png",
+            "label": "Lesson 6 Extra Practice #1",
+            "alt": "Lesson 6 Student Page 67 Extra Practice 1"
+          },
+          {
+            "src": "assets/worksheets/level4/lesson6_extra_practice_2.png",
+            "label": "Lesson 6 Extra Practice #2",
+            "alt": "Lesson 6 Student Page 68 Extra Practice 2"
+          }
+        ]
+      },
+      "recovery": {
+        "trigger": "Student cannot complete the prior extra practice accurately.",
+        "prompts": [
+          "Stop the new lesson.",
+          "Repeat the prior lesson before teaching Lesson 7."
+        ]
+      }
+    },
+    {
+      "id": "L4.7.teach1.01",
+      "phase": "New Teaching 1",
+      "label": "Review earlier division rules",
+      "say": {
+        "text": "Before I show you a new way to divide a word into syllables, let's review the rules you already know."
+      },
+      "do": "Build RELAX and ADMIT. Student reviews that one letter between vowels moves to the end first, and two letters between vowels split.",
+      "listen": {
+        "expect": [
+          "One letter moves to the end first.",
+          "Two letters split."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [
+          {
+            "word": "RELAX",
+            "row": 0
+          },
+          {
+            "word": "ADMIT",
+            "row": 1
+          }
+        ],
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.7.teach1.02",
+      "phase": "New Teaching 1",
+      "label": "Teach 1-2 split",
+      "say": {
+        "text": "Today, I'm going to show you what to do if there are three letters between the vowels. When there are three letters, most of the time you do a 1-2 split."
+      },
+      "listen": {
+        "expect": [
+          "A 1-2 split."
+        ]
+      },
+      "do": "Build CONFLICT. Student counts three letters between vowels and divides CON-FLICT with a 1-2 split.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "prePlace": [
+          {
+            "word": "CONFLICT",
+            "row": 0
+          }
+        ],
+        "lock": false
+      },
+      "note": "1-2 split means the first consonant goes with the first syllable and the other two move to the end."
+    },
+    {
+      "id": "L4.7.teach1.03",
+      "phase": "New Teaching 1",
+      "label": "Practice 1-2 split and prior rules",
+      "say": {
+        "text": "Divide the word, say it, and tell me why you divided it there."
+      },
+      "do": "Build NOSTRIL, EXPRESS, and COMPLEX. Student divides with the 1-2 split and reviews schwa and Campus Confess when they appear.",
+      "listen": {
+        "expect": [
+          "Nostril has vowel-L schwa.",
+          "Express has two S's because the last syllable is accented.",
+          "Complex uses a 1-2 split."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      },
+      "note": "Partial rule: Three letters between vowels usually take a 1-2 split."
+    },
+    {
+      "id": "L4.7.teach2.01",
+      "phase": "New Teaching 2",
+      "label": "Do not split units",
+      "say": {
+        "text": "The 1-2 split works most of the time. But you have to be careful of digraphs and Units."
+      },
+      "do": "Build BANKRUPT and KINGDOM. Student sees that Units contain a vowel and are never split; the Unit goes one way and everything else goes the other way.",
+      "listen": {
+        "expect": [
+          "Never split a Unit."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "units",
+        "prePlace": [
+          {
+            "word": "BANKRUPT",
+            "row": 0
+          },
+          {
+            "word": "KINGDOM",
+            "row": 1
+          }
+        ],
+        "lock": false
+      },
+      "note": "Use KINGDOM to review closed-O schwa in the unaccented syllable."
+    },
+    {
+      "id": "L4.7.teach2.02",
+      "phase": "New Teaching 2",
+      "label": "Do not split digraphs",
+      "say": {
+        "text": "You never split a digraph. A digraph makes just one sound, so you treat it like one sound."
+      },
+      "do": "Build ETHNIC and ANTHEM. Student divides without splitting TH and explains the digraph exception. Review IC for /ik/ at the end of a multi-syllable word.",
+      "listen": {
+        "expect": [
+          "Never split a digraph.",
+          "/ik/ at the end of a multi-syllable word is IC."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.7.teach2.03",
+      "phase": "New Teaching 2",
+      "label": "Introduce compound words",
+      "say": {
+        "text": "Sometimes words with three letters between the vowels are actually two small words run together."
+      },
+      "do": "Build SHELLFISH. Let the student try a 1-2 split, then show that Shell and Fish are two small words. Teach that compound words are divided by pulling the two small words apart.",
+      "listen": {
+        "expect": [
+          "Shell and fish.",
+          "Pull the two small words apart."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "prePlace": [
+          {
+            "word": "SHELLFISH",
+            "row": 0
+          }
+        ],
+        "lock": false
+      },
+      "note": "In a compound word, each small word is spelled exactly as it is by itself. Shell keeps Floss-rule double L."
+    },
+    {
+      "id": "L4.7.teach2.04",
+      "phase": "New Teaching 2",
+      "label": "Practice compound spelling",
+      "say": {
+        "text": "Divide the compound word and explain why the small word keeps its spelling."
+      },
+      "do": "Build PILLBOX and LIPSTICK. Student divides compound words and explains Floss in pill and the ICK spelling in stick.",
+      "listen": {
+        "expect": [
+          "Each part is spelled as if it were a word by itself."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.7.teach2.05",
+      "phase": "New Teaching 2",
+      "label": "Identify compounds orally",
+      "say": {
+        "text": "Listen to each word I say, then tell me if it is a compound word."
+      },
+      "do": "Say drumstick, express, crosswalk, and sandbox. Student identifies compounds and names the two words.",
+      "listen": {
+        "expect": [
+          "Drumstick: drum and stick.",
+          "Express: not a compound.",
+          "Crosswalk: cross and walk.",
+          "Sandbox: sand and box."
+        ]
+      },
+      "board": {
+        "mode": "clear"
+      }
+    },
+    {
+      "id": "L4.7.teach2.06",
+      "phase": "New Teaching 2",
+      "label": "One word or two",
+      "say": {
+        "text": "If the two small words together refer to one thing, then write them as one word."
+      },
+      "do": "Build SANDBOX and SOFTBALL. Student explains why each is one word and divides SOFT-BALL. Review that BALL keeps Floss-rule double L because each small word keeps its spelling.",
+      "listen": {
+        "expect": [
+          "One word because it means one thing.",
+          "Each small word keeps its spelling."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "prePlace": [
+          {
+            "word": "SANDBOX",
+            "row": 0
+          },
+          {
+            "word": "SOFTBALL",
+            "row": 1
+          }
+        ],
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.7.teach2.07",
+      "phase": "New Teaching 2",
+      "label": "Review Rule #3",
+      "say": {
+        "text": [
+          "How do you divide a compound word?",
+          "If it isn't a compound word, what kind of split would you do for three letters?",
+          "What are the two things you never split?"
+        ]
+      },
+      "listen": {
+        "expect": [
+          "Pull apart the two small words.",
+          "A 1-2 split.",
+          "Never split a digraph or a Unit."
+        ]
+      },
+      "board": {
+        "mode": "story",
+        "pageType": "reference_page",
+        "title": "Syllable Division Rule #3",
+        "text": "3 letters: check for a compound word. Otherwise use a 1-2 split, but do not split a digraph or Unit.",
+        "images": [
+          {
+            "src": "assets/reference/level4/lesson7_syllable_division_rule_3.png",
+            "label": "Lesson 7 Page 228: Syllable Division Rule #3",
+            "alt": "Book 4 Lesson 7 manual page showing Syllable Division Rule 3 summary"
+          }
+        ],
+        "purpose": "reference"
+      }
+    },
+    {
+      "id": "L4.7.spelltiles.01",
+      "phase": "Tile Spelling",
+      "label": "Spell real words with tiles",
+      "say": {
+        "text": "The first word is pantry. Repeat that word. Tap each syllable, build each syllable, and read each syllable exactly as it looks."
+      },
+      "do": "Dictate real words with tiles. Leave the Franklin Spelling Ace within reach for uncertain spellings.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      },
+      "note": "Words: pantry, hundred, subtract, crosswind, handball, checklist. Repeat-lesson words: contract, simply, tantrum, inspect, nonstop. In compound words, each syllable is accented equally."
+    },
+    {
+      "id": "L4.7.readtiles.01",
+      "phase": "Tile Reading",
+      "label": "Read nonsense words on tiles",
+      "say": {
+        "text": "Divide that word into syllables. Say each syllable exactly as it looks. Now say it like a word."
+      },
+      "do": "Build nonsense words for the student to divide and read.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      },
+      "note": "Words: IXTRACT (in-TRACT), ROMSTON (ROM-stun), PANPRESS (pan-PRESS), LANDCAP (LAND-CAP), STRONGPIT (STRONG-PIT), DISHNICK (DISH-NICK). Repeat-lesson words: ENTRUM, DASTRO, HANDREST, HOPSTAFF, TRAMPLING."
+    },
+    {
+      "id": "L4.7.spelltiles.02",
+      "phase": "Tile Spelling",
+      "label": "Spell nonsense words with tiles",
+      "say": {
+        "text": "Now it's your turn to spell nonsense words. Repeat the word, tap each syllable, and build each syllable."
+      },
+      "do": "Dictate nonsense words with tiles, then move tiles out of the way.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      },
+      "note": "Words: EX-grit, san-PRESS, WIN-fict, OFF-RAG (compound), DUST-CUFF (compound), CHECK-LOCK (compound). Repeat-lesson words: PAN-grip, EX-maft, con-TRESS, UP-TRICK (compound), TRAM-NET (compound). Sanpress has two S's because the last syllable lasts the longest."
+    },
+    {
+      "id": "L4.7.words.01",
+      "phase": "Reading",
+      "label": "Read words through word frame",
+      "say": {
+        "text": "Now you're going to read words through the word frame. If you don't know the word, use your pencil to help you divide it."
+      },
+      "do": "Student reads the Lesson 7 word page through the word frame. Optional: circle each compound word.",
+      "board": {
+        "mode": "word_frame",
+        "title": "Lesson 7 Read These Words",
+        "words": [
+          "children",
+          "Alfred",
+          "freshman",
+          "contrast",
+          "saffron",
+          "hundred",
+          "address",
+          "jackpot",
+          "central",
+          "hopscotch",
+          "handcuff",
+          "withhold",
+          "control",
+          "instant",
+          "comship",
+          "ziltric",
+          "simstant",
+          "culsnep",
+          "toppling",
+          "shivback",
+          "holdball"
+        ]
+      }
+    },
+    {
+      "id": "L4.7.paper.01",
+      "phase": "Paper Spelling",
+      "label": "Spell words on paper",
+      "say": {
+        "text": "Now you'll spell on paper, syllable by syllable. If you hear a schwa and aren't absolutely sure which vowel changed, use your electronic spell checker."
+      },
+      "do": "Dictate real and nonsense words on paper.",
+      "note": "Real words: extract, withhold, constant, saffron, handbag. Nonsense words: PUFF-GUN (compound), ex-FLICT, DROP-TRAP (compound), IN-stim. Repeat real words: SMALL-POX, impress, camshaft, freshman, mongrel. Repeat nonsense: ex-PLANT, TRACK-PIN, ETH-rip, MON-step, com-DRAFT."
+    },
+    {
+      "id": "L4.7.sightread.01",
+      "phase": "Sight Words",
+      "label": "Review sight word reading deck",
+      "say": {
+        "text": "Let's review your Sight Word Reading Deck. Warm up by reading each card, then keep the clue hidden and read them again as fast as you can."
+      },
+      "do": "Use the student's physical Sight Word Reading Deck. Skip if unavailable."
+    },
+    {
+      "id": "L4.7.sightspell.01",
+      "phase": "Sight Words",
+      "label": "Review sight word spelling cards",
+      "say": {
+        "text": "Let's review your tricky sight words."
+      },
+      "do": "For each physical Sight Word Spelling Card: read, explain the red letter, see and spell twice on the wall, see and write twice on the table, and see and write twice on paper. Dictate active sight words later after phrase spelling.",
+      "note": "Retire a card after three correct sessions and replace it from the Sight Word Check List."
+    },
+    {
+      "id": "L4.7.phrases.01",
+      "phase": "Phrases",
+      "label": "Read phrases",
+      "say": {
+        "text": "Now you'll read some phrases. Create sentences, then point to two compound words."
+      },
+      "do": "Student reads phrase groups, creates sentences, and identifies two compound words.",
+      "board": {
+        "mode": "sentences",
+        "title": "Lesson 7 Read These Phrases",
+        "items": [
+          "The hungry puppy",
+          "Mr. Kingston",
+          "My grandson",
+          "Their children",
+          "had a tantrum",
+          "went bankrupt",
+          "will install a sickbed",
+          "began to yap",
+          "in the kitchen",
+          "in Richmond",
+          "behind the pantry",
+          "in the attic",
+          "so no one would know.",
+          "by a sandwich.",
+          "but I didn't spank him.",
+          "for Alfred."
+        ]
+      }
+    },
+    {
+      "id": "L4.7.phrases.02",
+      "phase": "Phrases",
+      "label": "Spell phrases on paper",
+      "say": {
+        "text": "Now you're going to write some phrases. Repeat the phrase, write it down, and figure out the tough words syllable by syllable."
+      },
+      "do": "Dictate phrases, then dictate the three active sight words from the spelling deck.",
+      "note": "Phrases: CAMSHAFT IS BROKEN; FILTHY KITTEN. Repeat-lesson phrases: CONTRACT SMALLPOX; HIS MUSKRAT; IN AN INSTANT."
+    },
+    {
+      "id": "L4.7.sentences.01",
+      "phase": "Sentences",
+      "label": "Read sentences",
+      "say": {
+        "text": "Read that first sentence to yourself. Now read it out loud. Mark each phrase, then reread with phrasing."
+      },
+      "do": "Student reads, marks phrases, rereads with phrasing, and optionally circles compound words.",
+      "board": {
+        "mode": "sentences",
+        "title": "Lesson 7 Read These Sentences",
+        "items": [
+          "The hungry bulldog began to yap in the kitchen by the sandwich.",
+          "My grandson had a tantrum behind the pantry but I didn't spank him.",
+          "Mr. Kingston went bankrupt in Richmond so no one would know.",
+          "Their children will install a sickbed in the attic for Alfred.",
+          "His offhand comment did not impress me.",
+          "My mattress is filthy and much too soft.",
+          "Mr. Jackson will inspect the blacktop.",
+          "Winston is such a contrast to the rest of her children."
+        ]
+      }
+    },
+    {
+      "id": "L4.7.sentences.02",
+      "phase": "Sentences",
+      "label": "Spell sentences on paper",
+      "say": {
+        "text": "Now you're going to write three sentences. Repeat the sentence, write it, tap the syllables on long words, and check your sentence."
+      },
+      "do": "Dictate three sentences and guide correction.",
+      "note": "Sentences: MY CAMSHAFT AND DIPSTICK ARE BROKEN. PUT THE FILTHY KITTEN IN THE BATHTUB. WILL YOU PUT A BLINDFOLD ON MR. WINSTON? Repeat-lesson sentences: MY GRANDSON DID CONTRACT SMALLPOX. HIS MUSKRAT IS IN THE ATTIC. IN AN INSTANT, THE BANDIT DID CONFESS."
+    },
+    {
+      "id": "L4.7.stories.01",
+      "phase": "Stories",
+      "label": "Read basic stories",
+      "say": {
+        "text": "Now you're ready to read a story. Preread the story and figure out the tough words. Then read it out loud to me."
+      },
+      "do": "Have the student read the first story aloud. For the second story, have the student read silently and retell in their own words.",
+      "board": {
+        "mode": "story",
+        "title": "Lesson 7 Stories - Basic",
+        "stories": [
+          {
+            "title": "Mrs. Hudson",
+            "text": "Mrs. Hudson does spend a lot of cash to stock her pantry.\n\nIf she has a hint that you are hungry, she'll rush to the kitchen and put on her cotton apron. She'll fix a batch of lemon strudel and pop it in the oven.\n\nThe kitchen is her kingdom, and all of her stuff is yummy. If you are a friend of Mrs. Hudson, you could get fat."
+          },
+          {
+            "title": "The Handbag",
+            "text": "Bonny can't find her lipstick. She is sure that it must be in her handbag.\n\nShe did find a pencil she had lost and an old traffic ticket. She did find a bran muffin and some chopsticks.\n\nAlfred told her there was too much junk in her handbag. He said she should get a backpack.\n\nDo you think that would help?"
+          }
+        ],
+        "text": "Read Story #1 aloud. Read Story #2 silently and retell."
+      }
+    },
+    {
+      "id": "L4.7.stories.02",
+      "phase": "Stories",
+      "label": "Read advanced stories",
+      "do": "Use these instead of the basic stories when appropriate for the student.",
+      "board": {
+        "mode": "story",
+        "title": "Lesson 7 Stories - Advanced",
+        "stories": [
+          {
+            "title": "Mr. Cranston",
+            "text": "Mr. Cranston couldn't suppress a grin. The children were busy smuggling a straggly mongrel into the pantry.\n\nHis instinct told him he should confront the kids and banish the mutt. But his giggly children did enchant him, and Mr. Cranston doesn't do well with conflict.\n\nIt is a complex task to be both a father and a friend."
+          },
+          {
+            "title": "Lucky Jason",
+            "text": "Jason had a black belt in Judo. He won a windfall at Blackjack in Reno. He was a whiz in the cockpit. He was also a kingpin in Congress.\n\nTo put it simply, Jason was a success.\n\nSo it was a shock when he had a sudden crackup and became a rambling windbag."
+          }
+        ],
+        "text": "Optional advanced connected-text reading."
+      }
+    },
+    {
+      "id": "L4.7.close.01",
+      "phase": "Close",
+      "label": "Wrap up",
+      "say": {
+        "text": "You've done a lot of reading and spelling today. Thank you for working so hard."
+      },
+      "do": "Assign optional extra practice only if the student asks for between-session practice. Always do the first problem together before sending a page home.",
+      "board": {
+        "mode": "story",
+        "pageType": "worksheet",
+        "title": "Lesson 7 Extra Practice",
+        "subtitle": "Rendered from the real Book 4 manual pages before Lesson 8",
+        "text": "Show Lesson 7 Extra Practice #1 or #2. The student completes the selected paper copy outside the app.",
+        "images": [
+          {
+            "src": "assets/worksheets/level4/lesson7_extra_practice_1.png",
+            "label": "Lesson 7 Extra Practice #1",
+            "alt": "Lesson 7 Student Page 76 Extra Practice 1"
+          },
+          {
+            "src": "assets/worksheets/level4/lesson7_extra_practice_2.png",
+            "label": "Lesson 7 Extra Practice #2",
+            "alt": "Lesson 7 Student Page 77 Extra Practice 2"
+          }
+        ]
+      },
+      "note": "Extra Practice #1 asks the student to divide real words and mark each vowel sound as Short, Long, Schwa, or a Unit. Extra Practice #2 asks the student to form compound words by drawing lines between columns."
+    }
+  ]
+}

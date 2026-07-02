@@ -1,0 +1,378 @@
+{
+  "level": 3,
+  "lesson": 11,
+  "title": "Spelling: Kind Old Units",
+  "sections": [
+    {
+      "id": "Part_Intro",
+      "title": "Lesson Overview",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "Materials Needed: NEW Units: OLL, OLD, OLT, OST, ILD, IND. Letter Tiles: A-Z plus F, L, S, Z, CH, TH, CK, SH, WH, TCH. Units: ALL, ANG, ING, ONG, UNG, ANK, INK, ONK, UNK.\n\nOverview: Students learn the last set of Units for quite a while. In each of these Units, the vowel makes its Long sound (says its own name). Introduce the 4 units that start with O, then the 2 that start with I. Point out that most of them have an L after the vowel. Mark Unit syllables by drawing a box around all 3 letters."
+        }
+      ]
+    },
+    {
+      "id": "Part_C",
+      "title": "C: Phonemic Awareness Warmup",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Repeat this nonsense word, then make just its FIRST sound. Ready? HENCH."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Hench, /h/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to the tile that makes that sound."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the H tile."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now I want the LAST sound. CRENT."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Crent, /t/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to that tile."
+        },
+        {
+          "type": "action",
+          "text": "Student points to T."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now for the MIDDLE sound. Say both the sound AND its keyword. Ready? SNISH."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Snish, /i/-Itchy."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Repeat First Sound for: FLISHT, THRAP, BRONT. Last Sound for: DRIMP, BRUZZ, PLOTH, GLAV. Vowel Sound for: GLOCK, DRANT, RUCK, SMETCH."
+        }
+      ]
+    },
+    {
+      "id": "Part_D",
+      "title": "D: NEW TEACHING #1: Units Starting with O",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["all"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What does this say? Is it a Digraph or a Unit?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: ALL. Unit."
+        },
+        {
+          "type": "dialogue",
+          "text": "Today, you're going to be learning 6 more Units."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["oll"]
+        },
+        {
+          "type": "dialogue",
+          "text": "If A-L-L says ALL, what do you think O-L-L will say? Let me make a word out of it."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["r", "oll"]
+        },
+        {
+          "type": "dialogue",
+          "text": "That's something you might eat with dinner. What's that word?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Roll."
+        },
+        {
+          "type": "dialogue",
+          "text": "So what does O-L-L say? In /oll/, is the vowel making its Short sound? No. It is saying its own name... O. That's why it is a Unit."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["old"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Here's another Unit. This one can be a word all by itself. What does it say?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Old."
+        },
+        {
+          "type": "dialogue",
+          "text": "What sound is that vowel making? Its own name. Although it LOOKS like a Closed syllable, the vowel is NOT making its Short sound."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Build SOLD, SCOLD. Note why we use C and not K (O is not a Watch Out vowel)."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["olt"]
+        },
+        {
+          "type": "dialogue",
+          "text": "In this Unit, the O says its Own Name. So what does this unit say?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: OLT."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Build COLT, JOLT, BOLT."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["ost"]
+        },
+        {
+          "type": "dialogue",
+          "text": "This is the tricky Unit. As a Unit, the O says its own name, so it says OST. But in 3 words, O-S-T acts like a regular Closed syllable and says /ost/ (short o). Those words are LOST, COST, and FROST."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Build MOST, POST to show it acting as a Unit."
+        }
+      ]
+    },
+    {
+      "id": "Part_E",
+      "title": "E: NEW TEACHING #2: Units Starting with I",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["ild"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Here's a Unit that does NOT start with O. Since it's a Unit, do you think the vowel will make its Short sound or say its Own Name?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Its own name."
+        },
+        {
+          "type": "dialogue",
+          "text": "Right. So this Unit says ILD. What does it say?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Ild."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Build CHILD, WILD."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["ind"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What do you think this one says?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Ind."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Build MIND, RIND, GRIND. Then build WIND."
+        },
+        {
+          "type": "dialogue",
+          "text": "I need to warn you about 1 word. WIND. That's one way to say it. What's the other way?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Wind (long I)."
+        },
+        {
+          "type": "dialogue",
+          "text": "Right. It can either say Wind (wind your watch) or Wind (the wind is blowing). You won't know which way to say it unless you see it in a sentence."
+        }
+      ]
+    },
+    {
+      "id": "Part_F",
+      "title": "F: Spell Real Words with Fingers, then Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to finger spell. The first word is MOLD. Repeat that word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: MOLD"
+        },
+        {
+          "type": "dialogue",
+          "text": "Use your fingers to break it into sounds. But raise only ONE finger for the OLD sound, because you bring down only one tile."
+        },
+        {
+          "type": "action",
+          "text": "Student raises thumb for /m/, index for /old/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Double check by blending those sounds. Now change one tile to make that word say MILD."
+        },
+        {
+          "type": "action",
+          "text": "Student swaps OLD for ILD."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining words: FOLD, GOLD, JOLT, VOLT, COLT, COLD, TOLD, TROLL, SCROLL, BLIND, BIND, HOST, HIND."
+        }
+      ]
+    },
+    {
+      "id": "Part_I",
+      "title": "I: Read Words Through Word Frame",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to read words through the word frame. If you know the word for sure, just say it. Otherwise, sound it out."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": [
+            "child", "scold", "bolt", "grind", "stroll", "frost", "blind",
+            "hold", "toll", "volt", "kind", "post", "told", "wind",
+            "wost", "yold", "groll", "hild", "golt", "jost", "thind"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Part_M",
+      "title": "M: Read Phrases",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's read some phrases. Tell me the WHO, DID WHAT, WHERE, and ADD-ON phrases."
+        },
+        {
+          "type": "student_page",
+          "mode": "phrase_builder",
+          "payload": {
+            "who": [
+              "The small child",
+              "The cold duck",
+              "A blind man",
+              "One kind host"
+            ],
+            "did what": [
+              "won't tell Hank to sit",
+              "wouldn't hold still",
+              "didn't step",
+              "couldn't find us"
+            ],
+            "where": [
+              "on a bench",
+              "in the old shack",
+              "at the mall",
+              "on the hind leg"
+            ],
+            "add-on": [
+              "of the wild hog.",
+              "with frost on it.",
+              "but didn't mind.",
+              "and shut up."
+            ]
+          }
+        },
+        {
+          "type": "dialogue",
+          "text": "Now find every word that ends in a Unit, and box off the Unit on the screen."
+        }
+      ]
+    },
+    {
+      "id": "Part_O",
+      "title": "O: Read Sentences",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll read some sentences. Read the first sentence to yourself, then read it out loud."
+        },
+        {
+          "type": "student_page",
+          "mode": "sentence_marking",
+          "payload": [
+            "A blind man couldn't find us at the mall but didn't mind.",
+            "The cold duck wouldn't hold still in the old shack with frost on it.",
+            "The small child didn't step on the hind leg of the wild frog.",
+            "One kind host won't tell Hank to sit on a bench and shut up.",
+            "She'll hold on to the strong dog when she goes on a stroll.",
+            "He'll scold the wild child in class, but he won't tell on him.",
+            "The bold colt is sick and won't kick in the spring.",
+            "If it weren't for Mom, you'd bring a crust with mold on it."
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Mark the WHO phrase, DID WHAT phrase, WHERE phrase, and ADD-ON phrase."
+        },
+        {
+          "type": "action",
+          "text": "Student marks phrases and reads sentence with phrasing (pausing between chunks)."
+        }
+      ]
+    },
+    {
+      "id": "Part_Q",
+      "title": "Q: Read a Story",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're ready to read a story. Preread the story and figure out the tough words. Then read it out loud to me."
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "The Colt",
+            "text": "Dad and Pam went to find the colt. It was a cold stroll, but the child didn't mind. Dad led her with his hand. Pam was blind. Dad would put Pam on the back of the colt. It was a thrill to hug his neck as she sat on his back. When the colt went on a trot, Pam felt the jolt of his strong legs. 'Thank you, Dad,' she said when she had to stop."
+          }
+        },
+        {
+          "type": "teacher_note",
+          "text": "Have the student retell the story in their own words to check comprehension. Alternative stories in manual: 'Tim Wasn't Kind', 'The Skunk', 'The Wild Colt'."
+        }
+      ]
+    }
+  ]
+}

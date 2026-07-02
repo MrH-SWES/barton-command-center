@@ -1,0 +1,279 @@
+{
+  "level": 1,
+  "lesson": 1,
+  "title": "Breaking 2 Sounds Apart",
+  "sections": [
+    {
+      "id": "Part_Intro",
+      "title": "Lesson Overview & Intro",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "Materials Needed: Colored tiles, two each of three different colors.\\n\\nDo not use letters yet. The goal is to isolate sounds completely independent of their spelling."
+        },
+        {
+          "type": "dialogue",
+          "text": "Do you know that research has shown there are two different ways to read words? Some people memorize the shape of each word they read. But other people read by sounding out each word."
+        },
+        {
+          "type": "dialogue",
+          "text": "Good readers and spellers don't memorize. They do it by sounding out. I'm going to teach you how to read and spell by sounding out."
+        },
+        {
+          "type": "dialogue",
+          "text": "The problem is that words contain more than one sound, and the sounds run together. So the first thing I'll teach you is how to break a word that you hear into sounds."
+        },
+        {
+          "type": "action",
+          "text": "Tutor brings out tiles. Let student play with them for a moment."
+        },
+        {
+          "type": "dialogue",
+          "text": "Notice there are no letters on these tiles. That's because we're not going to be doing any reading or spelling right now. Instead, you'll use those tiles to show me what you hear."
+        }
+      ]
+    },
+    {
+      "id": "Part_A1",
+      "title": "A-1: Break Apart VC Words",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "When you listen to a word, it's hard to hear each sound because the sounds run together. First I'll say a nonsense word... AK."
+        },
+        {
+          "type": "action",
+          "text": "Expected: AK"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it again, very slowly like this: /aaaa/-/k/. Now you do it."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /aaaa/-/k/"
+        },
+        {
+          "type": "dialogue",
+          "text": "How many sounds did you hear?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: 2"
+        },
+        {
+          "type": "dialogue",
+          "text": "Good listening. Were they the same sound or different sounds?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Different"
+        },
+        {
+          "type": "dialogue",
+          "text": "Right. So to show me what you heard, pull down 2 tiles (one for each sound) that are different colors because the sounds were different."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["a", "k"]
+        },
+        {
+          "type": "action",
+          "text": "Tutor touches the first tile and says /a/, then touches the second tile and says /k/."
+        },
+        {
+          "type": "dialogue",
+          "text": "You do it."
+        },
+        {
+          "type": "action",
+          "text": "Student touches the first tile and says /a/, then touches the second tile and says /k/."
+        },
+        {
+          "type": "dialogue",
+          "text": "That's all I want you to do, so go ahead and wash the sound off those tiles by pushing them back."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining VC words one by one: OP, USH, OM, ITH, OJ, ACH. Stay on this step until the student can do it easily and accurately."
+        }
+      ]
+    },
+    {
+      "id": "Part_A2",
+      "title": "A-2: Break Apart CV Words",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's do the same thing, only these nonsense words might be a little bit harder. Ready? SA."
+        },
+        {
+          "type": "action",
+          "text": "Expected: SA"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it very slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /ssss/-/aaaa/"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "a"]
+        },
+        {
+          "type": "action",
+          "text": "Student pulls down tiles, touches and says each sound."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining CV words one by one: FI, CHO, BA, PI, VA."
+        }
+      ]
+    },
+    {
+      "id": "Part_B",
+      "title": "B: Break-Replace",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "We're going to start the same way, but I'll add a step at the end. Ready? The first word is AB."
+        },
+        {
+          "type": "action",
+          "text": "Expected: AB"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it again... very slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /aaaa/-/b/"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["a", "b"]
+        },
+        {
+          "type": "action",
+          "text": "Student touches first tile and says /a/, touches second tile and says /b/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Here's the new step. Watch carefully. I'm going to change this sound to /i/."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["i", "b"]
+        },
+        {
+          "type": "dialogue",
+          "text": "To figure out the new word, first touch-and-say those sounds."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student touches first tile and says /i/, touches second tile and says /b/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly blend those sounds into a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /iiii/-/b/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it fast like a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: IB"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining Break-Replace sets: MO -> MI, JA -> SHA, IG -> OG, DA -> LA."
+        }
+      ]
+    },
+    {
+      "id": "Part_C",
+      "title": "C: Compare Two Words",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now we're going to compare two words. The first word is UK."
+        },
+        {
+          "type": "action",
+          "text": "Expected: UK"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /uuuu/-/k/"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["u", "k"]
+        },
+        {
+          "type": "action",
+          "text": "Student touches and says /u/ and /k/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Good. The second word is AK."
+        },
+        {
+          "type": "action",
+          "text": "Expected: AK"
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /aaaa/-/k/"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["a", "k"]
+        },
+        {
+          "type": "action",
+          "text": "Student touches and says /a/ and /k/ in the second row."
+        },
+        {
+          "type": "dialogue",
+          "text": "Here's the tough part. I'll have you touch-and-say to figure out if these two sounds are different, or if these two sounds are different. Touch and say UK. Touch and say AK."
+        },
+        {
+          "type": "action",
+          "text": "Expected: The first sounds are different."
+        },
+        {
+          "type": "dialogue",
+          "text": "Good listening. So go ahead and change one of the tiles in that column to show that those two sounds are different."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining comparison pairs: IP & IM, ISH & JO, ITH & PO, CHI & IJ, THI & THA."
+        }
+      ]
+    }
+  ]
+}

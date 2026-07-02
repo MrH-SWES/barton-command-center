@@ -1,0 +1,497 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "level": 4,
+    "lesson": 10,
+    "title": "Spelling: The Banana Rule",
+    "estMinutes": 50,
+    "author": "Barton Command Center",
+    "videoSpeedDefault": 1.5
+  },
+  "materials": [
+    "2 thick rubber bands",
+    "Franklin Spelling Ace electronic spell checker",
+    "Level 4 letter tiles: 2 sets of A through Z plus Vowel Y, CH, TH, CK, SH, WH, TCH",
+    "Unit tiles: ALL, ANG, ING, ONG, UNG, ANK, INK, ONK, UNK, OLL, OLD, OLT, OST, ILD, IND",
+    "Binder paper and pencil",
+    "Word frame",
+    "Blank light-colored 5 x 8 index card",
+    "Several blank 3 x 5 index cards",
+    "Book 4 Spelling Rules page (Student Page #97)"
+  ],
+  "objectives": [
+    "Understand that any Open-A in an unaccented syllable changes to the Schwa sound /uh/.",
+    "Apply the Banana Rule: an Open-A at the end of a word always says /uh/; an Open-A by itself at the beginning usually says /uh/.",
+    "Spell /uh/ at the end of an unaccented syllable as Open-A.",
+    "Use rubber bands and accent experiments to decide which syllable is accented.",
+    "Read and spell real words using the Banana Rule.",
+    "Read phrases, sentences, and stories containing Lesson 10 patterns."
+  ],
+  "beats": [
+    {
+      "id": "L4.10.prep.01",
+      "phase": "Prep",
+      "label": "Tutor overview",
+      "do": "Set out rubber bands, the Franklin Spelling Ace, the Level 4 tile set, Units, binder paper, pencil, word frame, blank cards, and the Book 4 Spelling Rules page (Student Page #97). Keep the Spelling Ace within easy reach.",
+      "note": "Tutor-only overview: Lesson 10 teaches the Banana Rule. In Lesson 6, students learned that a Closed-A or Closed-O in an unaccented syllable changes to /uh/ (Schwa). This lesson extends that: an Open-A in an unaccented syllable ALSO changes to Schwa. An Open-A at the end of a word always changes (plasma, China, banana). An Open-A by itself at the beginning usually changes (adopt, ago). In three-syllable words, if two syllables are both Open-A and both unaccented, they both change (banana, Canada). The spelling rule: if you hear /uh/ at the end of an unaccented syllable, spell it Open-A. There are no nonsense words in this lesson."
+    },
+    {
+      "id": "L4.10.review.01",
+      "phase": "Review",
+      "label": "Review prior extra practice",
+      "say": {
+        "text": "Let's take a look at your extra practice page. Go ahead and read the words to me."
+      },
+      "do": "Review Lesson 9 extra practice. If it was not completed at home, complete a prior extra-practice page now.",
+      "board": {
+        "mode": "story",
+        "pageType": "worksheet",
+        "title": "Lesson 9 Extra Practice Review",
+        "subtitle": "Use one of the prior lesson pages if needed.",
+        "text": "Review Lesson 9 Extra Practice before beginning Lesson 10.",
+        "images": [
+          {
+            "src": "assets/worksheets/level4/lesson9_extra_practice_1.png",
+            "label": "Lesson 9 Extra Practice #1",
+            "alt": "Lesson 9 Student Page 95 Extra Practice 1"
+          },
+          {
+            "src": "assets/worksheets/level4/lesson9_extra_practice_2.png",
+            "label": "Lesson 9 Extra Practice #2",
+            "alt": "Lesson 9 Student Page 96 Extra Practice 2"
+          }
+        ]
+      },
+      "recovery": {
+        "trigger": "Student cannot complete the prior extra practice accurately.",
+        "prompts": [
+          "Stop the new lesson.",
+          "Repeat the prior lesson before teaching Lesson 10."
+        ]
+      }
+    },
+    {
+      "id": "L4.10.teach1.01",
+      "phase": "New Teaching 1",
+      "label": "Review Schwa and introduce Open-A Schwa",
+      "say": {
+        "text": "Today you'll see that sounding out some words can be tricky. You already know that a Closed-A or Closed-O in an unaccented syllable changes to /uh/. What happens if there's an Open-A in that unaccented syllable?"
+      },
+      "do": "Build INFANT. Student divides IN-fant and identifies that the A changed to Schwa. Reinforce: usually the last syllable is unaccented. Then build COMMA. Student divides COM-MA and sees the Open-A at the end changed to Schwa.",
+      "listen": {
+        "expect": [
+          "The A changed to Schwa.",
+          "The last syllable is usually unaccented.",
+          "A is the only vowel that changes whether Open or Closed."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "prePlace": [
+          { "word": "INFANT", "row": 0 },
+          { "word": "COMMA", "row": 1 }
+        ],
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.10.teach1.02",
+      "phase": "New Teaching 1",
+      "label": "QUOTA and PLASMA — Open-A at the end always changes",
+      "say": {
+        "text": "Both syllables are Open, but only Open-A's change. So that word says? Listen: an Open-A at the end of a word will always change to Schwa. So if you're spelling a word and the very last sound was /uh/, how would you spell it?"
+      },
+      "do": "Build QUOTA. Student divides QUO-TA and explains the A changes but the O does not. Build PLASMA. Student divides PLAS-MA and confirms the final Open-A changed. Ask about CHINA, CALIFORNIA, AMERICA — student identifies the final letter A.",
+      "listen": {
+        "expect": [
+          "QUO-tuh — the A changes but the O does not.",
+          "PLAS-muh — the Open-A at the end always changes.",
+          "The last letter in China is A; in California, A; in America, A."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "lock": false
+      },
+      "note": "Spelling rule: if you hear /uh/ at the very end of a word, spell it Open-A. Only UN-accented syllables change — the accented syllable in PLASMA (PLAS-) keeps its Closed-A sound."
+    },
+    {
+      "id": "L4.10.teach2.01",
+      "phase": "New Teaching 2",
+      "label": "Introduce the Banana Rule with UMBRELLA",
+      "say": {
+        "text": "See if you can find a Schwa in this word. How many syllables? How did you know? Divide the word. Which vowel will change to Schwa? In words with three syllables, only one syllable is accented. So how many unaccented syllables are there?"
+      },
+      "do": "Build UMBRELLA. Student divides UM-BREL-LA. Use rubber bands to find the accented syllable (middle: BREL). Establish there are two unaccented syllables.",
+      "listen": {
+        "expect": [
+          "UM-BREL-luh — the Open-A at the end changes.",
+          "The middle syllable lasts the longest — it's accented.",
+          "There are two unaccented syllables."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.10.teach2.02",
+      "phase": "New Teaching 2",
+      "label": "BANANA — both Open-A's change",
+      "say": {
+        "text": "If both of the unaccented syllables were Open-A's, they would both change. That word says? How many /uh/'s do you hear? Both Open-A syllables are unaccented, so they are both changing to Schwa."
+      },
+      "do": "Build and divide BA-NAN-A. Student says buh-NAN-uh and counts two /uh/ sounds. Explain this is the Banana Rule: every Open-A that is unaccented will change to Schwa.",
+      "listen": {
+        "expect": [
+          "buh-NAN-uh",
+          "Two /uh/'s.",
+          "Both Open-A syllables are unaccented."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "prePlace": [
+          { "word": "BANANA", "row": 0 }
+        ],
+        "lock": true
+      },
+      "note": "Name the rule: the Banana Rule. The word BANANA reminds the student that every Open-A that is unaccented will change to Schwa."
+    },
+    {
+      "id": "L4.10.teach2.03",
+      "phase": "New Teaching 2",
+      "label": "CANADA and ALASKA — Banana Rule practice",
+      "say": {
+        "text": "Use the Banana rule on this word. That word says? Which vowels changed? What's the name of this rule — Lemon or Banana?"
+      },
+      "do": "Build and divide CAN-A-DA. Student says CAN-uh-duh; both unaccented Open-A's changed. Then build ALASKA. Student divides A-LAS-KA and says uh-LAS-kuh. Reinforce spelling rule: /uh/ at the end of an unaccented syllable is spelled A. Use Spell Checker if unsure about accent.",
+      "listen": {
+        "expect": [
+          "CAN-uh-duh — both Open-A's changed because both are unaccented.",
+          "uh-LAS-kuh — the first and last A's changed.",
+          "The Banana Rule."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.10.teach2.04",
+      "phase": "New Teaching 2",
+      "label": "ADOPT and AGO — Open-A by itself at the beginning",
+      "say": {
+        "text": "In most two-syllable words, the first syllable is accented. In that case, this would say AY-dupt. Does that sound right? So let's switch the accent. If that Open-A were not accented, what would that word say? In fact, when there's an A by itself at the beginning, it usually says /uh/."
+      },
+      "do": "Build ADOPT. Student divides A-DOPT, experiments with accent (AY-dupt sounds wrong, uh-DOPT sounds right). Build AGO. Student divides A-GO and applies the Banana Rule.",
+      "listen": {
+        "expect": [
+          "uh-DOPT — the Open-A by itself at the beginning says /uh/.",
+          "uh-GO — yes, it follows the Banana Rule."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.10.teach2.05",
+      "phase": "New Teaching 2",
+      "label": "SALON and PRIVACY — experimenting with accent",
+      "say": {
+        "text": "Divide that word. First say it exactly as it looks. Does that sound right? Now try it with the Banana Rule. Which vowel will change? So it would say?"
+      },
+      "do": "Build SALON. Student divides SA-LON, tries SAY-lon (wrong), then applies Banana Rule to get suh-LON (hair salon). Build PRIVACY. Student divides PRI-VA-CY, recognizes the Open-A will change: PRI-vuh-cy.",
+      "listen": {
+        "expect": [
+          "suh-LON — as in a hair salon.",
+          "PRI-vuh-cy — the Open-A changes because it's unaccented."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "lock": false
+      },
+      "note": "Verified OCR correction: privacy = PRI-vuh-cy (the Open-A in the middle syllable is unaccented and changes to Schwa). Accented syllable is always PRI-."
+    },
+    {
+      "id": "L4.10.teach2.06",
+      "phase": "New Teaching 2",
+      "label": "Add Banana Rule to Spelling Rules page",
+      "say": {
+        "text": "So an Open-A at the end of a word will always say what? And an A by itself at the beginning of a word will usually say what? In fact, any unaccented Open-A will say what? And that rule is called?"
+      },
+      "do": "Hand the student the Book 4 Spelling Rules page (Student Page #97). Point to the new Banana Rule entry. Review all rules on the page.",
+      "listen": {
+        "expect": [
+          "/uh/",
+          "/uh/",
+          "/uh/",
+          "The Banana Rule."
+        ]
+      },
+      "board": {
+        "mode": "story",
+        "pageType": "reference_page",
+        "purpose": "reference",
+        "title": "Spelling Rules — Book 4 (Student Page #97)",
+        "text": "New entry: Ba-nan-a (Open-A). Use the student's physical Spelling Rules page to add the Banana Rule.",
+        "images": [
+          {
+            "src": "assets/reference/level4/book4_spelling_rules_student_page_97.png",
+            "label": "Student Page #97: Spelling Rules — Book 4",
+            "alt": "Book 4 Spelling Rules student page 97 showing Banana Rule and all prior rules"
+          }
+        ]
+      }
+    },
+    {
+      "id": "L4.10.spelltiles.01",
+      "phase": "Tile Spelling",
+      "label": "Spell real words with tiles",
+      "say": {
+        "text": "The first word is DEL-tuh. Repeat that word. Tap each syllable on the table. Say just the first syllable, then bring down its tiles. Say the second syllable, and bring down its tiles. Double-check by reading that word."
+      },
+      "do": "Dictate real words for tile spelling. Pronounce words carefully. There are no nonsense words in this lesson. Encourage use of the Franklin Spell Checker when uncertain.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "lock": false
+      },
+      "note": "Verified OCR corrections: DEL-tuh (Delta), MAG-muh (Magma), VIS-tuh (Vista), uh-NE-mic (Anemic), tuh-CO-muh (Tacoma), Piñ-uh-tuh (Piñata). Repeat-lesson words: uh-RO-muh (Aroma), ro-TUN-duh (Rotunda), SO-fuh (Sofa), uh-TOM-ic (Atomic)."
+    },
+    {
+      "id": "L4.10.words.01",
+      "phase": "Reading",
+      "label": "Read words through word frame",
+      "say": {
+        "text": "Now you're going to read words through the word frame. If you know that word for sure, just say it. If you don't know the word, use your pencil to help you divide it. After reading all the words, find words that change to Schwa using the Banana rule."
+      },
+      "do": "Student reads the Lesson 10 word page through the word frame. Optional: mark any vowels changing to Schwa and note whether it's the Banana Rule, a Vowel-L, or a Closed-A or Closed-O.",
+      "board": {
+        "mode": "word_frame",
+        "title": "Lesson 10 Read These Words",
+        "words": [
+          "across",
+          "stigma",
+          "Cuba",
+          "cinnamon",
+          "Atlanta",
+          "buffalo",
+          "Brazil",
+          "vanilla",
+          "adult",
+          "magma",
+          "Edna",
+          "Pacific",
+          "data",
+          "company",
+          "ultra",
+          "abandon",
+          "baton",
+          "canal",
+          "legacy",
+          "privacy",
+          "awaken"
+        ]
+      },
+      "note": "Verified Lesson 10 word-frame items confirmed visually against rendered page image. 'legacy', 'privacy', and 'awaken' were visually verified as present on the student page."
+    },
+    {
+      "id": "L4.10.paper.01",
+      "phase": "Paper Spelling",
+      "label": "Spell words on paper",
+      "say": {
+        "text": "Now you'll spell on paper, syllable by syllable. The first word is ZE-bruh. Repeat that word. Tap each syllable on the table. Say the first syllable, and write it down. Say the second syllable, and write it down. To double check, read that word."
+      },
+      "do": "Dictate real words on paper. There are no nonsense words in this lesson.",
+      "note": "Real words: ZE-bruh (Zebra), uh-DRIFT (Adrift), cuh-RESS (Caress), uh-STON-ish (Astonish), NEB-u-luh (Nebula). Repeat-lesson real words: uh-NE-mic (Anemic), TO-guh (Toga), uh-LOFT (Aloft), uh-RO-muh (Aroma), luh-MENT (Lament). No nonsense words."
+    },
+    {
+      "id": "L4.10.sightread.01",
+      "phase": "Sight Words",
+      "label": "Review sight word reading deck",
+      "say": {
+        "text": "Let's review your Sight Word Reading Deck. Warm up by reading each card. Check yourself by looking at the clue. Now keep the clue hidden and read them again as fast as you can."
+      },
+      "do": "Use the student's physical Sight Word Reading Deck. Skip if the student does not have one."
+    },
+    {
+      "id": "L4.10.sightspell.01",
+      "phase": "Sight Words",
+      "label": "Review sight word spelling cards",
+      "say": {
+        "text": "Let's review your tricky sight words."
+      },
+      "do": "For each physical Sight Word Spelling Card: read it, explain the red letter, see and spell twice on the wall, see and write twice on the table, and see and write twice on paper. Dictate the three active sight words at the end of phrase spelling.",
+      "note": "Retire a card after three correct sessions, then use the Sight Word Check List to find a replacement."
+    },
+    {
+      "id": "L4.10.phrases.01",
+      "phase": "Phrases",
+      "label": "Read phrases",
+      "say": {
+        "text": "Now you'll read some phrases. Read each group, create sentences, then point to two words that use the Banana rule."
+      },
+      "do": "Student reads Who, Did What, Where, and Add-On phrases; creates sentences; then identifies two words following the Banana Rule.",
+      "board": {
+        "mode": "sentences",
+        "title": "Lesson 10 Read These Phrases",
+        "items": [
+          "My adult son",
+          "The math faculty",
+          "The volcano",
+          "Their company",
+          "did spill its magma",
+          "will abolish calculus",
+          "did adopt a panda",
+          "went",
+          "from China",
+          "across Malta",
+          "to Montana",
+          "on campus",
+          "along with Sandra.",
+          "to look for buffalo.",
+          "long ago.",
+          "next spring."
+        ]
+      }
+    },
+    {
+      "id": "L4.10.phrases.02",
+      "phase": "Phrases",
+      "label": "Spell phrases on paper",
+      "say": {
+        "text": "Now you're going to write some phrases. Repeat the phrase, write it down, and figure out the tough words syllable by syllable."
+      },
+      "do": "Dictate phrases, then dictate the three active sight words from the spelling deck.",
+      "note": "Phrases: WENT SCUBA DIVING; PRIVACY IN CHINA; THE EXTRA UMBRELLA. Repeat-lesson phrases: ACROSS BRAZIL; MET THE QUOTA; AWAKEN FROM A COMA."
+    },
+    {
+      "id": "L4.10.sentences.01",
+      "phase": "Sentences",
+      "label": "Read sentences",
+      "say": {
+        "text": "Read that first sentence to yourself. Now read it out loud. Let's mark each phrase. Now read that sentence with phrasing. Put a small pause between each phrase."
+      },
+      "do": "Student reads, marks Who/Did What/Where/Add-On phrases, and rereads with phrasing. Optional: circle each word that uses the Banana Rule.",
+      "board": {
+        "mode": "sentences",
+        "title": "Lesson 10 Read These Sentences",
+        "items": [
+          "Donna will begin an extra calculus class on campus next spring.",
+          "My adult son did adopt a panda from China along with Sandra.",
+          "The volcano did erupt its magma across Malta long ago.",
+          "Their company went to Montana to look for buffalo.",
+          "Silly Donna sat on a sofa in Alaska with her dusty tuba.",
+          "People in Tampa did abandon their atomic equipment long ago.",
+          "Mrs. Mona Cranston did caress her anemic son when he said, \"Momma.\"",
+          "The cadet from Canada lost his baton."
+        ]
+      }
+    },
+    {
+      "id": "L4.10.sentences.02",
+      "phase": "Sentences",
+      "label": "Spell sentences on paper",
+      "say": {
+        "text": "Now you're going to write three sentences. Repeat the sentence, write it, tap the syllables on long words, and check your sentence."
+      },
+      "do": "Dictate three sentences and guide correction.",
+      "note": "Sentences: SANDRA AND HER BROTHER WENT SCUBA DIVING. EVERY VIOLET WANT PRIVACY IN CHINA. PLEASE FIND THE EXTRA UMBRELLA IN THE CANOE. Repeat-lesson sentences: LAST YEAR, EMILY GOT THE QUOTA. ROSA DID NOT AWAKEN FROM HER COMA."
+    },
+    {
+      "id": "L4.10.stories.01",
+      "phase": "Stories",
+      "label": "Read basic stories",
+      "say": {
+        "text": "Now you're ready to read a story. Preread the story and figure out the tough words. Then read it out loud to me."
+      },
+      "do": "Have the student read the first story aloud. For the second story, have the student read silently and retell in their own words.",
+      "board": {
+        "mode": "story",
+        "title": "Lesson 10 Stories — Basic",
+        "stories": [
+          {
+            "title": "The Canal",
+            "text": "Long ago, some people from the U.S. said they would attempt to construct a canal across a thin stretch of land. If a big ship could pass through the canal, the cost of a trip from East to West would plummet.\n\nIt was a risky project. Many adults who went to dig got very sick from an insect or a strange virus. But Congress did not abandon the project, even when there was conflict and nothing went right.\n\nDo you know where that canal is?"
+          },
+          {
+            "title": "Lunch in Italy",
+            "text": "When Mona was on a trip to Italy, she met a friend for lunch at a villa. It was a very romantic spot.\n\nMona wasn't hungry, but she had a yen to select something exotic from the menu.\n\nThey split a spicy potato, tuna salad in a tomato, cinnamon molasses crisp, and a vanilla soda.\n\nBut the fantastic vista was the best thing about that lunch."
+          }
+        ],
+        "text": "Read Story #1 aloud. Read Story #2 silently and retell."
+      }
+    },
+    {
+      "id": "L4.10.stories.02",
+      "phase": "Stories",
+      "label": "Read advanced stories",
+      "do": "Use these instead of the basic stories when appropriate for the student.",
+      "board": {
+        "mode": "story",
+        "title": "Lesson 10 Stories — Advanced",
+        "stories": [
+          {
+            "title": "The Infant",
+            "text": "Emma bent over the crib. She put a tiny panda next to Sandra. How could anyone abandon this baby? If they could adopt Sandra, Emma would be a momma in an instant. Could she adjust to the change?\n\nHer husband, Dan, was full of love for this baby and did want to be a father.\n\nEmma asked, \"Is this the right thing for us to do?\" Dan felt it was. \"We must adopt this infant and protect it,\" he said."
+          },
+          {
+            "title": "Reno",
+            "text": "Truman had come to Reno to attempt to win at Blackjack. The hotel was very plush. There was nothing akin to it in Montana.\n\nThe bellhop said, \"There is a pickpocket so adept that he can lift your billfold, and you will not even know it.\"\n\nTruman did expect to go back to Montana with a windfall in his pocket. He didn't want anything to go amiss. So he put a big tip in the bellhop's hand."
+          }
+        ],
+        "text": "Optional advanced connected-text reading."
+      }
+    },
+    {
+      "id": "L4.10.close.01",
+      "phase": "Close",
+      "label": "Wrap up",
+      "say": {
+        "text": "You've done a lot of reading and spelling today. Thank you for working so hard."
+      },
+      "do": "Assign optional extra practice only if the student asks for between-session practice. Always do the first problem together before sending a page home.",
+      "board": {
+        "mode": "story",
+        "pageType": "worksheet",
+        "title": "Lesson 10 Extra Practice",
+        "subtitle": "Rendered from the real Book 4 manual pages after Lesson 10",
+        "text": "Show Lesson 10 Extra Practice #1 or #2. The student completes the selected paper copy outside the app.",
+        "images": [
+          {
+            "src": "assets/worksheets/level4/lesson10_extra_practice_1.png",
+            "label": "Lesson 10 Extra Practice #1",
+            "alt": "Lesson 10 Student Page 105 Extra Practice 1"
+          },
+          {
+            "src": "assets/worksheets/level4/lesson10_extra_practice_2.png",
+            "label": "Lesson 10 Extra Practice #2",
+            "alt": "Lesson 10 Student Page 106 Extra Practice 2"
+          }
+        ]
+      },
+      "note": "Extra Practice #1 asks the student to underline any vowel changing to Schwa and identify the rule (Banana Rule, Vowel-L, or Closed-A/Closed-O). Extra Practice #2 asks the student to circle words that are names of locations (countries, states, or towns)."
+    }
+  ]
+}

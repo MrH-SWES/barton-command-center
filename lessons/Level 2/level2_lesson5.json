@@ -1,0 +1,666 @@
+{
+  "level": 2,
+  "lesson": 5,
+  "title": "E, CH, CK, SH, TH, WH",
+  "sections": [
+    {
+      "id": "Part_Intro",
+      "title": "Lesson Overview",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "Materials Needed: New Tiles: E, CH, CK, SH, TH, WH. Known Letter Tiles: A, I, O, U and all previously taught consonants. Binder paper and pencil, Word Frame, Blank card.\n\nNote: This lesson introduces the final short vowel (E) and Consonant Digraphs. A digraph is two letters that make only ONE sound, so they are printed on a single tile."
+        }
+      ]
+    },
+    {
+      "id": "Part_A",
+      "title": "A: Review Known Letters and Sounds",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Before teaching the new sounds, let's review the ones you learned last time. Which ones are the vowels?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: A, I, O, U"
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and tap each vowel's keyword and sound."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student taps Apple Apple /a/ /a/ /a/, Itchy Itchy /i/ /i/ /i/, Olive Olive /o/ /o/ /o/, and Up Up /u/ /u/ /u/."
+        },
+        {
+          "type": "action",
+          "text": "Tutor points to each of the consonant tiles (including QU and X). Tell me the name and the sound of this letter."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student says the name of each letter and its sound."
+        }
+      ]
+    },
+    {
+      "id": "Part_C",
+      "title": "C: Phonemic Awareness Warm-up",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's try a quick warm-up. I'll say a nonsense word, you repeat it. Ready? SHAB."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Shab"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say just the FIRST sound in that word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /sh/"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Repeat FIRST sound for: CHUD, THIP, WHOB. Switch to LAST sound for: MASH, TICH, LATH, MOCK (use /k/). Then MIDDLE sound for: PEB, KEX, TEG."
+        }
+      ]
+    },
+    {
+      "id": "Part_D",
+      "title": "D: Teach New Vowel Sound",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "e"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Tell me the name of this letter."
+        },
+        {
+          "type": "action",
+          "text": "Expected: E"
+        },
+        {
+          "type": "dialogue",
+          "text": "Is it a vowel or a consonant?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: A vowel"
+        },
+        {
+          "type": "dialogue",
+          "text": "The most common sound that E makes is /e/. Repeat that sound."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /e/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now I'll help you create a picture in your head to make it easy to remember. Close your eyes. Picture an old man who is very hard of hearing. His name is Ed. You say 'Hi Ed!' but he can't hear you. He cups his hand behind his ear, leans forward, and says '/e/?'. What is the old man's name?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Ed"
+        },
+        {
+          "type": "dialogue",
+          "text": "Right. Say that name."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Ed"
+        },
+        {
+          "type": "dialogue",
+          "text": "To tap this keyword, we use a hand motion. Cup your hand behind your ear, lean forward, and say /e/."
+        },
+        {
+          "type": "action",
+          "text": "Tutor cups ear and says /e/."
+        },
+        {
+          "type": "dialogue",
+          "text": "That's the sound you should make whenever you see the letter E. You say: Ed, Ed, /e/ /e/ /e/. You try it."
+        },
+        {
+          "type": "action",
+          "text": "Student cups ear and says: Ed, Ed, /e/ /e/ /e/."
+        }
+      ]
+    },
+    {
+      "id": "Part_E",
+      "title": "E: Teach Consonant Digraphs",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're ready to learn a new type of consonant called a Digraph. A digraph is two letters that make only ONE sound together. Because they only make one sound, they are printed on just ONE tile."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "sh"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "This is SH. Together they make the sound /sh/. Repeat that sound."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /sh/ (Keyword: Ship)"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "ch"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "This is CH. Together they make the sound /ch/. Repeat that sound."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /ch/ (Keyword: Chin)"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "th"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "This is TH. Together they make the sound /th/. Repeat that sound."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /th/ (Keyword: Thumb)"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "wh"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "This is WH. It makes the same sound as a regular W: /w/. Say /w/."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /w/ (Keyword: Whistle)"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "ck"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "This is CK. It makes the sound /k/. But there is a very strict rule for CK. CK is ONLY used at the very end of a word, right after a short vowel. Repeat that sound."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /k/ (Keyword: Duck)"
+        }
+      ]
+    },
+    {
+      "id": "Part_F",
+      "title": "F: Read Sounds on Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Before you spell, let's run through them one more time. Tap the E vowel for me."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Ed, Ed, /e/ /e/ /e/ (while cupping ear)"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now the U."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Up, Up, /u/ /u/ /u/"
+        },
+        {
+          "type": "action",
+          "text": "Tutor points to SH, CH, TH, WH, and CK. Student says the letters and makes their sounds."
+        }
+      ]
+    },
+    {
+      "id": "Part_G",
+      "title": "G: Spell Sounds with Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "I'm going to make the sound. You repeat the sound. /sh/"
+        },
+        {
+          "type": "action",
+          "text": "Expected: /sh/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to the tile that says /sh/."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the SH tile."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining sounds: /ch/, /th/, /w/ (point to both W and WH), /k/ (point to C, K, and CK), /e/, /u/, /a/, /i/, /o/."
+        }
+      ]
+    },
+    {
+      "id": "Part_H",
+      "title": "H: Read Real Words with Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're ready to take those sounds and blend them into words. Here's how that works."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "sh",
+            "e",
+            "d"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Let's figure out the vowel first. Tap its keyword, then its sound."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Ed, Ed, /e/ /e/ /e/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now touch-and-say each sound."
+        },
+        {
+          "type": "action",
+          "text": "Student touches first tile and says /sh/, touches second tile and says /e/, touches third tile and says /d/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Next, slowly drag your finger underneath that word while you run those sounds together."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /sh/-/eeee/-/d/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it fast like a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Shed"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Change one tile at a time to build these words: RED, FED, BED, BEG, LEG, PEG, PEN, TEN, THEN, WHEN, WHIP, SHIP, CHIN, THIN."
+        }
+      ]
+    },
+    {
+      "id": "Part_I",
+      "title": "I: Spell Real Words with Fingers, then Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now let's do the opposite. I'll say a word, and YOU break it into the sounds. The first word is CHAT."
+        },
+        {
+          "type": "action",
+          "text": "Expected: CHAT"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it again, very slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /ch/-/aaaa/-/t/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Use your fingers to break it into sounds."
+        },
+        {
+          "type": "action",
+          "text": "Student raises thumb while saying /ch/, index finger while saying /a/, middle finger while saying /t/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Pull down a tile for each finger, while making its sound. Remember that /ch/ is a digraph, so it goes on one tile."
+        },
+        {
+          "type": "action",
+          "text": "Student pulls down CH, then A, then T."
+        },
+        {
+          "type": "dialogue",
+          "text": "To see if that's right, slowly blend those tiles together."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /ch/-/aaaa/-/t/ ... Chat."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining words, having the student change one tile at a time: THAT, SHUT, SHOCK (remind student about the CK rule at the end of short vowel words), MOCK, DOCK, DECK, NECK, PECK, PATH, MATH, MASH."
+        }
+      ]
+    },
+    {
+      "id": "Part_J",
+      "title": "J: Read Nonsense Words with Tiles",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "th",
+            "e",
+            "p"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Now I'm going to build a nonsense word. Figure out the vowel first. Tap its keyword, then its sound."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Ed, Ed, /e/ /e/ /e/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now touch-and-say each tile."
+        },
+        {
+          "type": "action",
+          "text": "Student touches TH and says /th/, touches E and says /e/, touches P and says /p/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly blend those sounds together."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /th/-/eeee/-/p/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it fast like a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Thep"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Build these words one by one: CHEX, SHIB, WHOM, KECK."
+        }
+      ]
+    },
+    {
+      "id": "Part_K",
+      "title": "K: Spell Nonsense Words with Fingers, then Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll spell some nonsense words. The first word is ZECK."
+        },
+        {
+          "type": "action",
+          "text": "Expected: ZECK"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /zzzz/-/eeee/-/k/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Use your fingers to break it into sounds, then pull down a tile for each finger. Remember the rule for /k/ at the end of a short vowel word!"
+        },
+        {
+          "type": "action",
+          "text": "Student spells on fingers, then pulls down Z, E, CK."
+        },
+        {
+          "type": "dialogue",
+          "text": "Double-check by blending those sounds together."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /zzzz/-/eeee/-/k/ ... Zeck."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate these words: SHUP, THIM, CHAD, WEV."
+        }
+      ]
+    },
+    {
+      "id": "Part_L",
+      "title": "L: Read Words Through Word Frame",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to read words using a word frame. If you know that word for sure, just say it. Otherwise, touch-and-say each sound, then blend them together."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": [
+            "pet",
+            "them",
+            "sack",
+            "shut",
+            "check",
+            "wish",
+            "lock",
+            "then",
+            "kick",
+            "when",
+            "sick",
+            "much",
+            "dash",
+            "peck",
+            "luck",
+            "shop",
+            "chop",
+            "back",
+            "math",
+            "ship",
+            "neck",
+            "rich"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Part_M",
+      "title": "M: Spell Words with Fingers, then Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to spell words on paper. The first word is SHELL."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Shell"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it again, slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /sh/-/eeee/-/l/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Use your fingers to break it into sounds. Then tell me what letter you need."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /sh/-SH, /e/-Ed-E, /l/-L."
+        },
+        {
+          "type": "dialogue",
+          "text": "Make each sound while you write down its letter."
+        },
+        {
+          "type": "action",
+          "text": "Student writes SH, E, L on paper."
+        },
+        {
+          "type": "dialogue",
+          "text": "Double-check what you wrote by blending the sounds together."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate real words: CHIP, DECK, WITH, THEN. Dictate nonsense words: SHACK, CHUM, THICK, WHIP, YECK."
+        }
+      ]
+    },
+    {
+      "id": "Part_N",
+      "title": "N: Read Phrases",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "You now can read enough words to read phrases. Read the phrases on this page."
+        },
+        {
+          "type": "student_page",
+          "mode": "phrase_builder",
+          "payload": {
+            "who": [
+              "the rich king",
+              "a fat hen",
+              "Seth",
+              "a red bug",
+              "the men"
+            ],
+            "did what": [
+              "had a shock",
+              "can peck",
+              "got a check",
+              "bit a dog",
+              "hid"
+            ],
+            "where": [
+              "on the deck",
+              "in a shed",
+              "on a ship",
+              "in the shack",
+              "with a net"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "Part_O",
+      "title": "O: Read Sentences",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now let's look at some sentences. Read the first sentence to yourself, then read it out loud."
+        },
+        {
+          "type": "student_page",
+          "mode": "sentence_marking",
+          "payload": [
+            "Seth got a shock on the deck.",
+            "A fat hen can peck in a shed.",
+            "The men hid on a ship.",
+            "A red bug bit a dog in the shack.",
+            "The rich king had a check with a net.",
+            "When did the men quit?",
+            "Ed had a rash on his neck.",
+            "Tim got a duck at the shop.",
+            "She put a dish in the sink.",
+            "The dog sat on the path."
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "How many phrases in that sentence? Mark each phrase for me. 'Seth' is the WHO, and 'got a shock' is the DID WHAT."
+        },
+        {
+          "type": "action",
+          "text": "Student marks the phrases and reads the sentence with phrasing."
+        }
+      ]
+    },
+    {
+      "id": "Part_P",
+      "title": "P: Read Longer Words Together",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Nonsense words are the first syllables of longer words. Read just the first syllable on your page."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": [
+            "den",
+            "vel",
+            "pen",
+            "sep",
+            "sel",
+            "vec",
+            "tem",
+            "nep",
+            "let",
+            "mem"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "That's the first syllable in the word Dentist. Say that word. Can you think of any other words that start with DEN?"
+        },
+        {
+          "type": "teacher_note",
+          "text": "If the student struggles to think of words, change the directions to: 'Some of these words are real, some are nonsense. Tell me if it's real or nonsense.'"
+        }
+      ]
+    }
+  ]
+}

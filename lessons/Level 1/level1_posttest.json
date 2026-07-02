@@ -1,0 +1,405 @@
+{
+  "level": 1,
+  "lesson": "posttest",
+  "title": "Level 1 Posttest",
+  "sections": [
+    {
+      "id": "Part_Intro",
+      "title": "Posttest Overview",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "Materials Needed: Colored tiles, three each of five different colors.\n\nOverview: This posttest checks if the student has mastered the 7 essential phonemic awareness skills. They should have at least 95% accuracy (maximum 1 error per task). If they miss 2 or more on any task, stop the test and return to the lowest lesson number circled on the answer sheet."
+        }
+      ]
+    },
+    {
+      "id": "Part_A",
+      "title": "Task A: Break Apart Nonsense Words",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's break a word into sounds. Some of these words have two sounds, but some of them have three. So you'll have to listen carefully. Ready? The first word is SNI."
+        },
+        {
+          "type": "action",
+          "text": "Expected: SNI"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it again ... very slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /ssss/-/nnnn/-/iiii/"
+        },
+        {
+          "type": "dialogue",
+          "text": "How many sounds did you hear in that word?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: 3"
+        },
+        {
+          "type": "dialogue",
+          "text": "Good listening. Pull down the tiles."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "s",
+            "n",
+            "i"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Now touch-and-say each sound."
+        },
+        {
+          "type": "action",
+          "text": "Student touches the first tile and says /s/, touches the second tile and says /n/, then touches the third tile and says /i/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now wash those tiles off."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the following words one by one. Score accuracy for breaking sounds apart:\n1. NACH\n2. OK\n3. USP\n4. PIP\n5. GLA\n6. OPT\n7. THA\n8. SHRO\n9. TOB\n10. IM\n11. SKA\n12. ILT\n13. BO\n14. TRI\n15. SHAD"
+        }
+      ]
+    },
+    {
+      "id": "Part_B",
+      "title": "Task B: Break-Replace-Remove",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll break a word, then I'll change a sound. Some of these words have 2 sounds, others have 3. Ready? The first word is SKA."
+        },
+        {
+          "type": "action",
+          "text": "Expected: SKA"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it again ... very slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /ssss/-/k/-/aaaa/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Pull down the tiles."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "s",
+            "k",
+            "a"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Touch-and-say."
+        },
+        {
+          "type": "action",
+          "text": "Student touches first tile and says /s/, touches second tile and says /k/, touches third tile and says /a/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now watch carefully. I'm going to change this sound to /o/."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "s",
+            "k",
+            "o"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "To figure out the new word, touch-and-say the sounds."
+        },
+        {
+          "type": "action",
+          "text": "Student touches first tile and says /s/, touches second tile and says /k/, touches third tile and says /o/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly blend those sounds into a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /ssss/-/k/-/oooo/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it fast like a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: SKO"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now watch carefully. I'm going to take out this tile."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "k",
+            "o"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Touch-and-say the sounds that are left."
+        },
+        {
+          "type": "action",
+          "text": "Student touches first tile and says /k/, touches second tile and says /o/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly blend."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /k/-/oooo/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it fast like a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: KO"
+        },
+        {
+          "type": "dialogue",
+          "text": "Great. Go ahead and wash off those tiles."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the following sets for the student to break, replace, and remove:\n1. VAK -> VOK -> VO\n2. DA -> LA -> A\n3. IMP -> ISP -> IP\n4. UJ -> UK -> U\n5. BLO -> BLI -> BI"
+        }
+      ]
+    },
+    {
+      "id": "Part_C",
+      "title": "Task C: Compare Two Words",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now we're going to compare two words. The first word is SPA."
+        },
+        {
+          "type": "action",
+          "text": "Expected: SPA"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /ssss/-/p/-/aaaa/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Touch-and-say using the first row."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "s",
+            "p",
+            "a"
+          ]
+        },
+        {
+          "type": "action",
+          "text": "Student touches first tile and says /s/, touches second tile and says /p/, touches the third tile and says /a/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Good. The second word is SPI."
+        },
+        {
+          "type": "action",
+          "text": "Expected: SPI"
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /ssss/-/p/-/iiii/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Touch-and-say using the second row."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "s",
+            "p",
+            "i"
+          ]
+        },
+        {
+          "type": "action",
+          "text": "In the second row, student touches first tile and says /s/, touches second tile and says /p/, touches third tile and says /i/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Here's the tough part. Touch-and-say until you find the sounds that are different. SPA. SPI."
+        },
+        {
+          "type": "action",
+          "text": "Expected: The last sounds are different."
+        },
+        {
+          "type": "dialogue",
+          "text": "Good listening. So go ahead and change the last tile in the new word ... to show that it's different."
+        },
+        {
+          "type": "action",
+          "text": "Student changes the last tile in the second row."
+        },
+        {
+          "type": "dialogue",
+          "text": "That's perfect. Now go ahead and wash off those tiles."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the following pairs for comparison:\n1. UD vs. UCH\n2. KOV vs. TOV\n3. BA vs. KA\n4. UNT vs. UST\n5. GRO vs. GRA"
+        }
+      ]
+    },
+    {
+      "id": "Part_D",
+      "title": "Task D: Blend 2 and 3 Sounds into Real Words",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now I'll give you some sounds. You'll blend them together to create a real word. Let me show you what I mean."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "a",
+            "t"
+          ]
+        },
+        {
+          "type": "action",
+          "text": "Tutor touches each tile while saying: 'This tile says /a/, this tile says /t/.' Now you touch-and-say those sounds."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student touches first tile saying /a/, then second tile saying /t/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly blend them together."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /aaaaa/-/t/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it fast like a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: AT"
+        },
+        {
+          "type": "dialogue",
+          "text": "Perfect. Go ahead and wash off those tiles."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the following sound sequences for the student to blend into words:\n1. /a/ /t/ (AT)\n2. /h/ /a/ /v/ (HAVE)\n3. /n/ /o/ /k/ (KNOCK)\n4. /f/ /u/ /j/ (FUDGE)\n5. /m/ /a/ /ch/ (MATCH)\n6. /th/ /i/ /n/ (THIN)\n7. /e/ /n/ /d/ (END)\n8. /l/ /a/ /m/ (LAMB)"
+        }
+      ]
+    },
+    {
+      "id": "Part_E",
+      "title": "Task E: Rhyme Words",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're ready for the last step in this book - creating words that rhyme. First let me give you some sounds."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "s",
+            "a",
+            "d"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Here are the sounds: /s/ /a/ /d/. Touch-and-say, then tell me the word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student touches, blends, and says SAD."
+        },
+        {
+          "type": "dialogue",
+          "text": "Which tile would you change to create a word that rhymes?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: The first one."
+        },
+        {
+          "type": "dialogue",
+          "text": "Right. So go ahead and create a word that rhymes with SAD."
+        },
+        {
+          "type": "action",
+          "text": "Student replaces the first tile, says its sound, then says the rhyming word."
+        },
+        {
+          "type": "dialogue",
+          "text": "Create two more words that rhyme."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Expect words like BAD, DAD, FAD, HAD, MAD, PAD, TAD, etc. Once done, wash off tiles."
+        },
+        {
+          "type": "action",
+          "text": "Assign these sounds to three tiles: /l/ /i/ /p/."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Have the student create rhyming words for LIP. Expect dip, hip, nip, sip, tip, whip, yip, zip, chip, ship."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "level": 2,
+  "lesson": "posttest",
+  "title": "Level 2 Posttest",
+  "sections": [
+    {
+      "id": "Part_Intro",
+      "title": "Posttest Overview",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "Materials Needed: Several sheets of binder paper, a pencil.\n\nOverview: This posttest ensures the student has mastered all short vowels, consonants, and digraphs taught in Level 2. The student should achieve at least 95% accuracy (maximum 1 error per task). If the student makes more than 1 error on a task, stop the test and review the lesson indicated on the answer sheet. If your student is absolutely solid on everything, you may skip this and go directly to Level 3."
+        }
+      ]
+    },
+    {
+      "id": "Part_A",
+      "title": "Task A: Letter Name & Sound Knowledge",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "You are now very good at hearing every sound in a syllable. So you're ready to start reading and spelling. Each letter in our language has a name and makes a sound."
+        },
+        {
+          "type": "dialogue",
+          "text": "Starting at the top, tell me the name of each letter, then the sound that it makes. I'm going to write down what you say, so please pause after each one."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Do not let the student see what you are writing, and do not provide feedback on whether they are right or wrong. For vowels, ask for the SHORT sound."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": [
+            "b", "p", "qu", "c", "d", "r", "f", "s", "g", "t", "h", "v", "j", "w", "k", "x", "l", "y", "m", "z", "n", "a", "th", "e", "sh", "i", "ch", "o", "wh", "u", "ck"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Part_B",
+      "title": "Task B: Spelling Individual Sounds on Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now I'd like you to write down each answer."
+        },
+        {
+          "type": "action",
+          "text": "Tutor gives student a piece of paper and pencil."
+        },
+        {
+          "type": "dialogue",
+          "text": "I'm going to make a sound. I want you to repeat the sound, say the name of the letter or letters that make that sound, then write your answer down. Ready?"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the following sounds one by one. Watch for confusion in writing b, d, p, q, s, z, n, or m.\n\nConsonants/Digraphs: /n/, /p/, /ch/, /g/, /t/, /v/, /f/, /th/, /d/, /b/, /z/, /w/, /wh/, /sh/, /s/, /x/, /qu/, /m/, /j/, /k/ (accept c, k, or ck), /r/, /y/.\n\nVowels: /a/, /o/, /u/, /i/, /e/."
+        }
+      ]
+    },
+    {
+      "id": "Part_C",
+      "title": "Task C: Identifying First, Last, and Middle Sounds",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now I'm going to say a nonsense word. You repeat it. Ready? CHUP."
+        },
+        {
+          "type": "action",
+          "text": "Expected: CHUP"
+        },
+        {
+          "type": "dialogue",
+          "text": "What is the first sound in that word?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: /ch/"
+        },
+        {
+          "type": "dialogue",
+          "text": "How would you spell that sound?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: CH"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the rest of the FIRST sound words: THIB, WHOV, SHAM, QUIM."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now let's do the same thing, but this time, tell me the LAST sound ... and how you'd spell it."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the LAST sound words: LISS, YUCH, GAN, MOX, SUFF."
+        },
+        {
+          "type": "dialogue",
+          "text": "Follow those same steps, but this time, tell me the MIDDLE sound ... and how you'd spell it."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the MIDDLE sound words: CHAM, MOG, PEZ, THUN, TIB."
+        }
+      ]
+    },
+    {
+      "id": "Part_D",
+      "title": "Task D: Read These Words",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "I'd like you to read these words out loud for me."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": [
+            "wed", "thin", "tag", "peck", "shush", "check", "dock", 
+            "Mel", "shin", "buck", "whim", "wax", "quick", "yet", 
+            "shud", "chep", "vock", "neth", "bish", "jeck", "quish"
+          ]
+        },
+        {
+          "type": "teacher_note",
+          "text": "If student misreads one or two consonants/digraphs, start review at Lesson 5. If they misread vowels (A, I, O), review Lesson 3. If they misread U or E, review Lesson 4."
+        }
+      ]
+    },
+    {
+      "id": "Part_E",
+      "title": "Task E: Spelling Real and Nonsense Words on Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll be spelling words. I'll say a word. You repeat it, then write it down. Ready?"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the following words. If your student incorrectly spells a consonant or a vowel, start review at Lesson 3. If they incorrectly spell only a digraph, review Lesson 5.\n\nWords: path, whip, shot, chin, Ned, chez, thub, hov, quesh, whid, dach."
+        }
+      ]
+    },
+    {
+      "id": "Part_F",
+      "title": "Task F: Read These Sentences",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Please read each of these sentences out loud."
+        },
+        {
+          "type": "student_page",
+          "mode": "sentence_marking",
+          "payload": [
+            "Rex and Ed met Beth.",
+            "Fat Chad sat with a thud.",
+            "A duck got sick in the bath tub.",
+            "Thin Ken did dash on the path.",
+            "A red hen got wet at the dock.",
+            "Rick did yell at Deb.",
+            "Peg got sick on the ship.",
+            "A vet got a fish at the dock.",
+            "Sam and Ted met Meg at a bash."
+          ]
+        },
+        {
+          "type": "teacher_note",
+          "text": "If student reads flawlessly, they are ready for Level 3. If the student makes more than 3 mistakes or reads in a very choppy manner, start review at Lesson 5."
+        }
+      ]
+    }
+  ]
+}

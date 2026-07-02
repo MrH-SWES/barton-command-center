@@ -1,0 +1,479 @@
+{
+  "level": 3,
+  "lesson": 8,
+  "title": "Spelling: ING & INK Units",
+  "sections": [
+    {
+      "id": "Part_Intro",
+      "title": "Lesson Overview",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "Materials Needed: New Unit Tiles: ANG, ING, ONG, UNG, ANK, INK, ONK, UNK. Letter Tiles: A-Z plus CH, TH, CK, SH, WH. Extra F, S, L, Z.\n\nOverview: Students learn two new sets of Units (ending in NG and NK). Units are 3 letters that appear at the end of a word and make a slightly different sound as a group than individually. It is critical to emphasize there is NO 'ENG' or 'ENK' tile. The /eeng/ sound is spelled ING. Mark units by drawing a box around them."
+        }
+      ]
+    },
+    {
+      "id": "Part_C",
+      "title": "C: Phonemic Awareness Warmup",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Repeat this nonsense word, then make just its FIRST sound. Ready? FRACK."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Frack, /f/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to the tile that makes that sound."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the F tile."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now I want the LAST sound. KEZZ."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Kez, /z/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to that tile."
+        },
+        {
+          "type": "action",
+          "text": "Student points to Z."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now for the MIDDLE sound. Say both the sound AND its keyword. Ready? COSK."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Cosk, /o/-Olive."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Repeat First Sound for: RUCK, THISK, WHOSK. Last Sound for: CLITH, BLASH, QUECH, BLEV. Vowel Sound for: SPILK, BUSK, SHELK, GLACK."
+        }
+      ]
+    },
+    {
+      "id": "Part_D",
+      "title": "D: NEW TEACHING #1: The NG Units",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["all"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What does this say?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: ALL"
+        },
+        {
+          "type": "dialogue",
+          "text": "Is it a Digraph or a Unit?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Unit. Because it's red and makes an unusual sound."
+        },
+        {
+          "type": "dialogue",
+          "text": "Where do Units come in a word—at the beginning or at the end?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: At the end."
+        },
+        {
+          "type": "dialogue",
+          "text": "Right. Today, you're going to learn several more Units."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["ang", "ing", "ong", "ung"]
+        },
+        {
+          "type": "dialogue",
+          "text": "You probably already know these. What do they say?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: /ang/, /ing/, /ong/, /ung/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Let's make words with these Units."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "ing"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What does this say? And if you were finger spelling it, how many fingers would you use?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Sing. Two fingers. One for /s/, one for /ing/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Let's create words that start with a Digraph."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["th", "ing"]
+        },
+        {
+          "type": "action",
+          "text": "Student reads THING. Change ING to ONG to read THONG."
+        },
+        {
+          "type": "dialogue",
+          "text": "Saying these units is easy. But spelling them can be tricky. Look at the Unit tiles. Is there one that starts with an E?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: No."
+        },
+        {
+          "type": "dialogue",
+          "text": "There is NO E-N-G. So when you hear /eeng/, how are you going to spell it?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: I-N-G."
+        }
+      ]
+    },
+    {
+      "id": "Part_E",
+      "title": "E: NEW TEACHING #2: The NK Units",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now I'm going to show you 4 more Units."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["ank", "ink", "onk", "unk"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What's the same about ANG and ANK? What's different?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Both start with A-N. One ends in G, the other in K."
+        },
+        {
+          "type": "dialogue",
+          "text": "Why did they spell /k/ with a K and not a C-K?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Because you only use CK right after a Short Vowel! This is a Unit, so the vowel isn't making its normal short sound."
+        },
+        {
+          "type": "dialogue",
+          "text": "Exactly. Be sure to make the /k/ sound loudly when you're saying the ones in this column. Let's make words."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "ank"]
+        },
+        {
+          "type": "action",
+          "text": "Student reads SANK. Tutor swaps to SINK, SONK, SUNK."
+        },
+        {
+          "type": "dialogue",
+          "text": "Let's try a 3-letter blend."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["sh", "r", "ink"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What does that say? And is it a Closed Syllable?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Shrink. No, it's a Unit Syllable because it contains a Unit and the vowel isn't making its normal short sound."
+        },
+        {
+          "type": "dialogue",
+          "text": "By the way, is there an E-N-K?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: No. You spell /eenk/ with I-N-K."
+        }
+      ]
+    },
+    {
+      "id": "Part_F",
+      "title": "F: Spell Real Words with Fingers, then Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to finger spell. The first word is FRANK. Repeat that word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: FRANK"
+        },
+        {
+          "type": "dialogue",
+          "text": "Use your fingers to break it into sounds. But raise only ONE finger for the ANK sound, because you bring down only one tile."
+        },
+        {
+          "type": "action",
+          "text": "Student raises thumb for /f/, index for /r/, middle for /ank/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Double check by blending those sounds. Now change one tile to make it say PRANK."
+        },
+        {
+          "type": "action",
+          "text": "Student swaps F for P."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining words, changing one tile at a time: LUNG, LONG, SLUNK, STUNG, DRANK, DRINK, CLUNG, SLUNG."
+        }
+      ]
+    },
+    {
+      "id": "Part_I",
+      "title": "I: Read Words Through Word Frame",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to read words through the word frame. If you know the word for sure, just say it. Otherwise, sound it out."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": [
+            "gang", "bring", "song", "hung", "blank",
+            "drink", "honk", "trunk", "shrank", "sting",
+            "rang", "wink", "chunk", "plank", "drong",
+            "strunk", "ying", "spong", "flink", "blung", "bronk"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Part_J",
+      "title": "J: Spell Words with Fingers, then Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "After you finger spell these words, you'll write them on paper. The first word is WING."
+        },
+        {
+          "type": "action",
+          "text": "Expected: WING"
+        },
+        {
+          "type": "dialogue",
+          "text": "Use your fingers. Raise only ONE finger for the ING sound. Now say-and-write each sound on paper."
+        },
+        {
+          "type": "action",
+          "text": "Student writes W, ING."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate Real Words: KING, BANG, RANK, BLINK, DUNK. Dictate Nonsense Words: RONK, SPRINK, FLANG, GRONG, SMUNK."
+        }
+      ]
+    },
+    {
+      "id": "Part_K",
+      "title": "K: Read NEW Sight Word List",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's look at some more common Sight words to see which ones we need to practice."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": [
+            "front", "been", "who", "there",
+            "where", "too", "any", "many",
+            "one", "done", "could", "should", "would", "again"
+          ]
+        },
+        {
+          "type": "teacher_note",
+          "text": "For any words the student misses, create a new index card. Have the student draw a visual clue in the lower-left corner to help them remember."
+        }
+      ]
+    },
+    {
+      "id": "Part_M",
+      "title": "M: Read Phrases",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's read some phrases. Tell me the WHO, DID WHAT, WHERE, and ADD-ON phrases."
+        },
+        {
+          "type": "student_page",
+          "mode": "phrase_builder",
+          "payload": {
+            "who": [
+              "Rich Frank",
+              "Jack",
+              "Dick and Chet",
+              "Kent"
+            ],
+            "did what": [
+              "flung the ring",
+              "clung to the rock",
+              "slept",
+              "swung the bat"
+            ],
+            "where": [
+              "from his hand",
+              "in the long bunk",
+              "in the big pond",
+              "in the thick fog"
+            ],
+            "add-on": [
+              "in to the sink.",
+              "but the ship sank.",
+              "next to a king.",
+              "and hit the ball."
+            ]
+          }
+        },
+        {
+          "type": "dialogue",
+          "text": "Now find every word that ends in a Unit, and box off the Unit on the screen."
+        }
+      ]
+    },
+    {
+      "id": "Part_N",
+      "title": "N: Spell Phrases and Sight Words on Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to write some phrases. The first phrase is THE STRONG KING. Repeat that phrase."
+        },
+        {
+          "type": "action",
+          "text": "Expected: THE STRONG KING"
+        },
+        {
+          "type": "dialogue",
+          "text": "Write it down. Double check by reading exactly what you wrote."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate remaining phrases: A LONG STRING, BRING THAT THING. Then dictate the 3 tricky sight words you made cards for earlier."
+        }
+      ]
+    },
+    {
+      "id": "Part_O",
+      "title": "O: Read Sentences",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll read some sentences. Read the first sentence to yourself, then read it out loud."
+        },
+        {
+          "type": "student_page",
+          "mode": "sentence_marking",
+          "payload": [
+            "Frank flung the ring from his hand in to the sink.",
+            "Kent swung the bat in the thick fog and hit the ball.",
+            "When the ship sank, Dick and Chet clung to the rock in the big pond.",
+            "Jack slept in the long bunk next to the strong king.",
+            "Hank sang a song as he hung up his smock which stunk.",
+            "If Scott does flunk this test, he will not pass the class.",
+            "I think the mink dress will shrink.",
+            "They drank the strong drink with a chunk of crisp crust."
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Mark the WHO phrase, DID WHAT phrase, WHERE phrase, and ADD-ON phrase."
+        },
+        {
+          "type": "action",
+          "text": "Student marks phrases and reads sentence with phrasing (pausing between chunks)."
+        }
+      ]
+    },
+    {
+      "id": "Part_P",
+      "title": "P: Spell Sentences on Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to write three sentences. The first sentence is: THE STRONG KING KEPT TRACK OF HIS TRUNK."
+        },
+        {
+          "type": "action",
+          "text": "Expected: THE STRONG KING KEPT TRACK OF HIS TRUNK."
+        },
+        {
+          "type": "dialogue",
+          "text": "Check your sentence. Does it start with a capital and end with punctuation?"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate: FRANK DRANK THE MILK WITH HIS LUNCH. \nDictate: HANK WILL BRING A SNACK TO MATH CLASS."
+        }
+      ]
+    },
+    {
+      "id": "Part_Q",
+      "title": "Q: Read a Story",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're ready to read a story. Preread the story and figure out the tough words. Then read it out loud to me."
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "The Finch",
+            "text": "If I were a finch I think I would have fun. In the spring, I would sit on a branch and bask in the sun. I could get some string and a twig or a stick and fix a nest. I would sing a long song. Some one would get a lift from the song. They would clap and fling a kiss. Next, I would nod, tuck in a wing, and get a rest."
+          }
+        },
+        {
+          "type": "teacher_note",
+          "text": "Have the student retell the story in their own words to check comprehension."
+        }
+      ]
+    }
+  ]
+}

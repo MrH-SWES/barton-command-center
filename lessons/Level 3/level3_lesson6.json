@@ -1,0 +1,1056 @@
+{
+  "level": 3,
+  "lesson": 6,
+  "title": "Kiss the Cat Rule",
+  "sections": [
+    {
+      "id": "Part_A",
+      "title": "A: Review Vowel Sounds and Digraphs",
+      "steps": [
+        {
+          "type": "action",
+          "text": "Tutor sets out all the tiles taught so far."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["a", "e", "i", "o", "u", "ch", "th", "sh", "ck", "wh"]
+        },
+        {
+          "type": "dialogue",
+          "text": "In this book, we'll always start by reviewing the vowel sounds. Which ones are the vowels?"
+        },
+        {
+          "type": "action",
+          "text": "Student taps A, E, I, O, U."
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and tap each vowel and say its sound and keyword."
+        },
+        {
+          "type": "action",
+          "text": "Student taps Apple /a/ /a/ /a/, etc."
+        }
+      ]
+    },
+    {
+      "id": "Part_B",
+      "title": "B: Review Extra Practice Page",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's take a look at your extra practice page."
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and read the words to me."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": ["shel", "tug", "whif", "dol", "cam", "bil", "pas", "buz", "bus", "spit", "buf", "mos"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Now let's look at the second practice page. Draw a line between the words in each column that rhyme."
+        },
+        {
+          "type": "student_page",
+          "mode": "matching",
+          "payload": {
+            "left": ["class", "pill", "bless", "stall", "cuff", "bliss", "boss"],
+            "right": ["grass", "still", "Jess", "squall", "puff", "Swiss", "cross"]
+          }
+        },
+        {
+          "type": "action",
+          "text": "Review extra practice pages for accuracy. If student has difficulty, repeat the last lesson."
+        }
+      ]
+    },
+    {
+      "id": "Part_C",
+      "title": "C: Phonemic Awareness Warmup",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now I'll say a nonsense word, and I want you to tell me just the FIRST sound. Ready? DROFF.",
+          "audio": "droff"
+        },
+        {
+          "type": "dialogue",
+          "text": "What's the first sound?"
+        },
+        {
+          "type": "action",
+          "text": "Student: /dr/"
+        },
+        {
+          "type": "action",
+          "text": "Dictate First Sound words: GRALL, VEZZ, BRILL, CHULL"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now I want the LAST sound. Ready? WHAZZ.",
+          "audio": "whazz"
+        },
+        {
+          "type": "dialogue",
+          "text": "What's the LAST sound?"
+        },
+        {
+          "type": "action",
+          "text": "Student: /z/"
+        },
+        {
+          "type": "action",
+          "text": "Dictate Last Sound words: TROSS, ZELL, JUFF"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now for the MIDDLE sound—the vowel. Say both the sound AND its keyword. Ready? SLIFF.",
+          "audio": "sliff"
+        },
+        {
+          "type": "dialogue",
+          "text": "What's the MIDDLE sound?"
+        },
+        {
+          "type": "action",
+          "text": "Student: /i/ — Igloo"
+        },
+        {
+          "type": "action",
+          "text": "Dictate Vowel Sound words: PLASS, THELL, PROSS, CHUZZ"
+        }
+      ]
+    },
+    {
+      "id": "Part_D",
+      "title": "D: NEW TEACHING #1: Two Sounds of C",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Before we work with this letter, I want you to show me where AFTER is. If I said a letter came AFTER the C, would it be on this side or this side?"
+        },
+        {
+          "type": "action",
+          "text": "Tutor puts out the C tile. Have your student point to the correct side (on the student's side of the C)."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now let's start working on words."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["c", "a", "b"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What's that word?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Cab"
+        },
+        {
+          "type": "dialogue",
+          "text": "And what sound is the C making?"
+        },
+        {
+          "type": "action",
+          "text": "Student: /k/"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["c", "e", "n", "t"]
+        },
+        {
+          "type": "dialogue",
+          "text": "This word means the same thing as a penny. Do you know this word?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Cent"
+        },
+        {
+          "type": "dialogue",
+          "text": "And what sound is the C making in this word?"
+        },
+        {
+          "type": "action",
+          "text": "Student: /s/"
+        },
+        {
+          "type": "dialogue",
+          "text": "C says /s/ when an E comes after it. Let's write that down."
+        },
+        {
+          "type": "action",
+          "text": "Tutor writes E on a piece of paper."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["c", "i", "n", "ch"]
+        },
+        {
+          "type": "dialogue",
+          "text": "I might say, 'That was so easy, it was a...'"
+        },
+        {
+          "type": "action",
+          "text": "Student: Cinch"
+        },
+        {
+          "type": "dialogue",
+          "text": "And what sound is the C making in this word?"
+        },
+        {
+          "type": "action",
+          "text": "Student: /s/"
+        },
+        {
+          "type": "dialogue",
+          "text": "C also makes the /s/ sound when it is followed by I. Let's write that down."
+        },
+        {
+          "type": "action",
+          "text": "Tutor writes I next to the E on the piece of paper."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["c", "o", "p"]
+        },
+        {
+          "type": "dialogue",
+          "text": "That is a slang word for policeman. What's that word?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Cop"
+        },
+        {
+          "type": "dialogue",
+          "text": "What sound is the C making?"
+        },
+        {
+          "type": "action",
+          "text": "Student: /k/"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["c", "u", "p"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What's that word?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Cup"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["c", "l", "a", "sh"]
+        },
+        {
+          "type": "dialogue",
+          "text": "That word is Clash. What sound is the C making?"
+        },
+        {
+          "type": "action",
+          "text": "Student: /k/ — it's followed by a consonant."
+        },
+        {
+          "type": "dialogue",
+          "text": "So when C is followed by a consonant, it makes its common /k/ sound. But what are the two Watch Out vowels we wrote down?"
+        },
+        {
+          "type": "action",
+          "text": "Student: E and I"
+        },
+        {
+          "type": "dialogue",
+          "text": "When those Watch Out vowels come after a C, the C switches to its other sound—/s/. There is one more Watch Out vowel—the Y. So the 3 Watch Out vowels are E, I, and Y."
+        },
+        {
+          "type": "action",
+          "text": "Tutor writes Y on the paper, after E and I. Leave this paper visible throughout the lesson."
+        },
+        {
+          "type": "dialogue",
+          "text": "They're easy to remember because they rhyme: E-I-Y. E-I-Y. You try it."
+        },
+        {
+          "type": "action",
+          "text": "Student says E-I-Y rhythmically with arm movements like a cheer."
+        },
+        {
+          "type": "dialogue",
+          "text": "So what are the two sounds a C can make?"
+        },
+        {
+          "type": "action",
+          "text": "Student: /k/ and /s/"
+        },
+        {
+          "type": "dialogue",
+          "text": "What is its most common sound?"
+        },
+        {
+          "type": "action",
+          "text": "Student: /k/"
+        },
+        {
+          "type": "dialogue",
+          "text": "When will it switch to the /s/ sound?"
+        },
+        {
+          "type": "action",
+          "text": "Student: When it is followed by a Watch Out vowel—E, I, or Y."
+        }
+      ]
+    },
+    {
+      "id": "Part_E",
+      "title": "E: NEW TEACHING #2: Spelling—C or K",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now let's talk about spelling. What's one way of spelling the /k/ sound?"
+        },
+        {
+          "type": "action",
+          "text": "Student: C (or K)"
+        },
+        {
+          "type": "dialogue",
+          "text": "C is the most common. And the rule for spelling the /k/ sound is this: Use a C whenever you can. Only use a K when a C won't work."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["_", "i", "d"]
+        },
+        {
+          "type": "dialogue",
+          "text": "If I put a C in that blank spot, what sound would the C make? Why?"
+        },
+        {
+          "type": "action",
+          "text": "Student: /s/ — because I is a Watch Out vowel."
+        },
+        {
+          "type": "dialogue",
+          "text": "Right. So the word would be /sid/. But if I wanted the word to be KID, what could I put in that spot?"
+        },
+        {
+          "type": "action",
+          "text": "Student replaces blank tile with K."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["k", "i", "d"]
+        },
+        {
+          "type": "dialogue",
+          "text": "So how do you spell /k/ when it's followed by a Watch Out vowel?"
+        },
+        {
+          "type": "action",
+          "text": "Student: With a K."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["_", "e", "p", "t"]
+        },
+        {
+          "type": "dialogue",
+          "text": "If I wanted that word to be KEPT, could that blank tile be a C? Why not?"
+        },
+        {
+          "type": "action",
+          "text": "Student: No — E is a Watch Out vowel, so the C would say /s/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and change that blank to the letter that CAN say /k/ in that spot."
+        },
+        {
+          "type": "action",
+          "text": "Student removes blank and drags in K."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["k", "e", "p", "t"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Here's the spelling rule: put a Blank wherever you hear the /k/ sound and finish spelling the word. Use a C whenever you can. But if a C can't make the /k/ sound in that spot, use a K. And a C can't when there's a Watch Out vowel after it. What are the 3 Watch Out vowels?"
+        },
+        {
+          "type": "action",
+          "text": "Student: E, I, and Y"
+        },
+        {
+          "type": "dialogue",
+          "text": "And here's a tricky blend that contains the /k/ sound."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "c", "a", "n"]
+        },
+        {
+          "type": "dialogue",
+          "text": "The word is Scan. Why is the /k/ sound spelled with a C?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Because A is not a Watch Out vowel."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "k", "i", "n"]
+        },
+        {
+          "type": "dialogue",
+          "text": "This word is Skin. Why is the /k/ sound spelled with a K?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Because I is a Watch Out vowel."
+        },
+        {
+          "type": "dialogue",
+          "text": "Exactly. So the blend /sk/ can be spelled either S-C or S-K depending on the vowel that comes after the /k/ sound."
+        },
+        {
+          "type": "dialogue",
+          "text": "Let's add this new rule to your Spelling Rule page. The name of this rule is Kiss the Cat."
+        },
+        {
+          "type": "action",
+          "text": "Tutor pulls out Spelling Rule page and writes: Kiss the Cat / e, i, y"
+        },
+        {
+          "type": "dialogue",
+          "text": "Why is Kiss spelled with a K?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Because I is a Watch Out vowel."
+        },
+        {
+          "type": "dialogue",
+          "text": "And why is Cat spelled with a C?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Because A is not a Watch Out vowel."
+        }
+      ]
+    },
+    {
+      "id": "Part_F",
+      "title": "F: Spell Real Words using a BLANK Tile",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": []
+        },
+        {
+          "type": "dialogue",
+          "text": "Now you're going to finger spell. Use a BLANK tile for the /k/ sound, finish spelling the rest of the word, then figure out whether to use a C or K."
+        },
+        {
+          "type": "dialogue",
+          "text": "The first word is KELP. Repeat that word."
+        },
+        {
+          "type": "action",
+          "text": "Student: Kelp"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly."
+        },
+        {
+          "type": "action",
+          "text": "Student: /k/-/eeee/-/llll/-/p/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Use your fingers to break it into sounds, then bring down a BLANK tile for the /k/ sound and finish spelling the word."
+        },
+        {
+          "type": "action",
+          "text": "Student pulls down a BLANK tile, then E, L, P."
+        },
+        {
+          "type": "dialogue",
+          "text": "How will you spell /k/ in that word?"
+        },
+        {
+          "type": "action",
+          "text": "Student: K — because E is a Watch Out vowel. Student replaces blank with K."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["k", "e", "l", "p"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Now double check."
+        },
+        {
+          "type": "action",
+          "text": "Student: Kelp. Correct."
+        },
+        {
+          "type": "action",
+          "text": "Dictate: SCAB, SKIN, CLUB, KEG"
+        }
+      ]
+    },
+    {
+      "id": "Part_G",
+      "title": "G: Read Nonsense Words on Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Here's a nonsense word. What sound will that C make? Why? So that word says?"
+        },
+        {
+          "type": "action",
+          "text": "Tutor builds: CIFF, CASS, CEP, CUG, COSS"
+        },
+        {
+          "type": "action",
+          "text": "Student touch-and-says, slowly blends, then says fast like a word. Put tiles away after each."
+        }
+      ]
+    },
+    {
+      "id": "Part_H",
+      "title": "H: Spell Nonsense Words with Fingers, then Tiles",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": []
+        },
+        {
+          "type": "dialogue",
+          "text": "Now you'll finger spell some nonsense words. Use a BLANK tile for the /k/ sound, finish spelling the rest of the word, then figure out whether to use a C or K."
+        },
+        {
+          "type": "dialogue",
+          "text": "The first word is KIFF. Repeat that word."
+        },
+        {
+          "type": "action",
+          "text": "Student: Kiff"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly."
+        },
+        {
+          "type": "action",
+          "text": "Student: /k/-/iiii/-/ffff/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Finger spell, bringing down a BLANK for the /k/ sound, then finish."
+        },
+        {
+          "type": "action",
+          "text": "Student pulls down BLANK, then I, F, F."
+        },
+        {
+          "type": "dialogue",
+          "text": "How will you spell /k/ in that word?"
+        },
+        {
+          "type": "action",
+          "text": "Student: K — because I is a Watch Out vowel. Student replaces blank with K."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["k", "i", "f", "f"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Double check."
+        },
+        {
+          "type": "action",
+          "text": "Student: Kiff. Correct."
+        },
+        {
+          "type": "action",
+          "text": "Dictate: CRUB, KEMP, CLOSS, CAFT"
+        }
+      ]
+    },
+    {
+      "id": "Part_I",
+      "title": "I: Read Words Through Word Frame",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to read words through the word frame."
+        },
+        {
+          "type": "dialogue",
+          "text": "If you know that word for sure, just say it. Otherwise, sound it out."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": ["clap", "cinch", "cith", "cent", "crash", "cath", "cub", "Kim", "ceth", "sect", "clam", "coth", "kit", "strict", "cuth", "cell", "skip", "crip", "scram", "crept", "cund"]
+        }
+      ]
+    },
+    {
+      "id": "Part_J",
+      "title": "J: Spell Words with Fingers, then Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "After you finger spell these words, you'll write them on paper."
+        },
+        {
+          "type": "action",
+          "text": "Tutor hands student a piece of paper and a pencil."
+        },
+        {
+          "type": "dialogue",
+          "text": "Ready? The first word is SCAN. Repeat that word."
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly."
+        },
+        {
+          "type": "dialogue",
+          "text": "Finger spell. Use an underline for the /k/ sound, finish spelling the word, then figure out how to spell the /k/ sound."
+        },
+        {
+          "type": "dialogue",
+          "text": "Double check what you wrote."
+        },
+        {
+          "type": "action",
+          "text": "Dictate Real Words: SCAN, CREPT, SKIT, CUFF, SKILL"
+        },
+        {
+          "type": "action",
+          "text": "Dictate Nonsense Words: KEB, CUMP, TECT, KISH, CRANT"
+        }
+      ]
+    },
+    {
+      "id": "Part_K",
+      "title": "K: Review Sight Word Reading Deck",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's review the Sight Word Reading Deck we created last time."
+        },
+        {
+          "type": "action",
+          "text": "Tutor pulls out the Sight Word Reading Deck and gives to student. Student puts thumb over the clue and reads each word out loud."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now that you're warmed up, keep the clue hidden and read them again... as fast as you can."
+        },
+        {
+          "type": "action",
+          "text": "Student puts thumb over clue, flips through the deck as fast as possible, reading each word out loud. Tutor sorts and repeats at supersonic speed."
+        }
+      ]
+    },
+    {
+      "id": "Part_L",
+      "title": "L: Review Sight Word Spelling Cards",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's review your tricky Sight words."
+        },
+        {
+          "type": "action",
+          "text": "Tutor pulls out the Sight Word Spelling Cards and holds up the first card. Student reads word, explains red letter, then 'see and spell' twice, 'see and write' twice on desk, 'see and write' twice on paper."
+        },
+        {
+          "type": "action",
+          "text": "Tutor repeats the process for each card in the Sight Word Spelling Deck, then puts the deck away."
+        }
+      ]
+    },
+    {
+      "id": "Part_M",
+      "title": "M: Read Phrases",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll read some phrases."
+        },
+        {
+          "type": "dialogue",
+          "text": "This group of phrases tell WHO. Read each phrase to me."
+        },
+        {
+          "type": "action",
+          "text": "Student reads each WHO phrase out loud."
+        },
+        {
+          "type": "dialogue",
+          "text": "These phrases tell DID WHAT. Read each phrase to me."
+        },
+        {
+          "type": "action",
+          "text": "Student reads each DID WHAT phrase out loud."
+        },
+        {
+          "type": "dialogue",
+          "text": "A sentence must have a WHO and a DID WHAT phrase. Go ahead and make a short sentence."
+        },
+        {
+          "type": "action",
+          "text": "Student verbally says a short sentence."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now read the WHERE phrases."
+        },
+        {
+          "type": "action",
+          "text": "Student reads each WHERE phrase out loud."
+        },
+        {
+          "type": "dialogue",
+          "text": "Create a sentence with 3 phrases."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now read the ADD-ON phrases."
+        },
+        {
+          "type": "action",
+          "text": "Student reads each ADD-ON phrase out loud."
+        },
+        {
+          "type": "dialogue",
+          "text": "Create a sentence with four phrases."
+        },
+        {
+          "type": "action",
+          "text": "Here's something new. Find one word that is a Closed syllable, and mark it with a breve. Then find one word that is a Unit syllable and put a box around it."
+        },
+        {
+          "type": "student_page",
+          "mode": "phrase_builder",
+          "payload": {
+            "who": ["Strict Kip", "The cross crab", "Clem", "Kent"],
+            "did_what": ["kept all the kelp", "did miss the drill", "did clench his fist", "crept"],
+            "where": ["in class", "from the cod fish", "at camp", "up to the club"],
+            "add_on": ["and said 'Scram.'", "then did crash his glass.", "and was cross.", "with a cop."]
+          }
+        }
+      ]
+    },
+    {
+      "id": "Part_N",
+      "title": "N: Spell Phrases and Sight Words on Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to write some phrases."
+        },
+        {
+          "type": "action",
+          "text": "Tutor hands student a piece of paper and a pencil."
+        },
+        {
+          "type": "dialogue",
+          "text": "The first phrase is CASH FOR A KEG. Repeat that phrase."
+        },
+        {
+          "type": "action",
+          "text": "Student: Cash for a keg."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now write it down. Use finger spelling for the tough words."
+        },
+        {
+          "type": "action",
+          "text": "Student works on his own with no help from the tutor."
+        },
+        {
+          "type": "dialogue",
+          "text": "Double check by reading exactly what you wrote."
+        },
+        {
+          "type": "action",
+          "text": "Student looks at his paper while reading the phrase."
+        },
+        {
+          "type": "dialogue",
+          "text": "Any word that you want help checking?"
+        },
+        {
+          "type": "action",
+          "text": "Tutor scans written phrase for errors. Use Guided Discovery if needed."
+        },
+        {
+          "type": "dialogue",
+          "text": "That's perfect. Here's the next phrase."
+        },
+        {
+          "type": "action",
+          "text": "Dictate: ACT IN A SKIT, CUT THE CLUMP"
+        },
+        {
+          "type": "action",
+          "text": "Tutor dictates each Sight Word from the Sight Word Spelling deck. Student says each letter as he writes it down, then underlines the red letter. If correct, tutor puts a checkmark on that Spelling Card."
+        }
+      ]
+    },
+    {
+      "id": "Part_O",
+      "title": "O: Read Sentences",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll read some sentences."
+        },
+        {
+          "type": "dialogue",
+          "text": "Read that first sentence to yourself."
+        },
+        {
+          "type": "action",
+          "text": "Student reads sentence to himself."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now read it out loud."
+        },
+        {
+          "type": "action",
+          "text": "Student: Strict Kip did miss the drill in class and was cross."
+        },
+        {
+          "type": "dialogue",
+          "text": "Let's mark each phrase. Mark the WHO phrase."
+        },
+        {
+          "type": "action",
+          "text": "Student uses pencil to draw under-up Strict Kip."
+        },
+        {
+          "type": "dialogue",
+          "text": "Mark the DID WHAT phrase."
+        },
+        {
+          "type": "action",
+          "text": "Student uses pencil to draw under-up did miss the drill."
+        },
+        {
+          "type": "dialogue",
+          "text": "Mark the WHERE phrase."
+        },
+        {
+          "type": "action",
+          "text": "Student uses pencil to draw under-up in class."
+        },
+        {
+          "type": "dialogue",
+          "text": "Mark the ADD-ON phrase."
+        },
+        {
+          "type": "action",
+          "text": "Student uses pencil to draw under-up and was cross."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now read that sentence with phrasing. Remember, put a small pause ... between each phrase."
+        },
+        {
+          "type": "action",
+          "text": "Student: Strict Kip ... did miss the drill ... in class ... and was cross."
+        },
+        {
+          "type": "dialogue",
+          "text": "Nice. On to sentence number 3."
+        },
+        {
+          "type": "action",
+          "text": "Have student read and mark each ODD-numbered sentence."
+        },
+        {
+          "type": "student_page",
+          "mode": "sentence_marking",
+          "payload": [
+            "1. Strict Kip did miss the drill in class and was cross.",
+            "2. The cross crab kept all the kelp from the cod fish.",
+            "3. Clem did clench his fist at camp, and said 'Scram.'",
+            "4. Kim crept up to the club with a cop.",
+            "5. The cub did grasp the crisp crust.",
+            "6. Kent fell off the cliff and hit his shin.",
+            "7. The cast had a script for the skit.",
+            "8. His chess skill was swell.",
+            "9. Chad had to scrimp to get cash for the kit."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Part_P",
+      "title": "P: Spell Sentences on Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to write three sentences."
+        },
+        {
+          "type": "action",
+          "text": "Tutor hands student a piece of paper and a pencil."
+        },
+        {
+          "type": "dialogue",
+          "text": "The first sentence is CLEM GOT CASH FOR HIS KEG. Repeat that sentence."
+        },
+        {
+          "type": "action",
+          "text": "Student: Clem got cash for his keg."
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and write that sentence. Use finger spelling on the tough words."
+        },
+        {
+          "type": "action",
+          "text": "Student works on his own with no help from the tutor."
+        },
+        {
+          "type": "dialogue",
+          "text": "Check your sentence by reading exactly what you wrote."
+        },
+        {
+          "type": "action",
+          "text": "Student looks at his paper while reading the sentence."
+        },
+        {
+          "type": "dialogue",
+          "text": "Here's the first question I'm always going to ask: Does it start with a capital and end with punctuation?"
+        },
+        {
+          "type": "action",
+          "text": "Student: Yes (or else student fixes sentence)."
+        },
+        {
+          "type": "dialogue",
+          "text": "Any word that you want help checking?"
+        },
+        {
+          "type": "action",
+          "text": "Tutor scans written sentence for errors and uses guided discovery as needed."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now it's perfect. Here's the next sentence."
+        },
+        {
+          "type": "action",
+          "text": "Dictate: KIT WILL ACT IN A SKIT., JEFF CUT THE CLUMP OF GRASS."
+        }
+      ]
+    },
+    {
+      "id": "Part_Q",
+      "title": "Q: Read a Story",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're ready to read a story. Preread the story and figure out the tough words. Then read it out loud to me."
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "Clem and the Duck",
+            "text": "Clem held the crisp crust in his fist. The duck swam to a spot on the sand. Clem cast the crust, and the duck did snap it up with his bill. The duck swam to a clump of brush. Clem kept still. 'Quack! Quack!' The duck swam back. The duck crept up to Clem. Clem did not flinch. It was fun to have the duck get a snack from his hand."
+          }
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "At Camp",
+            "text": "When Kent was at camp, a rock fell from the cliff. It cut a rip in his tent and put a dent in his cot. It was a shock! The kid next to him was quick to call for help. Kent was glad the rock did not crush his chest. All Kent has is a scab on his leg."
+          }
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "Miss the Skit",
+            "text": "Ken is cross. His last cent was spent on the cab to get to the club. The hands on the clock have crept past six. Ken can not rush. His leg is in a cast and his hand is on his crutch. Ken will miss the best act. His kid is in the skit. It is sad that Ken will not get to clap for his son."
+          }
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "Clash at Lunch",
+            "text": "Clem had a clash with Jeff Smith. Jeff is a brash kid. Jeff put up his fist and said, 'I want your lunch.' Clem was mad but did not flinch. Jeff struck Clem with a left cross. Clem fell on the bench with a crash. His lunch spilt on the grass. This is a fact: Such a bad lad can put a crimp in your lunch plan!"
+          }
+        }
+      ]
+    },
+    {
+      "id": "Part_Extra_Practice",
+      "title": "Extra Practice",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Here is your extra practice page. Put the correct spelling of the /k/ sound in each blank—either C or K."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": ["cork", "fact", "kiss", "crash", "clip", "skim", "kelp", "crunch", "clap", "strict", "skip", "scram", "keg"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Here is extra practice #2. Say each nonsense word. Then circle the words in which C makes the /s/ sound."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": ["cep", "cass", "comp", "cith", "clizz", "caft", "cled", "tect", "cen", "cesh", "crad", "cipt", "ceff", "cust"]
+        }
+      ]
+    }
+  ]
+}

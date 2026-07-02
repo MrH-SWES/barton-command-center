@@ -1,0 +1,413 @@
+{
+  "level": 3,
+  "lesson": 9,
+  "title": "Spelling: Catch Lunch Rule",
+  "sections": [
+    {
+      "id": "Part_Intro",
+      "title": "Lesson Overview",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "Materials Needed: NEW TILE: TCH. Letter Tiles: A-Z plus CH, TH, CK, SH, WH, TCH. Extra F, S, L, Z. Units: ALL, ANG, ING, ONG, UNG, ANK, INK, ONK, UNK.\n\nOverview: Students learn the Catch Lunch rule. It mirrors the Milk Truck rule: if the /ch/ sound comes right after a Short vowel, spell it TCH. Otherwise, spell it CH. Add the breve (teacup) over the A in 'catch' on the rules page to remind them to only use TCH right after a short vowel."
+        }
+      ]
+    },
+    {
+      "id": "Part_C",
+      "title": "C: Phonemic Awareness Warmup",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Repeat this nonsense word, then make just its FIRST sound. Ready? SLANK."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Slank, /s/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to the tile that makes that sound."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the S tile."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now I want the LAST unit. ZANK."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Zank, /ank/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to that tile."
+        },
+        {
+          "type": "action",
+          "text": "Student points to ANK."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now for the MIDDLE sound. Say both the sound AND its keyword. Ready? DACK."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Dack, /a/-Apple."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Repeat First Sound for: BRONG, CHING, FLINK. Last Sound for: SPONG, BLING, QUINK. Vowel Sound for: SHENT, CLONG, KIMP, PLUP."
+        }
+      ]
+    },
+    {
+      "id": "Part_D",
+      "title": "D: NEW TEACHING #1: Catch Lunch Rule",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "A few lessons ago, you learned the Milk Truck rule. What are the two ways to spell /k/ at the end of a word?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: K and C-K"
+        },
+        {
+          "type": "dialogue",
+          "text": "When is the only time you use CK?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Right after a Short vowel"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["p", "a"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and make that word say PACK. Why did you use CK?"
+        },
+        {
+          "type": "action",
+          "text": "Student adds CK. 'Because it came right after a short vowel.'"
+        },
+        {
+          "type": "dialogue",
+          "text": "Excellent. By the way, there are also two ways to spell the /ch/ sound. What's one way?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: CH"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["tch"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Here's the other way. Those three letters are on one tile because they make just one sound: /ch/. And the same rule for CK works with TCH. You only use TCH right after a Short vowel."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["p", "a", "tch"]
+        },
+        {
+          "type": "dialogue",
+          "text": "If that word should be PATCH, would I use CH or TCH?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: TCH. Because it comes right after a short vowel."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["l", "u", "n"]
+        },
+        {
+          "type": "dialogue",
+          "text": "If that word should be LUNCH, would you end it with CH or TCH? Why?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: CH. Because it's not right after a Short vowel. (Student adds CH)."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Practice with SKETCH (add TCH) and CRUNCH (add CH)."
+        },
+        {
+          "type": "dialogue",
+          "text": "Let me show you a trick. Look at K and CK. Which is the longest way to spell /k/? Look at CH and TCH. Which is the longest way to spell /ch/?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: CK and TCH."
+        },
+        {
+          "type": "dialogue",
+          "text": "Here's the trick: Use the longest spelling right after a Short vowel."
+        }
+      ]
+    },
+    {
+      "id": "Part_E",
+      "title": "E: NEW TEACHING #2: Exceptions to CH-TCH Rule",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "The Catch Lunch rule works on all words... except these four words."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "u", "ch"]
+        },
+        {
+          "type": "action",
+          "text": "Tutor builds SUCH, MUCH, RICH, WHICH to show exceptions."
+        },
+        {
+          "type": "dialogue",
+          "text": "By the way, there are two ways to spell WITCH. Let's look at the one that follows the rules. How would you spell WITCH—as in the lady on a broomstick?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: W-I-TCH. (It's right after a short vowel)."
+        },
+        {
+          "type": "dialogue",
+          "text": "Exactly. The Witch on a broomstick follows the rules. But WHICH (like 'which one') does not."
+        }
+      ]
+    },
+    {
+      "id": "Part_F",
+      "title": "F: Spell Real Words with Fingers, then Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to finger spell. The first word is SWITCH. Repeat that word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: SWITCH"
+        },
+        {
+          "type": "dialogue",
+          "text": "Use your fingers to break it into sounds. Pull down a tile for each finger."
+        },
+        {
+          "type": "action",
+          "text": "Student pulls down S, W, I, TCH."
+        },
+        {
+          "type": "dialogue",
+          "text": "Why did you use a TCH? Double check by blending those sounds. Now change one of those tiles to make that word say TWITCH."
+        },
+        {
+          "type": "action",
+          "text": "Student swaps S for T."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining words, changing one tile at a time: BATCH, MATCH, BENCH, FRENCH, HITCH, SNITCH, PUNCH, CRUNCH."
+        }
+      ]
+    },
+    {
+      "id": "Part_I",
+      "title": "I: Read Words Through Word Frame",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to read words through the word frame. If you know the word for sure, just say it. Otherwise, sound it out."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": [
+            "hatch", "crunch", "itch", "fetch", "gulch", "Scotch", "scratch",
+            "lunch", "stitch", "inch", "blanch", "stretch", "match", "trench",
+            "metch", "planch", "smulch", "spritch", "pratch", "slotch", "vonch"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Part_J",
+      "title": "J: Spell Words with Fingers, then Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "After you finger spell these words, you'll write them on paper. The first word is ITCH."
+        },
+        {
+          "type": "action",
+          "text": "Expected: ITCH"
+        },
+        {
+          "type": "dialogue",
+          "text": "Use your fingers. Now say-and-write each sound on paper."
+        },
+        {
+          "type": "action",
+          "text": "Student writes I, TCH."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate Real Words: HATCH, PUNCH, BELCH, NOTCH, FILCH, SNATCH, CLENCH, HITCH. Dictate Nonsense Words: FUTCH, KENCH, SMOTCH, GANCH, NUTCH, TELCH, DROTCH, SILCH."
+        }
+      ]
+    },
+    {
+      "id": "Part_M",
+      "title": "M: Read Phrases",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's read some phrases. Tell me the WHO, DID WHAT, WHERE, and ADD-ON phrases."
+        },
+        {
+          "type": "student_page",
+          "mode": "phrase_builder",
+          "payload": {
+            "who": [
+              "Chuck",
+              "A Scotch lad",
+              "Your strong dog",
+              "A rich grinch"
+            ],
+            "did what": [
+              "did jump",
+              "will snatch a snack",
+              "had brunch",
+              "did pitch a hat"
+            ],
+            "where": [
+              "at the ranch",
+              "in to the ditch",
+              "up on the desk",
+              "from the ranch"
+            ],
+            "add-on": [
+              "and scratch it.",
+              "then sit on a bench.",
+              "then did belch.",
+              "as a trick."
+            ]
+          }
+        },
+        {
+          "type": "dialogue",
+          "text": "Now find one word that is a Closed syllable, and mark it. Find one word that's a Unit syllable, and mark it."
+        }
+      ]
+    },
+    {
+      "id": "Part_N",
+      "title": "N: Spell Phrases and Sight Words on Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to write some phrases. The first phrase is THE FRENCH KID. Repeat that phrase."
+        },
+        {
+          "type": "action",
+          "text": "Expected: THE FRENCH KID"
+        },
+        {
+          "type": "dialogue",
+          "text": "Write it down. Double check by reading exactly what you wrote."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate remaining phrases: A DUTCH TRUNK, AT THE SCOTCH LASS, MUNCH ON A BATCH, AN INCH THICK, DO NOT FLINCH. Then dictate sight words."
+        }
+      ]
+    },
+    {
+      "id": "Part_O",
+      "title": "O: Read Sentences",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll read some sentences. Read the first sentence to yourself, then read it out loud."
+        },
+        {
+          "type": "student_page",
+          "mode": "sentence_marking",
+          "payload": [
+            "A rich grinch had brunch at the ranch, then did belch.",
+            "Did your strong dog jump on the desk and scratch it?",
+            "Chuck will snatch a snack from the ranch, then sit on a bench.",
+            "Did a Scotch lad pitch Frank's black cap in to the ditch as a trick?",
+            "A skunk has a strong stench.",
+            "Nick did switch his lunch with Dick, just on a hunch.",
+            "Mr. Chang did catch the ball in the grass and win the match.",
+            "Fetch the thick branch that fell on the path."
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Mark the WHO phrase, DID WHAT phrase, WHERE phrase, and ADD-ON phrase."
+        },
+        {
+          "type": "action",
+          "text": "Student marks phrases and reads sentence with phrasing (pausing between chunks)."
+        }
+      ]
+    },
+    {
+      "id": "Part_P",
+      "title": "P: Spell Sentences on Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to write three sentences. The first sentence is: THE FRENCH KID DID PINCH MITCH."
+        },
+        {
+          "type": "action",
+          "text": "Expected: THE FRENCH KID DID PINCH MITCH."
+        },
+        {
+          "type": "dialogue",
+          "text": "Check your sentence. Does it start with a capital and end with punctuation?"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate: NICK WILL SKETCH A DUTCH TRUNK. \nDictate: CHAD DID WINK AT THE SCOTCH LASS.\nFor extra practice: FRANK DID MUNCH ON A BATCH OF CRISP CRUST. THE PATCH OF GRASS WAS AN INCH THICK."
+        }
+      ]
+    },
+    {
+      "id": "Part_Q",
+      "title": "Q: Read a Story",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're ready to read a story. Preread the story and figure out the tough words. Then read it out loud to me."
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "Sit and Think",
+            "text": "If Mr. Scott would let him pitch, they could win the match. When Fred did not swing at the ball, Chuck did snatch the bat from Fred. Mr. Scott was mad. He said, 'You can not pitch or catch. You must sit and think. I trust you will not do that act again.' It was not fun to sit on the bench in the hot sun."
+          }
+        },
+        {
+          "type": "teacher_note",
+          "text": "Have the student retell the story in their own words to check comprehension. Alternative stories in manual: 'The Match', 'Pat', 'The Hen'."
+        }
+      ]
+    }
+  ]
+}

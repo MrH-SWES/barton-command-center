@@ -1,0 +1,497 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "level": 4,
+    "lesson": 9,
+    "title": "Three-Syllable Words",
+    "estMinutes": 50,
+    "author": "Barton Command Center",
+    "videoSpeedDefault": 1.5
+  },
+  "materials": [
+    "2 thick rubber bands",
+    "Franklin Spelling Ace electronic spell checker",
+    "Level 4 letter tiles: 2 sets of A through Z plus Vowel Y, CH, TH, CK, SH, WH, TCH",
+    "Unit tiles: ALL, ANG, ING, ONG, UNG, ANK, INK, ONK, UNK, OLL, OLD, OLT, OST, ILD, IND",
+    "Binder paper and pencil",
+    "Word frame",
+    "Blank light-colored 5 x 8 index card",
+    "Several blank 3 x 5 index cards"
+  ],
+  "objectives": [
+    "Divide three-syllable words by starting at the beginning, finding the first two vowels, and applying the appropriate rule.",
+    "Fix a word that doesn't sound right by moving a single consonant the other way.",
+    "Identify and divide three-syllable compound words by pulling the two small words apart.",
+    "Read and spell three-syllable real and nonsense words.",
+    "Read phrases, sentences, and stories containing Lesson 9 patterns."
+  ],
+  "beats": [
+    {
+      "id": "L4.9.prep.01",
+      "phase": "Prep",
+      "label": "Tutor overview",
+      "do": "Set out rubber bands, the Franklin Spelling Ace, the Level 4 tile set, Units, binder paper, pencil, word frame, and blank cards. Keep the Spelling Ace within easy reach. WARNING: On the first word (CONSONANT), you need three of the same letter. Take an unused consonant tile, turn it upside down to create a blank, and use that blank tile where the third letter should appear.",
+      "note": "Tutor-only overview: Lesson 9 teaches three-syllable words. No new rules are needed — the student applies the same division rules starting at the beginning. Find the first two vowels, separate them, divide by the count rule, then repeat with the next pair of vowels. If a division doesn't create a real word, go back and move the first single-consonant the other way. Three-syllable words can also be compound words; pulling them apart is a fast shortcut."
+    },
+    {
+      "id": "L4.9.review.01",
+      "phase": "Review",
+      "label": "Review prior extra practice",
+      "say": {
+        "text": "Let's take a look at your extra practice page. Go ahead and read the words to me."
+      },
+      "do": "Review Lesson 8 extra practice. If it was not completed at home, complete a prior extra-practice page now.",
+      "board": {
+        "mode": "story",
+        "pageType": "worksheet",
+        "title": "Lesson 8 Extra Practice Review",
+        "subtitle": "Use one of the prior lesson pages if needed.",
+        "text": "Review Lesson 8 Extra Practice before beginning Lesson 9.",
+        "images": [
+          {
+            "src": "assets/worksheets/level4/lesson8_extra_practice_1.png",
+            "label": "Lesson 8 Extra Practice #1",
+            "alt": "Lesson 8 Student Page 86 Extra Practice 1"
+          },
+          {
+            "src": "assets/worksheets/level4/lesson8_extra_practice_2.png",
+            "label": "Lesson 8 Extra Practice #2",
+            "alt": "Lesson 8 Student Page 87 Extra Practice 2"
+          }
+        ]
+      },
+      "recovery": {
+        "trigger": "Student cannot complete the prior extra practice accurately.",
+        "prompts": [
+          "Stop the new lesson.",
+          "Repeat the prior lesson before teaching Lesson 9."
+        ]
+      }
+    },
+    {
+      "id": "L4.9.teach1.01",
+      "phase": "New Teaching 1",
+      "label": "Review prior division rules and introduce 3-syllable approach",
+      "say": {
+        "text": "How many syllables does this word have? How did you know? How many letters are between the vowels? Which way should you move it first?"
+      },
+      "do": "Build RELAX. Student reviews Rule #1 (one letter moves to the end first). Build MAGNET. Student reviews Rule #2 (two letters split). Bridge into three-syllable words with CONSONANT.",
+      "listen": {
+        "expect": [
+          "One letter moves to the end first.",
+          "Two letters split."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [
+          { "word": "RELAX", "row": 0 },
+          { "word": "MAGNET", "row": 1 }
+        ],
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.9.teach1.02",
+      "phase": "New Teaching 1",
+      "label": "Divide CONSONANT",
+      "say": {
+        "text": "You'll use the same rules. You always start at the beginning. Find your first two vowels and separate them. How many letters between? So what will you do? Find the next two vowels and repeat."
+      },
+      "do": "Build CONSONANT. Student starts at the beginning, finds the first two vowels (O and O), counts 2 letters between (NS), splits to CON-SONANT. Then finds the next vowels (O and A), counts 1 letter between (N), moves it to the end: CON-SO-NANT. Pronounce each syllable and say it fast like a word.",
+      "listen": {
+        "expect": [
+          "CON-SO-NANT",
+          "Consonant",
+          "A letter is either a vowel or a consonant."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      },
+      "note": "Use this word to reinforce the term 'consonant.' The blue tiles are called consonants."
+    },
+    {
+      "id": "L4.9.teach1.03",
+      "phase": "New Teaching 1",
+      "label": "Divide ROMANTIC",
+      "say": {
+        "text": "Where are you going to start? Find your first two vowels and separate them. Which way does one letter go? Now the first syllable is done — find the next two vowels and repeat."
+      },
+      "do": "Build ROMANTIC. Student divides: RO-MANTIC, then RO-MAN-TIC. Reinforce /ik/ at the end of a multi-syllable word is IC.",
+      "listen": {
+        "expect": [
+          "RO-MAN-TIC",
+          "/ik/ at the end of a multi-syllable word is I-C."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.9.teach1.04",
+      "phase": "New Teaching 1",
+      "label": "Divide DECENCY",
+      "say": {
+        "text": "Go ahead. What sound will that first C make? What about the other C? How come?"
+      },
+      "do": "Build DECENCY. Student divides DE-CENCY, then DE-CEN-CY. Explain that Y at the end is a Watch Out vowel (makes the Long-E sound). Note that C before E or Y says /s/.",
+      "listen": {
+        "expect": [
+          "DE-CEN-CY",
+          "Decency",
+          "C before E or Y says /s/."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.9.teach1.05",
+      "phase": "New Teaching 1",
+      "label": "Divide MELODY — fixing a bad division",
+      "say": {
+        "text": "ME-LO-DY. Does that sound like a real word? If you divide a word and it doesn't sound quite right, go back to the first time there was only one letter between the vowels and move it the other way."
+      },
+      "do": "Build MELODY. Student divides ME-LO-DY, finds it doesn't sound right. Tutor shows how to go back to the L (first single consonant) and move it the other way: MEL-O-DY. Student confirms 'Melody' is a real word.",
+      "listen": {
+        "expect": [
+          "MEL-O-DY",
+          "Melody — yes, that's a real word."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      },
+      "note": "Rescue strategy: if a division doesn't create a real word, start at the beginning, find the first single consonant between vowels, and move it the other way."
+    },
+    {
+      "id": "L4.9.teach1.06",
+      "phase": "New Teaching 1",
+      "label": "Divide DEMOCRAT — Rotten Letter exception",
+      "say": {
+        "text": "How many syllables? Because? Where will you start? Be careful — most of the time you split two letters, but why won't you split those two? Show me what you'd do with it."
+      },
+      "do": "Build DEMOCRAT. Student divides DE-MOCRAT (Rotten Letter R: do not split CR). Student says DEM-O-CRAT and confirms it sounds right. Reinforce: you can use this procedure no matter how many vowels the word has.",
+      "listen": {
+        "expect": [
+          "DEM-O-CRAT",
+          "Democrat — that sounds right.",
+          "R is a Rotten Letter — don't split it."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      },
+      "recovery": {
+        "trigger": "Student splits CR or cannot fix the bad division.",
+        "prompts": [
+          "R is a Rotten Letter — it almost always stays with the letter before it.",
+          "DEM-O-CRAT. Does that sound better than DE-MO-CRAT?"
+        ]
+      }
+    },
+    {
+      "id": "L4.9.teach2.01",
+      "phase": "New Teaching 2",
+      "label": "Compound words shortcut for 3-syllable words",
+      "say": {
+        "text": "In the last lesson, we worked with compound words — two small words pushed together, like Slingshot or Handshake. Three-syllable words can also be compound words. If you can see two small words, just pull them apart. It's faster."
+      },
+      "do": "Build ANYTHING. Student identifies any and thing, pulls apart: ANY-THING. Build POTBELLY: POT-BELLY. Build LADYBUG: LADY-BUG. Point out that Y in the middle of a compound word is a clue it's a compound.",
+      "listen": {
+        "expect": [
+          "Anything: any and thing.",
+          "Potbelly: pot and belly.",
+          "Ladybug: lady and bug — Y in the middle is a clue."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.9.spelltiles.01",
+      "phase": "Tile Spelling",
+      "label": "Spell real words with tiles",
+      "say": {
+        "text": "The first word is de-pos-it. Repeat that word. Tap each syllable on the table. Say just the first syllable, then bring down its tiles. Say the second syllable, and bring down its tiles. Say the third syllable, and bring down its tiles. Now read each syllable exactly as it looks."
+      },
+      "do": "Dictate real words for tile spelling. Encourage the student to use the Franklin Spell Checker when uncertain. Pronounce words carefully — do not turn Short-I or Short-E into Schwa unless they come at the end of a word as part of a Vowel-L.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      },
+      "note": "New Teaching 1 words: de-POS-it, com-PO-nent, do-MES-tic. New Teaching 2 (compound) words: SNAP-DRAGON, JELLY-FISH, SKY-DIVING. Repeat-lesson words: po-TA-to, e-LAS-tic, SLAP-HAP-py, in-HAB-it."
+    },
+    {
+      "id": "L4.9.readtiles.01",
+      "phase": "Tile Reading",
+      "label": "Read nonsense words on tiles",
+      "say": {
+        "text": "Divide that word into syllables. Say each syllable exactly as it looks. Now say it like a word."
+      },
+      "do": "Build nonsense words for the student to divide and read.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      },
+      "note": "New Teaching 1 words: BOMPLATRIC (bom-PLA-tric), MAGDODY (MAG-do-dy), DOSOTIC (do-SO-tic). New Teaching 2 (compound) words: GRANDWAGON (GRAND-WAGON), BELLYMATCH (BELLY-MATCH), HANDYSNAP (HANDY-SNAP). Repeat-lesson words: BODYSNACK (BODY-SNACK), FAMPLETIC (fam-PLE-tic), MILOSUS (MI-lo-sus), ANTHOCREN (AN-thro-cren), RENDOLUS (REN-do-lus)."
+    },
+    {
+      "id": "L4.9.spelltiles.02",
+      "phase": "Tile Spelling",
+      "label": "Spell nonsense words with tiles",
+      "say": {
+        "text": "Now it's your turn to spell nonsense words. The first word is MA-no-drit. Repeat that word. Tap each syllable on the table. Say just the first syllable, then bring down its tiles. Say the second and third syllables and bring down their tiles."
+      },
+      "do": "Dictate nonsense words with tiles, then move tiles out of the way. They will not be needed during the rest of the lesson.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      },
+      "note": "New Teaching 1 words: MA-no-drit, ex-MAH-ty (Exmatty). New Teaching 2 (compound) words: PONY-NUT, SILLY-FISH, SLIP-PENNY. Repeat-lesson words: MAN-de-sus, re-NES-dent, VA-trin-ty, ex-PRO-lish."
+    },
+    {
+      "id": "L4.9.words.01",
+      "phase": "Reading",
+      "label": "Read words through word frame",
+      "say": {
+        "text": "Now you're going to read words through the word frame. If you know that word for sure, just say it. If you don't know the word, use your pencil to help you divide it."
+      },
+      "do": "Student reads the Lesson 9 word page through the word frame. Optional: after reading all words, find all the Closed-A's or Closed-O's that changed to Schwa.",
+      "board": {
+        "mode": "word_frame",
+        "title": "Lesson 9 Read These Words",
+        "words": [
+          "intellect",
+          "romantic",
+          "vacancy",
+          "balcony",
+          "cosmetic",
+          "calculus",
+          "comprehend",
+          "reluctant",
+          "magnetic",
+          "volcano",
+          "abdomen",
+          "tomato",
+          "tobacco",
+          "frequency",
+          "excellent",
+          "Atlantic",
+          "penalty",
+          "disposal",
+          "electric",
+          "athletic",
+          "potato"
+        ]
+      }
+    },
+    {
+      "id": "L4.9.paper.01",
+      "phase": "Paper Spelling",
+      "label": "Spell words on paper",
+      "say": {
+        "text": "Now you'll spell on paper, syllable by syllable. The first word is de-PEN-dent. Repeat that word. Tap each syllable on the table. Say the first syllable, and write it down. Say the second syllable and write it. Say the third syllable and write it. To double check, read that word."
+      },
+      "do": "Dictate real and nonsense words on paper.",
+      "note": "Real words: de-PEN-dent, TEN-den-cy. Nonsense words: ro-TES-nic, MEL-po-dis, AT-lo-pin, FAM-is-ment. Repeat-lesson real words: e-POX-y, con-SIS-tent, re-PUB-lic, mag-NET-ic, PO-ten-cy. Repeat-lesson nonsense: ex-TRIN-ty, DIM-to-pox, CAD-o-mit, BOM-so-dent, VA-bin-ty. NOTE: In three-syllable words, when two letters appear between vowels and the second is a Rotten Letter, they split more often than in two-syllable words (e.g., ac-ro-bat, re-pub-lic)."
+    },
+    {
+      "id": "L4.9.sightread.01",
+      "phase": "Sight Words",
+      "label": "Review sight word reading deck",
+      "say": {
+        "text": "Let's review your Sight Word Reading Deck. Warm up by reading each card. Now keep the clue hidden and read them again as fast as you can."
+      },
+      "do": "Use the student's physical Sight Word Reading Deck. Skip if the student does not have one."
+    },
+    {
+      "id": "L4.9.sightspell.01",
+      "phase": "Sight Words",
+      "label": "Review sight word spelling cards",
+      "say": {
+        "text": "Let's review your tricky sight words."
+      },
+      "do": "For each physical Sight Word Spelling Card: read it, explain the red letter, see and spell twice on the wall, see and write twice on the table, and see and write twice on paper. Dictate the three active sight words at the end of phrase spelling.",
+      "note": "Retire a card after three correct sessions, then use the Sight Word Check List to find a replacement."
+    },
+    {
+      "id": "L4.9.phrases.01",
+      "phase": "Phrases",
+      "label": "Read phrases",
+      "say": {
+        "text": "Now you'll read some phrases. Read each group, create sentences, then point to two three-syllable words."
+      },
+      "do": "Student reads Who, Did What, Where, and Add-On phrases; creates sentences; then identifies two three-syllable words.",
+      "board": {
+        "mode": "sentences",
+        "title": "Lesson 9 Read These Phrases",
+        "items": [
+          "The diplomat",
+          "The volcano",
+          "The acrobat",
+          "Her Majesty",
+          "could erupt",
+          "will come with us",
+          "felt domestic",
+          "did astonish us",
+          "in Wisconsin",
+          "to Manhattan",
+          "on her balcony",
+          "in his Cadillac",
+          "for Thanksgiving.",
+          "with a handstand.",
+          "at any moment.",
+          "on the Atlantic."
+        ]
+      }
+    },
+    {
+      "id": "L4.9.phrases.02",
+      "phase": "Phrases",
+      "label": "Spell phrases on paper",
+      "say": {
+        "text": "Now you're going to write some phrases. Repeat the phrase, write it down, and figure out the tough words syllable by syllable."
+      },
+      "do": "Dictate phrases, then dictate the three active sight words from the spelling deck.",
+      "note": "Phrases: JELLYFISH SWIM; THIS ELECTRIC BLANKET; IN MANHATTAN. Repeat-lesson phrases: IS SO ROMANTIC; THE ATHLETIC ACROBAT; GO TO WISCONSIN."
+    },
+    {
+      "id": "L4.9.sentences.01",
+      "phase": "Sentences",
+      "label": "Read sentences",
+      "say": {
+        "text": "Read that first sentence to yourself. Now read it out loud. Let's mark each phrase. Now read that sentence with phrasing. Put a small pause between each phrase."
+      },
+      "do": "Student reads, marks Who/Did What/Where/Add-On phrases, and rereads with phrasing. Optional: circle each compound word.",
+      "board": {
+        "mode": "sentences",
+        "title": "Lesson 9 Read These Sentences",
+        "items": [
+          "The diplomat could erupt in Wisconsin for Thanksgiving.",
+          "The volcano will come with us to Manhattan with a handstand.",
+          "The acrobat felt domestic on her balcony at any moment.",
+          "Her Majesty did astonish us in his Cadillac on the Atlantic.",
+          "Jellyfish swim in the Atlantic.",
+          "This electric blanket is fantastic.",
+          "The hotel in Manhattan has a vacancy.",
+          "His strong handclasp was so romantic."
+        ]
+      }
+    },
+    {
+      "id": "L4.9.sentences.02",
+      "phase": "Sentences",
+      "label": "Spell sentences on paper",
+      "say": {
+        "text": "Now you're going to write three sentences. Repeat the sentence, write it, tap the syllables on long words, and check your sentence."
+      },
+      "do": "Dictate three sentences and guide correction.",
+      "note": "Sentences: JELLYFISH SWIM IN THE ATLANTIC. THIS ELECTRIC BLANKET IS FANTASTIC. THE HOTEL IN MANHATTAN HAS A VACANCY. Repeat-lesson sentences: HIS STRONG HANDCLASP WAS SO ROMANTIC. THE ATHLETIC ACROBAT WILL GET DUSTY. NEXT YEAR, I WILL GO TO WISCONSIN."
+    },
+    {
+      "id": "L4.9.stories.01",
+      "phase": "Stories",
+      "label": "Read basic stories",
+      "say": {
+        "text": "Now you're ready to read a story. Preread the story and figure out the tough words. Then read it out loud to me."
+      },
+      "do": "Have the student read the first story aloud. For the second story, have the student read silently and retell in their own words.",
+      "board": {
+        "mode": "story",
+        "title": "Lesson 9 Stories — Basic",
+        "stories": [
+          {
+            "title": "Robin's Brother",
+            "text": "Robin can detect her brother from the grandstand. It doesn't astonish Robin that her brother has such skill.\n\nIn his infancy, he had been an acrobat. When he was a small child, he began to do fantastic tricks. He could do a handstand when he was two.\n\nIn a moment, her brother will be skydiving. He will try to land on a spot by the bandstand to win the contest."
+          },
+          {
+            "title": "The Big Shot",
+            "text": "Greg is our basketball champ. But he's not bombastic. In fact, he is an excellent student and a big shot on campus.\n\nSo Greg was reluctant to admit he had a problem with alcohol. But he could not stop by himself.\n\nThat's why Greg had a crackup in his Cadillac. He was lucky he didn't kill anyone.\n\nDo you think he'll get help now?"
+          }
+        ],
+        "text": "Read Story #1 aloud. Read Story #2 silently and retell."
+      }
+    },
+    {
+      "id": "L4.9.stories.02",
+      "phase": "Stories",
+      "label": "Read advanced stories",
+      "do": "Use these instead of the basic stories when appropriate for the student.",
+      "board": {
+        "mode": "story",
+        "title": "Lesson 9 Stories — Advanced",
+        "stories": [
+          {
+            "title": "The I.R.S.",
+            "text": "Tom had a tendency to put off any job that he didn't want to do.\n\nWhen the tax consultant was insistent that Tom must not be delinquent, Tom didn't listen. He waited too long. Tom didn't comprehend that the I.R.S. would inflict such a big penalty.\n\nHe was indignant. It did astonish and depress him. Now Tom can't be complacent."
+          },
+          {
+            "title": "The Pregnancy",
+            "text": "Sally was pregnant. She didn't mind that she felt dizzy and wasn't as skinny as she had once been. She wasn't a crybaby.\n\nShe did wish that her husband wasn't dependent on alcohol. Then the prospect of bankruptcy wouldn't be such a problem.\n\nSally was reluctant to ask for help, but she did wish she had a friend to chat with. And, most of all, she felt distress about this pregnancy."
+          }
+        ],
+        "text": "Optional advanced connected-text reading."
+      }
+    },
+    {
+      "id": "L4.9.close.01",
+      "phase": "Close",
+      "label": "Wrap up",
+      "say": {
+        "text": "You've done a lot of reading and spelling today. Thank you for working so hard."
+      },
+      "do": "Assign optional extra practice only if the student asks for between-session practice. Always do the first problem together before sending a page home.",
+      "board": {
+        "mode": "story",
+        "pageType": "worksheet",
+        "title": "Lesson 9 Extra Practice",
+        "subtitle": "Rendered from the real Book 4 manual pages before Lesson 10",
+        "text": "Show Lesson 9 Extra Practice #1 or #2. The student completes the selected paper copy outside the app.",
+        "images": [
+          {
+            "src": "assets/worksheets/level4/lesson9_extra_practice_1.png",
+            "label": "Lesson 9 Extra Practice #1",
+            "alt": "Lesson 9 Student Page 95 Extra Practice 1"
+          },
+          {
+            "src": "assets/worksheets/level4/lesson9_extra_practice_2.png",
+            "label": "Lesson 9 Extra Practice #2",
+            "alt": "Lesson 9 Student Page 96 Extra Practice 2"
+          }
+        ]
+      },
+      "note": "Extra Practice #1 asks the student to circle each word that has three syllables. Extra Practice #2 asks the student to create compound words by drawing lines between two columns."
+    }
+  ]
+}

@@ -1,0 +1,1031 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "level": 4,
+    "lesson": 3,
+    "title": "Syllable Division Rule #2",
+    "estMinutes": 50,
+    "author": "Barton Command Center",
+    "videoSpeedDefault": 1.5
+  },
+  "materials": [
+    "Letter tiles: two sets of A through Z plus Vowel Y, CH, TH, CK, SH, WH, TCH",
+    "Unit tiles: ALL, ANG, ING, ONG, UNG, ANK, INK, ONK, UNK, OLL, OLD, OLT, OST, ILD, IND",
+    "Binder paper and pencil",
+    "Word frame",
+    "Blank light-colored 5x8 index card",
+    "Several blank 3x5 index cards",
+    "Book 4 Lesson 3 student pages"
+  ],
+  "objectives": [
+    "Review Unit sounds and Lesson 2 extra practice before starting new material",
+    "Apply Syllable Division Rule #2 by splitting two letters between vowels",
+    "Recognize that digraphs and Units are never split",
+    "Recognize that R and L are Rotten Letters that usually stay together and move to the end",
+    "Read and spell two-syllable real and nonsense words with tiles and on paper",
+    "Read words, phrases, sentences, and stories from the Lesson 3 student pages"
+  ],
+  "beats": [
+    {
+      "id": "L4.3.prep.01",
+      "phase": "Prep",
+      "label": "Tutor overview",
+      "do": "Set out the Level 4 tile set, binder paper, pencil, word frame, blank 5x8 card, blank 3x5 cards, and Lesson 3 student pages.",
+      "note": "Tutor-only overview: Lesson 3 teaches Syllable Division Rule #2. When two letters sit between two vowels, split the two letters most of the time. Never split a digraph or a Unit. If the second letter is R or L, usually keep both letters together and move them to the end. Use the split hand gesture when teaching the most common rule."
+    },
+    {
+      "id": "L4.3.review.01",
+      "phase": "Review",
+      "label": "Review Units",
+      "say": {
+        "text": "Can you tell me the sound that each of these Units makes?"
+      },
+      "do": "Point one by one to the red Unit tiles in the same order used in prior lessons.",
+      "listen": {
+        "expect": [
+          "/all/",
+          "/ang/",
+          "/ing/",
+          "/ong/",
+          "/ung/",
+          "/ank/",
+          "/ink/",
+          "/onk/",
+          "/unk/",
+          "/oll/",
+          "/old/",
+          "/olt/",
+          "/ost/",
+          "/ild/",
+          "/ind/"
+        ],
+        "hint": "Student gives the unit sound, not individual letter names."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "units",
+        "prePlace": [],
+        "lock": true
+      },
+      "note": "Consistent order helps the student learn the Units faster."
+    },
+    {
+      "id": "L4.3.review.02",
+      "phase": "Review",
+      "label": "Review Lesson 2 extra practice",
+      "say": {
+        "text": "Let's take a look at your extra practice page."
+      },
+      "do": "Review the completed Lesson 2 extra practice page for accuracy. If it was not done at home, have the student complete one Lesson 2 extra practice page now and read each word aloud.",
+      "listen": {
+        "expect": [
+          "Student reads the prior extra practice words accurately."
+        ],
+        "hint": "This is a gate before new teaching."
+      },
+      "board": {
+        "mode": "story",
+        "pageType": "worksheet",
+        "title": "Lesson 2 Extra Practice Review",
+        "subtitle": "Rendered from the real Book 4 manual pages before Lesson 3",
+        "text": "Review the paper page the student completed. If none was completed, use one Lesson 2 extra practice page now.",
+        "images": [
+          {
+            "src": "assets/worksheets/level4/lesson2_extra_practice_1.png",
+            "label": "Lesson 2 Extra Practice #1",
+            "alt": "Lesson 2 Student Page 23 Extra Practice 1"
+          },
+          {
+            "src": "assets/worksheets/level4/lesson2_extra_practice_2.png",
+            "label": "Lesson 2 Extra Practice #2",
+            "alt": "Lesson 2 Student Page 24 Extra Practice 2"
+          }
+        ]
+      },
+      "note": "If the student has difficulty completing the extra practice page accurately, do not go on with this lesson. Repeat Lesson 2 instead.",
+      "recovery": {
+        "trigger": "Student cannot complete the prior extra practice accurately.",
+        "prompts": [
+          "Let's pause and review the last lesson before adding a new division rule.",
+          "Where are the vowels?",
+          "How many letters are between the vowels?"
+        ]
+      }
+    },
+    {
+      "id": "L4.3.warmup.01",
+      "phase": "Warm-up",
+      "label": "First-sound warm-up",
+      "say": {
+        "text": [
+          "Repeat this nonsense word, then make just its first sound.",
+          "Ready? STU-DISH.",
+          "Point to the tile that makes that sound."
+        ]
+      },
+      "do": "Dictate first-sound words: STU-DISH, THEP-ID, FO-PUS, CHE-LENT. After each word, the student repeats the whole word, says only the first sound, and points to the matching tile.",
+      "listen": {
+        "expect": [
+          "STU-DISH -> /s/",
+          "THEP-ID -> /th/",
+          "FO-PUS -> /f/",
+          "CHE-LENT -> /ch/"
+        ],
+        "hint": "The student repeats the whole nonsense word before isolating the first sound."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [],
+        "lock": true
+      }
+    },
+    {
+      "id": "L4.3.warmup.02",
+      "phase": "Warm-up",
+      "label": "Last-sound warm-up",
+      "say": {
+        "text": [
+          "Now I want the last sound.",
+          "Ready? TAV-ID.",
+          "Point to that tile."
+        ]
+      },
+      "do": "Dictate last-sound words: TAV-ID, TRI-VUS, VA-LEM, PRO-LY. After each word, the student repeats the word, says the final sound, and points to the matching tile.",
+      "listen": {
+        "expect": [
+          "TAV-ID -> /d/",
+          "TRI-VUS -> /s/",
+          "VA-LEM -> /m/",
+          "PRO-LY -> /ee/"
+        ],
+        "hint": "Use the requested final sound, not the final letter name."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": true
+      }
+    },
+    {
+      "id": "L4.3.warmup.03",
+      "phase": "Warm-up",
+      "label": "End of first syllable",
+      "say": {
+        "text": [
+          "Here's something new. This time, I want the sound at the end of the first syllable.",
+          "Ready? RO-TIC.",
+          "What is at the end of the first syllable?",
+          "Point to that tile."
+        ]
+      },
+      "do": "Dictate RO-TIC, VA-LIC, STRI-DY, and RU-VAMP. Student repeats each word, identifies the sound at the end of the first syllable, and points to the matching tile.",
+      "listen": {
+        "expect": [
+          "RO-TIC -> /oe/",
+          "VA-LIC -> /ae/",
+          "STRI-DY -> /eye/",
+          "RU-VAMP -> /oo/ or /ee-oo/"
+        ],
+        "hint": "Target the final sound of the first syllable only."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "lock": true
+      }
+    },
+    {
+      "id": "L4.3.teach1.01",
+      "phase": "New Teaching",
+      "label": "Review Rule #1 with PRETEND",
+      "say": {
+        "text": [
+          "How many syllables in this word?",
+          "How did you know?",
+          "How many letters are between the vowels?",
+          "Where will you move it first?",
+          "If that was not a real word, what would you do?"
+        ]
+      },
+      "do": "Build PRETEND. Student divides it as PRE-TEND, reads the word, and reviews that one letter between vowels moves to the end first.",
+      "listen": {
+        "expect": [
+          "two",
+          "two vowels that are not next to each other",
+          "one",
+          "to the end",
+          "move it the other way"
+        ],
+        "hint": "This is a bridge from Lesson 2."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "prePlace": [
+          {
+            "word": "pretend",
+            "row": 0
+          }
+        ],
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.3.teach1.02",
+      "phase": "New Teaching",
+      "label": "Rule #2: split two letters",
+      "say": {
+        "text": [
+          "Now you are ready for the next rule.",
+          "How many syllables in this word?",
+          "How many letters are between the vowels?",
+          "Can we use Rule #1?",
+          "When there are two letters, split them."
+        ]
+      },
+      "do": "Build COMBAT. Have the student move each vowel into its own syllable, notice two letters between the vowels, split the two letters as COM-BAT, and read the word.",
+      "listen": {
+        "expect": [
+          "two",
+          "two vowels that are not next to each other",
+          "two",
+          "no",
+          "combat",
+          "split them"
+        ],
+        "hint": "Use the hand gesture for split."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "prePlace": [
+          {
+            "word": "combat",
+            "row": 0
+          }
+        ],
+        "lock": false
+      },
+      "note": "Syllable Division Rule #2: when there are two letters between the vowels, split them most of the time."
+    },
+    {
+      "id": "L4.3.teach1.03",
+      "phase": "New Teaching",
+      "label": "Practice most-common split",
+      "say": {
+        "text": "Divide each word. Say each syllable exactly as divided, then say it fast like a word."
+      },
+      "do": "Guide CHIPMUNK as CHIP-MUNK, CINDY as CIN-DY, NANCY as NAN-CY, MUFFIN as MUF-FIN, and CONCEPT as CON-CEPT.",
+      "listen": {
+        "expect": [
+          "chipmunk",
+          "Cindy",
+          "Nancy",
+          "muffin",
+          "concept"
+        ],
+        "hint": "Student should identify Closed, Unit, Watch Out C, final Y saying /ee/, and double letters running together as needed."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "prePlace": [
+          {
+            "word": "chipmunk",
+            "row": 0
+          },
+          {
+            "word": "cindy",
+            "row": 1
+          },
+          {
+            "word": "nancy",
+            "row": 2
+          }
+        ],
+        "lock": false
+      },
+      "note": "Use this sequence to review Watch Out vowels E, I, and Y; final Y saying /ee/ in multi-syllable words; and that two identical consonant sounds run together."
+    },
+    {
+      "id": "L4.3.rulepage.01",
+      "phase": "New Teaching",
+      "label": "Update spelling rules page",
+      "say": {
+        "text": "Let's add the new reminder to your Book 4 spelling rules page."
+      },
+      "do": "Use Student Page #25. Review: Long I at the end = cry; Long E at the end = baby; no FLOSS; SEE at the end = Nancy, most of the time.",
+      "listen": {
+        "expect": [
+          "cry",
+          "baby",
+          "no FLOSS",
+          "Nancy"
+        ],
+        "hint": "This is a reference page, not a drill."
+      },
+      "board": {
+        "mode": "story",
+        "pageType": "reference_page",
+        "title": "Student Page #25: Spelling Rules - Book 4",
+        "subtitle": "SEE at the end = Nancy, most of the time.",
+        "text": "Use the student's physical spelling rules page.",
+        "images": [
+          {
+            "src": "assets/reference/level4/book4_spelling_rules_student_page_25.png",
+            "label": "Student Page #25: Spelling Rules - Book 4",
+            "alt": "Book 4 Spelling Rules student page 25"
+          }
+        ],
+        "purpose": "reference"
+      }
+    },
+    {
+      "id": "L4.3.teach2.01",
+      "phase": "New Teaching",
+      "label": "Exception: never split a digraph",
+      "say": {
+        "text": [
+          "When there are two letters between the vowels, what do you do most of the time?",
+          "But those two letters are a digraph. You never split a digraph.",
+          "Since a digraph makes one sound, treat it like one letter."
+        ]
+      },
+      "do": "Build CHICKEN. Student first tries CHI-CKEN, sees that it is not a real word, then moves the digraph the other way to make CHICK-EN. Then build NATHAN and divide it as NA-THAN.",
+      "listen": {
+        "expect": [
+          "split them",
+          "Chi-cken is not a real word",
+          "chicken",
+          "Nathan",
+          "never split a digraph"
+        ],
+        "hint": "A digraph stays together because it is one sound."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [
+          {
+            "word": "chicken",
+            "row": 0
+          },
+          {
+            "word": "nathan",
+            "row": 1
+          }
+        ],
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.3.teach2.02",
+      "phase": "New Teaching",
+      "label": "Exception: never split a Unit",
+      "say": {
+        "text": [
+          "Here's another time you won't split two letters.",
+          "The vowel that is part of a Unit still counts when figuring out how many vowels.",
+          "You never divide a Unit, and you never divide a digraph."
+        ]
+      },
+      "do": "Build BLANKET. Student notices the vowel in the Unit, divides BLANK-ET, and states that Units are never split.",
+      "listen": {
+        "expect": [
+          "two syllables",
+          "two vowels that are not next to each other",
+          "blanket",
+          "never split a Unit"
+        ],
+        "hint": "All Units taught so far start with a vowel; that vowel counts."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "units",
+        "prePlace": [
+          {
+            "word": "blanket",
+            "row": 0
+          }
+        ],
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.3.teach2.03",
+      "phase": "New Teaching",
+      "label": "Exception: Rotten Letters",
+      "say": {
+        "text": [
+          "There is one more time when dividing can be tricky.",
+          "The one other time you don't split two letters is when the second letter is an R or an L.",
+          "I call them the Rotten Letters.",
+          "If the second letter is a Rotten Letter, the two letters usually stay together and go to the end."
+        ]
+      },
+      "do": "Build DUPLEX. Student first tries DUP-LEX, then moves PL together to the end as DU-PLEX. Teach that Rotten Letters are R and L.",
+      "listen": {
+        "expect": [
+          "DUP-LEX is not a real word",
+          "L",
+          "Rotten starts with R; Letters starts with L",
+          "duplex"
+        ],
+        "hint": "R and L usually stay with the preceding consonant and move to the end."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [
+          {
+            "word": "duplex",
+            "row": 0
+          }
+        ],
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.3.teach2.04",
+      "phase": "New Teaching",
+      "label": "Practice Rotten Letter: SECRET",
+      "say": {
+        "text": [
+          "See if you find a Rotten Letter in this word.",
+          "Go ahead and divide that word.",
+          "Why didn't you split the C and the R?",
+          "If you ever split two letters and end up with a weirdo word, check for Rotten Letters."
+        ]
+      },
+      "do": "Build SECRET. Student divides it as SE-CRET and explains that R is a Rotten Letter.",
+      "listen": {
+        "expect": [
+          "R is a Rotten Letter",
+          "secret",
+          "sec-ret would be a weirdo word"
+        ],
+        "hint": "Most of the time, do not split R or L when it is the second letter between vowels."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [
+          {
+            "word": "secret",
+            "row": 0
+          }
+        ],
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.3.teach2.05",
+      "phase": "New Teaching",
+      "label": "Review Rule #2",
+      "say": {
+        "text": [
+          "When there are two letters between the vowels, what do you do most of the time?",
+          "Will you ever split a digraph?",
+          "Will you ever split a Unit?",
+          "What are the two Rotten Letters?",
+          "What do you usually do with them?"
+        ]
+      },
+      "do": "Review Syllable Division Rule #2: split two letters, but do not split a digraph, do not split a Unit, and usually do not split a Rotten Letter.",
+      "listen": {
+        "expect": [
+          "Split them.",
+          "No.",
+          "No.",
+          "R and L.",
+          "Usually keep them together and move them to the end."
+        ],
+        "hint": "Do not move on until the student can state the rule and exceptions."
+      },
+      "note": "Rule summary: two letters, split them; but do not split a digraph, do not split a Unit, and usually do not split a Rotten Letter."
+    },
+    {
+      "id": "L4.3.realtiles.01",
+      "phase": "Tile Spelling",
+      "label": "Spell real words with tiles",
+      "say": {
+        "text": [
+          "The first word is CON-TEST. Repeat that word.",
+          "Tap each syllable on the table.",
+          "Say just the first syllable, then bring down its tiles.",
+          "Say the second syllable, and bring down its tiles.",
+          "Now read each syllable exactly as it looks."
+        ]
+      },
+      "do": "Dictate CON-TEST, MUS-TANG, FAN-CY, CLO-THING, CHUNK-Y, and RE-GRET. Make sure the student leaves a bit of space between syllables.",
+      "listen": {
+        "expect": [
+          "contest",
+          "mustang",
+          "fancy",
+          "clothing",
+          "chunky",
+          "regret"
+        ],
+        "hint": "Student taps syllables, spells one syllable at a time, then reads to check."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [],
+        "lock": false
+      },
+      "note": "Repeat-lesson words: IN-DEX, FLASH-Y, SUB-JECT, BAN-JO, QUIN-CY."
+    },
+    {
+      "id": "L4.3.nonsense.read.01",
+      "phase": "Tile Reading",
+      "label": "Read nonsense words on tiles",
+      "say": {
+        "text": [
+          "Divide that word into syllables.",
+          "Say each syllable exactly as it looks.",
+          "Now say it like a word."
+        ]
+      },
+      "do": "Build and have the student divide/read CLINTY as CLIN-TY, SLUPCY as SLUP-CY, RADNECT as RAD-NECT, PRISLAM as PRI-SLAM, SLINGUM as SLING-UM, and SHOFRET as SHO-FRET.",
+      "listen": {
+        "expect": [
+          "Student divides and reads each nonsense word."
+        ],
+        "hint": "Use Rule #2 and the exceptions as needed."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "prePlace": [
+          {
+            "word": "clinty",
+            "row": 0
+          }
+        ],
+        "lock": false
+      },
+      "note": "Repeat-lesson words include RUS-TO, SUB-MOST, FRE-PLIST, SHO-FRET, and LIM-VID."
+    },
+    {
+      "id": "L4.3.nonsense.spell.01",
+      "phase": "Tile Spelling",
+      "label": "Spell nonsense words with tiles",
+      "say": {
+        "text": [
+          "Now it's your turn to spell nonsense words.",
+          "The first word is BLOD-MENT. Repeat that word.",
+          "Tap each syllable on the table.",
+          "Say just the first syllable, then bring down its tiles.",
+          "Say just the second syllable, then bring down its tiles.",
+          "Now read each syllable exactly as it looks."
+        ]
+      },
+      "do": "Dictate BLOD-MENT, HUN-CY, PEL-SET, MU-TRIP, THRINK-ID, and SHI-GLAT. Listen carefully that sounds are in the correct syllable.",
+      "listen": {
+        "expect": [
+          "blodment",
+          "huncy",
+          "pelset",
+          "mutrip",
+          "thinkid",
+          "shiglat"
+        ],
+        "hint": "Student spells one syllable at a time and leaves space between syllables."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [],
+        "lock": false
+      },
+      "note": "Move tiles out of the way after this procedure. Repeat-lesson words: LIM-BY, SNA-THING, AN-PIT, SNI-PLET, TRU-CY."
+    },
+    {
+      "id": "L4.3.words.01",
+      "phase": "Paper Reading",
+      "label": "Read words through word frame",
+      "say": {
+        "text": [
+          "Now you're going to read words through the word frame.",
+          "If you know that word for sure, just say it.",
+          "If you don't know the word, divide it on paper."
+        ]
+      },
+      "do": "Use Student Page #26. If the student is unsure or inaccurate, have the student dot or highlight vowels, count the letters between them, draw the dividing line, pronounce each syllable exactly as divided, then say it fast like a word.",
+      "board": {
+        "mode": "word_frame",
+        "words": [
+          "nifty",
+          "grumpy",
+          "splendid",
+          "tempo",
+          "racket",
+          "helmet",
+          "subject",
+          "napkin",
+          "ticket",
+          "disco",
+          "trumpet",
+          "checkup",
+          "regret",
+          "presnic",
+          "shummy",
+          "nelvent",
+          "lacket",
+          "fomcy",
+          "extum",
+          "widkin"
+        ]
+      },
+      "listen": {
+        "expect": [
+          "Student reads the Lesson 3 word list accurately."
+        ],
+        "hint": "For a repeat lesson, start on the last word and work backwards."
+      },
+      "recovery": {
+        "trigger": "Student is unsure or reads a word inaccurately.",
+        "prompts": [
+          "Put a dot below each vowel.",
+          "How many letters are between the dots?",
+          "Apply Rule #1 or Rule #2.",
+          "Do not split a digraph or Unit.",
+          "Check for Rotten Letters."
+        ]
+      }
+    },
+    {
+      "id": "L4.3.paper.01",
+      "phase": "Paper Spelling",
+      "label": "Spell real words on paper",
+      "say": {
+        "text": [
+          "Next, you'll spell on paper, syllable by syllable.",
+          "The first word is CON-TACT. Repeat that word.",
+          "Tap each syllable on the table.",
+          "Say just the first syllable, then write it down.",
+          "Now say just the second syllable, and write it down.",
+          "To double check, read that word exactly as written."
+        ]
+      },
+      "do": "Dictate CON-TACT, IM-PACT, AL-BUM, DEN-TIST, and SPI-CY.",
+      "listen": {
+        "expect": [
+          "contact",
+          "impact",
+          "album",
+          "dentist",
+          "spicy"
+        ],
+        "hint": "Student repeats, taps syllables, writes one syllable at a time, and reads back."
+      },
+      "board": {
+        "mode": "clear"
+      }
+    },
+    {
+      "id": "L4.3.paper.02",
+      "phase": "Paper Spelling",
+      "label": "Spell nonsense words on paper",
+      "say": {
+        "text": "Now spell these nonsense words on paper. Repeat the word, tap each syllable, write one syllable at a time, then read the word."
+      },
+      "do": "Dictate LEN-TANG, RUT-CY, PRAS-COT, SO-PLID, and RIS-BO.",
+      "listen": {
+        "expect": [
+          "lentang",
+          "rutcy",
+          "prascot",
+          "soplid",
+          "risbo"
+        ],
+        "hint": "Student uses the same syllable-by-syllable paper spelling procedure."
+      },
+      "note": "Repeat-lesson real words: PLEN-TY, BAN-DIT, IN-VENT, RE-PRINT, FLASH-Y. Repeat-lesson nonsense words: TIB-SUS, BAN-CY, CO-FRIN, SLATH-O, NAN-DENT."
+    },
+    {
+      "id": "L4.3.sightread.01",
+      "phase": "Sight Words",
+      "label": "Review Reading Deck",
+      "say": {
+        "text": [
+          "Let's review your Sight Word Reading Deck.",
+          "Warm up by reading each card. Check yourself by looking at the clue.",
+          "Now keep the clue hidden and read them again as fast as you can."
+        ]
+      },
+      "do": "Give the Sight Word Reading Deck to the student. If the student does not have a Reading Deck, skip to the next step.",
+      "listen": {
+        "expect": [
+          "Student reads each Reading Deck card with clue access, then quickly without clues."
+        ],
+        "hint": "This is review of the existing physical deck."
+      }
+    },
+    {
+      "id": "L4.3.sightspell.01",
+      "phase": "Sight Words",
+      "label": "Review Sight Word Spelling Cards",
+      "say": {
+        "text": [
+          "Let's review your tricky Sight words.",
+          "What's this word?",
+          "Why is that letter in red?",
+          "Stare at it until you can see it in your mind with your eyes closed.",
+          "Look at that blank wall and see that word. How do you spell it?",
+          "Now write that word on the desk using your index and middle fingers as the pen.",
+          "As a last step, write it on paper, saying each letter as you write it. Then underline the red letter."
+        ]
+      },
+      "do": "Hold up each Sight Word Spelling Card. Student reads it, explains the red letter, sees-and-spells twice on the wall, sees-and-writes twice on the table, then writes it twice on paper.",
+      "listen": {
+        "expect": [
+          "Student reads, explains, visualizes, spells, writes, and underlines the red letter."
+        ],
+        "hint": "Later, after phrase spelling, dictate the current sight words and add a check mark for correct spelling."
+      },
+      "note": "Retire a Sight Word Spelling card after three check marks from three separate tutoring sessions, then choose a replacement from the Sight Word Check List."
+    },
+    {
+      "id": "L4.3.phrases.01",
+      "phase": "Phrases",
+      "label": "Read phrase groups",
+      "say": {
+        "text": [
+          "Now you'll read some phrases.",
+          "This group of phrases tells WHO. Read each phrase to me.",
+          "These phrases tell DID WHAT. Read each phrase to me.",
+          "Now read the WHERE phrases.",
+          "Now read each ADD-ON phrase."
+        ]
+      },
+      "do": "Use Student Page #27. Have the student read all phrase groups, create oral sentences from them, and find and divide two multi-syllable words.",
+      "board": {
+        "mode": "sentences",
+        "items": [
+          "Who: Nancy and Sandy",
+          "Who: Randy Quincy",
+          "Who: Mr. Henry Opmin",
+          "Who: Justin Shelby",
+          "Did What: led his mustang",
+          "Did What: was absent",
+          "Did What: will connect",
+          "Did What: has spoken",
+          "Where: in the lobby",
+          "Where: into the paddock",
+          "Where: at the splendid mall",
+          "Where: from the banquet",
+          "Add-On: of the classy hotel.",
+          "Add-On: with no problem.",
+          "Add-On: to get thick velvet.",
+          "Add-On: for a moment."
+        ]
+      },
+      "listen": {
+        "expect": [
+          "Student reads each phrase group accurately."
+        ],
+        "hint": "These are read-only phrase groups, not a drag-and-build activity."
+      }
+    },
+    {
+      "id": "L4.3.phrases.02",
+      "phase": "Phrases",
+      "label": "Create oral sentences",
+      "say": {
+        "text": [
+          "Go ahead and create two short sentences.",
+          "Create a sentence with three phrases.",
+          "Create two sentences that have four phrases.",
+          "Find and mark two multi-syllable words."
+        ]
+      },
+      "do": "Guide the student to combine WHO, DID WHAT, WHERE, and ADD-ON phrases orally, then mark two multi-syllable words.",
+      "listen": {
+        "expect": [
+          "Student combines phrase chunks into complete oral sentences and marks two multi-syllable words."
+        ],
+        "hint": "WHO + DID WHAT is the minimum complete sentence."
+      }
+    },
+    {
+      "id": "L4.3.phrasespell.01",
+      "phase": "Paper Spelling",
+      "label": "Spell phrases on paper",
+      "say": {
+        "text": [
+          "Now you're going to write some phrases.",
+          "The first phrase is FANCY CANDY. Repeat that phrase.",
+          "Now write it down. Figure out the tough words syllable by syllable.",
+          "Double check by reading exactly what you wrote.",
+          "Any word that you want help checking?"
+        ]
+      },
+      "do": "Dictate FANCY CANDY, BEHIND THE CLOSET, and THAT RUGBY HELMET. Then dictate each current Sight Word Spelling Deck word; if correct, put a check mark on that card.",
+      "listen": {
+        "expect": [
+          "fancy candy",
+          "behind the closet",
+          "that rugby helmet"
+        ],
+        "hint": "Student reads exactly what was written to double check."
+      },
+      "note": "Repeat-lesson phrases: STUDY DISCO, PREDICT ELVIS, KIDNAP TWENTY."
+    },
+    {
+      "id": "L4.3.sentread.01",
+      "phase": "Sentences",
+      "label": "Read and mark sentences",
+      "say": {
+        "text": [
+          "Now you'll read these sentences.",
+          "Read that first sentence to yourself.",
+          "Now read it out loud.",
+          "Let's mark each phrase.",
+          "Now read that sentence with phrasing."
+        ]
+      },
+      "do": "Use Student Page #28. Have the student read each sentence, mark WHO, DID WHAT, WHERE, and ADD-ON phrases where present, then reread with phrasing.",
+      "board": {
+        "mode": "sentences",
+        "items": [
+          "Justin Shelby led his mustang into the paddock with no problem.",
+          "Nancy and Sandy will connect at the splendid mall to get thick velvet.",
+          "Randy Quincy has spoken in the lobby of the classy hotel.",
+          "Mr. Henry Opmin was absent from the banquet for a moment.",
+          "The selfish student did disrupt the campus at recess with his silly slogan.",
+          "Mr. Nelson did consent to a tennis rematch with Calvin Ellis.",
+          "Benson felt he was too chubby to enlist in the Navy.",
+          "His sudden nifty comment was dandy."
+        ]
+      },
+      "listen": {
+        "expect": [
+          "Student reads each sentence accurately and rereads with phrase pauses."
+        ],
+        "hint": "Student may read silently first before reading aloud."
+      }
+    },
+    {
+      "id": "L4.3.sentread.02",
+      "phase": "Sentences",
+      "label": "Phrasing suggestions",
+      "do": "Use these phrase breaks if needed: Justin Shelby / led his mustang / into the paddock / with no problem. Nancy and Sandy / will connect / at the splendid mall / to get thick velvet. Randy Quincy / has spoken / in the lobby / of the classy hotel. Mr. Henry Opmin / was absent / from the banquet / for a moment.",
+      "note": "For remaining sentences, guide phrasing by meaning and punctuation."
+    },
+    {
+      "id": "L4.3.sentspell.01",
+      "phase": "Paper Spelling",
+      "label": "Spell sentences on paper",
+      "say": {
+        "text": [
+          "Now you're going to write three sentences.",
+          "The first sentence is THE FANCY CANDY WAS SPLENDID. Repeat that sentence.",
+          "Go ahead and write that sentence. On long words, tap each syllable.",
+          "Check your sentence by reading exactly what you wrote.",
+          "Does it start with a capital and end with punctuation?",
+          "Any word that you want help checking?"
+        ]
+      },
+      "do": "Dictate these sentences: THE FANCY CANDY WAS SPLENDID. BEHIND THE CLOSET IS A SECRET OBJECT. CALVIN DOESN'T WANT THAT RUGBY HELMET.",
+      "listen": {
+        "expect": [
+          "The fancy candy was splendid.",
+          "Behind the closet is a secret object.",
+          "Calvin doesn't want that rugby helmet."
+        ],
+        "hint": "Student repeats, writes, checks capitalization/punctuation, and reads exactly what was written."
+      },
+      "note": "Repeat-lesson sentences: WE STUDY DISCO WITH GUSTO. I PREDICT ELVIS WON'T DISRUPT MR. JANSEN. IT'S RISKY TO KIDNAP TWENTY FISH."
+    },
+    {
+      "id": "L4.3.stories.01",
+      "phase": "Stories",
+      "label": "Read story: The Tango",
+      "say": {
+        "text": [
+          "Now you're ready to read a story.",
+          "Preread the story and figure out the tough words. Then read it out loud to me."
+        ]
+      },
+      "do": "Give the student Basic Story #1.",
+      "board": {
+        "mode": "story",
+        "title": "The Tango",
+        "text": "Henry is shy but he did ask Penny to do the tango with him.\n\nHe's husky and a bit rusty, but Henry did his utmost to twist and swing with gusto. Once, when Henry did a fancy step, he got a kink in his biceps. When the tempo got frantic, Henry got frisky.\n\nPenny told me that she felt as if she were in combat when she did the tango with Henry."
+      },
+      "listen": {
+        "expect": [
+          "Student prereads, then reads the story aloud."
+        ],
+        "hint": "Ask comprehension questions as needed."
+      }
+    },
+    {
+      "id": "L4.3.stories.02",
+      "phase": "Stories",
+      "label": "Read story: The Insect",
+      "say": {
+        "text": "Here's another story. Read this one to yourself. Then in your own words, tell me what happened."
+      },
+      "do": "Give the student Basic Story #2 and ask for a retell after silent reading.",
+      "board": {
+        "mode": "story",
+        "title": "The Insect",
+        "text": "Patrick didn't expect to find a big, oblong insect in his basket. It made him grumpy to find a bug in his lunch.\n\nHe got a solid object and did try to make an impact on the pesky insect.\n\nThat was a risky thing to do. He upset the dish of relish and did smash his chicken nugget.\n\nWhat a mess!"
+      },
+      "listen": {
+        "expect": [
+          "Student silently reads and retells the story in their own words."
+        ],
+        "hint": "Ask comprehension questions as needed."
+      }
+    },
+    {
+      "id": "L4.3.stories.03",
+      "phase": "Stories",
+      "label": "Advanced story option: Fancy Banquet",
+      "say": {
+        "text": "If you are ready for an advanced story, preread this one and then read it out loud to me."
+      },
+      "do": "Use this advanced story if appropriate, or save it for a repeat or extension.",
+      "board": {
+        "mode": "story",
+        "title": "Fancy Banquet",
+        "text": "Molly is going back to the campus. There is to be a fancy banquet at a big hotel. Molly does want the old gang to envy her. She has a splendid princess dress of golden fabric with a lot of sequins. Will the class envy her as she goes gliding in with her strong Latin husband?\n\nNow that she is a success, she does expect they will accept her. Molly doesn't want them to focus on the messy mishap in her past. Do you think this plan will stop the gossip?"
+      },
+      "listen": {
+        "expect": [
+          "Student reads the advanced story aloud."
+        ],
+        "hint": "This is Student Page #31, Advanced."
+      }
+    },
+    {
+      "id": "L4.3.stories.04",
+      "phase": "Stories",
+      "label": "Advanced story option: Collect The Rent",
+      "say": {
+        "text": "Read this story to yourself. Then in your own words, tell me what happened."
+      },
+      "do": "Use this advanced story if appropriate, or save it for a repeat or extension.",
+      "board": {
+        "mode": "story",
+        "title": "Collect The Rent",
+        "text": "It has been hectic, and Eddy is grumpy. He still has to collect the rent on the duplex in Menlo. He'll have to contact that snippy dentist and insist on the cash now. He doesn't want to get huffy, but that man is a problem.\n\nOn his last visit to collect the rent, the dentist was flippant and testy. The dentist had said, \"You won't get a penny until you fix this shoddy shanty!\"\n\nEddy won't extend any credit. Eddy can't begin to fix the unit if he doesn't get the cash."
+      },
+      "listen": {
+        "expect": [
+          "Student silently reads and retells the advanced story."
+        ],
+        "hint": "This is Student Page #32, Advanced."
+      }
+    },
+    {
+      "id": "L4.3.close.01",
+      "phase": "Close",
+      "label": "Wrap up",
+      "say": {
+        "text": "You've done a lot of reading and spelling today. Thank you for working so hard."
+      },
+      "do": "Assign extra practice for work between tutoring sessions. Always do the first problem together before sending an extra practice page home.",
+      "board": {
+        "mode": "story",
+        "pageType": "worksheet",
+        "title": "Lesson 3 Extra Practice",
+        "subtitle": "Rendered from the real Book 4 manual pages before Lesson 4",
+        "text": "Show Lesson 3 Extra Practice #1 or #2. The student completes the selected paper copy outside the app.",
+        "images": [
+          {
+            "src": "assets/worksheets/level4/lesson3_extra_practice_1.png",
+            "label": "Lesson 3 Extra Practice #1",
+            "alt": "Lesson 3 Student Page 33 Extra Practice 1"
+          },
+          {
+            "src": "assets/worksheets/level4/lesson3_extra_practice_2.png",
+            "label": "Lesson 3 Extra Practice #2",
+            "alt": "Lesson 3 Student Page 34 Extra Practice 2"
+          }
+        ]
+      },
+      "note": "Default take-home choices: Lesson 3 Extra Practice #1, Lesson 3 Extra Practice #2, or practicing the Lesson 3 Read These Words page."
+    }
+  ]
+}

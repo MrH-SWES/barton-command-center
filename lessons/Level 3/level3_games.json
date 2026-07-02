@@ -1,0 +1,69 @@
+{
+  "level": 3,
+  "lesson": "games",
+  "title": "Level 3 Games",
+  "sections": [
+    {
+      "id": "Part_Intro",
+      "title": "Overview",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "These games can be played anytime during Book 3 (at the end of a lesson, or instead of a lesson if a student is tired/discouraged). All of these games use words with three sounds and short vowels.\n\nMost of these games require only imagination, or imagination plus the letter tiles. Please be aware that while younger students usually love playing games, some adult students do not. Games are optional."
+        }
+      ]
+    },
+    {
+      "id": "Game_A",
+      "title": "A: Hangman",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "Look through the lesson and pick a word that your student can read and spell. Use a combination of letter tiles and paper to play this game."
+        },
+        {
+          "type": "dialogue",
+          "text": "Let's play Hangman. I'll pick a word from today's lesson. Here is a strategy: since words in Book 3 have only one syllable, there will only be one vowel. Guess the vowel first, and as soon as one fits, don't guess any more vowels."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Here's another strategy to teach your student: If there's a blend at the beginning of a word, the second letter has a strong likelihood of being an L or an R."
+        },
+        {
+          "type": "action",
+          "text": "Have your student guess while looking at the tiles. After your student has guessed a letter (rightly or wrongly), remove that tile."
+        },
+        {
+          "type": "teacher_note",
+          "text": "After five guesses, give your student a clue as to the word's meaning. If he's still stuck, give a BIG clue by saying, 'This word rhymes with XXX.' Take turns."
+        }
+      ]
+    },
+    {
+      "id": "Game_B",
+      "title": "B: Homonyms Concentration",
+      "steps": [
+        {
+          "type": "action",
+          "text": "Cut a 3 x 5 index card in half. Write one word on each index card half. Start with 6-8 pairs."
+        },
+        {
+          "type": "dialogue",
+          "text": "I'm going to show you pairs of words that sound the same but mean different things. Do you know which one means [definition]?"
+        },
+        {
+          "type": "teacher_note",
+          "text": "If not, tell them it doesn't matter for the game. If so, ask: 'Do you know what the other one means?' If not, tell them."
+        },
+        {
+          "type": "action",
+          "text": "Play Concentration. Find matches (two words that are pronounced the same)."
+        },
+        {
+          "type": "teacher_note",
+          "text": "If they know the meanings of each word, offer a bonus point if they can use the word in a sentence. Offer 2 bonus points if they can use them both in the same sentence. Do your best to let them win.\n\nEASY PAIRS: by-buy, aunt-ant, be-bee, no-know, tail-tale, flu-flew, see-sea, right-write, rap-wrap, two-too, hi-high, cent-sent, here-hear, dear-deer, eight-ate, four-for, I-eye, one-won.\n\nCHALLENGING PAIRS: heal-heel, sum-some, knew-new, their-there, fare-fair, hair-hare, break-brake, cellar-seller, stair-stare, chute-shoot, cereal-serial, which-witch, bail-bale, plane-plain, creek-creak, bear-bare, heard-herd, cents-sense, weak-week, knight-night, dough-doe, hour-our, berry-bury, cheep-cheap, bored-board, steel-steal, chili-chilly."
+        }
+      ]
+    }
+  ]
+}

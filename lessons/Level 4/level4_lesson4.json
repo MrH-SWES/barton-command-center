@@ -1,0 +1,1106 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "level": 4,
+    "lesson": 4,
+    "title": "Spelling /k/ in the Middle",
+    "estMinutes": 50,
+    "author": "Barton Command Center",
+    "videoSpeedDefault": 1.5
+  },
+  "materials": [
+    "Book 3 Spelling Rules page",
+    "Letter tiles: two sets of A through Z plus Vowel Y, CH, TH, CK, SH, WH, TCH",
+    "Unit tiles: ALL, ANG, ING, ONG, UNG, ANK, INK, ONK, UNK, OLL, OLD, OLT, OST, ILD, IND",
+    "Binder paper and pencil",
+    "Word frame",
+    "Blank light-colored 5x8 index card",
+    "Several blank 3x5 index cards",
+    "Book 4 Lesson 4 student pages"
+  ],
+  "objectives": [
+    "Review Unit sounds and Lesson 3 extra practice before starting new material",
+    "Review Kiss the Cat and Milk Truck for /k/ at the beginning and end of words",
+    "Spell /ic/ at the end of multi-syllable words with IC using the Music Trick rule",
+    "Spell /k/ in the middle of multi-syllable words using the Picnic Chicken Basket rule",
+    "Read and spell real and nonsense words containing /k/ spellings",
+    "Read sight words, phrases, sentences, and stories from the Lesson 4 student pages"
+  ],
+  "beats": [
+    {
+      "id": "L4.4.prep.01",
+      "phase": "Prep",
+      "label": "Tutor overview",
+      "do": "Set out the Level 4 tile set, Book 3 Spelling Rules page, binder paper, pencil, word frame, blank 5x8 card, blank 3x5 cards, and Lesson 4 student pages.",
+      "note": "Tutor-only overview: Lesson 4 teaches spelling /k/ in multi-syllable words. At the beginning, Kiss the Cat still applies. At the end, Milk Truck applies unless the final sound is /ic/ in a multi-syllable word, which is spelled IC. In the middle, use C whenever possible; if C will not work, use CK right after a short vowel; otherwise use K."
+    },
+    {
+      "id": "L4.4.review.01",
+      "phase": "Review",
+      "label": "Review Units",
+      "say": {
+        "text": "Can you tell me the sound that each of these Units makes?"
+      },
+      "do": "Point one by one to the red Unit tiles in the same order used in prior lessons.",
+      "listen": {
+        "expect": [
+          "/all/",
+          "/ang/",
+          "/ing/",
+          "/ong/",
+          "/ung/",
+          "/ank/",
+          "/ink/",
+          "/onk/",
+          "/unk/",
+          "/oll/",
+          "/old/",
+          "/olt/",
+          "/ost/",
+          "/ild/",
+          "/ind/"
+        ],
+        "hint": "Student gives the unit sound, not individual letter names."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "units",
+        "prePlace": [],
+        "lock": true
+      },
+      "note": "The manual still reviews Units in Lesson 4; this procedure is discontinued starting in Lesson 5."
+    },
+    {
+      "id": "L4.4.review.02",
+      "phase": "Review",
+      "label": "Review Lesson 3 extra practice",
+      "say": {
+        "text": "Let's take a look at your extra practice page."
+      },
+      "do": "Review the completed Lesson 3 extra practice page for accuracy. If it was not done at home, have the student complete one Lesson 3 extra practice page now and read each word aloud.",
+      "listen": {
+        "expect": [
+          "Student reads the prior extra practice words accurately."
+        ],
+        "hint": "This is a gate before new teaching."
+      },
+      "board": {
+        "mode": "story",
+        "pageType": "worksheet",
+        "title": "Lesson 3 Extra Practice Review",
+        "subtitle": "Rendered from the real Book 4 manual pages before Lesson 4",
+        "text": "Review the paper page the student completed. If none was completed, use one Lesson 3 extra practice page now.",
+        "images": [
+          {
+            "src": "assets/worksheets/level4/lesson3_extra_practice_1.png",
+            "label": "Lesson 3 Extra Practice #1",
+            "alt": "Lesson 3 Student Page 33 Extra Practice 1"
+          },
+          {
+            "src": "assets/worksheets/level4/lesson3_extra_practice_2.png",
+            "label": "Lesson 3 Extra Practice #2",
+            "alt": "Lesson 3 Student Page 34 Extra Practice 2"
+          }
+        ]
+      },
+      "note": "If the student has difficulty completing the extra practice page accurately, do not go on with this lesson. Repeat Lesson 3 instead.",
+      "recovery": {
+        "trigger": "Student cannot complete the prior extra practice accurately.",
+        "prompts": [
+          "Let's pause and review Rule #2 before adding a spelling rule.",
+          "How many letters are between the vowels?",
+          "Do you split them, or is there a digraph, Unit, or Rotten Letter?"
+        ]
+      }
+    },
+    {
+      "id": "L4.4.warmup.01",
+      "phase": "Warm-up",
+      "label": "First-sound warm-up",
+      "say": {
+        "text": [
+          "Repeat this nonsense word, then make just its first sound.",
+          "Ready? RAD-NET.",
+          "Point to the tile that makes that sound."
+        ]
+      },
+      "do": "Dictate first-sound words: RAD-NET, SLING-UM, VO-TECK, WHIM-VID. After each word, the student repeats the whole word, says only the first sound, and points to the matching tile.",
+      "listen": {
+        "expect": [
+          "RAD-NET -> /r/",
+          "SLING-UM -> /s/",
+          "VO-TECK -> /v/",
+          "WHIM-VID -> /wh/"
+        ],
+        "hint": "The student repeats the whole nonsense word before isolating the first sound."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [],
+        "lock": true
+      }
+    },
+    {
+      "id": "L4.4.warmup.02",
+      "phase": "Warm-up",
+      "label": "Last-sound warm-up",
+      "say": {
+        "text": [
+          "Now I want the last sound.",
+          "Ready? RUN-VISH.",
+          "Point to that tile."
+        ]
+      },
+      "do": "Dictate last-sound words: RUN-VISH, TRI-CHUG, VAL-LO, PROT-CY. After each word, the student repeats the word, says the final sound, and points to the matching tile.",
+      "listen": {
+        "expect": [
+          "RUN-VISH -> /sh/",
+          "TRI-CHUG -> /g/",
+          "VAL-LO -> /oe/",
+          "PROT-CY -> /ee/"
+        ],
+        "hint": "Use the requested final sound, not the final letter name."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": true
+      }
+    },
+    {
+      "id": "L4.4.warmup.03",
+      "phase": "Warm-up",
+      "label": "End of first syllable",
+      "say": {
+        "text": [
+          "This time, I want the sound at the end of the first syllable.",
+          "Ready? PLA-TIC.",
+          "What is at the end of the first syllable?",
+          "Point to that tile."
+        ]
+      },
+      "do": "Dictate PLA-TIC, STRU-VIST, GLO-NET, and RIF-AMP. Student repeats each word, identifies the sound at the end of the first syllable, and points to the matching tile.",
+      "listen": {
+        "expect": [
+          "PLA-TIC -> /ae/",
+          "STRU-VIST -> /oo/ or /ee-oo/",
+          "GLO-NET -> /oe/",
+          "RIF-AMP -> /f/"
+        ],
+        "hint": "Target the final sound of the first syllable only."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "lock": true
+      }
+    },
+    {
+      "id": "L4.4.teach1.01",
+      "phase": "New Teaching",
+      "label": "Review /k/ at the beginning",
+      "say": {
+        "text": [
+          "Let's talk about spelling /k/ at the beginning of a word.",
+          "Which spelling rule would you use: FLOSS or Kiss the Cat?",
+          "What are my two choices for spelling /k/ at the beginning?",
+          "Which one should I use whenever I can?"
+        ]
+      },
+      "do": "Bring out Book 3's Spelling Rules page. Review the Kiss the Cat rule, then build blank-ABIN for CABIN and blank-ELLY for KELLY. Student chooses C for CABIN and K for KELLY.",
+      "listen": {
+        "expect": [
+          "Kiss the Cat",
+          "K or C",
+          "C",
+          "CABIN uses C because A is not a Watch Out vowel",
+          "KELLY uses K because E is a Watch Out vowel"
+        ],
+        "hint": "Kiss the Cat applies to the beginning of multi-syllable words too."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [
+          {
+            "word": "cabin",
+            "row": 0
+          },
+          {
+            "word": "kelly",
+            "row": 1
+          }
+        ],
+        "lock": true
+      }
+    },
+    {
+      "id": "L4.4.teach1.02",
+      "phase": "New Teaching",
+      "label": "Review /k/ at the end",
+      "say": {
+        "text": [
+          "Now let's talk about spelling /k/ at the end of a word.",
+          "That word says?",
+          "Which spelling rule is it following: FLOSS or Milk Truck?",
+          "Why did they use C-K?"
+        ]
+      },
+      "do": "Build DOCK, then PADDOCK. Emphasize that CK is used right after a short vowel at the end under the Milk Truck rule.",
+      "listen": {
+        "expect": [
+          "dock",
+          "Milk Truck",
+          "It comes right after a short vowel.",
+          "paddock"
+        ],
+        "hint": "Milk Truck still applies in multi-syllable words unless the ending is /ic/."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [
+          {
+            "word": "dock",
+            "row": 0
+          },
+          {
+            "word": "paddock",
+            "row": 1
+          }
+        ],
+        "lock": true
+      }
+    },
+    {
+      "id": "L4.4.teach1.03",
+      "phase": "New Teaching",
+      "label": "Music Trick: /ic/ at the end",
+      "say": {
+        "text": [
+          "There is one time that C-K won't happen.",
+          "Go ahead and divide that word.",
+          "What is different about the spelling of /k/ in this word?",
+          "If you hear /ic/ at the end of a multi-syllable word, it will always be spelled I-C."
+        ]
+      },
+      "do": "Build MUSIC and divide it as MU-SIC. Teach that multi-syllable words may end in C only when the final sound is /ic/. Then build PANIC and DRASTIC.",
+      "listen": {
+        "expect": [
+          "music",
+          "It ends with I-C.",
+          "panic",
+          "drastic",
+          "In a multi-syllable word, spell /ic/ as I-C."
+        ],
+        "hint": "This is the Music Trick rule."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "prePlace": [
+          {
+            "word": "music",
+            "row": 0
+          },
+          {
+            "word": "panic",
+            "row": 1
+          },
+          {
+            "word": "drastic",
+            "row": 2
+          }
+        ],
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.4.teach1.04",
+      "phase": "New Teaching",
+      "label": "Contrast one-syllable TRICK",
+      "say": {
+        "text": [
+          "That word should be TRICK. How many syllables in Trick?",
+          "Show me how you would spell /ic/ at the end of a one-syllable word.",
+          "The only time you spell /ic/ as I-C is at the end of a multi-syllable word.",
+          "How will the words Music Trick help you remember the spelling of /ic/?"
+        ]
+      },
+      "do": "Build TRICK, then place MUSIC in front of TRICK to name the Music Trick rule.",
+      "listen": {
+        "expect": [
+          "one",
+          "TRICK uses CK",
+          "In a multi-syllable word, spell /ic/ as I-C."
+        ],
+        "hint": "Do not use IC for one-syllable words like trick."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [
+          {
+            "word": "music",
+            "row": 0
+          },
+          {
+            "word": "trick",
+            "row": 1
+          }
+        ],
+        "lock": true
+      }
+    },
+    {
+      "id": "L4.4.rulepage.01",
+      "phase": "New Teaching",
+      "label": "Add Music Trick",
+      "say": {
+        "text": "Let's add Music Trick to your Book 4 spelling rules page."
+      },
+      "do": "Use Student Page #36 and review the Book 3 spelling rules page as needed.",
+      "listen": {
+        "expect": [
+          "Music Trick: in multi-syllable words, final /ic/ is spelled IC."
+        ],
+        "hint": "This is a reference page, not a drill."
+      },
+      "board": {
+        "mode": "story",
+        "pageType": "reference_page",
+        "title": "Student Page #36: Spelling Rules - Book 4",
+        "subtitle": "Music Trick",
+        "text": "Use the student's physical spelling rules page.",
+        "images": [
+          {
+            "src": "assets/reference/level4/book4_spelling_rules_student_page_36.png",
+            "label": "Student Page #36: Spelling Rules - Book 4",
+            "alt": "Book 4 Spelling Rules student page 36"
+          }
+        ],
+        "purpose": "reference"
+      }
+    },
+    {
+      "id": "L4.4.teach2.01",
+      "phase": "New Teaching",
+      "label": "Spell /k/ in the middle: try C",
+      "say": {
+        "text": [
+          "Now I want to show you how to combine those rules to spell /k/ in the middle of a multi-syllable word.",
+          "In the middle of a multi-syllable word, spell /k/ with a C whenever you can.",
+          "Would a C say /k/ in that spot?",
+          "How come?"
+        ]
+      },
+      "do": "Build FO-blank-US for FOCUS. Student replaces the blank with C because U is not a Watch Out vowel. Then build DE-blank-AL for DECAL and again use C.",
+      "listen": {
+        "expect": [
+          "Yes",
+          "U is not a Watch Out vowel",
+          "focus",
+          "decal",
+          "Spell /k/ with C whenever you can."
+        ],
+        "hint": "C is the first choice in the middle when it can say /k/."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [
+          {
+            "word": "focus",
+            "row": 0
+          },
+          {
+            "word": "decal",
+            "row": 1
+          }
+        ],
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.4.teach2.02",
+      "phase": "New Teaching",
+      "label": "If C will not work, try CK",
+      "say": {
+        "text": [
+          "That word should be JACKET. What is the rule?",
+          "Would a C work in that spot?",
+          "Why not?",
+          "If a C won't work, use C-K if it comes right after a short vowel."
+        ]
+      },
+      "do": "Build JA-blank-ET for JACKET. Student rejects C before E, then uses CK because the /k/ comes right after a short vowel. Repeat with STRICKEN.",
+      "listen": {
+        "expect": [
+          "Spell /k/ with C whenever you can.",
+          "No",
+          "E is a Watch Out vowel",
+          "CK",
+          "jacket",
+          "stricken"
+        ],
+        "hint": "CK can only be used right after a short vowel."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [
+          {
+            "word": "jacket",
+            "row": 0
+          },
+          {
+            "word": "stricken",
+            "row": 1
+          }
+        ],
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.4.teach2.03",
+      "phase": "New Teaching",
+      "label": "If C and CK will not work, use K",
+      "say": {
+        "text": [
+          "If a C won't work, try C-K. Could you use C-K in that spot?",
+          "Why not?",
+          "If you can't use C, and you can't use C-K, you have to use K."
+        ]
+      },
+      "do": "Build BAS-blank-ET for BASKET. Student rejects C before E, rejects CK because it is not right after a short vowel, then uses K. Repeat with PES-blank-Y for PESKY.",
+      "listen": {
+        "expect": [
+          "No",
+          "It is not right after a short vowel.",
+          "K",
+          "basket",
+          "pesky"
+        ],
+        "hint": "The order is C, CK, then K."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [
+          {
+            "word": "basket",
+            "row": 0
+          },
+          {
+            "word": "pesky",
+            "row": 1
+          }
+        ],
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.4.teach2.04",
+      "phase": "New Teaching",
+      "label": "Picnic Chicken Basket rule",
+      "say": {
+        "text": [
+          "Here is the complete rule for spelling /k/ in the middle of a multi-syllable word.",
+          "Use C whenever you can. If C won't work, try CK. If that won't work, use K.",
+          "So try C, C-K, then K. What is that order again?"
+        ]
+      },
+      "do": "Name the Picnic Chicken Basket rule and add it to Student Page #37. Connect Picnic to C, Chicken to CK, and Basket to K.",
+      "listen": {
+        "expect": [
+          "C, CK, K",
+          "Picnic Chicken Basket"
+        ],
+        "hint": "Do not move on until the student can state the order."
+      },
+      "board": {
+        "mode": "story",
+        "pageType": "reference_page",
+        "title": "Student Page #37: Spelling Rules - Book 4",
+        "subtitle": "Picnic Chicken Basket",
+        "text": "In the middle of a multi-syllable word, try C, then CK, then K.",
+        "images": [
+          {
+            "src": "assets/reference/level4/book4_spelling_rules_student_page_37.png",
+            "label": "Student Page #37: Spelling Rules - Book 4",
+            "alt": "Book 4 Spelling Rules student page 37"
+          }
+        ],
+        "purpose": "reference"
+      },
+      "note": "Picnic = C, Chicken = CK, Basket = K."
+    },
+    {
+      "id": "L4.4.realtiles.01",
+      "phase": "Tile Spelling",
+      "label": "Spell real words with tiles",
+      "say": {
+        "text": [
+          "The first word is GOTH-IC. Repeat that word.",
+          "Tap each syllable on the table.",
+          "Say just the first syllable, then bring down its tiles.",
+          "Say the second syllable, and bring down its tiles.",
+          "Now read each syllable exactly as it looks."
+        ]
+      },
+      "do": "Dictate GOTH-IC, KE-NO, HI-JACK, CAC-TUS, BRO-KEN, and SLACK-EN. For New Teaching #2 words, have the student use a blank tile for /k/, finish the word, then return to the blank and choose C, CK, or K with a reason.",
+      "listen": {
+        "expect": [
+          "gothic",
+          "keno",
+          "hijack",
+          "cactus",
+          "broken",
+          "slacken"
+        ],
+        "hint": "Student taps syllables, spells one syllable at a time, then reads to check."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [],
+        "lock": false
+      },
+      "note": "Repeat-lesson words: MED-IC, CRICK-ET, FRIS-KY, GRID-LOCK, CRO-CUS."
+    },
+    {
+      "id": "L4.4.nonsense.read.01",
+      "phase": "Tile Reading",
+      "label": "Read nonsense words on tiles",
+      "say": {
+        "text": [
+          "Divide that word into syllables.",
+          "Say each syllable exactly as it looks.",
+          "Now say it like a word."
+        ]
+      },
+      "do": "Build and have the student divide/read CLOPIC as CLO-PIC, KEPTY as KEP-TY, ROMACK as RO-MACK, SLUPKY as SLUP-KY, SPACKEN as SPACK-EN, and SHOCRET as SHO-CRET.",
+      "listen": {
+        "expect": [
+          "Student divides and reads each nonsense word."
+        ],
+        "hint": "For CK in the middle, move CK with the first vowel because CK is only used right after a short vowel."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "prePlace": [
+          {
+            "word": "clopic",
+            "row": 0
+          }
+        ],
+        "lock": false
+      },
+      "note": "Repeat-lesson words include RUC-TO, BLUCK-IN, CRE-PLIC, THO-KE, and NIS-KEN."
+    },
+    {
+      "id": "L4.4.nonsense.spell.01",
+      "phase": "Tile Spelling",
+      "label": "Spell nonsense words with tiles",
+      "say": {
+        "text": [
+          "Now it's your turn to spell nonsense words.",
+          "The first word is CON-PIC. Repeat that word.",
+          "Tap each syllable on the table.",
+          "Say just the first syllable, then bring down its tiles.",
+          "Say just the second syllable, then bring down its tiles.",
+          "Now read each syllable exactly as it looks."
+        ]
+      },
+      "do": "Dictate CON-PIC, KEL-IC, MUCK-ET, POC-TIC, RUN-KET, KING-TACK, and GRU-LACK. Listen carefully that sounds are in the correct syllable.",
+      "listen": {
+        "expect": [
+          "conpic",
+          "kelic",
+          "mucket",
+          "poctic",
+          "runket",
+          "kingtack",
+          "grulack"
+        ],
+        "hint": "Student spells one syllable at a time and leaves space between syllables."
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [],
+        "lock": false
+      },
+      "note": "Move tiles out of the way after this procedure. Repeat-lesson words: LAC-TY, SCAN-IC, PRACK-ET, CRAS-KEN."
+    },
+    {
+      "id": "L4.4.words.01",
+      "phase": "Paper Reading",
+      "label": "Read words through word frame",
+      "say": {
+        "text": [
+          "Now you're going to read words through the word frame.",
+          "If you know that word for sure, just say it.",
+          "If you don't know the word, use your pencil to help you divide it."
+        ]
+      },
+      "do": "Use Student Page #38. If the student is unsure or inaccurate, have the student dot or highlight vowels, count the letters between them, draw the dividing line, pronounce each syllable exactly as divided, then say it fast like a word.",
+      "board": {
+        "mode": "word_frame",
+        "words": [
+          "smoky",
+          "toxic",
+          "flanpack",
+          "comic",
+          "Cossack",
+          "kencot",
+          "kitten",
+          "Cuban",
+          "placken",
+          "civic",
+          "sprocket",
+          "sniskit",
+          "fresco",
+          "crisis",
+          "clacud",
+          "cubic",
+          "picket",
+          "dracnid",
+          "reject",
+          "bedrock",
+          "olaken"
+        ]
+      },
+      "listen": {
+        "expect": [
+          "Student reads the Lesson 4 word list accurately."
+        ],
+        "hint": "After reading, optionally ask why /k/ is spelled that way in selected words."
+      },
+      "recovery": {
+        "trigger": "Student is unsure or reads a word inaccurately.",
+        "prompts": [
+          "Put a dot below each vowel.",
+          "How many letters are between the dots?",
+          "Divide the word the most common way.",
+          "Where is the /k/ sound?",
+          "Which /k/ spelling rule applies?"
+        ]
+      }
+    },
+    {
+      "id": "L4.4.paper.01",
+      "phase": "Paper Spelling",
+      "label": "Spell real words on paper",
+      "say": {
+        "text": [
+          "Next, you'll spell on paper, syllable by syllable.",
+          "The first word is CLIN-IC. Repeat that word.",
+          "Tap each syllable on the table.",
+          "Say just the first syllable, then write it down.",
+          "Now say just the second syllable, and write it down.",
+          "To double check, read that word exactly as written."
+        ]
+      },
+      "do": "Dictate CLIN-IC, FLAP-JACK, BRIS-KET, RACK-ET, and PIC-NIC.",
+      "listen": {
+        "expect": [
+          "clinic",
+          "flapjack",
+          "brisket",
+          "racket",
+          "picnic"
+        ],
+        "hint": "Student repeats, taps syllables, writes one syllable at a time, and reads back."
+      },
+      "board": {
+        "mode": "clear"
+      }
+    },
+    {
+      "id": "L4.4.paper.02",
+      "phase": "Paper Spelling",
+      "label": "Spell nonsense words on paper",
+      "say": {
+        "text": "Now spell these nonsense words on paper. Repeat the word, tap each syllable, write one syllable at a time, then read the word."
+      },
+      "do": "Dictate NAC-TO, RUT-KY, FRACK-ET, TU-LIC, and SNIC-BO.",
+      "listen": {
+        "expect": [
+          "nacto",
+          "rutky",
+          "fracket",
+          "tulic",
+          "snicbo"
+        ],
+        "hint": "Student uses the same syllable-by-syllable paper spelling procedure."
+      },
+      "note": "Repeat-lesson real words: RIS-KY, DE-FROCK, TAC-TIC, TO-KEN, POCK-ET. Repeat-lesson nonsense words: TU-BIC, BAN-CY, GACK-EN, MAS-KET, NAC-PACK."
+    },
+    {
+      "id": "L4.4.sightread.01",
+      "phase": "Sight Words",
+      "label": "Read new sight word list",
+      "say": {
+        "text": "Let's look at some more common Sight words to see which ones we need to practice."
+      },
+      "do": "Give Student Page #39, place the word frame around the first word, and have the student read down each column. Track correct and incorrect responses on the Book 4 Sight Word Tracking Sheet.",
+      "board": {
+        "mode": "sight_words",
+        "words": [
+          "very",
+          "sure",
+          "mother",
+          "brother",
+          "only",
+          "push",
+          "nothing",
+          "about",
+          "because",
+          "father",
+          "friend",
+          "full",
+          "busy",
+          "love"
+        ]
+      },
+      "listen": {
+        "expect": [
+          "Student reads each sight word."
+        ],
+        "hint": "Unknown words become Reading Deck index cards."
+      },
+      "recovery": {
+        "trigger": "Student misreads a sight word.",
+        "prompts": [
+          "I'll write that one on a card so we can practice it.",
+          "Put a picture or clue in the lower-left corner to remind you of this word."
+        ]
+      }
+    },
+    {
+      "id": "L4.4.sightread.02",
+      "phase": "Sight Words",
+      "label": "Build and review Reading Deck",
+      "say": {
+        "text": [
+          "Wow. I'm impressed. You knew most of those words.",
+          "I'm going to write the ones you didn't know on index cards so we can practice.",
+          "Put your thumb over the clue and read the word.",
+          "Now do it one more time, without looking at the clues, as fast as you can."
+        ]
+      },
+      "do": "Make an index card for each misread word. Say the unknown word as you write it. Merge new cards with the existing Sight Word Reading Deck and review.",
+      "listen": {
+        "expect": [
+          "Student reads each Reading Deck card, first with clue access and then quickly without clues."
+        ],
+        "hint": "These cards are reviewed at each lesson."
+      },
+      "note": "Bring out any existing Sight Word Reading Deck cards and merge them into one deck."
+    },
+    {
+      "id": "L4.4.sightspell.01",
+      "phase": "Sight Words",
+      "label": "Review Sight Word Spelling Cards",
+      "say": {
+        "text": [
+          "Let's review your tricky Sight words.",
+          "What's this word?",
+          "Why is that letter in red?",
+          "Stare at it until you can see it in your mind with your eyes closed.",
+          "Look at that blank wall and see that word. How do you spell it?",
+          "Now write that word on the desk using your index and middle fingers as the pen.",
+          "As a last step, write it on paper, saying each letter as you write it. Then underline the red letter."
+        ]
+      },
+      "do": "Hold up each Sight Word Spelling Card. Student reads it, explains the red letter, sees-and-spells twice on the wall, sees-and-writes twice on the table, then writes it twice on paper.",
+      "listen": {
+        "expect": [
+          "Student reads, explains, visualizes, spells, writes, and underlines the red letter."
+        ],
+        "hint": "Later, after phrase spelling, dictate the current sight words and add a check mark for correct spelling."
+      },
+      "note": "Retire a Sight Word Spelling card after three check marks from three separate tutoring sessions, then choose a replacement from the Sight Word Check List."
+    },
+    {
+      "id": "L4.4.phrases.01",
+      "phase": "Phrases",
+      "label": "Read phrase groups",
+      "say": {
+        "text": [
+          "Now you'll read some phrases.",
+          "This group of phrases tells WHO. Read each phrase to me.",
+          "These phrases tell DID WHAT. Read each phrase to me.",
+          "Now read the WHERE phrases.",
+          "Now read each ADD-ON phrase."
+        ]
+      },
+      "do": "Use Student Page #40. Have the student read all phrase groups, create oral sentences from them, and find and divide two multi-syllable words.",
+      "board": {
+        "mode": "sentences",
+        "items": [
+          "Who: The chubby Viking",
+          "Who: Kenneth Cronin",
+          "Who: Trusty Mr. Ruskin",
+          "Who: My frisky kitten",
+          "Did What: lost a gold locket",
+          "Did What: put a plastic robot",
+          "Did What: did frolic",
+          "Did What: ran a toxic dump",
+          "Where: in the Congo",
+          "Where: behind a hemlock",
+          "Where: next to a rocket",
+          "Where: on a frozen pond",
+          "Add-On: and it's not a secret.",
+          "Add-On: because he's crazy.",
+          "Add-On: because it was foggy.",
+          "Add-On: that was broken."
+        ]
+      },
+      "listen": {
+        "expect": [
+          "Student reads each phrase group accurately."
+        ],
+        "hint": "These are read-only phrase groups, not a drag-and-build activity."
+      }
+    },
+    {
+      "id": "L4.4.phrases.02",
+      "phase": "Phrases",
+      "label": "Create oral sentences",
+      "say": {
+        "text": [
+          "Go ahead and create two short sentences.",
+          "Create a sentence with three phrases.",
+          "Create two sentences that have four phrases.",
+          "Find and mark two multi-syllable words."
+        ]
+      },
+      "do": "Guide the student to combine WHO, DID WHAT, WHERE, and ADD-ON phrases orally, then mark two multi-syllable words.",
+      "listen": {
+        "expect": [
+          "Student combines phrase chunks into complete oral sentences and marks two multi-syllable words."
+        ],
+        "hint": "WHO + DID WHAT is the minimum complete sentence."
+      }
+    },
+    {
+      "id": "L4.4.phrasespell.01",
+      "phase": "Paper Spelling",
+      "label": "Spell phrases on paper",
+      "say": {
+        "text": [
+          "Now you're going to write some phrases.",
+          "The first phrase is IN THE CASKET. Repeat that phrase.",
+          "Now write it down. Figure out the tough words syllable by syllable.",
+          "Double check by reading exactly what you wrote.",
+          "Any word that you want help checking?"
+        ]
+      },
+      "do": "Dictate IN THE CASKET, THAT TOKEN, and FELT FRANTIC. Then dictate each current Sight Word Spelling Deck word; if correct, put a check mark on that card.",
+      "listen": {
+        "expect": [
+          "in the casket",
+          "that token",
+          "felt frantic"
+        ],
+        "hint": "Student reads exactly what was written to double check."
+      },
+      "note": "Repeat-lesson phrases: COSMIC DUST, HASN'T SPOKEN, IN THE BUCKET."
+    },
+    {
+      "id": "L4.4.sentread.01",
+      "phase": "Sentences",
+      "label": "Read and mark sentences",
+      "say": {
+        "text": [
+          "Now you'll read these sentences.",
+          "Read that first sentence to yourself.",
+          "Now read it out loud.",
+          "Let's mark each phrase.",
+          "Now read that sentence with phrasing."
+        ]
+      },
+      "do": "Use Student Page #41. Have the student read each sentence, mark WHO, DID WHAT, WHERE, and ADD-ON phrases where present, then reread with phrasing.",
+      "board": {
+        "mode": "sentences",
+        "items": [
+          "The chubby Viking ran a toxic dump in the Congo because he's crazy.",
+          "Trusty Mr. Ruskin lost a gold locket on a frozen pond because it was foggy.",
+          "Kenneth Cronin put a plastic robot next to a rocket that was broken.",
+          "My frisky kitten did frolic behind a hemlock, and it's not a secret.",
+          "The Polish comic did protect Mr. Hancock with his broken tennis racket.",
+          "Janet Reno went on a junket to the tropics because it was her civic duty.",
+          "Lanky Jason will contact his friend Justin at his funky rustic cabin and go on a picnic."
+        ]
+      },
+      "listen": {
+        "expect": [
+          "Student reads each sentence accurately and rereads with phrase pauses."
+        ],
+        "hint": "Student may read silently first before reading aloud."
+      }
+    },
+    {
+      "id": "L4.4.sentread.02",
+      "phase": "Sentences",
+      "label": "Phrasing suggestions",
+      "do": "Use these phrase breaks if needed: The chubby Viking / ran a toxic dump / in the Congo / because he's crazy. Trusty Mr. Ruskin / lost a gold locket / on a frozen pond / because it was foggy. Kenneth Cronin / put a plastic robot / next to a rocket / that was broken. My frisky kitten / did frolic / behind a hemlock / and it's not a secret.",
+      "note": "For remaining sentences, guide phrasing by meaning and punctuation."
+    },
+    {
+      "id": "L4.4.sentspell.01",
+      "phase": "Paper Spelling",
+      "label": "Spell sentences on paper",
+      "say": {
+        "text": [
+          "Now you're going to write three sentences.",
+          "The first sentence is THE CRAZY CRICKET HID IN THE CASKET. Repeat that sentence.",
+          "Go ahead and write that sentence. On longer words, tap each syllable.",
+          "Check your sentence by reading exactly what you wrote.",
+          "Does it start with a capital and end with punctuation?",
+          "Any word that you want help checking?"
+        ]
+      },
+      "do": "Dictate these sentences: THE CRAZY CRICKET HID IN THE CASKET. THAT TOKEN OF CUPID IS TACKY. KEVIN FELT FRANTIC WHEN HE LOST HIS CHICKEN.",
+      "listen": {
+        "expect": [
+          "The crazy cricket hid in the casket.",
+          "That token of Cupid is tacky.",
+          "Kevin felt frantic when he lost his chicken."
+        ],
+        "hint": "Student repeats, writes, checks capitalization/punctuation, and reads exactly what was written."
+      },
+      "note": "Repeat-lesson sentences: WILL COSMIC DUST FALL ON THE SILKEN BLANKET? KEVIN HASN'T SPOKEN TO MR. LUFKIN. THE HUSKY LAD PUT A STICKY WICKET IN THE BUCKET."
+    },
+    {
+      "id": "L4.4.stories.01",
+      "phase": "Stories",
+      "label": "Read story: A Hippo?",
+      "say": {
+        "text": [
+          "Now you're ready to read a story.",
+          "Preread the story and figure out the tough words. Then read it out loud to me."
+        ]
+      },
+      "do": "Give the student Basic Story #1.",
+      "board": {
+        "mode": "story",
+        "title": "A Hippo?",
+        "text": "What would you do if a hippo went for a swim next to you? I suspect you would object.\n\nWould you jump from the pond in a flash and make a frantic dash to the city?\n\nWould you ask your brother to pop him with his pellet gun?\n\nWould you pick him up with a winch and drop him on a cactus patch?\n\nWould you try a hocus-pocus trick and command the hippo to vanish?\n\nOr would you extend your hand and try to be a friend? Would you ask that hippo to visit again?"
+      },
+      "listen": {
+        "expect": [
+          "Student prereads, then reads the story aloud."
+        ],
+        "hint": "Ask comprehension questions as needed."
+      }
+    },
+    {
+      "id": "L4.4.stories.02",
+      "phase": "Stories",
+      "label": "Read story: My Friend Jenny",
+      "say": {
+        "text": "Here's another story. Read this one to yourself. Then in your own words, tell me what happened."
+      },
+      "do": "Give the student Basic Story #2 and ask for a retell after silent reading.",
+      "board": {
+        "mode": "story",
+        "title": "My Friend Jenny",
+        "text": "Jenny says she is my friend, but I'm not sure about that.\n\nWhen I get a small bonus, I'm happy. But Jenny is cross. She says I shouldn't accept such a skimpy bonus.\n\nWhen I want to discuss a problem, Jenny will dismiss it. She says, \"You wouldn't have a problem if you were less timid.\"\n\nWhen I put on my new silk dress, Jenny was a critic. She said, \"The fabric is a bit shoddy. I expect it would be spiffy if you were not so skinny.\"\n\nCould it be that Jenny doesn't know how to be a friend?"
+      },
+      "listen": {
+        "expect": [
+          "Student silently reads and retells the story in their own words."
+        ],
+        "hint": "Ask comprehension questions as needed."
+      }
+    },
+    {
+      "id": "L4.4.stories.03",
+      "phase": "Stories",
+      "label": "Advanced story option: The Lotto Ticket",
+      "say": {
+        "text": "If you are ready for an advanced story, preread this one and then read it out loud to me."
+      },
+      "do": "Use this advanced story if appropriate, or save it for a repeat or extension.",
+      "board": {
+        "mode": "story",
+        "title": "The Lotto Ticket",
+        "text": "Nathan did stop at the shop to pick up a lotto ticket. It only cost one buck. If Nathan should win the pot, he would be rich. It would be fun to quit his job. He would stick some of the cash in the bank and pack his bag. Nathan would take Shannon on a long trip.\n\nShannon is a skeptic. She does not expect to win any cash with a lotto ticket. Shannon said, \"It is not prudent to spend one cent on such a scam. If you wish to be a rich man, your best tactic is to get a bond or some stock.\"\n\nNathan said, \"With any plan, one must have a lot of luck to get rich.\""
+      },
+      "listen": {
+        "expect": [
+          "Student reads the advanced story aloud."
+        ],
+        "hint": "This is Student Page #44, Advanced."
+      }
+    },
+    {
+      "id": "L4.4.stories.04",
+      "phase": "Stories",
+      "label": "Advanced story option: The Picnic",
+      "say": {
+        "text": "Read this story to yourself. Then in your own words, tell me what happened."
+      },
+      "do": "Use this advanced story if appropriate, or save it for a repeat or extension.",
+      "board": {
+        "mode": "story",
+        "title": "The Picnic",
+        "text": "The picnic was to be held in the annex. All of the Irish men would be there.\n\nKevin did not want to miss it. He did select an Irish dish with a shamrock on the lid. He didn't forget to tuck an Irish linen napkin into his basket.\n\nHe'd have lunch with his friend, Duncan. They had come from Belfast when they were lads. They would sit on a blanket on the grass and gab about the past.\n\nAn Irish band would present a program of classic Irish music. An Irish lad would do a jig. But Kevin was too old to kick up his legs. Kevin and Duncan would be content to sit and watch."
+      },
+      "listen": {
+        "expect": [
+          "Student silently reads and retells the advanced story."
+        ],
+        "hint": "This is Student Page #45, Advanced."
+      }
+    },
+    {
+      "id": "L4.4.close.01",
+      "phase": "Close",
+      "label": "Wrap up",
+      "say": {
+        "text": "You've done a lot of reading and spelling today. Thank you for working so hard."
+      },
+      "do": "Assign extra practice for work between tutoring sessions. Always do the first problem together before sending an extra practice page home.",
+      "board": {
+        "mode": "story",
+        "pageType": "worksheet",
+        "title": "Lesson 4 Extra Practice",
+        "subtitle": "Rendered from the real Book 4 manual pages before Lesson 5",
+        "text": "Show Lesson 4 Extra Practice #1 or #2. The student completes the selected paper copy outside the app.",
+        "images": [
+          {
+            "src": "assets/worksheets/level4/lesson4_extra_practice_1.png",
+            "label": "Lesson 4 Extra Practice #1",
+            "alt": "Lesson 4 Student Page 46 Extra Practice 1"
+          },
+          {
+            "src": "assets/worksheets/level4/lesson4_extra_practice_2.png",
+            "label": "Lesson 4 Extra Practice #2",
+            "alt": "Lesson 4 Student Page 47 Extra Practice 2"
+          }
+        ]
+      },
+      "note": "Default take-home choices: Lesson 4 Extra Practice #1, Lesson 4 Extra Practice #2, or practicing the Lesson 4 Read These Words page. The manual notes two high-level vocabulary words on Extra Practice #1: rubric means a rule-based system, and aspic is a type of cold jellied appetizer or salad."
+    }
+  ]
+}

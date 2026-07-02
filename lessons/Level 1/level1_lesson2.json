@@ -1,0 +1,288 @@
+{
+  "level": 1,
+  "lesson": 2,
+  "title": "Breaking CVC Words",
+  "sections": [
+    {
+      "id": "Part_Intro",
+      "title": "Lesson Overview",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "Materials Needed: Colored tiles, three each of five different colors.\\n\\nOverview: Working with nonsense words that have three sounds (CVC). Consonant-Vowel-Consonant. Use ONLY short vowel sounds."
+        }
+      ]
+    },
+    {
+      "id": "Part_A",
+      "title": "A: Break Apart CVC Words",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to break apart slightly longer words. Ready? The first word is KOV."
+        },
+        {
+          "type": "action",
+          "text": "Expected: KOV"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it very slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /k/-/oooo/-/v/"
+        },
+        {
+          "type": "dialogue",
+          "text": "How many sounds did you hear in that word?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: 3"
+        },
+        {
+          "type": "dialogue",
+          "text": "Good listening. So pull down the tiles."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "k",
+            "o",
+            "v"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Now touch-and-say each sound."
+        },
+        {
+          "type": "action",
+          "text": "Student touches the first tile and says /k/, touches the second tile and says /o/, then touches the third tile and says /v/."
+        },
+        {
+          "type": "dialogue",
+          "text": "That's all I want you to do, so wash the sound off those tiles."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining words one by one: BIP, VASH, SHOSH, THAJ, RIN, ZOF. Use Extra Practice words if student struggles."
+        }
+      ]
+    },
+    {
+      "id": "Part_B",
+      "title": "B: Break-Replace-Remove",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "This time, after you break a word I'll change a sound. Then we'll do a new step. Ready? The first word is FIM."
+        },
+        {
+          "type": "action",
+          "text": "Expected: FIM"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it again ... very slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /f/-/iiii/-/m/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Pull down the tiles."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "f",
+            "i",
+            "m"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Touch-and-say."
+        },
+        {
+          "type": "action",
+          "text": "Student touches first tile and says /f/, touches second tile and says /i/, touches third tile and says /m/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now watch carefully. I'm going to change this sound to /a/."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "f",
+            "a",
+            "m"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "To figure out the new word, touch-and-say those sounds."
+        },
+        {
+          "type": "action",
+          "text": "Student touches first tile and says /f/, touches second tile and says /a/, touches third tile and says /m/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly blend them into a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /f/-/aaaa/-/m/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it fast like a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: FAM"
+        },
+        {
+          "type": "dialogue",
+          "text": "Here's the new step. Watch carefully. I'm going to remove this tile."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "f",
+            "a"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Touch-and-say the sounds - just those sounds."
+        },
+        {
+          "type": "action",
+          "text": "Student touches first tile and says /f/, touches second tile and says /a/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly blend."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /f/-/aaaa/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Fast like a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: FA"
+        },
+        {
+          "type": "dialogue",
+          "text": "Great. Go ahead and wash off those tiles."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining sets: THAP -> THIP -> THI, LOM -> DOM -> DO, DAV -> DAP -> AP, MISH -> MOSH -> OSH."
+        }
+      ]
+    },
+    {
+      "id": "Part_C",
+      "title": "C: Compare Two Words",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now we're going to compare two words. The first word is THOP."
+        },
+        {
+          "type": "action",
+          "text": "Expected: THOP"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /th/-/oooo/-/p/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Touch-and-say using the first row."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "th",
+            "o",
+            "p"
+          ]
+        },
+        {
+          "type": "action",
+          "text": "Student touches first tile and says /th/, touches second tile and says /o/, touches third tile and says /p/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Good. The second word is THOK."
+        },
+        {
+          "type": "action",
+          "text": "Expected: THOK"
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /th/-/oooo/-/k/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Touch-and-say using the second row."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "th",
+            "o",
+            "k"
+          ]
+        },
+        {
+          "type": "action",
+          "text": "Student touches first tile and says /th/, touches second tile and says /o/, touches third tile and says /k/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Here's the tough part. Touch-and-say until you know whether these two are different, these two are different, or these two are different. THOP. THOK."
+        },
+        {
+          "type": "action",
+          "text": "Expected: The last sounds are different."
+        },
+        {
+          "type": "dialogue",
+          "text": "Perfect. Now go ahead and wash off those tiles."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining sets: LIB & LOB, PIV & DIV, NIM & NISH, KOV & TOV, RAJ & RAB."
+        }
+      ]
+    }
+  ]
+}

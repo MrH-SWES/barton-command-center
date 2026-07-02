@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+  <title>Reading Tile Board (Fixed Drag)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    :root{
+      --bg:#e5e7eb; --ink:#111827;
+      --tray:#3f3f46; --tab:#6b7280; --tab-dim:#9ca3af; --tab-ink:#fff;
+      --shadow:rgba(0,0,0,.25);
+    }
+    body{font-family:'Lexend',sans-serif;background:var(--bg);color:var(--ink);height:100vh;overflow:hidden;touch-action:manipulation}
+
+    #app{position:relative;height:100%;width:100%}
+
+    #wordPane{position:absolute;inset:0 0 24vh 0;background:transparent;overflow:hidden}
+    .hint{position:absolute;left:50%;top:40%;transform:translate(-50%,-50%);color:#6b7280;font-size:17px;text-align:center;pointer-events:none}
+    .sub-hint{display:block;font-size:14px;margin-top:8px;opacity:0.7}
+
+    .tile{width:52px;height:52px;border:2px solid #374151;border-radius:6px;cursor:grab;display:flex;align-items:center;justify-content:center;font-weight:700;user-select:none;box-shadow:0 2px 4px rgba(0,0,0,.25);flex-shrink:0;touch-action:none;background:white}
+    .tile:active{cursor:grabbing}
+    .tile.blue{background:#60a5fa}.tile.yellow{background:#fbbf24}.tile.red{background:#f87171}.tile.green{background:#4ade80}.tile.orange{background:#fb923c}.tile.purple{background:#a78bfa}
+    
+    .tile.dragging{position:fixed;z-index:1000;opacity:.95;pointer-events:none;will-change:transform;left:0;top:0}
+    .word-pane-tile{position:absolute}
+
+    /* Ghost Tile Style */
+    .ghost-tile {
+      position: absolute;
+      width: 52px; height: 52px;
+      border: 2px dashed #6b7280;
+      border-radius: 6px;
+      background: rgba(255, 255, 255, 0.3);
+      z-index: 5;
+      pointer-events: none;
+    }
+
+    #controls{position:absolute;top:8px;left:8px;display:flex;gap:6px;z-index:10}
+    .btn{background:#111827;color:#fff;border:none;border-radius:6px;padding:6px 10px;cursor:pointer;font-weight:600;font-size:13px;box-shadow:0 2px 6px var(--shadow)}
+    .btn.secondary{background:#374151}.btn.danger{background:#dc2626}.btn.primary{background:#2563eb}
+    .btn.speaking{background:#16a34a; transition: background 0.2s;}
+
+    #alphabetSection{position:absolute;left:0;right:0;bottom:24vh;background:#f9fafb;padding:4px 6px;pointer-events:auto;box-shadow:0 2px 6px rgba(0,0,0,.15);z-index:15;display:flex;flex-direction:column;gap:3px}
+    .alphabet-row{display:flex;gap:3px;justify-content:center;flex-wrap:wrap}
+
+    #bottomDock{position:absolute;left:0;right:0;bottom:0;height:24vh;pointer-events:none;z-index:20;display:flex;flex-direction:column}
+    #drawerTabs{display:flex;background:var(--tab-dim);pointer-events:auto;border-bottom:2px solid var(--shadow);overflow-x:auto;flex-shrink:0}
+    .drawer-tab{padding:6px 12px;background:var(--tab);border:none;cursor:pointer;font-weight:700;font-size:12px;white-space:nowrap;border-right:1px solid rgba(0,0,0,.2);transition:background .2s;flex-shrink:0;font-family:'Lexend',sans-serif}
+    .drawer-tab:hover{background:#52525b}
+    .drawer-tab.active{background:var(--tray);border-bottom:2px solid var(--tray)}
+    .drawer-tab.blue-text{color:#60a5fa}.drawer-tab.yellow-text{color:#fbbf24}.drawer-tab.red-text{color:#f87171}.drawer-tab.green-text{color:#4ade80}.drawer-tab.orange-text{color:#fb923c}.drawer-tab.purple-text{color:#a78bfa}
+
+    #baseTiles{flex:1;background:var(--tray);padding:4px 6px;pointer-events:auto;box-shadow:0 -4px 12px rgba(0,0,0,.3);overflow-x:auto;overflow-y:hidden;display:flex;align-items:center}
+    .base-row{display:flex;flex-wrap:nowrap;gap:3px;justify-content:center;width:100%}
+
+    @media screen and (max-width: 1440px) { .hint{font-size:16px} #controls{top:6px;left:6px} }
+    @media screen and (max-width: 1366px) { #bottomDock{height:22vh} #wordPane{inset:0 0 22vh 0} #alphabetSection{bottom:22vh;padding:3px 5px;gap:2px} .alphabet-row{gap:2px} .drawer-tab{padding:5px 10px;font-size:11px} #baseTiles{padding:4px 5px} .base-row{gap:2px} .hint{font-size:15px} }
+    @media screen and (max-height: 800px) { #bottomDock{height:20vh} #wordPane{inset:0 0 20vh 0} #alphabetSection{bottom:20vh;padding:3px 5px} }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div id="wordPane">
+      <div class="hint">Drag tiles here to build words.</div>
+      <div id="controls">
+        <select id="lessonSelect" class="btn secondary">
+          <option value="2">Book 2</option><option value="3">Book 3</option><option value="4">Book 4</option>
+          <option value="5">Book 5</option><option value="6">Book 6</option><option value="7">Book 7</option>
+          <option value="8">Book 8</option><option value="9">Book 9</option><option value="10">Book 10</option>
+        </select>
+        <button id="speakButton" class="btn primary">Speak 🔊</button>
+        <button id="resetButton" class="btn danger">Reset</button>
+      </div>
+    </div>
+
+    <div id="alphabetSection">
+      <div class="alphabet-row" id="alphabetRow1"></div>
+      <div class="alphabet-row" id="alphabetRow2"></div>
+    </div>
+
+    <div id="bottomDock">
+      <div id="drawerTabs">
+        <button class="drawer-tab active blue-text" data-drawer="consonants">Consonants</button>
+        <button class="drawer-tab yellow-text" data-drawer="vowels">Vowels</button>
+        <button class="drawer-tab red-text" data-drawer="units">Units</button>
+        <button class="drawer-tab green-text" data-drawer="endings">Endings</button>
+        <button class="drawer-tab orange-text" data-drawer="prefixes">Prefixes</button>
+        <button class="drawer-tab purple-text" data-drawer="roots">Roots</button>
+      </div>
+      <div id="baseTiles">
+        <div class="base-row" id="baseRow"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const TILE_SIZE = 52;
+    const MIN_VERTICAL_OVERLAP = Math.floor(TILE_SIZE * 0.33);
+    const TAP_MAX_TIME_MS = 250, TAP_MAX_MOVE_PX = 6;
+    const SEAM_CAPTURE = 22;
+
+    function dragThresholdFor(e){ return (e && e.pointerType === 'touch') ? 12 : 6; }
+
+    // ====== LEVEL DATA ======
+    const B_LEVELS = {
+      2: { blue:["b","c","d","f","g","h","j","k","l","m","n","p","qu","r","s","t","v","w","x","y","z","ch","ck","sh","th","wh"], yellow:["a","e","i","o","u"] },
+      3: { red:["all","ang","ing","ong","ung","ank","ink","onk","unk","oll","old","olt","ost","ild","ind"] },
+      4: { yellow:["ai","ay","ee","oa","oe","ue","ew","ow"] },
+      5: { green:["s","es","ed","ing","ful","er","est","ist","y","en","ish","ity","able","tion","sion"], orange:["dis","in","un","non","mis","sub","re","pre","inter","mid","over","up"] },
+      6: { blue:["ph"], yellow:["y"], red:["ture"], green:["ible","ble","cle","dle","fle","gle","kle","ple","tle","zle"], orange:["ate","ite","ine","ice","ace","age"] },
+      7: { yellow:["ar","or","er","ir","ur","ear"], green:["ary","ery","ory"] },
+      8: { yellow:["ie","oi","oy","ey","au","aw","oo","ou","ow","ea","igh","augh","eigh","ei","eu","tu"] },
+      9: { blue:["ps","rh","mn","wr","kn","gh","gn","que","gu","gue"], yellow:["eau","our"], orange:["age"] },
+      10:{ purple:["astro","auto","bio","chron","geo","graph","hydro","phon","tele","demo","fac","form","fort","fract","ject","jud","mal","mater","mit","mort","multi","pater","port","rupt","scrib","script","sect","sec","sent","spect","struct"] }
+    };
+
+    // ====== STATE ======
+    let baseTiles=[], redTiles=[], greenTiles=[], orangeTiles=[], purpleTiles=[];
+    let blueConsonants=[], yellowVowels=[]; 
+    let tiles=[];
+    let activeDrawer='consonants'; 
+    let draggedTile=null, draggedGroup=[], dragOffset={x:0,y:0}, gesture=null, dragStartRowY=null;
+    let lastTapId = null, lastTapTime = 0;
+    let currentUtterance = null;
+
+    // ====== UTIL ======
+    function getFontSize(text){
+      if(text.length<=2) return '22px';
+      if(text.length===3) return '18px';
+      if(text.length===4) return '15px';
+      if(text.length===5) return '13px';
+      return '11px';
+    }
+    function getUniqueSorted(arr){ return [...new Set(arr)].sort((a,b)=> (a.length===b.length ? a.localeCompare(b) : a.length-b.length)); }
+    function sameRowY(y1,y2){ return Math.abs(y1-y2) < TILE_SIZE/2; }
+    function areFlush(a,b,tol=2){ return Math.abs(a.x + TILE_SIZE - b.x) <= tol; }
+
+    function recomputeGroupsAround(rowY){
+      const row=tiles.filter(t=>sameRowY(t.y,rowY)).sort((a,b)=>a.x-b.x);
+      let i=0;
+      while(i<row.length){
+        let j=i+1;
+        while(j<row.length && areFlush(row[j-1],row[j])) j++;
+        const seg=row.slice(i,j);
+        if(seg.length===1) seg[0].groupId=null;
+        else { const gid=seg[0].groupId || seg[0].id; seg.forEach(t=>t.groupId=gid); }
+        i=j;
+      }
+    }
+
+    function getGroupChain(main){
+      const row=tiles.filter(t=>sameRowY(t.y,main.y)).sort((a,b)=>a.x-b.x);
+      const idx=row.findIndex(t=>t.id===main.id); if(idx===-1) return [main];
+      let L=idx; while(L-1>=0 && areFlush(row[L-1],row[L])) L--;
+      let R=idx; while(R+1<row.length && areFlush(row[R],row[R+1])) R++;
+      return row.slice(L,R+1);
+    }
+
+    // ====== DOM & RENDER ======
+    function createTile(text,color,source){
+      const el=document.createElement('div');
+      el.className=`tile ${color}`;
+      el.textContent=text;
+      el.style.fontSize=getFontSize(text);
+      el.addEventListener('pointerdown',(e)=>onPointerStart(e,text,color,source));
+      return el;
+    }
+
+    function renderTray(){
+      const lvl=parseInt(document.getElementById('lessonSelect').value,10);
+      let allBlue=[], allYellow=[];
+      redTiles=[]; greenTiles=[]; orangeTiles=[]; purpleTiles=[];
+
+      for(let i=2;i<=lvl;i++){
+        const L=B_LEVELS[i]; if(!L) continue;
+        if(L.blue)   allBlue.push(...L.blue);
+        if(L.yellow) allYellow.push(...L.yellow);
+        if(L.red)    redTiles.push(...L.red);
+        if(L.green)  greenTiles.push(...L.green);
+        if(L.orange) orangeTiles.push(...L.orange);
+        if(L.purple) purpleTiles.push(...L.purple);
+      }
+      blueConsonants=getUniqueSorted(allBlue);
+      yellowVowels=getUniqueSorted(allYellow);
+      redTiles=getUniqueSorted(redTiles);
+      greenTiles=getUniqueSorted(greenTiles);
+      orangeTiles=getUniqueSorted(orangeTiles);
+      purpleTiles=getUniqueSorted(purpleTiles);
+      renderActiveDrawer();
+    }
+
+    function renderActiveDrawer(){
+      const baseRow = document.getElementById('baseRow');
+      baseRow.innerHTML = '';
+      let list = [], color = 'blue';
+      if(activeDrawer==='consonants') { list=blueConsonants.filter(c=>c.length>1); color='blue'; }
+      else if(activeDrawer==='vowels') { list=yellowVowels.filter(v=>v.length>1); color='yellow'; }
+      else if(activeDrawer==='units') { list=redTiles; color='red'; }
+      else if(activeDrawer==='endings') { list=greenTiles; color='green'; }
+      else if(activeDrawer==='prefixes') { list=orangeTiles; color='orange'; }
+      else if(activeDrawer==='roots') { list=purpleTiles; color='purple'; }
+      list.forEach(txt => baseRow.appendChild(createTile(txt, color, 'tray')));
+    }
+
+    function renderAlphabet(){
+      const a='abcdefghijklmnopqrstuvwxyz'.split(''), v=new Set(['a','e','i','o','u']);
+      const r1=document.getElementById('alphabetRow1'), r2=document.getElementById('alphabetRow2');
+      r1.innerHTML=''; r2.innerHTML='';
+      a.slice(0,13).forEach(l=>r1.appendChild(createTile(l,v.has(l)?'yellow':'blue','alphabet')));
+      a.slice(13,26).forEach(l=>r2.appendChild(createTile(l,v.has(l)?'yellow':'blue','alphabet')));
+    }
+
+    function renderWordPane(){
+      const wp=document.getElementById('wordPane');
+      wp.querySelectorAll('.word-pane-tile').forEach(el=>el.remove());
+      wp.querySelector('.hint').style.display = tiles.length>0 ? 'none' : 'block';
+
+      tiles.forEach(tile=>{
+        if(draggedGroup.find(t=>t.id===tile.id)) return;
+        const el=document.createElement('div');
+        el.className=`tile ${tile.color} word-pane-tile`;
+        el.textContent=tile.text;
+        el.style.fontSize=getFontSize(tile.text);
+        el.style.left=tile.x+'px'; el.style.top=tile.y+'px';
+        el.dataset.id=tile.id;
+        el.addEventListener('pointerdown',(e)=>onPointerStart(e,tile.text,tile.color,tile.id));
+        wp.appendChild(el);
+      });
+    }
+
+    // ====== PREDICTION & GHOSTS ======
+    function findSeamNear(dropX, dropY){
+      const row=tiles.filter(t=>sameRowY(t.y, dropY)).sort((a,b)=>a.x-b.x);
+      for(let i=0;i<row.length-1;i++){
+        const L=row[i], R=row[i+1];
+        if(!areFlush(L,R)) continue;
+        const seamX=L.x + TILE_SIZE;
+        if(Math.abs(dropX - seamX) <= SEAM_CAPTURE) return { left:L, right:R, seamX, rowY:L.y };
+      }
+      return null;
+    }
+
+    function findNearbyTiles(dropX, dropY, excludeId){
+      const candidates=[];
+      const dL=dropX, dR=dropX+TILE_SIZE, dT=dropY, dB=dropY+TILE_SIZE;
+      for(const t of tiles){
+        if(t.id===excludeId) continue;
+        const tL=t.x, tR=t.x+TILE_SIZE, tT=t.y, tB=t.y+TILE_SIZE;
+        if(Math.min(dB,tB)-Math.max(dT,tT) < MIN_VERTICAL_OVERLAP) continue;
+        if(Math.max(dL, tL+TILE_SIZE/2) < Math.min(dL+TILE_SIZE/2, tR))
+          candidates.push({ tile:t, edge:'right', snapX:tR, snapY:t.y });
+        else if(Math.max(dL+TILE_SIZE/2, tL) < Math.min(dR, tL+TILE_SIZE/2))
+          candidates.push({ tile:t, edge:'left', snapX:tL-TILE_SIZE, snapY:t.y });
+      }
+      candidates.sort((a,b)=> Math.abs(a.snapY-dropY)-Math.abs(b.snapY-dropY));
+      return candidates;
+    }
+
+    function calculateDropTarget(dropX, dropY, sourceId = null){
+      const seam = findSeamNear(dropX, dropY);
+      if(seam) return { type: 'seam', x: seam.seamX, y: seam.rowY, seam };
+      const nearby = findNearbyTiles(dropX, dropY, sourceId);
+      if(nearby.length > 0) return { type: 'snap', x: nearby[0].snapX, y: nearby[0].snapY, tile: nearby[0].tile };
+      return { type: 'free', x: dropX, y: dropY };
+    }
+
+    function updateGhostVisual(mouseX, mouseY){
+      clearGhostVisual();
+      const wordPane = document.getElementById('wordPane');
+      if(!wordPane) return;
+      const paneRect = wordPane.getBoundingClientRect();
+      if(mouseX < paneRect.left || mouseX > paneRect.right || mouseY < paneRect.top || mouseY > paneRect.bottom) return;
+      
+      let rawDropX = mouseX - paneRect.left - dragOffset.x;
+      let rawDropY = mouseY - paneRect.top - dragOffset.y;
+      let prediction, offsetX = 0, offsetY = 0;
+
+      if(draggedTile.sourceType === 'tray'){
+        prediction = calculateDropTarget(rawDropX, rawDropY, null);
+      } else {
+        const main = draggedGroup.find(t => t.id === draggedTile.id);
+        const mainDropX = mouseX - paneRect.left - (draggedTile.startX - main.x);
+        const mainDropY = mouseY - paneRect.top - (draggedTile.startY - main.y);
+        prediction = calculateDropTarget(mainDropX, mainDropY, draggedTile.id);
+        offsetX = prediction.x - mainDropX;
+        offsetY = prediction.y - mainDropY;
+      }
+
+      if(draggedGroup.length > 0){
+        draggedGroup.forEach(t => {
+           const main = draggedGroup.find(dt => dt.id === draggedTile.id);
+           const ghost = document.createElement('div');
+           ghost.className = 'ghost-tile';
+           ghost.style.left = (prediction.x + (t.x - main.x)) + 'px';
+           ghost.style.top = (prediction.y + (t.y - main.y)) + 'px';
+           wordPane.appendChild(ghost);
+        });
+      } else {
+        const ghost = document.createElement('div');
+        ghost.className = 'ghost-tile';
+        ghost.style.left = prediction.x + 'px';
+        ghost.style.top = prediction.y + 'px';
+        wordPane.appendChild(ghost);
+      }
+    }
+    function clearGhostVisual(){ document.querySelectorAll('.ghost-tile').forEach(el => el.remove()); }
+
+    // ====== ROBUST TEXT TO SPEECH ======
+    function ensureVoiceLoad() { if('speechSynthesis' in window) window.speechSynthesis.getVoices(); }
+    ensureVoiceLoad();
+    if('speechSynthesis' in window) window.speechSynthesis.onvoiceschanged = ensureVoiceLoad;
+
+    function speakText(text){
+      if(!('speechSynthesis' in window)) { alert("Browser does not support Text-to-Speech."); return; }
+      const btn = document.getElementById('speakButton');
+      const originalText = btn.textContent;
+      btn.textContent = "Speaking...";
+      btn.classList.add('speaking');
+      window.speechSynthesis.cancel();
+
+      setTimeout(() => {
+        currentUtterance = new SpeechSynthesisUtterance(text);
+        currentUtterance.rate = 0.8; 
+        currentUtterance.onend = () => { btn.textContent = originalText; btn.classList.remove('speaking'); };
+        currentUtterance.onerror = (e) => { console.error("Speech error:", e); btn.textContent = originalText; btn.classList.remove('speaking'); };
+        window.speechSynthesis.speak(currentUtterance);
+      }, 50);
+    }
+
+    function speakGroup(sourceId){
+      const tile = tiles.find(t => t.id == sourceId);
+      if(!tile) return;
+      const chain = getGroupChain(tile);
+      const word = chain.map(t => t.text).join('');
+      speakText(word);
+      chain.forEach(t => {
+        const el = document.querySelector(`.word-pane-tile[data-id="${t.id}"]`);
+        if(el) { el.style.transform = 'scale(1.1)'; setTimeout(()=>el.style.transform='scale(1)', 200); }
+      });
+    }
+
+    function speakAllBoard(){
+      if(tiles.length === 0) { alert("Drag some tiles to the board first!"); return; }
+      const sorted = [...tiles].sort((a,b) => {
+         if(!sameRowY(a.y, b.y)) return a.y - b.y;
+         return a.x - b.x;
+      });
+      const words = [];
+      let i=0;
+      while(i < sorted.length){
+        let wordText = sorted[i].text;
+        let j=i+1;
+        while(j < sorted.length && sameRowY(sorted[j-1].y, sorted[j].y) && areFlush(sorted[j-1], sorted[j])){
+          wordText += sorted[j].text;
+          j++;
+        }
+        words.push(wordText);
+        i=j;
+      }
+      speakText(words.join('. '));
+    }
+
+    // ====== POINTERS ======
+    function onPointerStart(e,text,color,source){
+      if(e.isPrimary===false) return;
+      e.preventDefault(); e.stopPropagation();
+      if(e.currentTarget.setPointerCapture){ try{ e.currentTarget.setPointerCapture(e.pointerId);}catch(_){} }
+      const targetRect=e.currentTarget.getBoundingClientRect();
+      const startX=e.clientX, startY=e.clientY, tStart=performance.now();
+      gesture={ startX, startY, tStart, moved:false, lastX:startX, lastY:startY, source, text, color };
+      
+      const onMove=(ev)=>{
+        const dx=ev.clientX - gesture.startX, dy=ev.clientY - gesture.startY;
+        if(!gesture.moved && (Math.abs(dx)>dragThresholdFor(ev) || Math.abs(dy)>dragThresholdFor(ev))){
+          gesture.moved=true; beginDrag(gesture, targetRect, dx, dy);
+        }
+        if(gesture.moved) handleMove(ev);
+      };
+      const onEnd=(ev)=>{
+        const dt=performance.now()-gesture.tStart;
+        const totalMove=Math.hypot(ev.clientX-gesture.startX, ev.clientY-gesture.startY);
+        if(!gesture.moved && dt<=TAP_MAX_TIME_MS && totalMove<=TAP_MAX_MOVE_PX){
+          if(gesture.source !== 'tray' && gesture.source !== 'alphabet'){
+             const now = Date.now();
+             if(lastTapId === gesture.source && (now - lastTapTime) < 500){
+                speakGroup(gesture.source);
+                lastTapId = null;
+             } else {
+                lastTapId = gesture.source;
+                lastTapTime = now;
+             }
+          }
+          cleanup();
+          return;
+        }
+        handleEnd(ev); cleanup();
+      };
+      function cleanup(){ document.removeEventListener('pointermove',onMove); document.removeEventListener('pointerup',onEnd); document.removeEventListener('pointercancel',onEnd); gesture=null; }
+      document.addEventListener('pointermove',onMove,{passive:false});
+      document.addEventListener('pointerup',onEnd,{passive:false});
+      document.addEventListener('pointercancel',onEnd,{passive:false});
+    }
+
+    function beginDrag(g, targetRect, dx, dy){
+      const startX=g.startX, startY=g.startY;
+      if(g.source==='tray' || g.source==='alphabet'){
+        draggedTile={ text:g.text, color:g.color, x:startX, y:startY, sourceType:'tray', startX, startY };
+        draggedGroup=[]; dragStartRowY=null;
+      } else {
+        const paneTile=tiles.find(t=>t.id===g.source); if(!paneTile) return;
+        const chain=getGroupChain(paneTile);
+        const idx=chain.findIndex(t=>t.id===paneTile.id);
+        draggedGroup = (Math.abs(dx)>=Math.abs(dy)) ? (dx<0 ? chain.slice(0,idx+1) : chain.slice(idx)) : [paneTile];
+        draggedTile={ ...paneTile, x:startX, y:startY, sourceType:'pane', startX, startY };
+        dragStartRowY=paneTile.y;
+      }
+      dragOffset={ x:startX-targetRect.left, y:startY-targetRect.top };
+      updateDragVisual();
+    }
+
+    function handleMove(e){
+      if(!draggedTile) return;
+      e.preventDefault();
+      draggedTile.x=e.clientX; draggedTile.y=e.clientY;
+      updateDragVisual();
+      updateGhostVisual(e.clientX, e.clientY);
+    }
+
+    function handleEnd(e){
+      clearGhostVisual();
+      if(!draggedTile) return;
+      const wp=document.getElementById('wordPane'), r=wp.getBoundingClientRect();
+      const inside = e.clientX>=r.left && e.clientX<=r.right && e.clientY>=r.top && e.clientY<=r.bottom;
+      if(inside){
+        let dropX=e.clientX - r.left - dragOffset.x;
+        let dropY=e.clientY - r.top  - dragOffset.y;
+        if(draggedTile.sourceType==='tray'){
+           const target = calculateDropTarget(dropX, dropY);
+           if(target.type === 'seam'){ insertAtSeam(draggedTile, target.seam); }
+           else {
+             tiles.push({ id:Date.now()+Math.random(), text:draggedTile.text, color:draggedTile.color, x:target.x, y:target.y, groupId:(target.tile?target.tile.groupId||target.tile.id:null) });
+             recomputeGroupsAround(target.y);
+           }
+        } else {
+           const main=draggedGroup.find(t=>t.id===draggedTile.id);
+           const mainDropX=e.clientX - r.left - (draggedTile.startX - main.x);
+           const mainDropY=e.clientY - r.top - (draggedTile.startY - main.y);
+           if(draggedGroup.length===1 && findSeamNear(dropX,dropY)){
+             const seam=findSeamNear(dropX,dropY);
+             tiles=tiles.filter(t=>t.id!==draggedGroup[0].id);
+             if(dragStartRowY!==null) recomputeGroupsAround(draggedGroup[0].y);
+             insertAtSeam(draggedGroup[0], seam);
+           } else {
+             const target = calculateDropTarget(mainDropX, mainDropY, draggedTile.id);
+             const dx=target.x - mainDropX, dy=target.y - mainDropY;
+             const gid=(target.type==='snap')?(target.tile.groupId||target.tile.id):null;
+             tiles=tiles.map(t=>{
+               if(!draggedGroup.some(dt=>dt.id===t.id)) return t;
+               const relX=t.x - main.x, relY=t.y - main.y;
+               return { ...t, x:target.x+relX, y:target.y+relY, groupId:gid };
+             });
+             if(dragStartRowY!==null) recomputeGroupsAround(dragStartRowY);
+             recomputeGroupsAround(target.y);
+           }
+        }
+      } else if(draggedTile.sourceType==='pane'){
+        const ids=new Set(draggedGroup.map(t=>t.id));
+        const oy=draggedGroup[0].y;
+        tiles=tiles.filter(t=>!ids.has(t.id));
+        recomputeGroupsAround(oy);
+      }
+      draggedTile=null; draggedGroup=[]; dragStartRowY=null; clearDragVisual(); renderWordPane();
+    }
+
+    function insertAtSeam(data, seam){
+      const rightSide=tiles.filter(t=>sameRowY(t.y,seam.rowY) && t.x>=seam.right.x).sort((a,b)=>a.x-b.x);
+      rightSide.forEach(t=>t.x+=TILE_SIZE);
+      tiles.push({ id:Date.now()+Math.random(), text:data.text, color:data.color, x:seam.right.x-TILE_SIZE, y:seam.rowY, groupId:null });
+      recomputeGroupsAround(seam.rowY);
+    }
+
+    function updateDragVisual(){
+      document.querySelectorAll('[data-dragging="true"]').forEach(el=>el.remove());
+      if(!draggedTile) return;
+      const paneRect=document.getElementById('wordPane').getBoundingClientRect();
+
+      // --- FIX: USE SEPARATE LOGIC FOR TRAY VS GROUP TO PREVENT DISAPPEARANCE ---
+      if(draggedGroup.length > 0){
+        // Dragging existing group: Move relative to original positions
+        const dx = draggedTile.x - draggedTile.startX;
+        const dy = draggedTile.y - draggedTile.startY;
+        draggedGroup.forEach(t=>{
+          const g=document.createElement('div');
+          g.className=`tile ${t.color} dragging`;
+          g.textContent=t.text;
+          g.style.fontSize=getFontSize(t.text);
+          const gx=t.x + dx + paneRect.left, gy=t.y + dy + paneRect.top;
+          g.style.transform=`translate3d(${Math.round(gx)}px, ${Math.round(gy)}px, 0)`;
+          g.dataset.dragging='true';
+          document.body.appendChild(g);
+        });
+      } else {
+        // Dragging from Tray: Move absolute to mouse
+        const g=document.createElement('div');
+        g.className=`tile ${draggedTile.color} dragging`;
+        g.textContent=draggedTile.text;
+        g.style.fontSize=getFontSize(draggedTile.text);
+        // Correct math: Mouse ClientX - Offset inside tile
+        const gx=draggedTile.x - dragOffset.x; 
+        const gy=draggedTile.y - dragOffset.y;
+        g.style.transform=`translate3d(${Math.round(gx)}px, ${Math.round(gy)}px, 0)`;
+        g.dataset.dragging='true';
+        document.body.appendChild(g);
+      }
+    }
+
+    // ====== BOOT ======
+    document.getElementById('lessonSelect').addEventListener('change', renderTray);
+    document.getElementById('resetButton').addEventListener('click', ()=>{ tiles=[]; draggedTile=null; renderWordPane(); });
+    document.getElementById('speakButton').addEventListener('click', speakAllBoard);
+    document.querySelectorAll('.drawer-tab').forEach(tab => {
+      tab.addEventListener('click', (e) => { e.preventDefault(); switchDrawer(tab.dataset.drawer); });
+    });
+    function switchDrawer(d){ activeDrawer=d; document.querySelectorAll('.drawer-tab').forEach(t=>t.classList.toggle('active', t.dataset.drawer===d)); renderActiveDrawer(); }
+
+    renderAlphabet(); renderTray(); renderWordPane();
+  </script>
+</body>
+</html>

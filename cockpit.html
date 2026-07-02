@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Barton Command Center — Cockpit Prototype</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+    :root {
+      --bg: #f1f3f8; --surface: #ffffff; --ink: #1e293b;
+      --rail-bg: #1e293b; --rail-ink: #e2e8f0; --rail-active: #818cf8;
+      --card-border: #e2e8f0; --card-active-bg: #eff6ff; --card-active-border: #6366f1;
+      --badge-say: #4f46e5; --badge-note: #d97706; --badge-board: #0891b2;
+      --badge-student: #7c3aed; --badge-sight: #059669; --badge-tutor: #64748b;
+      --badge-listen: #15803d; --badge-dictation: #b91c1c; --badge-response: #0369a1;
+      --badge-do: #475569;
+      --right-bg: #f8fafc;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.08);
+      --shadow-md: 0 4px 12px rgba(0,0,0,.10);
+      --radius: 10px;
+    }
+
+    body { font-family:'Lexend',sans-serif; height:100vh; overflow:hidden; display:flex; background:var(--bg); color:var(--ink); }
+
+    /* ===== LEFT RAIL ===== */
+    #rail { width:240px; min-width:240px; height:100vh; background:var(--rail-bg); color:var(--rail-ink); display:flex; flex-direction:column; overflow:hidden; }
+    #rail-header { padding:20px 18px 14px; border-bottom:1px solid rgba(255,255,255,.08); }
+    #rail-header h1 { font-size:.85rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em; color:#818cf8; margin-bottom:2px; }
+    #rail-header p { font-size:.72rem; color:#94a3b8; }
+    #rail-sections { flex:1; overflow-y:auto; padding:10px 0; }
+    .rail-item { padding:10px 18px; font-size:.82rem; font-weight:500; cursor:pointer; border-left:3px solid transparent; transition:all .15s; color:#94a3b8; }
+    .rail-item:hover { background:rgba(255,255,255,.05); color:#e2e8f0; }
+    .rail-item.active { border-left-color:var(--rail-active); color:#fff; background:rgba(129,140,248,.12); font-weight:600; }
+    #rail-progress { padding:14px 18px; border-top:1px solid rgba(255,255,255,.08); font-size:.72rem; color:#64748b; }
+
+    /* ===== CENTER TIMELINE ===== */
+    #timeline { flex:1; height:100vh; overflow-y:auto; padding:32px 28px 80px; scroll-behavior:smooth; }
+    #timeline-header { margin-bottom:28px; }
+    #timeline-header h2 { font-size:1.3rem; font-weight:700; color:var(--ink); }
+    #timeline-header p { font-size:.82rem; color:#64748b; margin-top:4px; }
+    .section-block { margin-bottom:32px; }
+    .section-title { font-size:.92rem; font-weight:700; color:#b91c1c; padding:8px 0 10px; border-bottom:2px solid #fecaca; margin-bottom:12px; display:flex; align-items:center; gap:8px; }
+    .section-title span { font-size:.72rem; background:#fef2f2; color:#b91c1c; padding:2px 8px; border-radius:20px; font-weight:600; }
+
+    /* ===== STEP CARDS ===== */
+    .step-card { border:2px solid var(--card-border); border-radius:var(--radius); padding:14px 16px; margin-bottom:8px; cursor:pointer; transition:all .2s ease; background:var(--surface); }
+    .step-card:hover { border-color:#c7d2fe; box-shadow:var(--shadow-sm); }
+    .step-card.active { border-color:var(--card-active-border); background:var(--card-active-bg); box-shadow:var(--shadow-md); transform:scale(1.005); }
+    .step-card .badge { display:inline-block; font-size:.65rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; padding:2px 8px; border-radius:4px; margin-bottom:6px; color:#fff; }
+    .badge-say { background:var(--badge-say); }
+    .badge-note { background:var(--badge-note); }
+    .badge-board { background:var(--badge-board); }
+    .badge-student-page { background:var(--badge-student); }
+    .badge-sight { background:var(--badge-sight); }
+    .badge-tutor { background:var(--badge-tutor); }
+    .badge-response { background:var(--badge-response); }
+    .badge-listen { background:var(--badge-listen); }
+    .badge-dictation { background:var(--badge-dictation); }
+    .badge-do { background:var(--badge-do); }
+    .step-text { font-size:.88rem; line-height:1.55; color:var(--ink); white-space:pre-wrap; }
+    .step-card.active .step-text { font-weight:500; }
+
+    /* Student page inline preview */
+    .sp-preview { background:#eef2ff; border:2px solid #a5b4fc; border-radius:8px; padding:10px 14px; margin-top:8px; font-size:.82rem; }
+    .sp-preview-label { font-size:.68rem; font-weight:700; text-transform:uppercase; color:#6366f1; margin-bottom:4px; letter-spacing:.04em; }
+    .sp-pills { display:flex; flex-wrap:wrap; gap:5px; }
+    .sp-pill { background:#e0e7ff; border:1px solid #a5b4fc; border-radius:14px; padding:2px 10px; font-size:.78rem; font-weight:600; color:#3730a3; }
+
+    /* Sight word inline */
+    .sight-inline { display:flex; flex-wrap:wrap; gap:5px; margin-top:6px; }
+    .sight-pill { background:#dcfce7; border:1px solid #86efac; border-radius:14px; padding:2px 10px; font-size:.78rem; font-weight:600; color:#15803d; }
+
+    /* ===== RIGHT PANE ===== */
+    #workspace { width:300px; min-width:300px; height:100vh; background:var(--right-bg); border-left:2px solid #e2e8f0; display:flex; flex-direction:column; }
+    #ws-header { padding:18px 20px 14px; border-bottom:1px solid #e2e8f0; }
+    #ws-header h3 { font-size:.82rem; font-weight:700; text-transform:uppercase; letter-spacing:.06em; color:#64748b; }
+    #ws-content { flex:1; display:flex; align-items:center; justify-content:center; padding:24px; text-align:center; }
+    .ws-placeholder { color:#94a3b8; }
+    .ws-placeholder .ws-icon { font-size:2.4rem; margin-bottom:10px; }
+    .ws-placeholder .ws-label { font-size:.88rem; font-weight:600; color:#64748b; }
+    .ws-placeholder .ws-hint { font-size:.75rem; color:#94a3b8; margin-top:6px; }
+
+    /* ===== SCROLLBAR ===== */
+    #timeline::-webkit-scrollbar, #rail-sections::-webkit-scrollbar { width:6px; }
+    #timeline::-webkit-scrollbar-thumb { background:#cbd5e1; border-radius:3px; }
+    #rail-sections::-webkit-scrollbar-thumb { background:rgba(255,255,255,.15); border-radius:3px; }
+
+    /* ===== LOADING STATE ===== */
+    .loading { display:flex; align-items:center; justify-content:center; height:100%; }
+    .loading p { font-size:1rem; color:#64748b; }
+  </style>
+</head>
+<body>
+
+  <!-- LEFT RAIL -->
+  <nav id="rail">
+    <div id="rail-header">
+      <h1>Barton Cockpit</h1>
+      <p>Lesson Map</p>
+    </div>
+    <div id="rail-sections"></div>
+    <div id="rail-progress">—</div>
+  </nav>
+
+  <!-- CENTER TIMELINE -->
+  <main id="timeline">
+    <div class="loading"><p>Loading lesson…</p></div>
+  </main>
+
+  <!-- RIGHT WORKSPACE -->
+  <aside id="workspace">
+    <div id="ws-header"><h3>Student Workspace</h3></div>
+    <div id="ws-content">
+      <div class="ws-placeholder">
+        <div class="ws-icon">📋</div>
+        <div class="ws-label">Ready</div>
+        <div class="ws-hint">Navigate to a step to see context here.</div>
+      </div>
+    </div>
+  </aside>
+
+  <script>
+    /* ====== STATE ====== */
+    let cards = [];
+    let activeIndex = 0;
+    let sectionEls = [];
+
+    /* ====== BOOT ====== */
+    (async function boot() {
+      try {
+        const res = await fetch('lessons/level3_lesson1.json');
+        if (!res.ok) throw new Error('Could not load lesson JSON');
+        const data = await res.json();
+        render(data);
+      } catch (err) {
+        document.getElementById('timeline').innerHTML =
+          `<div class="loading"><p style="color:#dc2626">Error: ${esc(err.message)}<br>Are you running a local server?</p></div>`;
+      }
+    })();
+
+    /* ====== RENDER ====== */
+    function render(data) {
+      const timeline = document.getElementById('timeline');
+      const railSections = document.getElementById('rail-sections');
+
+      // Header
+      let html = `<div id="timeline-header"><h2>Level ${data.level}, Lesson ${data.lesson}: ${esc(data.title)}</h2>
+        <p>${data.sections.length} sections · Use arrow keys or click to navigate</p></div>`;
+
+      let cardIdx = 0;
+
+      data.sections.forEach((sec, sIdx) => {
+        // Rail item
+        const railItem = document.createElement('div');
+        railItem.className = 'rail-item';
+        railItem.textContent = sec.title;
+        railItem.dataset.sectionIdx = sIdx;
+        railItem.addEventListener('click', () => scrollToSection(sIdx));
+        railSections.appendChild(railItem);
+
+        // Section block
+        html += `<div class="section-block" data-section-idx="${sIdx}" id="section-${sIdx}">`;
+        html += `<div class="section-title"><span>§${sec.id.replace('Part_','')}</span> ${esc(sec.title)}</div>`;
+
+        sec.steps.forEach((step) => {
+          const badge = getBadge(step);
+          const text = getStepText(step);
+          const extra = getExtra(step);
+
+          html += `<div class="step-card${cardIdx === 0 ? ' active' : ''}" data-card-idx="${cardIdx}" data-section-idx="${sIdx}" data-step-type="${step.type}">`;
+          html += `<div class="badge ${badge.cls}">${badge.label}</div>`;
+          html += `<div class="step-text">${text}</div>`;
+          if (extra) html += extra;
+          html += `</div>`;
+          cardIdx++;
+        });
+
+        html += `</div>`;
+      });
+
+      timeline.innerHTML = html;
+
+      // Collect cards
+      cards = Array.from(timeline.querySelectorAll('.step-card'));
+      sectionEls = Array.from(railSections.querySelectorAll('.rail-item'));
+
+      // Click-to-activate cards
+      cards.forEach((el, i) => {
+        el.addEventListener('click', () => activateCard(i));
+      });
+
+      // Init
+      activeIndex = 0;
+      updateRail();
+      updateProgress();
+      updateWorkspace();
+    }
+
+    /* ====== BADGE LOGIC ====== */
+    function getBadge(step) {
+      if (step.type === 'dialogue') return { label: '💬 SAY', cls: 'badge-say' };
+      if (step.type === 'teacher_note') return { label: '📝 NOTE', cls: 'badge-note' };
+      if (step.type === 'board_action') return { label: '🎯 BOARD CUE', cls: 'badge-board' };
+      if (step.type === 'student_page') return { label: '📄 STUDENT PAGE', cls: 'badge-student-page' };
+      if (step.type === 'sight_word_tracker') return { label: '👁️ SIGHT WORDS', cls: 'badge-sight' };
+      if (step.type === 'guided_discovery') return { label: '🆘 GUIDED DISCOVERY', cls: 'badge-note' };
+      if (step.type === 'action') {
+        const t = step.text.trim();
+        if (t.startsWith('Tutor')) return { label: '✋ TUTOR DOES', cls: 'badge-tutor' };
+        if (t.startsWith('Student:')) return { label: '🗣️ STUDENT RESPONSE', cls: 'badge-response' };
+        if (t.startsWith('Expected:')) return { label: '👂 LISTEN FOR', cls: 'badge-listen' };
+        if (t.startsWith('Dictate:')) return { label: '📝 DICTATION', cls: 'badge-dictation' };
+        return { label: '🔹 DO', cls: 'badge-do' };
+      }
+      return { label: '🔹 DO', cls: 'badge-do' };
+    }
+
+    /* ====== TEXT RENDERING ====== */
+    function getStepText(step) {
+      if (step.type === 'dialogue') return `"${esc(step.text)}"`;
+      if (step.type === 'teacher_note') return step.text; // contains HTML formatting from source
+      if (step.type === 'board_action') {
+        if (step.command === 'spawn_tiles' && step.payload) {
+          return `Spawn tiles: ${step.payload.length > 0 ? step.payload.map(t => t.toUpperCase()).join(' · ') : '(clear board)'}`;
+        }
+        return esc(JSON.stringify(step));
+      }
+      if (step.type === 'student_page') return `Student Page — ${toTitle(step.mode)}`;
+      if (step.type === 'sight_word_tracker') return 'Sight Word Tracker';
+      if (step.type === 'guided_discovery') {
+        return step.prompts.map((p, i) => `${i + 1}. "${esc(p)}"`).join('\n');
+      }
+      return esc(step.text);
+    }
+
+    /* ====== EXTRA CONTENT (payloads) ====== */
+    function getExtra(step) {
+      if (step.type === 'student_page') {
+        if (step.mode === 'word_frame' && Array.isArray(step.payload)) {
+          return `<div class="sp-preview"><div class="sp-preview-label">Words</div><div class="sp-pills">${step.payload.map(w => `<span class="sp-pill">${esc(w)}</span>`).join('')}</div></div>`;
+        }
+        if (step.mode === 'phrase_builder' && step.payload) {
+          let h = '<div class="sp-preview"><div class="sp-preview-label">Phrase Builder</div>';
+          for (const [key, vals] of Object.entries(step.payload)) {
+            if (vals.length === 0) continue;
+            h += `<div style="margin-top:4px;font-weight:600;font-size:.72rem;color:#6366f1;text-transform:uppercase">${esc(toTitle(key))}</div>`;
+            h += `<div class="sp-pills">${vals.map(v => `<span class="sp-pill">${esc(v)}</span>`).join('')}</div>`;
+          }
+          return h + '</div>';
+        }
+        if (step.mode === 'sentence_marking' && Array.isArray(step.payload)) {
+          return `<div class="sp-preview"><div class="sp-preview-label">Sentences</div>${step.payload.map(s => `<div style="margin:3px 0;font-size:.82rem;line-height:1.5">${esc(s)}</div>`).join('')}</div>`;
+        }
+        if (step.mode === 'story_reading' && step.payload) {
+          return `<div class="sp-preview"><div class="sp-preview-label">Story: ${esc(step.payload.title)}</div><div style="font-size:.82rem;line-height:1.6;margin-top:4px">${esc(step.payload.text)}</div></div>`;
+        }
+        if (step.mode === 'matching' && step.payload) {
+          return `<div class="sp-preview"><div class="sp-preview-label">Matching</div><div class="sp-pills">${step.payload.left.map(w => `<span class="sp-pill">${esc(w)}</span>`).join('')} ↔ ${step.payload.right.map(w => `<span class="sp-pill">${esc(w)}</span>`).join('')}</div></div>`;
+        }
+        if (step.mode === 'fill_blanks' && step.payload) {
+          return `<div class="sp-preview"><div class="sp-preview-label">Fill in the Blanks</div><div class="sp-pills">${step.payload.bank.map(w => `<span class="sp-pill">${esc(w)}</span>`).join('')}</div></div>`;
+        }
+      }
+      if (step.type === 'sight_word_tracker' && step.words) {
+        return `<div class="sight-inline">${step.words.map(w => `<span class="sight-pill">${esc(w)}</span>`).join('')}</div>`;
+      }
+      return '';
+    }
+
+    /* ====== NAVIGATION ====== */
+    function activateCard(idx) {
+      if (idx < 0 || idx >= cards.length) return;
+      cards[activeIndex].classList.remove('active');
+      activeIndex = idx;
+      cards[activeIndex].classList.add('active');
+      cards[activeIndex].scrollIntoView({ behavior: 'smooth', block: 'center' });
+      updateRail();
+      updateProgress();
+      updateWorkspace();
+    }
+
+    document.addEventListener('keydown', (e) => {
+      if (!cards.length) return;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault();
+        activateCard(activeIndex + 1);
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault();
+        activateCard(activeIndex - 1);
+      }
+    });
+
+    function scrollToSection(sIdx) {
+      const block = document.getElementById('section-' + sIdx);
+      if (block) {
+        block.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        // Activate first card in that section
+        const first = block.querySelector('.step-card');
+        if (first) activateCard(parseInt(first.dataset.cardIdx));
+      }
+    }
+
+    /* ====== RAIL HIGHLIGHT ====== */
+    function updateRail() {
+      const secIdx = cards[activeIndex]?.dataset.sectionIdx;
+      sectionEls.forEach(el => {
+        el.classList.toggle('active', el.dataset.sectionIdx === secIdx);
+      });
+    }
+
+    /* ====== PROGRESS ====== */
+    function updateProgress() {
+      document.getElementById('rail-progress').textContent =
+        `Step ${activeIndex + 1} / ${cards.length}`;
+    }
+
+    /* ====== RIGHT PANE WORKSPACE ====== */
+    function updateWorkspace() {
+      const card = cards[activeIndex];
+      if (!card) return;
+      const type = card.dataset.stepType;
+      const ws = document.getElementById('ws-content');
+
+      let icon = '📋', label = 'Tutor-led Activity', hint = 'Follow the script in the center panel.';
+
+      if (type === 'board_action') {
+        icon = '🎯'; label = 'Board Cue'; hint = 'Tile board action — manipulate tiles as directed.';
+      } else if (type === 'student_page') {
+        icon = '📄'; label = 'Student Activity'; hint = 'Student is working with printed materials.';
+      } else if (type === 'sight_word_tracker') {
+        icon = '👁️'; label = 'Sight Words'; hint = 'Review sight words with the student.';
+      } else if (type === 'dialogue' || type === 'action') {
+        icon = '💬'; label = 'Tutor-led Activity'; hint = 'Read from the script and interact with student.';
+      } else if (type === 'teacher_note') {
+        icon = '📝'; label = 'Teacher Note'; hint = 'Review this note before proceeding.';
+      }
+
+      ws.innerHTML = `<div class="ws-placeholder">
+        <div class="ws-icon">${icon}</div>
+        <div class="ws-label">${label}</div>
+        <div class="ws-hint">${hint}</div>
+      </div>`;
+    }
+
+    /* ====== HELPERS ====== */
+    function esc(str) {
+      return String(str).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+    function toTitle(str) {
+      return str.replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
+    }
+  </script>
+</body>
+</html>

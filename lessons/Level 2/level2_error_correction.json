@@ -1,0 +1,99 @@
+{
+  "level": 2,
+  "lesson": "tips_and_errors",
+  "title": "Tips and Error Correction",
+  "sections": [
+    {
+      "id": "Part_Overview",
+      "title": "Overview & General Rules",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "<b>Overview:</b><br>These tips are a memory jogger for the error correction sections shown in the tutor training videos. Use them to correct your student quickly and positively."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Can't finish a lesson in one session?</b><br>Go as far as you can. Next time warm up using one of the Extra Practice pages, then jump back in right where you left off. If that feels too abrupt, have the student touch each tile that's been taught and make its sound before resuming."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Student Repeats the Wrong Word</b><br>Accept the blame. 'I didn't say that word clearly. Let me try it again.' Then dictate the word again, and elongate the sound the student had trouble hearing."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Student Doesn't Know Meaning of Word</b><br>In simple terms, explain the meaning of the word. If it is a word he needs to know, use it in a sentence, and ask him to also use it in a sentence."
+        }
+      ]
+    },
+    {
+      "id": "Part_Confusions",
+      "title": "Letter & Vowel Confusions",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "<b>Student Confuses b and p</b><br>Have your student figure out the tough sounds before reaching for the tiles. When spelling, as soon as he makes the sound, ask 'Is that the Balloons or Pigs sound?' Use your hand gesture. When reading, say 'That word has one of those tricky letters. Check to see if that's Balloons or Pigs.'"
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Student Confuses b and d</b><br>Similar to b and p, have your student check FIRST. When reading, the letter will either match the Balloons shape (fist with thumb up) or not. When spelling, it will either start with the same sound as the word Balloons or not."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Student Confuses Vowel Sounds When Reading</b><br>ALWAYS tap the vowel before doing the touch-and-say step. If there is just one pair of vowels he confuses, congratulate him on knowing most vowels, and have him tap only those two tricky vowels when reading."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Student Confuses Vowel Sounds When Spelling</b><br>Until the confusion disappears, when finger spelling, ALWAYS have your student say the vowel sound AND its Keyword, as in /e/-Eddy. If he's not sure, have him try both keywords and ask 'Which sounds better?'"
+        }
+      ]
+    },
+    {
+      "id": "Part_Procedures",
+      "title": "Procedure Errors",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "<b>Student Says Word Instead of Touch-And-Say</b><br>Don't accept it. Tell the student, 'It's great that you know this word. But I need you to touch-and-say each tile. That will really help you when the words get longer.'"
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Student Reads Word Incorrectly on Paper</b><br>Gently say, 'Try that word again,' or 'Take another look at that word.' Usually, he'll slow down. If not, say 'That's a word you must touch-and-say.'"
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Student Spells Word Incorrectly (Paper)</b><br>You likely skipped a step. Make sure the student breaks the sounds out on his fingers, AND goes through his fingers again to tell you the sound followed by the letter BEFORE picking up a pencil."
+        }
+      ]
+    },
+    {
+      "id": "Part_Fluency",
+      "title": "Fluency, Phrasing & Sentences",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "<b>Nonfluent Reading of Words (Word Frame)</b><br>After he finishes accurately, say 'let's see if you can read them just a bit faster.' Put the edge of the Word Frame below the row and encourage the Slow Blend movement (eliminating touch-and-say). Then point randomly and encourage 'fast like a word'."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Nonfluent Reading of Phrases</b><br>If he has to sound out words in phrases, say 'now that you've figured out the phrases, let's see if you can read them in random order.' Point to phrases randomly until he can read them without sounding out most words."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Marks Did What & Where As One Phrase</b><br>First have your student mark the Who phrase. Skip the Did What phrase temporarily and ask your student to mark the Where phrase (remind them it starts with small words like in, on, at). The unmarked words in between must be the Did What phrase."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Nonfluent Reading of Sentences</b><br>Encourage your student to 'read the sentence to yourself and figure out the tough words' BEFORE reading out loud. If still choppy, you 'model' the phrasing yourself and have him try it."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Leaving Words Out of Sentences</b><br>If it happens once, just tell him he accidentally left a word out. If it happens frequently, teach him to point to each word with his finger while reading the sentence."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Changes Prepositions (e.g., 'in' instead of 'on')</b><br>Let your student know that even small words are important. Have him visualize the sentence 'Jim is on the horse' vs. 'Jim is in the horse.' Teach him that those small words mark the beginning of a Where phrase."
+        }
+      ]
+    }
+  ]
+}

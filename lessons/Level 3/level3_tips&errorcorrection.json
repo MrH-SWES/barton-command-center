@@ -1,0 +1,75 @@
+{
+  "level": 3,
+  "lesson": "tips_and_errors",
+  "title": "Tips and Error Correction",
+  "sections": [
+    {
+      "id": "Part_Overview",
+      "title": "Overview",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "<b>Overview:</b><br>These tips are a memory jogger for the error correction sections shown in the tutor training videos. Many of the errors discussed in Level 2's Tips and Error Corrections section still apply, since many of the procedures are exactly the same. Only errors unique to Level 3 are listed here."
+        }
+      ]
+    },
+    {
+      "id": "Part_Spelling",
+      "title": "Common Errors: Spelling",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "<b>Student Misspells a Word in a Phrase or Sentence</b><br>Be sure you always encourage your student to 'double-check by reading back exactly what you wrote.' Next, ask if there is any word he would like help checking. If so, get his eyes off the page and back on your mouth. Say the word at normal speed, have him say it slowly with the swooping motion, then have him finger spell. If he wrote it incorrectly, have him draw a single line through it and write it correctly above."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Student 'Decorates' With Silent E's</b><br>If your student adds Silent E's when writing phrases or sentences, have him spell the word on his fingers. He'll run out of fingers before he gets to the Silent-E. Ask him, 'What's the E doing?' Explain that for now, there won't be any silent letters. If he hears a sound, write it down. Otherwise, don't."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Student Misspells a Sight Word</b><br>Let him finish the sentence and go through the regular checking procedures. If he still hasn't noticed his mistake, ask 'Are there any Sight words in that sentence?' When he finds it, say 'Underline its Red letter.' As soon as he underlines it, he'll usually notice it is wrong and fix it."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Student Frequently Spells I as E (or vice versa)</b><br>Let your student know that he has learned most vowels extremely well, but these two are still tricky. When spelling a word with either the /i/ or /e/ sound, REQUIRE that he say the sound AND the keyword (e.g., /i/-Itchy or /e/-Ed) before writing. Gradually drop this requirement once the confusion disappears."
+        }
+      ]
+    },
+    {
+      "id": "Part_Reading",
+      "title": "Common Errors: Reading & Comprehension",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "<b>Student Left Out a Word and Didn't Notice</b><br>If he leaves a word out during the 'read it back to me' phase, have him point to each word as he reads it to you again. Share with him that pointing to each word as he proofs his own written work is a very good strategy."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Student Thinks a Nonsense Word is a Real Word</b><br>If your student thinks a nonsense word is real, ask him to use the 'real word' in a sentence. (e.g., if he says CRUS is the 'crus' on bread). Once you know what he's confusing it with, write the actual real word down (if it follows rules he knows), pronounce it correctly, and explain the difference."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Student Cannot Retell the Story</b><br>If he has poor verbal skills, ask two-choice questions ('Was the story about a girl or a boy?'). If he didn't read carefully, let him know the answer is in the first paragraph, and have him read the first paragraph out loud. A student may comprehend a story better when he 'hears' it by reading it out loud."
+        }
+      ]
+    },
+    {
+      "id": "Part_Fluency",
+      "title": "Improving Fluency (Speed)",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "<b>Student Lacks Fluency</b><br>It is more important that your student be accurate than fast. However, if he has to sound out many words, work on fluency using <b>Repeated Readings</b>."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Repeated Readings: Phrases</b><br>Have the student read the Who phrases out loud. Then randomly point to various Who phrases and have him read them to you until each phrase has been read at least 3 times. Repeat with Did What, Where, and Add-On phrases."
+        },
+        {
+          "type": "teacher_note",
+          "text": "<b>Repeated Readings: Stories (Cold, Hot, Blazing)</b><br>Start by having the student read the story to himself. Time his first read out loud (Cold reading) and track errors. Then say, 'Now that you're warmed up, let's try a Hot reading.' Time him again. If he will tolerate it, ask 'Are you ready for a Blazing reading?' and time him a third time. NEVER sacrifice accuracy for speed."
+        }
+      ]
+    }
+  ]
+}

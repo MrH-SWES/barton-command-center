@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "level": 1,
+    "lesson": 1,
+    "title": "Sample — Blending Short A (placeholder content)",
+    "estMinutes": 20,
+    "author": "sample",
+    "videoSpeedDefault": 1.5
+  },
+  "materials": [
+    "Letter tile set",
+    "Whiteboard + marker",
+    "Student reading page"
+  ],
+  "objectives": [
+    "Blend three sounds into a spoken word",
+    "Read several short-a words"
+  ],
+  "beats": [
+    {
+      "id": "s.warmup.01",
+      "phase": "Warm-up",
+      "label": "Greet and set up",
+      "say": { "text": ["We're going to build some words today.", "First, let's warm up our sounds."], "audio": true },
+      "do": "Have the tile set within the student's reach."
+    },
+    {
+      "id": "s.warmup.02",
+      "phase": "Warm-up",
+      "label": "Review sounds",
+      "say": { "text": "Touch each tile and tell me its sound." },
+      "listen": { "expect": ["/k/", "/a/", "/t/"], "hint": "Individual sounds, not letter names." },
+      "board": { "mode": "tiles", "level": 2, "openDrawer": "consonants", "prePlace": [{ "word": "cat", "row": 0 }], "lock": true },
+      "recovery": {
+        "trigger": "Student says letter names instead of sounds.",
+        "prompts": [
+          "That's its name. What sound does it make?",
+          "Watch my mouth and copy the sound."
+        ]
+      }
+    },
+    {
+      "id": "s.new.01",
+      "phase": "New Concept",
+      "label": "Model blending",
+      "media": {
+        "source": "BARTON BOOK 1 DISC 1 c1 [72927655].mp4",
+        "start": "0:05",
+        "end": 18,
+        "caption": "Model: sweeping sounds together to blend"
+      },
+      "say": { "text": "Watch how I sweep the sounds together into one word." },
+      "do": "Slide your finger left to right under the tiles as you blend."
+    },
+    {
+      "id": "s.practice.01",
+      "phase": "Practice",
+      "label": "Student blends",
+      "say": { "text": "Your turn. Blend the sounds into a word." },
+      "board": { "mode": "tiles", "level": 2, "openDrawer": "consonants" },
+      "listen": { "expect": ["cat"] },
+      "recovery": {
+        "trigger": "Student can't blend the three sounds.",
+        "prompts": [
+          "Say the sounds slowly with me.",
+          "Now say them faster, all together."
+        ],
+        "reteach": "s.warmup.02"
+      }
+    },
+    {
+      "id": "s.practice.02",
+      "phase": "Practice",
+      "label": "Swap the vowel",
+      "say": { "text": "I'll change one tile. What's the new word?" },
+      "board": { "mode": "tiles", "level": 2, "openDrawer": "vowels", "prePlace": [{ "word": "cut", "row": 0 }], "lock": true },
+      "listen": { "expect": ["cut"] }
+    },
+    {
+      "id": "s.review.01",
+      "phase": "Review",
+      "label": "Read the set",
+      "say": { "text": "Read each word on the board." },
+      "board": { "mode": "word_frame", "words": ["cat", "map", "sun", "bed", "fix"] },
+      "note": "Step through one word at a time; let the student set the pace."
+    },
+    {
+      "id": "s.pages.01",
+      "phase": "Pages",
+      "label": "Build a phrase",
+      "say": { "text": "Pick one word from each column to make a sentence." },
+      "board": { "mode": "phrase_builder", "columns": {
+        "article": ["the", "a"],
+        "noun": ["cat", "dog", "map"],
+        "verb": ["ran", "sat", "naps"]
+      } }
+    },
+    {
+      "id": "s.pages.02",
+      "phase": "Pages",
+      "label": "Fill the vowel",
+      "say": { "text": "Drop the missing vowel into each word." },
+      "board": { "mode": "fill_blanks", "bank": ["a", "i", "o", "u"],
+                 "rows": ["c___t", "m___p", "s___n"] }
+    },
+    {
+      "id": "s.pages.03",
+      "phase": "Pages",
+      "label": "Read the sentences",
+      "say": { "text": "Read each sentence out loud." },
+      "board": { "mode": "sentences", "items": ["The cat sat.", "A map is flat.", "The pup ran up."] }
+    },
+    {
+      "id": "s.pages.04",
+      "phase": "Pages",
+      "label": "Read the story",
+      "say": { "text": "Read the story to me." },
+      "board": { "mode": "story", "title": "The Tan Cat",
+                 "text": "The cat sat on a mat. The cat is tan. A pup ran up to the cat. The cat did not run. The pup and the cat nap in the sun." }
+    },
+    {
+      "id": "s.pages.05",
+      "phase": "Pages",
+      "label": "Match the pairs",
+      "say": { "text": "Match each word to its picture." },
+      "board": { "mode": "matching", "pairs": [["cat", "🐱"], ["dog", "🐕"], ["sun", "☀️"], ["bug", "🐛"]] }
+    },
+    {
+      "id": "s.pages.06",
+      "phase": "Pages",
+      "label": "Sight words",
+      "say": { "text": "Tap each word and say it with me." },
+      "board": { "mode": "sight_words", "words": ["the", "a", "is", "was", "said"] }
+    },
+    {
+      "id": "s.review.02",
+      "phase": "Review",
+      "label": "Extra practice sheet",
+      "say": { "text": "Great work today." },
+      "do": "Show the extra practice sheet the student will complete on paper.",
+      "board": {
+        "mode": "story",
+        "pageType": "worksheet",
+        "title": "Sample Extra Practice",
+        "subtitle": "Physical paper worksheet reference",
+        "text": "Use the paper copy. This screen only confirms the page."
+      }
+    }
+  ]
+}

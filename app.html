@@ -1,0 +1,3031 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Barton Command Center</title>
+  <meta name="description" content="In-classroom reading lesson delivery shell for the Barton Reading &amp; Spelling System." />
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    /* ====== RESET ====== */
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html, body { height:100%; overflow:hidden; }
+    body { font-family:'Lexend',sans-serif; display:flex; background:#eef1f6; touch-action:manipulation; }
+
+    /* ====== CALM PALETTE (Section 3) ======
+       Light, airy, one quiet accent. Tokens used across rail + chrome so the
+       deliverer sees one harmonized surface, never six competing brights. */
+    :root {
+      --rail-bg:      #f4f6fb;   /* rail surface */
+      --rail-panel:   #ffffff;   /* elevated cards / bars */
+      --rail-sunk:    #eaeef6;   /* progress + nav bars */
+      --rail-line:    #e3e8f0;   /* hairlines */
+      --ink-1:        #1f2937;   /* primary text (named -1 to avoid the engine's unused --ink) */
+      --ink-2:        #51607a;   /* secondary */
+      --ink-3:        #8a97ad;   /* muted */
+      --accent:       #2f6bed;   /* THE quiet accent */
+      --accent-soft:  #eef3ff;   /* accent tint bg */
+      --accent-line:  #cfe0ff;
+      --ok:           #2f9e6b;   /* listen, calm green */
+      --ok-soft:      #eaf7f0;
+      --do-soft:      #fbf3e2;   /* do, muted warm */
+      --do-line:      #e7c98a;
+    }
+
+    /* ====== SHELL ====== */
+    #shell { display:flex; width:100vw; height:100vh; }
+
+    /* ====== RAIL ====== */
+    #rail {
+      width: 38%;
+      min-width: 280px;
+      height: 100%;
+      background: var(--rail-bg);
+      color: var(--ink-1);
+      border-right: 1px solid var(--rail-line);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    /* ---- Pre-flight ---- */
+    .preflight {
+      display: flex; flex-direction: column;
+      height: 100%; overflow-y: auto;
+      padding: 36px 30px; gap: 26px;
+    }
+    .preflight-level {
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--accent);
+    }
+    .preflight-title {
+      font-size: 24px; font-weight: 700;
+      color: var(--ink-1); line-height: 1.25; margin-top: 8px;
+    }
+    .preflight-time { font-size: 13px; color: var(--ink-3); margin-top: 6px; }
+    .preflight-divider { border: none; border-top: 1px solid var(--rail-line); }
+    .preflight-section { display:flex; flex-direction:column; gap:10px; }
+    .preflight-section-label {
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--ink-2);
+    }
+    .preflight-list { padding-left: 20px; display:flex; flex-direction:column; gap:7px; }
+    .preflight-list li { font-size: 14px; color: var(--ink-2); line-height: 1.55; }
+    .preflight-footer { margin-top: auto; display:flex; flex-direction:column; gap:10px; }
+    .btn-begin {
+      background: var(--accent); color: #fff; border: none;
+      border-radius: 10px; padding: 16px 22px;
+      font-size: 16px; font-weight: 700; cursor: pointer;
+      font-family: 'Lexend', sans-serif;
+      box-shadow: 0 6px 18px rgba(47,107,237,0.28);
+      transition: background 0.15s, transform 0.1s;
+    }
+    .btn-begin:hover { background: #2257cf; }
+    .btn-begin:active { transform: translateY(1px); }
+    .preflight-beat-count { text-align:center; font-size:12px; color:var(--ink-3); }
+
+    /* ---- Active rail layout ---- */
+    .rail-active { display:flex; flex-direction:column; height:100%; overflow:hidden; }
+
+    /* ---- Progress map (fixed top) ---- */
+    .rail-progress {
+      flex-shrink: 0;
+      padding: 13px 18px 11px;
+      background: var(--rail-panel);
+      border-bottom: 1px solid var(--rail-line);
+      display: flex; flex-direction: column; gap: 9px;
+    }
+    .phase-chain { display:flex; align-items:center; gap:4px; flex-wrap:wrap; }
+    .phase-pill {
+      font-size: 10px; font-weight: 700;
+      padding: 3px 9px; border-radius: 99px;
+      color: var(--ink-3); background: transparent;
+      border: 1px solid transparent;
+      letter-spacing: 0.05em; white-space: nowrap;
+    }
+    .phase-pill-active { /* inline style overrides */ }
+    .phase-sep { color: var(--rail-line); font-size: 11px; flex-shrink: 0; }
+    .beat-meter { display:flex; align-items:center; gap:10px; }
+    .beat-dots { display:flex; gap:4px; flex-wrap:wrap; }
+    .progress-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #d3dae6; flex-shrink: 0;
+    }
+    .dot-done  { background: #aab6c8; }
+    .dot-active {
+      background: var(--accent); width: 9px; height: 9px;
+      box-shadow: 0 0 0 3px rgba(47,107,237,0.18);
+    }
+    .beat-pos-text { font-size: 11px; color: var(--ink-3); white-space: nowrap; font-weight:700; }
+
+    /* ---- Scrollable beat list ---- */
+    .rail-scroll {
+      flex: 1; overflow-y: auto;
+      scrollbar-width: thin; scrollbar-color: #2a2a45 transparent;
+    }
+    .beat-list { padding: 6px 0 10px; }
+
+    /* ---- Peripheral beats ---- */
+    .beat-peripheral {
+      display: flex; align-items: center; gap: 10px;
+      padding: 8px 18px 8px 16px;
+      cursor: pointer; border-left: 2px solid transparent;
+      transition: background 0.1s;
+      user-select: none;
+    }
+    .beat-peripheral:hover { background: rgba(47,107,237,0.06); }
+    .beat-past  { opacity: 0.5; }
+    .beat-future { opacity: 0.62; }
+    .peripheral-num {
+      font-size: 11px; font-weight: 700; min-width: 18px;
+      text-align: right; color: var(--ink-3); flex-shrink: 0;
+    }
+    .peripheral-phase-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      flex-shrink: 0; opacity: 0.7;
+    }
+    .peripheral-label {
+      font-size: 13px; color: var(--ink-2); flex: 1;
+      min-width: 0; white-space: nowrap;
+      overflow: hidden; text-overflow: ellipsis;
+    }
+    .peripheral-check { font-size: 11px; color: var(--ok); flex-shrink: 0; }
+
+    /* ---- Focal beat ---- (the unmistakable card) */
+    .beat-focal { padding: 12px 14px; }
+    .focal-card {
+      background: var(--rail-panel);
+      border-radius: 14px;
+      padding: 20px 20px 18px;
+      border-top: 3px solid var(--accent);
+      box-shadow: 0 10px 30px rgba(31,41,55,0.12), 0 2px 6px rgba(31,41,55,0.06);
+      color: var(--ink-1);
+      display: flex; flex-direction: column; gap: 13px;
+    }
+    .focal-header { display:flex; align-items:baseline; gap:9px; flex-wrap:wrap; }
+    .focal-phase-badge {
+      font-size: 10px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; padding: 3px 9px; border-radius: 99px;
+      flex-shrink: 0;
+    }
+    .focal-beat-label { font-size: 15px; font-weight: 700; color: var(--ink-1); }
+    .focal-section { display:flex; flex-direction:column; gap:5px; }
+    .focal-section-lbl {
+      font-size: 10px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    /* SAY — the loudest voice on the card */
+    .focal-say {
+      background: var(--accent-soft); border-radius: 10px;
+      padding: 14px 16px; gap: 9px;
+      border: 1px solid var(--accent-line);
+    }
+    .focal-say .focal-section-lbl { color: var(--accent); }
+    .say-body { display:flex; flex-direction:column; gap:9px; }
+    .say-line {
+      font-size: 19px; font-weight: 600;
+      line-height: 1.5; color: #142036;
+    }
+    .speak-say-btn {
+      align-self: flex-start;
+      background: var(--accent); color: #fff; border: none;
+      border-radius: 7px; padding: 7px 13px;
+      font-size: 12px; font-weight: 700; cursor: pointer;
+      font-family: 'Lexend', sans-serif;
+      transition: background 0.12s;
+    }
+    .speak-say-btn:hover { background: #2257cf; }
+
+    /* DO */
+    .focal-do {
+      background: var(--do-soft); border-radius: 10px;
+      padding: 12px 16px; border-left: 4px solid var(--do-line);
+    }
+    .focal-do .focal-section-lbl { color: #9a6a16; }
+    .focal-do .section-body { font-size: 14px; color: #5c4a26; line-height: 1.55; }
+
+    /* LISTEN */
+    .focal-listen {
+      background: var(--ok-soft); border-radius: 10px;
+      padding: 12px 16px; border-left: 4px solid var(--ok);
+    }
+    .focal-listen .focal-section-lbl { color: #1d7a52; }
+    .expect-pills { display:flex; flex-wrap:wrap; gap:6px; margin-top: 3px; }
+    .expect-pill {
+      background: #fff; color: #1d7a52;
+      border: 1px solid #bfe6d2;
+      padding: 4px 11px; border-radius: 99px;
+      font-size: 14px; font-weight: 600;
+      font-family: monospace;
+    }
+    .listen-hint { font-size: 12px; color: var(--ink-3); font-style: italic; margin-top: 5px; }
+
+    /* NOTE */
+    .focal-note { border-left: 3px solid var(--rail-line); padding: 6px 14px; }
+    .focal-note .focal-section-lbl { color: var(--ink-3); }
+    .focal-note .section-body { font-size: 13px; color: var(--ink-2); font-style: italic; line-height: 1.55; }
+
+    /* ====== PHASE 4 — MEDIA (model video) ====== */
+    .focal-media {
+      background: #0f172a; border-radius: 10px;
+      padding: 12px; display: flex; flex-direction: column; gap: 10px;
+    }
+    .media-section-lbl {
+      font-size: 10px; font-weight: 700; letter-spacing: 0.14em;
+      text-transform: uppercase; color: #93c5fd;
+    }
+    .media-video {
+      width: 100%; border-radius: 8px; background: #000;
+      max-height: 320px; display: block;
+    }
+    .media-controls { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+    .media-play-btn {
+      background: var(--accent); color: #fff; border: none;
+      border-radius: 7px; padding: 9px 14px; font-size: 13px; font-weight: 700;
+      cursor: pointer; font-family: 'Lexend',sans-serif; transition: background .12s;
+      min-height: 44px;
+    }
+    .media-play-btn:hover { background: #2257cf; }
+    .speed-toggle {
+      display: flex; margin-left: auto;
+      border: 1px solid #334155; border-radius: 8px; overflow: hidden;
+    }
+    .speed-btn {
+      background: #1e293b; color: #cbd5e1; border: none;
+      padding: 9px 13px; font-size: 13px; font-weight: 700; cursor: pointer;
+      font-family: 'Lexend',sans-serif; border-left: 1px solid #334155;
+      min-height: 44px; transition: background .12s;
+    }
+    .speed-btn:first-child { border-left: none; }
+    .speed-btn:hover { background: #27344a; }
+    .speed-btn.active { background: var(--accent); color: #fff; }
+    .media-caption { font-size: 12px; color: #cbd5e1; line-height: 1.45; }
+    /* compact media inside the board-dominant strip */
+    .strip-media { margin-top: 2px; }
+    .strip-media .media-video { max-height: 150px; }
+
+    /* RECOVERY */
+    .focal-recovery { border-top: 1px solid #e2e8f0; padding-top: 8px; margin-top: 0; }
+    .recovery-toggle {
+      background: transparent; border: 1px solid #fca5a5;
+      color: #dc2626; border-radius: 5px;
+      padding: 5px 10px; font-size: 11px; font-weight: 700;
+      cursor: pointer; font-family: 'Lexend', sans-serif;
+      width: 100%; text-align: left;
+      transition: background 0.12s;
+    }
+    .recovery-toggle:hover { background: #fef2f2; }
+    .recovery-open .recovery-toggle { background: #fef2f2; }
+    .recovery-panel {
+      margin-top: 7px; background: #fff1f2;
+      border-radius: 6px; padding: 10px 12px;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .recovery-trigger {
+      font-size: 11px; color: #9f1239;
+      font-style: italic; line-height: 1.5;
+    }
+    .recovery-prompts { padding-left: 18px; display:flex; flex-direction:column; gap:4px; }
+    .recovery-prompts li { font-size: 13px; color: #1e293b; line-height: 1.5; }
+    .reteach-btn {
+      background: #fecdd3; color: #881337;
+      border: 1px solid #fda4af;
+      border-radius: 5px; padding: 6px 10px;
+      font-size: 12px; font-weight: 700; cursor: pointer;
+      font-family: 'Lexend', sans-serif; text-align: left;
+      transition: background 0.12s; margin-top: 2px;
+    }
+    .reteach-btn:hover { background: #fda4af; }
+
+    /* ---- Nav footer (fixed bottom) ---- */
+    .rail-nav {
+      flex-shrink: 0;
+      display: flex; gap: 10px;
+      padding: 13px 16px;
+      background: var(--rail-panel);
+      border-top: 1px solid var(--rail-line);
+    }
+    .nav-prev {
+      flex: 0 0 auto;
+      background: #fff; color: var(--ink-2);
+      border: 1px solid #d3dae6; border-radius: 10px;
+      padding: 12px 18px; font-size: 14px; font-weight: 700;
+      cursor: pointer; font-family: 'Lexend', sans-serif;
+      transition: background 0.12s;
+    }
+    .nav-prev:hover:not(:disabled) { background: #f1f4fa; color: var(--ink-1); }
+    .nav-prev:disabled { opacity: 0.4; cursor: not-allowed; }
+    .nav-next {
+      flex: 1;
+      background: var(--accent); color: #fff; border: none;
+      border-radius: 10px; padding: 13px 18px;
+      font-size: 15px; font-weight: 700; cursor: pointer;
+      font-family: 'Lexend', sans-serif;
+      box-shadow: 0 4px 14px rgba(47,107,237,0.26);
+      transition: background 0.12s, transform 0.1s;
+    }
+    .nav-next:hover { background: #2257cf; }
+    .nav-next:active { transform: translateY(1px); }
+    .nav-next.nav-done { background: var(--ok); box-shadow: 0 4px 14px rgba(47,158,107,0.26); }
+    .nav-next.nav-done:hover { background: #268a5c; }
+
+    /* ====== BOARD ====== */
+    #board {
+      flex: 1; height: 100%;
+      position: relative; overflow: hidden;
+    }
+
+    /* ====== ENGINE — re-scoped from tiles-app.html ====== */
+    :root {
+      --bg: #e5e7eb; --ink: #111827;
+      --tray: #3f3f46; --tab: #6b7280; --tab-dim: #9ca3af; --tab-ink: #fff;
+      --shadow: rgba(0,0,0,.25);
+    }
+    #board #app { position:relative; height:100%; width:100%; background:var(--bg); }
+    #wordPane { position:absolute; inset:0 0 24vh 0; background:transparent; overflow:hidden; }
+    .hint { position:absolute; left:50%; top:40%; transform:translate(-50%,-50%); color:#6b7280; font-size:17px; text-align:center; pointer-events:none; }
+    .sub-hint { display:block; font-size:14px; margin-top:8px; opacity:0.7; }
+    .tile { width:52px; height:52px; border:2px solid #374151; border-radius:6px; cursor:grab; display:flex; align-items:center; justify-content:center; font-weight:700; font-family:'Lexend',sans-serif; user-select:none; box-shadow:0 2px 4px rgba(0,0,0,.25); flex-shrink:0; touch-action:none; background:white; }
+    .tile:active { cursor:grabbing; }
+    .tile.blue{background:#60a5fa} .tile.yellow{background:#fbbf24} .tile.red{background:#f87171} .tile.green{background:#4ade80} .tile.orange{background:#fb923c} .tile.purple{background:#a78bfa}
+    .tile.dragging { position:fixed; z-index:1000; opacity:.95; pointer-events:none; will-change:transform; left:0; top:0; }
+    .word-pane-tile { position:absolute; }
+    .ghost-tile { position:absolute; width:52px; height:52px; border:2px dashed #6b7280; border-radius:6px; background:rgba(255,255,255,0.3); z-index:5; pointer-events:none; }
+    #controls { position:absolute; top:8px; left:8px; display:flex; gap:6px; z-index:10; }
+    .btn { background:#111827; color:#fff; border:none; border-radius:6px; padding:6px 10px; cursor:pointer; font-weight:600; font-size:13px; box-shadow:0 2px 6px var(--shadow); font-family:'Lexend',sans-serif; }
+    .btn.secondary{background:#374151} .btn.danger{background:#dc2626} .btn.primary{background:#2563eb}
+    .btn.speaking { background:#16a34a; transition:background 0.2s; }
+    #alphabetSection { position:absolute; left:0; right:0; bottom:24vh; background:#f9fafb; padding:4px 6px; pointer-events:auto; box-shadow:0 2px 6px rgba(0,0,0,.15); z-index:15; display:flex; flex-direction:column; gap:3px; }
+    .alphabet-row { display:flex; gap:3px; justify-content:center; flex-wrap:wrap; }
+    #bottomDock { position:absolute; left:0; right:0; bottom:0; height:24vh; pointer-events:none; z-index:20; display:flex; flex-direction:column; }
+    #drawerTabs { display:flex; background:var(--tab-dim); pointer-events:auto; border-bottom:2px solid var(--shadow); overflow-x:auto; flex-shrink:0; }
+    .drawer-tab { padding:6px 12px; background:var(--tab); border:none; cursor:pointer; font-weight:700; font-size:12px; white-space:nowrap; border-right:1px solid rgba(0,0,0,.2); transition:background .2s; flex-shrink:0; font-family:'Lexend',sans-serif; }
+    .drawer-tab:hover{background:#52525b} .drawer-tab.active{background:var(--tray);border-bottom:2px solid var(--tray)}
+    .drawer-tab.blue-text{color:#60a5fa} .drawer-tab.yellow-text{color:#fbbf24} .drawer-tab.red-text{color:#f87171} .drawer-tab.green-text{color:#4ade80} .drawer-tab.orange-text{color:#fb923c} .drawer-tab.purple-text{color:#a78bfa}
+    #baseTiles { flex:1; background:var(--tray); padding:4px 6px; pointer-events:auto; box-shadow:0 -4px 12px rgba(0,0,0,.3); overflow-x:auto; overflow-y:hidden; display:flex; align-items:center; }
+    .base-row { display:flex; flex-wrap:nowrap; gap:3px; justify-content:center; width:100%; }
+    @media screen and (max-width:1366px) {
+      #bottomDock{height:22vh} #wordPane{inset:0 0 22vh 0} #alphabetSection{bottom:22vh;padding:3px 5px;gap:2px} .alphabet-row{gap:2px} .drawer-tab{padding:5px 10px;font-size:11px} #baseTiles{padding:4px 5px} .base-row{gap:2px} .hint{font-size:15px}
+    }
+    @media screen and (max-height:800px) {
+      #bottomDock{height:20vh} #wordPane{inset:0 0 20vh 0} #alphabetSection{bottom:20vh;padding:3px 5px}
+    }
+
+    /* ====== PHASE 2 — BOARD CONTROL ====== */
+    /* Rail is the sole level driver — hide the manual dropdown */
+    #lessonSelect { display: none; }
+
+    /* Locked board: pane tiles cannot be picked up */
+    #wordPane.locked .word-pane-tile { pointer-events: none; }
+    .board-lock-badge {
+      position: absolute; top: 8px; right: 8px;
+      background: rgba(17,24,39,0.72); color: #f9fafb;
+      border-radius: 4px; padding: 3px 8px; font-size: 11px;
+      pointer-events: none; z-index: 10;
+      font-family: 'Lexend', sans-serif; letter-spacing: 0.02em;
+    }
+
+    /* ====== PHASE 4 — STUDENT-PAGE MODE SURFACES ====== */
+    /* When a non-tiles mode is active, hide (don't destroy) the engine surfaces
+       and reveal the mode surface. Engine tile state persists hidden. */
+    #mode-surface { display: none; }
+    #board.mode-active #wordPane,
+    #board.mode-active #alphabetSection,
+    #board.mode-active #bottomDock { display: none; }
+    #board.mode-active #mode-surface {
+      display: flex; position: absolute; inset: 0;
+      background: #e5e7eb; overflow: auto;
+      flex-direction: column;
+    }
+
+    /* Shared mode scaffold */
+    .mode-pane {
+      flex: 1; display: flex; flex-direction: column;
+      padding: clamp(16px, 3vw, 40px);
+      gap: clamp(12px, 2vw, 24px); min-height: 0;
+    }
+    .mode-head {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; flex-shrink: 0;
+    }
+    .mode-title {
+      font-size: clamp(15px, 1.6vw, 20px); font-weight: 700;
+      color: #334155; letter-spacing: 0.02em;
+    }
+    .mode-hint { font-size: 13px; color: #94a3b8; }
+    .mode-stepper { display: flex; align-items: center; gap: 8px; }
+    .mode-step-btn {
+      background: #fff; border: 1px solid #cbd5e1; color: #334155;
+      border-radius: 8px; padding: 8px 14px; font-size: 16px; font-weight: 700;
+      cursor: pointer; font-family: 'Lexend',sans-serif; box-shadow: 0 1px 3px rgba(0,0,0,.12);
+      min-height: 44px; min-width: 44px;
+    }
+    .mode-step-btn:hover:not(:disabled) { background: #f1f5f9; }
+    .mode-step-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+    .mode-step-pos { font-size: 13px; color: #64748b; font-weight: 700; min-width: 42px; text-align: center; }
+    .reader-card {
+      flex: 1; display: flex; align-items: center; justify-content: center;
+      text-align: center; color: #0f172a; font-weight: 800; line-height: 1.16;
+      padding: clamp(22px, 5vw, 74px);
+      min-height: clamp(220px, 48vh, 620px);
+      overflow-wrap: anywhere;
+    }
+    .reader-card .reader-text {
+      max-width: min(980px, 92vw);
+      font-size: clamp(46px, 8vw, 118px);
+    }
+    .reader-card.reader-sentence .reader-text {
+      font-size: clamp(34px, 5.6vw, 82px);
+      line-height: 1.22;
+    }
+    .reader-empty { color: #94a3b8; font-weight: 700; }
+
+    /* word_frame */
+    .wf-grid {
+      flex: 1; display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: clamp(10px, 1.6vw, 18px); align-content: center;
+    }
+    .wf-word {
+      display: flex; align-items: center; justify-content: center;
+      background: #fff; border: 2px solid #e2e8f0; border-radius: 14px;
+      padding: clamp(14px, 2vw, 26px) 10px;
+      font-size: clamp(22px, 3vw, 40px); font-weight: 700; color: #475569;
+      cursor: pointer; user-select: none; transition: transform .12s, box-shadow .12s, border-color .12s;
+      box-shadow: 0 1px 3px rgba(0,0,0,.06);
+    }
+    .wf-word:hover { border-color: #cbd5e1; }
+    .wf-word.spot {
+      border-color: #2563eb; color: #1e3a8a; background: #eff6ff;
+      box-shadow: 0 8px 28px rgba(37,99,235,.28); transform: scale(1.04);
+    }
+
+    /* phrase_builder */
+    .pb-cols { display: flex; gap: clamp(10px, 2vw, 22px); flex: 1; min-height: 0; }
+    .pb-col {
+      flex: 1; display: flex; flex-direction: column; gap: 8px;
+      background: #fff; border: 1px solid #e2e8f0; border-radius: 12px;
+      padding: 12px; overflow-y: auto;
+    }
+    .pb-col-lbl {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.08em; color: #94a3b8; text-align: center;
+    }
+    .pb-chip {
+      background: #f8fafc; border: 1px solid #cbd5e1; border-radius: 9px;
+      padding: 12px 10px; font-size: clamp(16px, 1.8vw, 22px); font-weight: 700;
+      color: #334155; cursor: pointer; text-align: center; user-select: none;
+      transition: background .12s, border-color .12s; min-height: 44px;
+    }
+    .pb-chip:hover { background: #f1f5f9; }
+    .pb-chip.sel { background: #2563eb; color: #fff; border-color: #2563eb; }
+    .pb-tray {
+      flex-shrink: 0; background: #1e293b; border-radius: 12px;
+      padding: clamp(14px, 2vw, 22px); min-height: 64px;
+      display: flex; align-items: center; justify-content: center; gap: 10px;
+      font-size: clamp(22px, 3vw, 38px); font-weight: 700; color: #f8fafc; flex-wrap: wrap;
+    }
+    .pb-tray-empty { color: #64748b; font-size: 16px; font-weight: 400; font-style: italic; }
+    .pb-tray-word.placeholder { color: #475569; }
+
+    /* fill_blanks */
+    .fb-rows { flex: 1; display: flex; flex-direction: column; gap: clamp(10px, 1.6vw, 18px); justify-content: center; }
+    .fb-row {
+      display: flex; align-items: center; justify-content: center; gap: 4px;
+      font-size: clamp(26px, 3.6vw, 48px); font-weight: 700; color: #334155;
+      letter-spacing: 0.04em;
+    }
+    .fb-blank {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-width: clamp(40px, 5vw, 64px); height: clamp(40px, 5vw, 64px);
+      border-bottom: 4px solid #94a3b8; border-radius: 4px;
+      background: rgba(255,255,255,.5); cursor: pointer; transition: background .12s, border-color .12s;
+    }
+    .fb-blank.filled { background: #dbeafe; border-bottom-color: #2563eb; color: #1e3a8a; }
+    .fb-bank { flex-shrink: 0; display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; padding-top: 12px; border-top: 1px dashed #cbd5e1; }
+    .fb-chip {
+      background: #fff; border: 2px solid #cbd5e1; border-radius: 10px;
+      min-width: 52px; height: 52px; padding: 0 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px; font-weight: 700; color: #334155; cursor: pointer; user-select: none;
+      box-shadow: 0 2px 4px rgba(0,0,0,.12); transition: transform .1s;
+    }
+    .fb-chip:hover { background: #f8fafc; }
+    .fb-chip.sel { background: #2563eb; color: #fff; border-color: #2563eb; transform: scale(1.06); }
+
+    /* sentences */
+    .sn-list { flex: 1; display: flex; flex-direction: column; gap: clamp(10px, 1.6vw, 16px); justify-content: center; }
+    .sn-item {
+      background: #fff; border: 1px solid #e2e8f0; border-left: 4px solid #cbd5e1;
+      border-radius: 8px; padding: clamp(14px, 2vw, 22px) clamp(16px, 2.4vw, 28px);
+      font-size: clamp(18px, 2.4vw, 30px); font-weight: 600; color: #1e293b; line-height: 1.5;
+      cursor: pointer; user-select: none;
+    }
+    .sn-item.spot { border-left-color: #2563eb; background: #eff6ff; box-shadow: 0 8px 22px rgba(37,99,235,.15); }
+    .sn-label {
+      display: inline-flex; margin-right: 10px; padding: 3px 8px;
+      border-radius: 999px; background: #e2e8f0; color: #475569;
+      font-size: .72em; font-weight: 800; vertical-align: middle;
+    }
+
+    /* story */
+    .story-pane { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: clamp(20px, 4vw, 56px); }
+    .story-card {
+      background: #fffef9; border: 1px solid #f0ead9; border-radius: 16px;
+      padding: clamp(24px, 4vw, 56px); max-width: 820px; width: 100%;
+      box-shadow: 0 6px 30px rgba(0,0,0,.08);
+    }
+    .story-title { font-size: clamp(26px, 3.4vw, 44px); font-weight: 700; color: #1e293b; margin-bottom: clamp(14px, 2vw, 26px); }
+    .story-text { font-size: clamp(20px, 2.6vw, 32px); line-height: 1.85; color: #334155; white-space: pre-wrap; }
+    .worksheet-card {
+      width: min(840px, 92vw); min-height: min(86vh, 980px);
+      background: #fff; border: 1px solid #d9e0ea; border-radius: 8px;
+      box-shadow: 0 10px 32px rgba(15,23,42,.16);
+      padding: clamp(26px, 4vw, 54px);
+      display: flex; flex-direction: column; gap: clamp(18px, 3vw, 34px);
+    }
+    .worksheet-kicker {
+      font-size: 12px; font-weight: 800; letter-spacing: .08em;
+      text-transform: uppercase; color: #64748b;
+    }
+    .worksheet-title {
+      font-size: clamp(28px, 4vw, 52px); font-weight: 800;
+      color: #0f172a; line-height: 1.12;
+    }
+    .worksheet-subtitle { font-size: clamp(16px, 2vw, 24px); color: #475569; line-height: 1.45; }
+    .worksheet-lines {
+      flex: 1; display: flex; flex-direction: column; justify-content: space-evenly;
+      gap: clamp(16px, 2.4vw, 30px); margin-top: clamp(8px, 2vw, 26px);
+    }
+    .worksheet-line { height: 1px; background: #cbd5e1; position: relative; }
+    .worksheet-line::before {
+      content: attr(data-num); position: absolute; left: 0; bottom: 8px;
+      color: #94a3b8; font-size: 13px; font-weight: 800;
+    }
+    .worksheet-images {
+      display: flex; flex-direction: column; align-items: center;
+      gap: clamp(18px, 3vw, 34px); width: 100%;
+    }
+    .worksheet-image-frame {
+      width: min(980px, 96vw);
+      background: #f8fafc; border: 1px solid #cbd5e1;
+      border-radius: 8px; box-shadow: 0 10px 32px rgba(15,23,42,.16);
+      padding: clamp(8px, 1.4vw, 16px);
+    }
+    .worksheet-image-label {
+      font-size: 13px; font-weight: 800; color: #475569;
+      margin: 0 0 8px 2px;
+    }
+    .worksheet-image {
+      display: block; width: 100%; height: auto; border-radius: 4px;
+      background: #fff;
+    }
+    .worksheet-caption {
+      max-width: min(980px, 96vw); color: #475569;
+      font-size: clamp(14px, 1.5vw, 18px); line-height: 1.5;
+      text-align: center;
+    }
+
+    /* matching */
+    .mt-board { flex: 1; display: flex; gap: clamp(20px, 5vw, 80px); justify-content: center; align-items: center; }
+    .mt-col { display: flex; flex-direction: column; gap: clamp(10px, 1.6vw, 16px); min-width: 130px; }
+    .mt-cell {
+      background: #fff; border: 2px solid #cbd5e1; border-radius: 12px;
+      padding: clamp(12px, 1.8vw, 20px); min-height: 56px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: clamp(22px, 3vw, 38px); font-weight: 700; color: #334155;
+      cursor: pointer; user-select: none; transition: transform .12s, border-color .12s, background .12s;
+    }
+    .mt-cell:hover:not(.matched) { border-color: #94a3b8; }
+    .mt-cell.sel { border-color: #2563eb; background: #eff6ff; transform: scale(1.04); }
+    .mt-cell.matched { border-color: #16a34a; background: #f0fdf4; color: #15803d; cursor: default; }
+    .mt-cell.miss { border-color: #f87171; background: #fef2f2; animation: mt-shake .3s; }
+    @keyframes mt-shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-5px)} 75%{transform:translateX(5px)} }
+
+    /* sight_words */
+    .sw-wrap { flex: 1; display: flex; flex-wrap: wrap; gap: clamp(12px, 2vw, 22px); align-content: center; justify-content: center; }
+    .sw-pill {
+      background: #fff; border: 2px solid #e2e8f0; border-radius: 99px;
+      padding: clamp(12px, 1.8vw, 22px) clamp(22px, 3vw, 40px);
+      font-size: clamp(22px, 3vw, 40px); font-weight: 700; color: #475569;
+      cursor: pointer; user-select: none; transition: transform .12s, box-shadow .12s, border-color .12s;
+      box-shadow: 0 1px 3px rgba(0,0,0,.06);
+    }
+    .sw-pill:hover { border-color: #cbd5e1; }
+    .sw-pill.spot { border-color: #2563eb; color: #1e3a8a; background: #eff6ff; transform: scale(1.06); box-shadow: 0 8px 24px rgba(37,99,235,.25); }
+    .sw-pill.known { border-color: #16a34a; background: #f0fdf4; color: #166534; }
+    .sw-pill.missed { border-color: #dc2626; background: #fef2f2; color: #991b1b; }
+    .sw-pill:active { transform: scale(0.96); }
+    .sw-teacher-current {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      padding: clamp(18px, 2.6vw, 34px); background: #fff; border: 1px solid #e2e8f0;
+      border-radius: 10px; box-shadow: 0 3px 12px rgba(15,23,42,.07);
+    }
+    .sw-current-word { font-size: clamp(34px, 5vw, 68px); font-weight: 800; color: #0f172a; }
+    .sw-markers { display: flex; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+    .sw-mark-btn {
+      border: 1px solid #cbd5e1; border-radius: 8px; background: #f8fafc;
+      padding: 10px 14px; font-weight: 800; color: #334155; cursor: pointer;
+    }
+    .sw-mark-btn.known { border-color: #16a34a; color: #166534; background: #f0fdf4; }
+    .sw-mark-btn.missed { border-color: #dc2626; color: #991b1b; background: #fef2f2; }
+    .reading-deck {
+      flex-shrink: 0; padding: 14px 16px; border: 1px dashed #cbd5e1;
+      border-radius: 10px; background: rgba(248,250,252,.88);
+    }
+    .reading-deck-title { font-size: 13px; color: #64748b; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; margin-bottom: 8px; }
+    .reading-deck-list { display: flex; gap: 8px; flex-wrap: wrap; color: #991b1b; font-weight: 800; }
+
+    /* Board readout line in rail focal card */
+    .board-readout {
+      font-size: 11px; color: var(--ink-2); font-weight: 600;
+      padding: 8px 0 2px; border-top: 1px dashed var(--rail-line);
+      line-height: 1.5; letter-spacing: 0.01em;
+    }
+    .board-readout-unchanged { color: var(--ink-3); font-style: italic; font-weight: 400; }
+
+    /* ====== PHASE 3 — LAYOUT STATES ====== */
+
+    /* Layout picker — fixed overlay on #shell, reachable in ALL layouts
+       (incl. rail-focus & board-only where #board / #rail are hidden). */
+    #layout-picker {
+      position: fixed; top: 8px; right: 8px; z-index: 1000;
+      background: rgba(255,255,255,0.94); color: var(--ink-2);
+      border: 1px solid var(--accent-line);
+      border-radius: 8px; padding: 5px;
+      font-size: 11px; font-weight: 700; font-family: 'Lexend',sans-serif;
+      user-select: none;
+      display: flex; align-items: center; gap: 8px;
+      white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(31,41,55,0.14); backdrop-filter: blur(4px);
+    }
+    .layout-segment-group {
+      display: flex; align-items: center; gap: 0;
+      border: 1px solid #d3dae6; border-radius: 7px; overflow: hidden;
+      background: #f8fafc;
+    }
+    .layout-group-label { color: var(--ink-3); padding-left: 2px; }
+    .layout-segment {
+      border: none; border-left: 1px solid #d3dae6;
+      background: transparent; color: var(--ink-2);
+      min-height: 30px; padding: 6px 10px;
+      font-size: 11px; font-weight: 700; font-family: 'Lexend',sans-serif;
+      cursor: pointer; transition: background 0.12s, color 0.12s;
+    }
+    .layout-segment:first-child { border-left: none; }
+    .layout-segment:hover { background: var(--accent-soft); color: var(--accent); }
+    .layout-segment.active,
+    .layout-segment[aria-checked="true"] {
+      background: var(--accent); color: #fff;
+    }
+    .layout-segment:focus-visible {
+      outline: 2px solid #111827; outline-offset: 2px; position: relative; z-index: 1;
+    }
+    #cartridge-picker {
+      position: fixed; top: 54px; right: 8px; z-index: 1000;
+      display: flex; align-items: center; gap: 8px;
+      background: rgba(255,255,255,0.94); color: var(--ink-2);
+      border: 1px solid var(--accent-line); border-radius: 8px;
+      padding: 6px 8px; box-shadow: 0 2px 8px rgba(31,41,55,0.14);
+      backdrop-filter: blur(4px); font-family: 'Lexend',sans-serif;
+    }
+    .cartridge-label { font-size: 11px; font-weight: 700; color: var(--ink-3); }
+    #cartridgeSelect {
+      border: 1px solid #d3dae6; border-radius: 7px;
+      background: #fff; color: var(--ink-1);
+      min-height: 32px; max-width: 260px; padding: 6px 28px 6px 9px;
+      font-size: 12px; font-weight: 700; font-family: 'Lexend',sans-serif;
+    }
+    .cartridge-status {
+      font-size: 11px; font-weight: 700; color: var(--ink-3);
+      max-width: 210px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+    }
+
+    /* Board proxy panel (rail-focus mode only) */
+    #board-proxy { display: none; }
+    #shell.layout-rail-focus #board-proxy {
+      display: flex; flex-direction: column;
+      flex: 1; background: var(--rail-bg);
+      border-left: 1px solid var(--rail-line);
+      overflow-y: auto;
+    }
+    .proxy-shell {
+      flex: 1; display: flex; flex-direction: column;
+      align-items: center; padding: 28px 24px; gap: 18px; min-height: 100%;
+    }
+    .proxy-topbar {
+      width: 100%; display: flex; align-items: center;
+      justify-content: space-between; flex-shrink: 0;
+    }
+    .proxy-header {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.14em; color: var(--ink-2);
+    }
+    .proxy-pos { font-size: 11px; color: var(--ink-3); font-weight: 700; }
+    .proxy-card {
+      background: var(--rail-panel); border: 1px solid var(--rail-line);
+      border-top: 3px solid var(--accent);
+      border-radius: 14px; padding: 24px 26px; width: 100%;
+      box-shadow: 0 10px 30px rgba(31,41,55,0.10);
+      display: flex; flex-direction: column; gap: 16px;
+    }
+    .proxy-mode-chip {
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.1em; padding: 4px 10px; border-radius: 99px;
+      color: var(--accent); background: var(--accent-soft);
+      align-self: flex-start;
+    }
+    .proxy-detail { font-size: 15px; color: var(--ink-2); line-height: 1.65; }
+    .proxy-tile-visual { display: flex; flex-wrap: wrap; gap: 6px; }
+    .proxy-tile-chip {
+      width: 48px; height: 48px; border-radius: 6px;
+      border: 2px solid #374151;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 20px; font-family: 'Lexend',sans-serif;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.35);
+    }
+    .proxy-tile-chip.blue   { background:#60a5fa; color:#1e3a5f; }
+    .proxy-tile-chip.yellow { background:#fbbf24; color:#3b2500; }
+    .proxy-tile-chip.red    { background:#f87171; }
+    .proxy-tile-chip.green  { background:#4ade80; }
+    .proxy-tile-chip.orange { background:#fb923c; }
+    .proxy-tile-chip.purple { background:#a78bfa; }
+    .proxy-lock-badge { font-size: 13px; color: #c2410c; font-weight: 700; }
+    .proxy-unchanged {
+      font-size: 16px; color: var(--ink-3); font-style: italic;
+      text-align: center; padding: 44px 0; width: 100%;
+    }
+    .proxy-cleared {
+      font-size: 18px; color: var(--ink-2); text-align: center;
+      padding: 36px 0; width: 100%;
+    }
+    .proxy-footer {
+      font-size: 11px; color: var(--ink-3); text-align: center;
+      padding-top: 12px; border-top: 1px solid var(--rail-line);
+      width: 100%; margin-top: auto;
+    }
+    .proxy-idle {
+      text-align: center; color: var(--ink-3); font-size: 15px;
+      padding: 64px 24px; width: 100%;
+    }
+
+    /* Side-by-side: base styles already set by #rail / #board rules */
+
+    /* Board-dominant: slim rail strip, board gets the space */
+    #shell.layout-board-dominant #rail {
+      width: 240px; min-width: 200px; max-width: 260px;
+      flex-shrink: 0;
+    }
+    #shell.layout-board-dominant #board { flex: 1; }
+
+    /* Board-only: student view — rail fully hidden */
+    #shell.layout-board-only #rail { display: none; }
+    #shell.layout-board-only #board { flex: 1; width: 100%; }
+    #shell.layout-board-only #layout-picker,
+    #shell.layout-board-only #cartridge-picker,
+    #shell.layout-board-only #controls,
+    #shell.layout-board-only #drawerTabs,
+    #shell.layout-board-only .board-lock-badge {
+      display: none !important;
+    }
+    #shell.layout-board-only #board #app {
+      background:
+        radial-gradient(circle at 50% 42%, rgba(255,255,255,0.72), rgba(255,255,255,0) 38%),
+        #e7ebf2;
+    }
+    #shell.layout-board-only #wordPane {
+      inset: 0;
+      background: transparent;
+    }
+    #shell.layout-board-only #wordPane .hint {
+      top: 50%;
+      font-size: clamp(18px, 2.2vw, 28px);
+      color: #7b879a;
+    }
+    #shell.layout-board-only #wordPane .sub-hint {
+      display: none;
+    }
+    #shell.layout-board-only #alphabetSection,
+    #shell.layout-board-only #bottomDock {
+      display: none;
+    }
+    #shell.layout-board-only.student-tile-bank-needed #wordPane {
+      inset: 0 0 clamp(132px, 18vh, 210px) 0;
+    }
+    #shell.layout-board-only.student-tile-bank-needed #alphabetSection {
+      display: flex;
+      bottom: clamp(74px, 10vh, 118px);
+      padding: 8px clamp(10px, 2vw, 24px);
+      gap: 8px;
+      background: rgba(248,250,252,0.96);
+      border-top: 1px solid #dbe3ef;
+      box-shadow: 0 -4px 18px rgba(31,41,55,0.12);
+    }
+    #shell.layout-board-only.student-tile-bank-needed .alphabet-row {
+      gap: clamp(5px, 0.8vw, 10px);
+    }
+    #shell.layout-board-only.student-tile-bank-needed #bottomDock {
+      display: flex;
+      height: clamp(74px, 10vh, 118px);
+      pointer-events: none;
+    }
+    #shell.layout-board-only.student-tile-bank-needed #baseTiles {
+      pointer-events: auto;
+      background: rgba(31,41,55,0.92);
+      padding: 10px clamp(12px, 2vw, 26px);
+      box-shadow: 0 -6px 20px rgba(31,41,55,0.22);
+    }
+    #shell.layout-board-only.student-tile-bank-needed .base-row {
+      gap: clamp(6px, 1vw, 12px);
+      justify-content: center;
+    }
+    #shell.layout-board-only .word-pane-tile {
+      border-width: 3px;
+      border-radius: 10px;
+      font-size: clamp(28px, 4vw, 46px) !important;
+      box-shadow:
+        0 0 0 clamp(5px, 0.65vw, 10px) rgba(255,255,255,0.82),
+        0 14px 28px rgba(31,41,55,0.24);
+    }
+    #shell.layout-board-only .ghost-tile {
+      border-width: 3px;
+      border-radius: 10px;
+      box-shadow: 0 0 0 clamp(5px, 0.65vw, 10px) rgba(255,255,255,0.45);
+    }
+    #shell.layout-board-only.student-tile-bank-needed #alphabetSection .tile,
+    #shell.layout-board-only.student-tile-bank-needed #baseTiles .tile {
+      border-radius: 9px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.24);
+    }
+    #shell.layout-board-only #board.mode-active #mode-surface {
+      background: #eef1f6;
+    }
+    #shell.layout-board-only #board.mode-active .mode-pane,
+    #shell.layout-board-only #board.mode-active .story-pane {
+      padding: clamp(26px, 5vw, 72px);
+    }
+    #shell.layout-board-only #board.mode-active .reader-card {
+      min-height: calc(100vh - clamp(52px, 10vw, 144px));
+    }
+    #shell.layout-board-only #board.mode-active .mode-title,
+    #shell.layout-board-only #board.mode-active .mode-hint {
+      color: transparent;
+      pointer-events: none;
+    }
+    #student-exit-button {
+      display: none; position: fixed; top: 10px; right: 10px; z-index: 1200;
+      border: 1px solid rgba(148,163,184,0.72); border-radius: 8px;
+      background: rgba(255,255,255,0.9); color: #334155;
+      font-family: 'Lexend', sans-serif; font-size: 12px; font-weight: 800;
+      padding: 9px 12px; min-height: 40px;
+      box-shadow: 0 4px 14px rgba(15,23,42,0.16);
+      cursor: pointer;
+    }
+    #student-exit-button:hover { background: #fff; color: #0f172a; }
+    #shell.layout-board-only #student-exit-button { display: block; }
+    #shell.layout-board-only #board.mode-active .worksheet-pane {
+      justify-content: flex-start;
+      padding: clamp(54px, 6vw, 84px) clamp(12px, 3vw, 42px) clamp(22px, 4vw, 56px);
+    }
+    #shell.layout-board-only #board.mode-active .worksheet-image-frame {
+      width: min(1120px, 98vw);
+      padding: clamp(4px, 0.8vw, 10px);
+    }
+
+    /* Rail-focus: teacher laptop view — live board hidden, proxy shown */
+    #shell.layout-rail-focus #board { display: none; }
+    #shell.layout-rail-focus #rail {
+      width: 45%; min-width: 300px; max-width: 520px;
+      flex-shrink: 0;
+    }
+
+    /* Slim strip styles (board-dominant active) */
+    .rail-strip {
+      display: flex; flex-direction: column;
+      height: 100%; overflow: hidden;
+    }
+    .strip-progress {
+      flex-shrink: 0; padding: 10px 12px;
+      background: var(--rail-panel); border-bottom: 1px solid var(--rail-line);
+      display: flex; align-items: center; justify-content: space-between; gap: 6px;
+    }
+    .strip-phase-chip {
+      font-size: 10px; font-weight: 700; padding: 3px 9px;
+      border-radius: 99px; white-space: nowrap;
+    }
+    .strip-beat-pos { font-size: 10px; color: var(--ink-3); flex-shrink: 0; font-weight:700; }
+    .strip-scroll {
+      flex: 1; overflow-y: auto;
+      scrollbar-width: thin; scrollbar-color: #cbd5e1 transparent;
+      padding: 16px 13px 10px;
+      display: flex; flex-direction: column; gap: 9px;
+    }
+    .strip-say-lbl {
+      font-size: 9px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.14em; color: var(--accent);
+    }
+    .strip-say-text {
+      font-size: 17px; font-weight: 600;
+      color: var(--ink-1); line-height: 1.55;
+    }
+    .strip-say-btn {
+      align-self: flex-start;
+      background: var(--accent); color: #fff; border: none;
+      border-radius: 6px; padding: 6px 11px; font-size: 12px;
+      font-weight: 700; cursor: pointer;
+      font-family: 'Lexend',sans-serif; transition: background 0.12s;
+    }
+    .strip-say-btn:hover { background: #2257cf; }
+    .strip-recovery-wrap { flex-shrink: 0; padding: 0 10px 6px; }
+    .strip-recovery-toggle {
+      width: 100%; background: transparent;
+      border: 1px solid #fca5a5; color: #dc2626;
+      border-radius: 5px; padding: 7px 10px;
+      font-size: 11px; font-weight: 700; cursor: pointer;
+      font-family: 'Lexend',sans-serif; text-align: left;
+      transition: background 0.12s;
+    }
+    .strip-recovery-toggle:hover { background: rgba(254,242,242,0.08); color: #fca5a5; }
+    .strip-recovery-panel {
+      margin-top: 6px; background: #fff1f2;
+      border-radius: 6px; padding: 8px 10px;
+      display: flex; flex-direction: column; gap: 6px;
+    }
+    .strip-recovery-trigger {
+      font-size: 11px; color: #9f1239; font-style: italic; line-height: 1.5;
+    }
+    .strip-recovery-prompts { padding-left: 16px; }
+    .strip-recovery-prompts li { font-size: 12px; color: #1e293b; line-height: 1.5; }
+    .strip-reteach-btn {
+      background: #fecdd3; color: #881337; border: 1px solid #fda4af;
+      border-radius: 4px; padding: 5px 8px;
+      font-size: 11px; font-weight: 700; cursor: pointer;
+      font-family: 'Lexend',sans-serif; text-align: left;
+      transition: background 0.12s;
+    }
+    .strip-reteach-btn:hover { background: #fda4af; }
+    .strip-nav {
+      flex-shrink: 0; padding: 12px 12px;
+      background: var(--rail-panel); border-top: 1px solid var(--rail-line);
+      display: flex; gap: 8px;
+    }
+    .strip-prev {
+      background: #fff; color: var(--ink-2);
+      border: 1px solid #d3dae6; border-radius: 9px;
+      padding: 11px 12px; font-size: 16px; font-weight: 700;
+      cursor: pointer; font-family: 'Lexend',sans-serif;
+      transition: background 0.12s; flex-shrink: 0;
+    }
+    .strip-prev:disabled { opacity: 0.4; cursor: not-allowed; }
+    .strip-prev:hover:not(:disabled) { background: #f1f4fa; color: var(--ink-1); }
+    .strip-next {
+      flex: 1; background: var(--accent); color: #fff; border: none;
+      border-radius: 9px; padding: 12px 12px;
+      font-size: 15px; font-weight: 700; cursor: pointer;
+      font-family: 'Lexend',sans-serif; transition: background 0.12s;
+      box-shadow: 0 4px 14px rgba(47,107,237,0.24);
+    }
+    .strip-next:hover { background: #2257cf; }
+    .strip-next.strip-done { background: var(--ok); box-shadow: 0 4px 14px rgba(47,158,107,0.24); }
+    .strip-next.strip-done:hover { background: #268a5c; }
+
+    /* ====== TOUCH / COARSE-POINTER TARGETS ====== */
+    /* Enlarges tap targets on touchscreens; doesn't affect tile physics sizing */
+    @media (pointer: coarse) {
+      .nav-next, .strip-next { min-height: 52px; font-size: 16px; }
+      .nav-prev, .strip-prev  { min-height: 52px; }
+      .recovery-toggle, .strip-recovery-toggle { min-height: 44px; }
+      .drawer-tab { min-height: 44px; padding: 9px 12px; }
+      .beat-peripheral { padding: 10px 14px 10px 12px; min-height: 38px; }
+      #layout-picker { font-size: 12px; }
+      .layout-segment { min-height: 38px; padding: 8px 12px; font-size: 12px; }
+      #cartridge-picker { top: 60px; }
+      #cartridgeSelect { min-height: 38px; font-size: 12px; }
+      .btn-begin { min-height: 52px; font-size: 16px; }
+      .strip-prev, .strip-next { min-height: 52px; }
+    }
+  </style>
+</head>
+<body>
+<div id="shell" class="layout-side-by-side">
+
+  <!-- Layout picker: fixed overlay, lives on #shell (NOT #board) so it stays
+       reachable in rail-focus and board-only where #board / #rail are hidden. -->
+  <div id="layout-picker" aria-label="Layout picker">
+    <div class="layout-segment-group" role="radiogroup" aria-label="Main layouts">
+      <button class="layout-segment" type="button" role="radio" data-layout="side-by-side"
+              onclick="selectLayout('side-by-side')" onkeydown="handleLayoutKey(event)"
+              aria-checked="true">Side-by-Side</button>
+      <button class="layout-segment" type="button" role="radio" data-layout="board-dominant"
+              onclick="selectLayout('board-dominant')" onkeydown="handleLayoutKey(event)"
+              aria-checked="false">Board-Focus</button>
+    </div>
+    <span class="layout-group-label">Two screens:</span>
+    <div class="layout-segment-group" role="radiogroup" aria-label="Two-screen layouts">
+      <button class="layout-segment" type="button" role="radio" data-layout="rail-focus"
+              onclick="selectLayout('rail-focus')" onkeydown="handleLayoutKey(event)"
+              aria-checked="false">Teacher</button>
+      <button class="layout-segment" type="button" role="radio" data-layout="board-only"
+              onclick="selectLayout('board-only')" onkeydown="handleLayoutKey(event)"
+              aria-checked="false">Student</button>
+    </div>
+  </div>
+
+  <button id="student-exit-button" type="button" onclick="selectLayout('rail-focus')" title="Exit Student View">
+    Teacher View
+  </button>
+
+  <div id="cartridge-picker" aria-label="Cartridge picker">
+    <span class="cartridge-label">Lesson</span>
+    <select id="cartridgeSelect">
+      <option value="sample">Sample Lesson</option>
+      <option value="level4_lesson1">Level 4 Lesson 1 — Open Syllables</option>
+      <option value="level4_lesson2">Level 4 Lesson 2</option>
+      <option value="level4_lesson3">Level 4 Lesson 3</option>
+      <option value="level4_lesson4">Level 4 Lesson 4</option>
+      <option value="level4_lesson5">Level 4 Lesson 5</option>
+      <option value="level4_lesson6">Level 4 Lesson 6</option>
+      <option value="level4_lesson7">Level 4 Lesson 7</option>
+    </select>
+    <span id="cartridgeStatus" class="cartridge-status"></span>
+  </div>
+
+  <!-- ============================================================
+       RAIL — populated by renderRail()
+       ============================================================ -->
+  <div id="rail"></div>
+
+  <!-- ============================================================
+       BOARD — tile engine, salvaged verbatim from tiles-app.html
+       ============================================================ -->
+  <div id="board">
+    <div id="app">
+      <div id="wordPane">
+        <div class="hint">
+          Drag tiles here to build words.
+          <span class="sub-hint">Double-tap a word to hear it spoken.</span>
+        </div>
+        <div id="controls">
+          <select id="lessonSelect" class="btn secondary">
+            <option value="2">Book 2</option>
+            <option value="3">Book 3</option>
+            <option value="4">Book 4</option>
+            <option value="5">Book 5</option>
+            <option value="6">Book 6</option>
+            <option value="7">Book 7</option>
+            <option value="8">Book 8</option>
+            <option value="9">Book 9</option>
+            <option value="10">Book 10</option>
+          </select>
+          <button id="speakButton" class="btn primary">Speak &#x1F50A;</button>
+          <button id="resetButton" class="btn danger">Reset</button>
+        </div>
+      </div>
+      <div id="alphabetSection">
+        <div class="alphabet-row" id="alphabetRow1"></div>
+        <div class="alphabet-row" id="alphabetRow2"></div>
+      </div>
+      <div id="bottomDock">
+        <div id="drawerTabs">
+          <button class="drawer-tab active blue-text"   data-drawer="consonants">Consonants</button>
+          <button class="drawer-tab yellow-text"        data-drawer="vowels">Vowels</button>
+          <button class="drawer-tab red-text"           data-drawer="units">Units</button>
+          <button class="drawer-tab green-text"         data-drawer="endings">Endings</button>
+          <button class="drawer-tab orange-text"        data-drawer="prefixes">Prefixes</button>
+          <button class="drawer-tab purple-text"        data-drawer="roots">Roots</button>
+        </div>
+        <div id="baseTiles"><div class="base-row" id="baseRow"></div></div>
+      </div>
+      <!-- Phase 4: student-page mode surface. Overlays the engine surfaces
+           (wordPane/alphabetSection/bottomDock) when a non-tiles board mode is
+           active. Engine surfaces are hidden (not destroyed) via #board.mode-active. -->
+      <div id="mode-surface"></div>
+    </div>
+  </div>
+
+  <!-- Phase 3: board proxy — shown only in rail-focus layout -->
+  <div id="board-proxy"></div>
+
+</div><!-- #shell -->
+
+<script>
+// ================================================================
+// CARTRIDGE — embedded sample plus optional v2 JSON loader.
+// Validated: python3 validate_cartridge.py sample_lesson.json
+//   → ✅ Valid cartridge. 0 warning(s).
+// ================================================================
+const SAMPLE_CARTRIDGE = {
+  schemaVersion: 2,
+  meta: {
+    level: 1,
+    lesson: 1,
+    title: "Sample \u2014 Blending Short A (placeholder content)",
+    estMinutes: 20,
+    author: "sample",
+    videoSpeedDefault: 1.5
+  },
+  materials: [
+    "Letter tile set",
+    "Whiteboard + marker",
+    "Student reading page"
+  ],
+  objectives: [
+    "Blend three sounds into a spoken word",
+    "Read several short-a words"
+  ],
+  beats: [
+    {
+      id: "s.warmup.01",
+      phase: "Warm-up",
+      label: "Greet and set up",
+      say: { text: ["We're going to build some words today.", "First, let's warm up our sounds."], audio: true },
+      do: "Have the tile set within the student's reach."
+    },
+    {
+      id: "s.warmup.02",
+      phase: "Warm-up",
+      label: "Review sounds",
+      say: { text: "Touch each tile and tell me its sound." },
+      listen: { expect: ["/k/", "/a/", "/t/"], hint: "Individual sounds, not letter names." },
+      board: { mode: "tiles", level: 2, openDrawer: "consonants",
+               prePlace: [{ word: "cat", row: 0 }], lock: true },
+      recovery: {
+        trigger: "Student says letter names instead of sounds.",
+        prompts: [
+          "That's its name. What sound does it make?",
+          "Watch my mouth and copy the sound."
+        ]
+      }
+    },
+    {
+      id: "s.new.01",
+      phase: "New Concept",
+      label: "Model blending",
+      media: { source: "BARTON BOOK 1 DISC 1 c1 [72927655].mp4", start: "0:05", end: 18,
+               caption: "Model: sweeping sounds together to blend" },
+      say: { text: "Watch how I sweep the sounds together into one word." },
+      do: "Slide your finger left to right under the tiles as you blend."
+    },
+    {
+      id: "s.practice.01",
+      phase: "Practice",
+      label: "Student blends",
+      say: { text: "Your turn. Blend the sounds into a word." },
+      board: { mode: "tiles", level: 2, openDrawer: "consonants" },
+      listen: { expect: ["cat"] },
+      recovery: {
+        trigger: "Student can't blend the three sounds.",
+        prompts: [
+          "Say the sounds slowly with me.",
+          "Now say them faster, all together."
+        ],
+        reteach: "s.warmup.02"
+      }
+    },
+    {
+      id: "s.practice.02",
+      phase: "Practice",
+      label: "Swap the vowel",
+      say: { text: "I'll change one tile. What's the new word?" },
+      board: { mode: "tiles", level: 2, openDrawer: "vowels",
+               prePlace: [{ word: "cut", row: 0 }], lock: true },
+      listen: { expect: ["cut"] }
+    },
+    {
+      id: "s.review.01",
+      phase: "Review",
+      label: "Read the set",
+      say: { text: "Read each word on the board." },
+      board: { mode: "word_frame", words: ["cat", "map", "sun", "bed", "fix"] },
+      note: "Step through one word at a time; let the student set the pace."
+    },
+    {
+      id: "s.pages.01",
+      phase: "Pages",
+      label: "Build a phrase",
+      say: { text: "Pick one word from each column to make a sentence." },
+      board: { mode: "phrase_builder", columns: {
+        article: ["the", "a"],
+        noun: ["cat", "dog", "map"],
+        verb: ["ran", "sat", "naps"]
+      } }
+    },
+    {
+      id: "s.pages.02",
+      phase: "Pages",
+      label: "Fill the vowel",
+      say: { text: "Drop the missing vowel into each word." },
+      board: { mode: "fill_blanks", bank: ["a", "i", "o", "u"],
+               rows: ["c___t", "m___p", "s___n"] }
+    },
+    {
+      id: "s.pages.03",
+      phase: "Pages",
+      label: "Read the sentences",
+      say: { text: "Read each sentence out loud." },
+      board: { mode: "sentences", items: ["The cat sat.", "A map is flat.", "The pup ran up."] }
+    },
+    {
+      id: "s.pages.04",
+      phase: "Pages",
+      label: "Read the story",
+      say: { text: "Read the story to me." },
+      board: { mode: "story", title: "The Tan Cat",
+               text: "The cat sat on a mat. The cat is tan. A pup ran up to the cat. The cat did not run. The pup and the cat nap in the sun." }
+    },
+    {
+      id: "s.pages.05",
+      phase: "Pages",
+      label: "Match the pairs",
+      say: { text: "Match each word to its picture." },
+      board: { mode: "matching", pairs: [["cat", "🐱"], ["dog", "🐕"], ["sun", "☀️"], ["bug", "🐛"]] }
+    },
+    {
+      id: "s.pages.06",
+      phase: "Pages",
+      label: "Sight words",
+      say: { text: "Tap each word and say it with me." },
+      board: { mode: "sight_words", words: ["the", "a", "is", "was", "said"] }
+    },
+    {
+      id: "s.review.02",
+      phase: "Review",
+      label: "Extra practice sheet",
+      say: { text: "Great work today." },
+      do: "Show the extra practice sheet the student will complete on paper.",
+      board: { mode: "story", pageType: "worksheet", title: "Sample Extra Practice", subtitle: "Physical paper worksheet reference", text: "Use the paper copy. This screen only confirms the page." }
+    }
+  ]
+};
+
+// ================================================================
+// TILE ENGINE — salvaged verbatim from tiles-app.html.
+// Re-scoped: #app lives inside #board (position:relative).
+// All viewport-based math (clientX/Y, getBoundingClientRect,
+// position:fixed for .tile.dragging) is unchanged.
+// ================================================================
+
+const TILE_SIZE = 52;
+const MIN_VERTICAL_OVERLAP = Math.floor(TILE_SIZE * 0.33);
+const TAP_MAX_TIME_MS = 250, TAP_MAX_MOVE_PX = 6;
+const SEAM_CAPTURE = 22;
+
+function dragThresholdFor(e){ return (e && e.pointerType==='touch') ? 12 : 6; }
+
+const B_LEVELS = {
+  2: { blue:["b","c","d","f","g","h","j","k","l","m","n","p","qu","r","s","t","v","w","x","y","z","ch","ck","sh","th","wh"], yellow:["a","e","i","o","u"] },
+  3: { red:["all","ang","ing","ong","ung","ank","ink","onk","unk","oll","old","olt","ost","ild","ind"] },
+  4: { yellow:["ai","ay","ee","oa","oe","ue","ew","ow"] },
+  5: { green:["s","es","ed","ing","ful","er","est","ist","y","en","ish","ity","able","tion","sion"], orange:["dis","in","un","non","mis","sub","re","pre","inter","mid","over","up"] },
+  6: { blue:["ph"], yellow:["y"], red:["ture"], green:["ible","ble","cle","dle","fle","gle","kle","ple","tle","zle"], orange:["ate","ite","ine","ice","ace","age"] },
+  7: { yellow:["ar","or","er","ir","ur","ear"], green:["ary","ery","ory"] },
+  8: { yellow:["ie","oi","oy","ey","au","aw","oo","ou","ow","ea","igh","augh","eigh","ei","eu","tu"] },
+  9: { blue:["ps","rh","mn","wr","kn","gh","gn","que","gu","gue"], yellow:["eau","our"], orange:["age"] },
+  10:{ purple:["astro","auto","bio","chron","geo","graph","hydro","phon","tele","demo","fac","form","fort","fract","ject","jud","mal","mater","mit","mort","multi","pater","port","rupt","scrib","script","sect","sec","sent","spect","struct"] }
+};
+
+let baseTiles=[], redTiles=[], greenTiles=[], orangeTiles=[], purpleTiles=[];
+let blueConsonants=[], yellowVowels=[];
+let tiles=[];
+let activeDrawer='consonants';
+let draggedTile=null, draggedGroup=[], dragOffset={x:0,y:0}, gesture=null, dragStartRowY=null;
+let lastTapId=null, lastTapTime=0;
+let currentUtterance=null;
+
+function getFontSize(text){
+  if(text.length<=2) return '22px';
+  if(text.length===3) return '18px';
+  if(text.length===4) return '15px';
+  if(text.length===5) return '13px';
+  return '11px';
+}
+
+let CARTRIDGE = SAMPLE_CARTRIDGE;
+
+const CARTRIDGE_SOURCES = {
+  sample: { label: 'Sample Lesson', embedded: SAMPLE_CARTRIDGE },
+  level4_lesson1: {
+    label: 'Level 4 Lesson 1 — Open Syllables',
+    url: 'lessons/Level%204/level4_lesson1.json'
+  },
+  level4_lesson2: {
+    label: 'Level 4 Lesson 2',
+    url: 'lessons/Level%204/level4_lesson2.json'
+  },
+  level4_lesson3: {
+    label: 'Level 4 Lesson 3',
+    url: 'lessons/Level%204/level4_lesson3.json'
+  },
+  level4_lesson4: {
+    label: 'Level 4 Lesson 4',
+    url: 'lessons/Level%204/level4_lesson4.json'
+  },
+  level4_lesson5: {
+    label: 'Level 4 Lesson 5',
+    url: 'lessons/Level%204/level4_lesson5.json'
+  },
+  level4_lesson6: {
+    label: 'Level 4 Lesson 6',
+    url: 'lessons/Level%204/level4_lesson6.json'
+  },
+  level4_lesson7: {
+    label: 'Level 4 Lesson 7',
+    url: 'lessons/Level%204/level4_lesson7.json'
+  }
+};
+
+function setCartridgeStatus(text, isError=false){
+  const el=document.getElementById('cartridgeStatus');
+  if(!el) return;
+  el.textContent=text||'';
+  el.style.color=isError?'#dc2626':'';
+}
+
+function resetLessonForCartridge(nextCartridge){
+  CARTRIDGE=nextCartridge;
+  railState='preflight';
+  activeBeatIndex=0;
+  recoveryOpenForBeat=null;
+  tiles=[];
+  boardLocked=false;
+  modeState=null;
+  boardMode='tiles';
+  showEngineSurface();
+  syncStudentBoardView({render:false});
+  videoSpeed=(CARTRIDGE.meta && CARTRIDGE.meta.videoSpeedDefault) || 1.5;
+  renderTray();
+  renderWordPane();
+  renderRail();
+  updateLayoutPicker();
+}
+
+async function selectCartridge(key){
+  const source=CARTRIDGE_SOURCES[key]||CARTRIDGE_SOURCES.sample;
+  const select=document.getElementById('cartridgeSelect');
+  try{
+    setCartridgeStatus('Loading...');
+    let next=source.embedded;
+    if(!next){
+      const response=await fetch(source.url,{cache:'no-store'});
+      if(!response.ok) throw new Error(`HTTP ${response.status}`);
+      next=await response.json();
+    }
+    if(next.schemaVersion!==2 || !next.meta || !Array.isArray(next.beats)){
+      throw new Error('Not a v2 cartridge');
+    }
+    resetLessonForCartridge(next);
+    setCartridgeStatus(`${next.beats.length} beats`);
+  } catch(err){
+    if(select) select.value='sample';
+    resetLessonForCartridge(SAMPLE_CARTRIDGE);
+    setCartridgeStatus(`Load failed: ${err.message}`, true);
+  }
+}
+function getUniqueSorted(arr){ return [...new Set(arr)].sort((a,b)=>(a.length===b.length?a.localeCompare(b):a.length-b.length)); }
+function sameRowY(y1,y2){ return Math.abs(y1-y2)<TILE_SIZE/2; }
+function areFlush(a,b,tol=2){ return Math.abs(a.x+TILE_SIZE-b.x)<=tol; }
+
+function recomputeGroupsAround(rowY){
+  const row=tiles.filter(t=>sameRowY(t.y,rowY)).sort((a,b)=>a.x-b.x);
+  let i=0;
+  while(i<row.length){
+    let j=i+1;
+    while(j<row.length&&areFlush(row[j-1],row[j])) j++;
+    const seg=row.slice(i,j);
+    if(seg.length===1) seg[0].groupId=null;
+    else { const gid=seg[0].groupId||seg[0].id; seg.forEach(t=>t.groupId=gid); }
+    i=j;
+  }
+}
+
+function getGroupChain(main){
+  const row=tiles.filter(t=>sameRowY(t.y,main.y)).sort((a,b)=>a.x-b.x);
+  const idx=row.findIndex(t=>t.id===main.id); if(idx===-1) return [main];
+  let L=idx; while(L-1>=0&&areFlush(row[L-1],row[L])) L--;
+  let R=idx; while(R+1<row.length&&areFlush(row[R],row[R+1])) R++;
+  return row.slice(L,R+1);
+}
+
+function createTile(text,color,source){
+  const el=document.createElement('div');
+  el.className=`tile ${color}`;
+  el.textContent=text;
+  el.style.fontSize=getFontSize(text);
+  el.addEventListener('pointerdown',(e)=>onPointerStart(e,text,color,source));
+  return el;
+}
+
+function renderTray(){
+  const lvl=parseInt(document.getElementById('lessonSelect').value,10);
+  let allBlue=[], allYellow=[];
+  redTiles=[]; greenTiles=[]; orangeTiles=[]; purpleTiles=[];
+  for(let i=2;i<=lvl;i++){
+    const L=B_LEVELS[i]; if(!L) continue;
+    if(L.blue)   allBlue.push(...L.blue);
+    if(L.yellow) allYellow.push(...L.yellow);
+    if(L.red)    redTiles.push(...L.red);
+    if(L.green)  greenTiles.push(...L.green);
+    if(L.orange) orangeTiles.push(...L.orange);
+    if(L.purple) purpleTiles.push(...L.purple);
+  }
+  blueConsonants=getUniqueSorted(allBlue);
+  yellowVowels=getUniqueSorted(allYellow);
+  redTiles=getUniqueSorted(redTiles);
+  greenTiles=getUniqueSorted(greenTiles);
+  orangeTiles=getUniqueSorted(orangeTiles);
+  purpleTiles=getUniqueSorted(purpleTiles);
+  renderActiveDrawer();
+}
+
+function renderActiveDrawer(){
+  const baseRow=document.getElementById('baseRow');
+  baseRow.innerHTML='';
+  let list=[], color='blue';
+  if(activeDrawer==='consonants') { list=blueConsonants.filter(c=>c.length>1); color='blue'; }
+  else if(activeDrawer==='vowels')    { list=yellowVowels.filter(v=>v.length>1); color='yellow'; }
+  else if(activeDrawer==='units')     { list=redTiles;    color='red'; }
+  else if(activeDrawer==='endings')   { list=greenTiles;  color='green'; }
+  else if(activeDrawer==='prefixes')  { list=orangeTiles; color='orange'; }
+  else if(activeDrawer==='roots')     { list=purpleTiles; color='purple'; }
+  list.forEach(txt=>baseRow.appendChild(createTile(txt,color,'tray')));
+}
+
+function renderAlphabet(){
+  const a='abcdefghijklmnopqrstuvwxyz'.split(''), v=new Set(['a','e','i','o','u']);
+  const r1=document.getElementById('alphabetRow1'), r2=document.getElementById('alphabetRow2');
+  r1.innerHTML=''; r2.innerHTML='';
+  a.slice(0,13).forEach(l=>r1.appendChild(createTile(l,v.has(l)?'yellow':'blue','alphabet')));
+  a.slice(13,26).forEach(l=>r2.appendChild(createTile(l,v.has(l)?'yellow':'blue','alphabet')));
+}
+
+function renderWordPane(){
+  const wp=document.getElementById('wordPane');
+  // Clear pane tiles + lock overlay
+  wp.querySelectorAll('.word-pane-tile,.board-lock-badge').forEach(el=>el.remove());
+  // Toggle lock CSS class (disables pointer-events on .word-pane-tile)
+  wp.classList.toggle('locked', boardLocked);
+  wp.querySelector('.hint').style.display=tiles.length>0?'none':'block';
+  tiles.forEach(tile=>{
+    if(draggedGroup.find(t=>t.id===tile.id)) return;
+    const el=document.createElement('div');
+    el.className=`tile ${tile.color} word-pane-tile`;
+    el.textContent=tile.text;
+    el.style.fontSize=getFontSize(tile.text);
+    el.style.left=tile.x+'px'; el.style.top=tile.y+'px';
+    el.dataset.id=tile.id;
+    el.addEventListener('pointerdown',(e)=>onPointerStart(e,tile.text,tile.color,tile.id));
+    wp.appendChild(el);
+  });
+  // Phase 2: lock badge when board is locked and has tiles
+  if(boardLocked&&tiles.length>0){
+    const badge=document.createElement('div');
+    badge.className='board-lock-badge';
+    badge.textContent='\uD83D\uDD12 Locked';
+    wp.appendChild(badge);
+  }
+}
+
+function findSeamNear(dropX,dropY){
+  const row=tiles.filter(t=>sameRowY(t.y,dropY)).sort((a,b)=>a.x-b.x);
+  for(let i=0;i<row.length-1;i++){
+    const L=row[i],R=row[i+1];
+    if(!areFlush(L,R)) continue;
+    const seamX=L.x+TILE_SIZE;
+    if(Math.abs(dropX-seamX)<=SEAM_CAPTURE) return {left:L,right:R,seamX,rowY:L.y};
+  }
+  return null;
+}
+
+function findNearbyTiles(dropX,dropY,excludeId){
+  const candidates=[];
+  const dL=dropX,dR=dropX+TILE_SIZE,dT=dropY,dB=dropY+TILE_SIZE;
+  for(const t of tiles){
+    if(t.id===excludeId) continue;
+    const tL=t.x,tR=t.x+TILE_SIZE,tT=t.y,tB=t.y+TILE_SIZE;
+    if(Math.min(dB,tB)-Math.max(dT,tT)<MIN_VERTICAL_OVERLAP) continue;
+    if(Math.max(dL,tL+TILE_SIZE/2)<Math.min(dL+TILE_SIZE/2,tR))
+      candidates.push({tile:t,edge:'right',snapX:tR,snapY:t.y});
+    else if(Math.max(dL+TILE_SIZE/2,tL)<Math.min(dR,tL+TILE_SIZE/2))
+      candidates.push({tile:t,edge:'left',snapX:tL-TILE_SIZE,snapY:t.y});
+  }
+  candidates.sort((a,b)=>Math.abs(a.snapY-dropY)-Math.abs(b.snapY-dropY));
+  return candidates;
+}
+
+function calculateDropTarget(dropX,dropY,sourceId=null){
+  const seam=findSeamNear(dropX,dropY);
+  if(seam) return {type:'seam',x:seam.seamX,y:seam.rowY,seam};
+  const nearby=findNearbyTiles(dropX,dropY,sourceId);
+  if(nearby.length>0) return {type:'snap',x:nearby[0].snapX,y:nearby[0].snapY,tile:nearby[0].tile};
+  return {type:'free',x:dropX,y:dropY};
+}
+
+function updateGhostVisual(mouseX,mouseY){
+  clearGhostVisual();
+  const wordPane=document.getElementById('wordPane'); if(!wordPane) return;
+  const paneRect=wordPane.getBoundingClientRect();
+  if(mouseX<paneRect.left||mouseX>paneRect.right||mouseY<paneRect.top||mouseY>paneRect.bottom) return;
+  let rawDropX=mouseX-paneRect.left-dragOffset.x;
+  let rawDropY=mouseY-paneRect.top-dragOffset.y;
+  let prediction;
+  if(draggedTile.sourceType==='tray'){
+    prediction=calculateDropTarget(rawDropX,rawDropY,null);
+  } else {
+    const main=draggedGroup.find(t=>t.id===draggedTile.id);
+    const mainDropX=mouseX-paneRect.left-(draggedTile.startX-main.x);
+    const mainDropY=mouseY-paneRect.top-(draggedTile.startY-main.y);
+    prediction=calculateDropTarget(mainDropX,mainDropY,draggedTile.id);
+  }
+  if(draggedGroup.length>0){
+    draggedGroup.forEach(t=>{
+      const main=draggedGroup.find(dt=>dt.id===draggedTile.id);
+      const ghost=document.createElement('div');
+      ghost.className='ghost-tile';
+      ghost.style.left=(prediction.x+(t.x-main.x))+'px';
+      ghost.style.top=(prediction.y+(t.y-main.y))+'px';
+      wordPane.appendChild(ghost);
+    });
+  } else {
+    const ghost=document.createElement('div');
+    ghost.className='ghost-tile';
+    ghost.style.left=prediction.x+'px';
+    ghost.style.top=prediction.y+'px';
+    wordPane.appendChild(ghost);
+  }
+}
+function clearGhostVisual(){ document.querySelectorAll('.ghost-tile').forEach(el=>el.remove()); }
+
+function ensureVoiceLoad(){ if('speechSynthesis' in window) window.speechSynthesis.getVoices(); }
+ensureVoiceLoad();
+if('speechSynthesis' in window) window.speechSynthesis.onvoiceschanged=ensureVoiceLoad;
+
+function speakText(text){
+  if(!('speechSynthesis' in window)){ alert("Browser does not support Text-to-Speech."); return; }
+  const btn=document.getElementById('speakButton');
+  const originalText=btn.textContent;
+  btn.textContent="Speaking\u2026";
+  btn.classList.add('speaking');
+  window.speechSynthesis.cancel();
+  setTimeout(()=>{
+    currentUtterance=new SpeechSynthesisUtterance(text);
+    currentUtterance.rate=0.8;
+    currentUtterance.onend=()=>{ btn.textContent=originalText; btn.classList.remove('speaking'); };
+    currentUtterance.onerror=(e)=>{ console.error("Speech error:",e); btn.textContent=originalText; btn.classList.remove('speaking'); };
+    window.speechSynthesis.speak(currentUtterance);
+  },50);
+}
+
+function speakGroup(sourceId){
+  const tile=tiles.find(t=>t.id==sourceId); if(!tile) return;
+  const chain=getGroupChain(tile);
+  const word=chain.map(t=>t.text).join('');
+  speakText(word);
+  chain.forEach(t=>{
+    const el=document.querySelector(`.word-pane-tile[data-id="${t.id}"]`);
+    if(el){ el.style.transform='scale(1.1)'; setTimeout(()=>el.style.transform='scale(1)',200); }
+  });
+}
+
+function speakAllBoard(){
+  if(tiles.length===0){ alert("Drag some tiles to the board first!"); return; }
+  const sorted=[...tiles].sort((a,b)=>{ if(!sameRowY(a.y,b.y)) return a.y-b.y; return a.x-b.x; });
+  const words=[];
+  let i=0;
+  while(i<sorted.length){
+    let wordText=sorted[i].text; let j=i+1;
+    while(j<sorted.length&&sameRowY(sorted[j-1].y,sorted[j].y)&&areFlush(sorted[j-1],sorted[j])){ wordText+=sorted[j].text; j++; }
+    words.push(wordText); i=j;
+  }
+  speakText(words.join('. '));
+}
+
+function onPointerStart(e,text,color,source){
+  if(e.isPrimary===false) return;
+  e.preventDefault(); e.stopPropagation();
+  if(e.currentTarget.setPointerCapture){ try{ e.currentTarget.setPointerCapture(e.pointerId); }catch(_){} }
+  const targetRect=e.currentTarget.getBoundingClientRect();
+  const startX=e.clientX, startY=e.clientY, tStart=performance.now();
+  gesture={ startX, startY, tStart, moved:false, lastX:startX, lastY:startY, source, text, color };
+  const onMove=(ev)=>{
+    const dx=ev.clientX-gesture.startX, dy=ev.clientY-gesture.startY;
+    if(!gesture.moved&&(Math.abs(dx)>dragThresholdFor(ev)||Math.abs(dy)>dragThresholdFor(ev))){ gesture.moved=true; beginDrag(gesture,targetRect,dx,dy); }
+    if(gesture.moved) handleMove(ev);
+  };
+  const onEnd=(ev)=>{
+    const dt=performance.now()-gesture.tStart;
+    const totalMove=Math.hypot(ev.clientX-gesture.startX,ev.clientY-gesture.startY);
+    if(!gesture.moved&&dt<=TAP_MAX_TIME_MS&&totalMove<=TAP_MAX_MOVE_PX){
+      if(gesture.source!=='tray'&&gesture.source!=='alphabet'){
+        const now=Date.now();
+        if(lastTapId===gesture.source&&(now-lastTapTime)<500){ speakGroup(gesture.source); lastTapId=null; }
+        else { lastTapId=gesture.source; lastTapTime=now; }
+      }
+      cleanup(); return;
+    }
+    handleEnd(ev); cleanup();
+  };
+  function cleanup(){ document.removeEventListener('pointermove',onMove); document.removeEventListener('pointerup',onEnd); document.removeEventListener('pointercancel',onEnd); gesture=null; }
+  document.addEventListener('pointermove',onMove,{passive:false});
+  document.addEventListener('pointerup',onEnd,{passive:false});
+  document.addEventListener('pointercancel',onEnd,{passive:false});
+}
+
+function beginDrag(g,targetRect,dx,dy){
+  const startX=g.startX, startY=g.startY;
+  if(g.source==='tray'||g.source==='alphabet'){
+    draggedTile={text:g.text,color:g.color,x:startX,y:startY,sourceType:'tray',startX,startY};
+    draggedGroup=[]; dragStartRowY=null;
+  } else {
+    const paneTile=tiles.find(t=>t.id===g.source); if(!paneTile) return;
+    const chain=getGroupChain(paneTile);
+    const idx=chain.findIndex(t=>t.id===paneTile.id);
+    draggedGroup=(Math.abs(dx)>=Math.abs(dy))?(dx<0?chain.slice(0,idx+1):chain.slice(idx)):[paneTile];
+    draggedTile={...paneTile,x:startX,y:startY,sourceType:'pane',startX,startY};
+    dragStartRowY=paneTile.y;
+  }
+  dragOffset={x:startX-targetRect.left,y:startY-targetRect.top};
+  updateDragVisual();
+}
+
+function handleMove(e){
+  if(!draggedTile) return;
+  e.preventDefault();
+  draggedTile.x=e.clientX; draggedTile.y=e.clientY;
+  updateDragVisual(); updateGhostVisual(e.clientX,e.clientY);
+}
+
+function handleEnd(e){
+  clearGhostVisual();
+  if(!draggedTile) return;
+  const wp=document.getElementById('wordPane'), r=wp.getBoundingClientRect();
+  const inside=e.clientX>=r.left&&e.clientX<=r.right&&e.clientY>=r.top&&e.clientY<=r.bottom;
+  // Phase 2 LOCK GATE — discard any drop onto a locked board
+  if(boardLocked&&inside){ draggedTile=null; draggedGroup=[]; dragStartRowY=null; clearDragVisual(); return; }
+  if(inside){
+    let dropX=e.clientX-r.left-dragOffset.x;
+    let dropY=e.clientY-r.top-dragOffset.y;
+    if(draggedTile.sourceType==='tray'){
+      const target=calculateDropTarget(dropX,dropY);
+      if(target.type==='seam'){ insertAtSeam(draggedTile,target.seam); }
+      else { tiles.push({id:Date.now()+Math.random(),text:draggedTile.text,color:draggedTile.color,x:target.x,y:target.y,groupId:(target.tile?target.tile.groupId||target.tile.id:null)}); recomputeGroupsAround(target.y); }
+    } else {
+      const main=draggedGroup.find(t=>t.id===draggedTile.id);
+      const mainDropX=e.clientX-r.left-(draggedTile.startX-main.x);
+      const mainDropY=e.clientY-r.top-(draggedTile.startY-main.y);
+      if(draggedGroup.length===1&&findSeamNear(dropX,dropY)){
+        const seam=findSeamNear(dropX,dropY);
+        tiles=tiles.filter(t=>t.id!==draggedGroup[0].id);
+        if(dragStartRowY!==null) recomputeGroupsAround(draggedGroup[0].y);
+        insertAtSeam(draggedGroup[0],seam);
+      } else {
+        const target=calculateDropTarget(mainDropX,mainDropY,draggedTile.id);
+        const gid=(target.type==='snap')?(target.tile.groupId||target.tile.id):null;
+        tiles=tiles.map(t=>{ if(!draggedGroup.some(dt=>dt.id===t.id)) return t; const relX=t.x-main.x,relY=t.y-main.y; return {...t,x:target.x+relX,y:target.y+relY,groupId:gid}; });
+        if(dragStartRowY!==null) recomputeGroupsAround(dragStartRowY);
+        recomputeGroupsAround(target.y);
+      }
+    }
+  } else if(draggedTile.sourceType==='pane'){
+    const ids=new Set(draggedGroup.map(t=>t.id));
+    const oy=draggedGroup[0].y;
+    tiles=tiles.filter(t=>!ids.has(t.id));
+    recomputeGroupsAround(oy);
+  }
+  draggedTile=null; draggedGroup=[]; dragStartRowY=null;
+  clearDragVisual(); renderWordPane();
+}
+
+function insertAtSeam(data,seam){
+  const rightSide=tiles.filter(t=>sameRowY(t.y,seam.rowY)&&t.x>=seam.right.x).sort((a,b)=>a.x-b.x);
+  rightSide.forEach(t=>t.x+=TILE_SIZE);
+  tiles.push({id:Date.now()+Math.random(),text:data.text,color:data.color,x:seam.right.x-TILE_SIZE,y:seam.rowY,groupId:null});
+  recomputeGroupsAround(seam.rowY);
+}
+
+function updateDragVisual(){
+  clearDragVisual();
+  if(!draggedTile) return;
+  const paneRect=document.getElementById('wordPane').getBoundingClientRect();
+  if(draggedGroup.length>0){
+    const dx=draggedTile.x-draggedTile.startX, dy=draggedTile.y-draggedTile.startY;
+    draggedGroup.forEach(t=>{
+      const g=document.createElement('div');
+      g.className=`tile ${t.color} dragging`; g.textContent=t.text; g.style.fontSize=getFontSize(t.text);
+      const gx=t.x+dx+paneRect.left, gy=t.y+dy+paneRect.top;
+      g.style.transform=`translate3d(${Math.round(gx)}px,${Math.round(gy)}px,0)`;
+      g.dataset.dragging='true'; document.body.appendChild(g);
+    });
+  } else {
+    const g=document.createElement('div');
+    g.className=`tile ${draggedTile.color} dragging`; g.textContent=draggedTile.text; g.style.fontSize=getFontSize(draggedTile.text);
+    const gx=draggedTile.x-dragOffset.x, gy=draggedTile.y-dragOffset.y;
+    g.style.transform=`translate3d(${Math.round(gx)}px,${Math.round(gy)}px,0)`;
+    g.dataset.dragging='true'; document.body.appendChild(g);
+  }
+}
+function clearDragVisual(){ document.querySelectorAll('[data-dragging="true"]').forEach(el=>el.remove()); }
+
+function switchDrawer(d){ activeDrawer=d; document.querySelectorAll('.drawer-tab').forEach(t=>t.classList.toggle('active',t.dataset.drawer===d)); renderActiveDrawer(); }
+
+// ================================================================
+// RAIL STATE
+// ================================================================
+let railState = 'preflight'; // 'preflight' | 'active'
+let activeBeatIndex = 0;
+let recoveryOpenForBeat = null; // beat.id string or null
+
+// ================================================================
+// PHASE 2 — BOARD STATE
+// ================================================================
+let boardLocked = false;    // true = board tiles non-interactive
+
+// Phase 4: student-page mode state.
+// boardMode: 'tiles' | 'clear' | one of the seven page modes.
+// modeState: interactive sub-state for the active page mode (null for tiles/clear).
+// The tile-engine `tiles` array is NEVER cleared when entering a page mode — the
+// engine surface is merely hidden, so mode → tiles → mode reappears intact.
+let boardMode = 'tiles';
+let modeState = null;
+
+/** Programmatically set the Book level. Rail is the sole driver; never user-driven. */
+function setEngineLevel(level){
+  const sel=document.getElementById('lessonSelect');
+  const v=String(level);
+  if(sel.value!==v){ sel.value=v; renderTray(); }
+}
+
+/**
+ * Build a flat list of all currently-loaded tiles, sorted longest-first.
+ * Used for greedy-match tokenization of prePlace word strings.
+ */
+function buildTileTokenList(){
+  const list=[];
+  blueConsonants.forEach(t=>list.push({text:t,color:'blue'}));
+  yellowVowels.forEach(t=>list.push({text:t,color:'yellow'}));
+  redTiles.forEach(t=>list.push({text:t,color:'red'}));
+  greenTiles.forEach(t=>list.push({text:t,color:'green'}));
+  orangeTiles.forEach(t=>list.push({text:t,color:'orange'}));
+  purpleTiles.forEach(t=>list.push({text:t,color:'purple'}));
+  // Longest first: greedy match finds 'th' before 't', 'ch' before 'c', etc.
+  list.sort((a,b)=>b.text.length-a.text.length||a.text.localeCompare(b.text));
+  return list;
+}
+
+/**
+ * Greedy-match tokenize a word string against the current tile set.
+ * Falls back to single-letter tiles (yellow=vowel, blue=consonant).
+ */
+function tokenizeWord(word){
+  const tokenList=buildTileTokenList();
+  const basicVowels=new Set(['a','e','i','o','u']);
+  const result=[];
+  let i=0;
+  const w=(word||'').toLowerCase();
+  while(i<w.length){
+    let matched=false;
+    for(const t of tokenList){
+      if(w.startsWith(t.text,i)){
+        result.push({text:t.text,color:t.color});
+        i+=t.text.length; matched=true; break;
+      }
+    }
+    if(!matched){
+      const ch=w[i];
+      result.push({text:ch,color:basicVowels.has(ch)?'yellow':'blue'});
+      i++;
+    }
+  }
+  return result;
+}
+
+/** Place a word as a flush group of tiles at a given board row. */
+const PREPLACE_PAD_X=20, PREPLACE_PAD_Y=20, PREPLACE_ROW_H=TILE_SIZE+14;
+function prePlaceWord(word,row){
+  const tokens=tokenizeWord(word);
+  if(!tokens.length) return;
+  const y=PREPLACE_PAD_Y+(row||0)*PREPLACE_ROW_H;
+  let x=PREPLACE_PAD_X;
+  tokens.forEach(tok=>{
+    tiles.push({id:Date.now()+Math.random(),text:tok.text,color:tok.color,x,y,groupId:null});
+    x+=TILE_SIZE; // flush — zero gap, engine groups them
+  });
+  recomputeGroupsAround(y); // engine assigns groupId by flush detection
+}
+
+/**
+ * applyBeatBoard(beatIndex) — call on every navigation change.
+ * If the beat has a board field, apply it; otherwise do nothing (sticky).
+ */
+function applyBeatBoard(beatIndex){
+  const beat=CARTRIDGE.beats[beatIndex];
+  if(beat&&beat.board) applyBoardState(beat.board);
+  // No board field → leave board unchanged
+}
+
+// ================================================================
+// PHASE 3 — LAYOUT STATE
+// ================================================================
+let layoutMode = 'side-by-side';
+// 'side-by-side' | 'board-dominant' | 'board-only' | 'rail-focus'
+
+const LAYOUT_MODES = ['side-by-side','board-dominant','rail-focus','board-only'];
+
+/**
+ * setLayout(mode) — switch layout.
+ * Cancels any in-flight drag first so getBoundingClientRect stays consistent.
+ */
+function setLayout(mode){
+  // Cancel any in-progress drag before geometry changes
+  if(draggedTile){
+    clearGhostVisual(); clearDragVisual();
+    draggedTile=null; draggedGroup=[]; dragStartRowY=null;
+    renderWordPane();
+  }
+  layoutMode=mode;
+  const shell=document.getElementById('shell');
+  LAYOUT_MODES.forEach(m=>shell.classList.remove('layout-'+m));
+  shell.classList.add('layout-'+mode);
+  renderRail();
+  renderModeSurface();
+  syncStudentBoardView({render:true});
+}
+
+function selectLayout(mode){
+  if(!LAYOUT_MODES.includes(mode) || mode===layoutMode) {
+    updateLayoutPicker();
+    return;
+  }
+  setLayout(mode);
+}
+
+function updateLayoutPicker(){
+  document.querySelectorAll('.layout-segment[data-layout]').forEach(btn=>{
+    const active=btn.dataset.layout===layoutMode;
+    btn.classList.toggle('active', active);
+    btn.setAttribute('aria-checked', active ? 'true' : 'false');
+    btn.tabIndex=active ? 0 : -1;
+  });
+}
+
+function needsStudentTileBank(){
+  return layoutMode==='board-only' && boardMode==='tiles' && !boardLocked;
+}
+
+function centerTilesForStudentView(){
+  if(layoutMode!=='board-only' || boardMode!=='tiles' || !tiles.length) return false;
+  const wp=document.getElementById('wordPane');
+  if(!wp) return false;
+  const paneW=wp.clientWidth, paneH=wp.clientHeight;
+  if(!paneW || !paneH) return false;
+  let minX=Infinity,minY=Infinity,maxX=-Infinity,maxY=-Infinity;
+  tiles.forEach(t=>{
+    minX=Math.min(minX,t.x); minY=Math.min(minY,t.y);
+    maxX=Math.max(maxX,t.x+TILE_SIZE); maxY=Math.max(maxY,t.y+TILE_SIZE);
+  });
+  const blockW=maxX-minX, blockH=maxY-minY;
+  const targetX=Math.max(28, (paneW-blockW)/2);
+  const targetY=Math.max(28, (paneH-blockH)/2);
+  const dx=targetX-minX, dy=targetY-minY;
+  if(Math.abs(dx)<1 && Math.abs(dy)<1) return false;
+  tiles=tiles.map(t=>({...t,x:t.x+dx,y:t.y+dy}));
+  return true;
+}
+
+function syncStudentBoardView(opts={}){
+  const shell=document.getElementById('shell');
+  if(!shell) return;
+  shell.classList.toggle('student-tile-bank-needed', needsStudentTileBank());
+  if(opts.render && centerTilesForStudentView()) renderWordPane();
+}
+
+function handleLayoutKey(e){
+  const keys=['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Home','End'];
+  if(!keys.includes(e.key)) return;
+  e.preventDefault();
+  const current=LAYOUT_MODES.indexOf(layoutMode);
+  let next=current;
+  if(e.key==='Home') next=0;
+  else if(e.key==='End') next=LAYOUT_MODES.length-1;
+  else if(e.key==='ArrowLeft'||e.key==='ArrowUp') next=(current-1+LAYOUT_MODES.length)%LAYOUT_MODES.length;
+  else next=(current+1)%LAYOUT_MODES.length;
+  const mode=LAYOUT_MODES[next];
+  setLayout(mode);
+  const btn=document.querySelector(`.layout-segment[data-layout="${mode}"]`);
+  if(btn) btn.focus();
+}
+
+/**
+ * renderRailStrip() — board-dominant slim strip.
+ * Shows only: phase/beat position, SAY text, recovery toggle, Back/Next.
+ * All state (recoveryOpenForBeat, activeBeatIndex) shared with full rail.
+ */
+function renderRailStrip(){
+  const beat=CARTRIDGE.beats[activeBeatIndex];
+  const total=CARTRIDGE.beats.length, pos=activeBeatIndex+1;
+  const info=phaseInfo(beat.phase);
+  const isFirst=activeBeatIndex===0, isLast=activeBeatIndex===total-1;
+  const isRecOpen=recoveryOpenForBeat===beat.id;
+
+  // SAY section
+  const say=beat.say;
+  const sayLines=Array.isArray(say.text)?say.text:[say.text];
+  const sayTextHtml=sayLines.map(l=>`<div class="strip-say-text">${esc(l)}</div>`).join('');
+  const sayAudioBtn=say.audio
+    ? `<button class="strip-say-btn" onclick="speakBeatSay(${activeBeatIndex})">\uD83D\uDD0A</button>` : '';
+
+  // Recovery section
+  let recoveryHtml='';
+  if(beat.recovery){
+    const rec=beat.recovery;
+    const lbl=isRecOpen?'\u25B2 Close':'\u26A0\uFE0F Student struggling?';
+    let panelHtml='';
+    if(isRecOpen){
+      const promptsHtml=(rec.prompts||[]).map(p=>`<li>${esc(p)}</li>`).join('');
+      let reteachHtml='';
+      if(rec.reteach){
+        const rb=CARTRIDGE.beats.find(b=>b.id===rec.reteach);
+        const rlabel=rb?(rb.label||rec.reteach):rec.reteach;
+        reteachHtml=`<button class="strip-reteach-btn" onclick="jumpToBeat('${escJsArg(rec.reteach)}')">\u21A9 ${esc(rlabel)}</button>`;
+      }
+      panelHtml=`<div class="strip-recovery-panel">
+        <div class="strip-recovery-trigger">${esc(rec.trigger)}</div>
+        <ol class="strip-recovery-prompts">${promptsHtml}</ol>
+        ${reteachHtml}
+      </div>`;
+    }
+    recoveryHtml=`<div class="strip-recovery-wrap">
+      <button class="strip-recovery-toggle" onclick="toggleRecovery('${escJsArg(beat.id)}')">${lbl}</button>
+      ${panelHtml}
+    </div>`;
+  }
+
+  return `<div class="rail-strip">
+    <div class="strip-progress">
+      <span class="strip-phase-chip" style="color:${info.color};background:${info.bg}">${esc(beat.phase||'\u2014')}</span>
+      <span class="strip-beat-pos">${pos}/${total}</span>
+    </div>
+    <div class="strip-scroll">
+      <div class="strip-say-lbl">SAY</div>
+      ${sayTextHtml}
+      ${sayAudioBtn}
+      ${beat.media ? renderMediaSection(beat, true) : ''}
+    </div>
+    ${recoveryHtml}
+    <div class="strip-nav">
+      <button class="strip-prev" onclick="goToPrev()" ${isFirst?'disabled':''}>◄</button>
+      <button class="strip-next ${isLast?'strip-done':''}" onclick="goToNext()">${isLast?'Done \u2713':'Next \u25B6'}</button>
+    </div>
+  </div>`;
+}
+
+/**
+ * proxyModeDetail(board) — rail-focus summary for a student-page mode.
+ * Describes the mode's payload in words so the two-device case stays informed.
+ */
+function proxyModeDetail(board){
+  const m=board.mode;
+  const list=(arr,max=12)=>{
+    const a=(arr||[]).map(x=>esc(String(x)));
+    return a.slice(0,max).join(', ')+(a.length>max?` +${a.length-max} more`:'');
+  };
+  if(m==='word_frame')
+    return `<div class="proxy-detail"><b>${(board.words||[]).length} words</b><br>${list(board.words)}</div>`;
+  if(m==='sight_words')
+    return `<div class="proxy-detail"><b>${(board.words||[]).length} sight words</b><br>${list(board.words)}</div>`;
+  if(m==='phrase_builder'){
+    const cols=board.columns||{};
+    const rows=Object.keys(cols).map(k=>`<b>${esc(k)}:</b> ${list(cols[k])}`).join('<br>');
+    return `<div class="proxy-detail">Tap-to-build sentence<br>${rows}</div>`;
+  }
+  if(m==='fill_blanks')
+    return `<div class="proxy-detail"><b>Bank:</b> ${list(board.bank)}<br><b>Rows:</b> ${list(board.rows)}</div>`;
+  if(m==='sentences'){
+    const items=(board.items||[]).map(s=>`<div>• ${esc(s)}</div>`).join('');
+    return `<div class="proxy-detail"><b>${(board.items||[]).length} sentences</b>${items}</div>`;
+  }
+  if(m==='story'){
+    const txt=String(board.text||'');
+    const snip=txt.length>140?txt.slice(0,140)+'…':txt;
+    return `<div class="proxy-detail"><b>${esc(board.title||'Story')}</b><br>${esc(snip)}</div>`;
+  }
+  if(m==='matching'){
+    const pairs=(board.pairs||[]).map(p=>`${esc(p[0])} ↔ ${esc(p[1])}`).join('<br>');
+    return `<div class="proxy-detail"><b>${(board.pairs||[]).length} pairs</b><br>${pairs}</div>`;
+  }
+  return `<div class="proxy-detail">${esc(m)} surface active.</div>`;
+}
+
+/**
+ * renderBoardProxy() — rail-focus mode.
+ * Shows the enlarged passive board readout in #board-proxy.
+ * Uses only cartridge data (beat.board) + tokenizeWord for tile visualization.
+ * Called from renderRail() when layoutMode==='rail-focus'.
+ */
+function renderBoardProxy(){
+  const proxy=document.getElementById('board-proxy');
+  if(!proxy) return;
+
+  if(railState!=='active'){
+    proxy.innerHTML=`<div class="proxy-shell"><div class="proxy-idle">Begin a lesson to see board status.</div></div>`;
+    return;
+  }
+
+  const beat=CARTRIDGE.beats[activeBeatIndex];
+  const board=beat.board;
+  const posLabel=`Beat ${activeBeatIndex+1} / ${CARTRIDGE.beats.length}`;
+  let contentHtml='';
+
+  if(!board){
+    contentHtml=`<div class="proxy-unchanged">Board \u2192 unchanged<br><small style="font-size:12px;color:#3d3d5c">Carries over from previous beat</small></div>`;
+  } else if(board.mode==='clear'){
+    contentHtml=`<div class="proxy-cleared">\u2610 Board cleared</div>`;
+  } else if(board.mode==='tiles'){
+    const parts=[];
+    if(board.level!=null) parts.push(`Book ${esc(String(board.level))}`);
+    if(board.openDrawer) parts.push(`${esc(board.openDrawer)} drawer`);
+    let tilesHtml='';
+    if(board.prePlace&&board.prePlace.length){
+      tilesHtml=board.prePlace.map(entry=>{
+        const toks=tokenizeWord(entry.word);
+        const chips=toks.map(tok=>`<span class="proxy-tile-chip ${tok.color}">${esc(tok.text)}</span>`).join('');
+        return `<div class="proxy-tile-visual">${chips}</div>`;
+      }).join('');
+    }
+    contentHtml=`<div class="proxy-card">
+      <span class="proxy-mode-chip">Tiles</span>
+      <div class="proxy-detail">${parts.join(' \u00b7 ')}</div>
+      ${tilesHtml}
+      ${board.lock?'<div class="proxy-lock-badge">\uD83D\uDD12 Locked \u2014 teacher model only</div>':''}
+    </div>`;
+  } else {
+    contentHtml=`<div class="proxy-card">
+      <span class="proxy-mode-chip">${esc(board.mode)}</span>
+      ${proxyModeDetail(board)}
+    </div>`;
+  }
+
+  proxy.innerHTML=`<div class="proxy-shell">
+    <div class="proxy-topbar">
+      <div class="proxy-header">Board Status</div>
+      <div class="proxy-pos">${posLabel}</div>
+    </div>
+    ${contentHtml}
+    <div class="proxy-footer">Rail-focus \u2014 board is on the other device</div>
+  </div>`;
+}
+
+// ================================================================
+// RAIL UTILITIES
+// ================================================================
+
+/** Minimal HTML-escaping so cartridge strings are safe in innerHTML. */
+function esc(s){
+  return String(s ?? '')
+    .replace(/&/g,'&amp;')
+    .replace(/</g,'&lt;')
+    .replace(/>/g,'&gt;')
+    .replace(/"/g,'&quot;');
+}
+
+/** Escape cartridge strings that are passed through inline JS handlers. */
+function escJsArg(s){
+  return String(s ?? '')
+    .replace(/\\/g,'\\\\')
+    .replace(/'/g,"\\'")
+    .replace(/\r/g,'\\r')
+    .replace(/\n/g,'\\n')
+    .replace(/</g,'\\x3c')
+    .replace(/>/g,'\\x3e')
+    .replace(/&/g,'\\x26');
+}
+
+/**
+ * Returns color/background values for a phase name.
+ * Maps phase names loosely so minor variations don't break rendering.
+ */
+function phaseInfo(phase){
+  const p=(phase||'').toLowerCase();
+  if(p.includes('warm'))    return { color:'#2563eb', bg:'rgba(37,99,235,0.13)'  };
+  if(p.includes('new')||p.includes('concept')) return { color:'#7c3aed', bg:'rgba(124,58,237,0.13)' };
+  if(p.includes('practice')) return { color:'#059669', bg:'rgba(5,150,105,0.13)' };
+  if(p.includes('review'))   return { color:'#d97706', bg:'rgba(217,119,6,0.13)' };
+  return                             { color:'#64748b', bg:'rgba(100,116,139,0.13)' };
+}
+
+/**
+ * Returns ordered list of unique phases from the cartridge, in appearance order.
+ */
+function getPhaseOrder(){
+  const seen=new Set(), order=[];
+  CARTRIDGE.beats.forEach(b=>{ const p=b.phase||''; if(!seen.has(p)){ seen.add(p); order.push(p); } });
+  return order;
+}
+
+/** Speak the SAY text of a beat by index. Called by the 🔊 button. */
+function speakBeatSay(beatIndex){
+  const beat=CARTRIDGE.beats[beatIndex];
+  if(!beat||!beat.say) return;
+  const text=Array.isArray(beat.say.text) ? beat.say.text.join(' ') : beat.say.text;
+  speakText(text);
+}
+
+// ================================================================
+// RAIL NAVIGATION — all pure state changes followed by renderRail()
+// ================================================================
+
+function beginLesson(){
+  railState='active';
+  activeBeatIndex=0;
+  recoveryOpenForBeat=null;
+  applyBeatBoard(0);                    // Phase 2
+  renderRail();
+  scrollActiveBeatIntoView();
+}
+
+function goToNext(){
+  if(activeBeatIndex<CARTRIDGE.beats.length-1){
+    activeBeatIndex++;
+    recoveryOpenForBeat=null;
+    applyBeatBoard(activeBeatIndex);    // Phase 2
+    renderRail();
+    scrollActiveBeatIntoView();
+  }
+}
+
+function goToPrev(){
+  if(activeBeatIndex>0){
+    activeBeatIndex--;
+    recoveryOpenForBeat=null;
+    applyBeatBoard(activeBeatIndex);    // Phase 2
+    renderRail();
+    scrollActiveBeatIntoView();
+  }
+}
+
+function jumpToBeat(beatId){
+  const idx=CARTRIDGE.beats.findIndex(b=>b.id===beatId);
+  if(idx!==-1){
+    activeBeatIndex=idx;
+    recoveryOpenForBeat=null;
+    applyBeatBoard(idx);                // Phase 2
+    renderRail();
+    scrollActiveBeatIntoView();
+  }
+}
+
+function toggleRecovery(beatId){
+  recoveryOpenForBeat=(recoveryOpenForBeat===beatId) ? null : beatId;
+  renderRail();
+  // Keep scroll position — don't auto-scroll on recovery toggle
+  requestAnimationFrame(()=>{
+    const fc=document.querySelector('.beat-focal');
+    if(fc) fc.scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+}
+
+function scrollActiveBeatIntoView(){
+  requestAnimationFrame(()=>{
+    const fc=document.querySelector('.beat-focal');
+    if(fc) fc.scrollIntoView({behavior:'smooth',block:'nearest'});
+  });
+}
+
+// ================================================================
+// RAIL RENDERERS
+// ================================================================
+
+function renderPreflight(){
+  const m=CARTRIDGE.meta;
+  const mats=CARTRIDGE.materials||[];
+  const objs=CARTRIDGE.objectives||[];
+
+  const timeHtml=m.estMinutes
+    ? `<div class="preflight-time">\u2248 ${esc(String(m.estMinutes))} minutes</div>` : '';
+
+  const matsHtml=mats.length ? `
+    <div class="preflight-section">
+      <div class="preflight-section-label">\uD83D\uDCCB What to have ready</div>
+      <ul class="preflight-list">
+        ${mats.map(item=>`<li>${esc(item)}</li>`).join('')}
+      </ul>
+    </div>` : '';
+
+  const objsHtml=objs.length ? `
+    <div class="preflight-section">
+      <div class="preflight-section-label">\uD83C\uDFAF Today's goals</div>
+      <ul class="preflight-list">
+        ${objs.map(o=>`<li>${esc(o)}</li>`).join('')}
+      </ul>
+    </div>` : '';
+
+  return `
+    <div class="preflight">
+      <div>
+        <div class="preflight-level">Level ${esc(String(m.level))} &middot; Lesson ${esc(String(m.lesson))}</div>
+        <h1 class="preflight-title">${esc(m.title)}</h1>
+        ${timeHtml}
+      </div>
+      <hr class="preflight-divider" />
+      ${matsHtml}
+      ${objsHtml}
+      <div class="preflight-footer">
+        <button class="btn-begin" id="btn-begin" onclick="beginLesson()">Begin Lesson &#x25B6;</button>
+        <div class="preflight-beat-count">${CARTRIDGE.beats.length} beats</div>
+      </div>
+    </div>`;
+}
+
+function renderProgressMap(){
+  const phases=getPhaseOrder();
+  const curPhase=CARTRIDGE.beats[activeBeatIndex]?.phase||'';
+  const total=CARTRIDGE.beats.length;
+  const pos=activeBeatIndex+1;
+
+  const chainHtml=phases.map((ph,i)=>{
+    const info=phaseInfo(ph);
+    const isActive=ph===curPhase;
+    const sep=i>0 ? '<span class="phase-sep">\u203A</span>' : '';
+    const style=isActive
+      ? `color:${info.color};background:${info.bg};border-color:${info.color}60`
+      : '';
+    return `${sep}<span class="phase-pill${isActive?' phase-pill-active':''}" style="${style}">${esc(ph||'\u2014')}</span>`;
+  }).join('');
+
+  const dotsHtml=CARTRIDGE.beats.map((_,i)=>{
+    const cls=i<activeBeatIndex?'dot-done':i===activeBeatIndex?'dot-active':'';
+    return `<span class="progress-dot ${cls}"></span>`;
+  }).join('');
+
+  return `
+    <div class="rail-progress">
+      <div class="phase-chain">${chainHtml}</div>
+      <div class="beat-meter">
+        <div class="beat-dots">${dotsHtml}</div>
+        <span class="beat-pos-text">Beat ${pos} of ${total}</span>
+      </div>
+    </div>`;
+}
+
+function renderSaySection(beat, beatIndex){
+  const say=beat.say;
+  const lines=Array.isArray(say.text) ? say.text : [say.text];
+  const linesHtml=lines.map(l=>`<p class="say-line">${esc(l)}</p>`).join('');
+  const audioBtn=say.audio
+    ? `<button class="speak-say-btn" onclick="speakBeatSay(${beatIndex})">\uD83D\uDD0A Read aloud</button>` : '';
+  return `
+    <div class="focal-section focal-say">
+      <div class="focal-section-lbl">SAY</div>
+      <div class="say-body">
+        ${linesHtml}
+        ${audioBtn}
+      </div>
+    </div>`;
+}
+
+function renderDoSection(beat){
+  return `
+    <div class="focal-section focal-do">
+      <div class="focal-section-lbl">DO</div>
+      <div class="section-body">${esc(beat.do)}</div>
+    </div>`;
+}
+
+function renderListenSection(beat){
+  const listen=beat.listen;
+  const pillsHtml=(listen.expect||[]).map(e=>`<span class="expect-pill">${esc(e)}</span>`).join('');
+  const hintHtml=listen.hint ? `<p class="listen-hint">${esc(listen.hint)}</p>` : '';
+  return `
+    <div class="focal-section focal-listen">
+      <div class="focal-section-lbl">LISTEN</div>
+      <div class="expect-pills">${pillsHtml}</div>
+      ${hintHtml}
+    </div>`;
+}
+
+function renderNoteSection(beat){
+  return `
+    <div class="focal-section focal-note">
+      <div class="focal-section-lbl">NOTE</div>
+      <div class="section-body">${esc(beat.note)}</div>
+    </div>`;
+}
+
+// ================================================================
+// PHASE 4 — MEDIA (timestamped model video + speed toggle)
+// Deliverer-facing modeling aid; renders in the rail focal card (and the
+// board-dominant strip). Plays only the start→end window of a local file.
+// No fetch: the <video src> is a relative path that works from file://.
+// ================================================================
+
+/** Session-wide playback speed; initialised from meta.videoSpeedDefault at boot. */
+let videoSpeed = 1.5;
+
+/** Parse a time that may be seconds (number) or an "m:ss" string. */
+function parseTime(v){
+  if(v==null) return NaN;
+  if(typeof v==='number') return v;
+  const s=String(v).trim();
+  if(s.includes(':')){
+    const parts=s.split(':');
+    const m=parseInt(parts[0],10)||0;
+    const sec=parseFloat(parts[1])||0;
+    return m*60+sec;
+  }
+  return parseFloat(s);
+}
+
+/**
+ * renderMediaSection(beat[, compact]) — the model-video affordance.
+ * data-start / data-end carry the parsed window; ontimeupdate stops at end.
+ */
+function renderMediaSection(beat, compact){
+  const md=beat.media;
+  if(!md||!md.source) return '';
+  const start=parseTime(md.start);
+  const startAttr=isNaN(start)?0:start;
+  const end=parseTime(md.end);
+  const endAttr=isNaN(end)?'':end;          // absent end → play to natural end
+  const src=esc(encodeURI(md.source));      // encode spaces/brackets for file:// src
+  const speedBtns=[1,1.5,2].map(r=>
+    `<button class="speed-btn ${r===videoSpeed?'active':''}" data-rate="${r}" onclick="setVideoSpeed(${r})">${r}×</button>`
+  ).join('');
+  const cap=md.caption?`<div class="media-caption">${esc(md.caption)}</div>`:'';
+  return `
+    <div class="focal-section focal-media ${compact?'strip-media':''}">
+      <div class="media-section-lbl">▶ Model video</div>
+      <video class="media-video" src="${src}" preload="metadata"
+             data-start="${startAttr}" data-end="${endAttr}"
+             onloadedmetadata="mediaInit(this)" ontimeupdate="mediaTick(this)"
+             controls playsinline></video>
+      <div class="media-controls">
+        <button class="media-play-btn" onclick="mediaPlaySegment(this)">▶ Play segment</button>
+        <div class="speed-toggle">${speedBtns}</div>
+      </div>
+      ${cap}
+    </div>`;
+}
+
+/** On metadata load: apply speed and park the playhead at the segment start. */
+function mediaInit(v){
+  v.playbackRate=videoSpeed;
+  const s=parseFloat(v.dataset.start);
+  if(!isNaN(s)){ try{ v.currentTime=s; }catch(_){} }
+}
+
+/** Play from the segment start at the current speed. */
+function mediaPlaySegment(btn){
+  const wrap=btn.closest('.focal-media');
+  const v=wrap&&wrap.querySelector('.media-video');
+  if(!v) return;
+  const s=parseFloat(v.dataset.start);
+  v.playbackRate=videoSpeed;
+  v.currentTime=isNaN(s)?0:s;
+  v.play();
+}
+
+/** Stop hard at the segment end (no end → play through). */
+function mediaTick(v){
+  const e=parseFloat(v.dataset.end);
+  if(!isNaN(e) && v.currentTime>=e){ v.pause(); }
+}
+
+/** Persistent 1× / 1.5× / 2× toggle — applies live without interrupting playback. */
+function setVideoSpeed(rate){
+  videoSpeed=rate;
+  document.querySelectorAll('.media-video').forEach(v=>{ v.playbackRate=rate; });
+  document.querySelectorAll('.speed-btn').forEach(b=>{
+    b.classList.toggle('active', parseFloat(b.dataset.rate)===rate);
+  });
+}
+
+function renderRecoverySection(beat){
+  const rec=beat.recovery;
+  const isOpen=recoveryOpenForBeat===beat.id;
+  const toggleLabel=isOpen ? '\u25B2 Close' : '\u26A0\uFE0F Student struggling?';
+
+  let panelHtml='';
+  if(isOpen){
+    const promptsHtml=(rec.prompts||[]).map(p=>`<li>${esc(p)}</li>`).join('');
+    let reteachHtml='';
+    if(rec.reteach){
+      const rb=CARTRIDGE.beats.find(b=>b.id===rec.reteach);
+      const rlabel=rb ? (rb.label||rec.reteach) : rec.reteach;
+      reteachHtml=`<button class="reteach-btn" onclick="jumpToBeat('${escJsArg(rec.reteach)}')">\u21A9 Return to: ${esc(rlabel)}</button>`;
+    }
+    panelHtml=`
+      <div class="recovery-panel">
+        <div class="recovery-trigger">${esc(rec.trigger)}</div>
+        <ol class="recovery-prompts">${promptsHtml}</ol>
+        ${reteachHtml}
+      </div>`;
+  }
+
+  return `
+    <div class="focal-recovery ${isOpen?'recovery-open':''}">
+      <button class="recovery-toggle" onclick="toggleRecovery('${escJsArg(beat.id)}')">${toggleLabel}</button>
+      ${panelHtml}
+    </div>`;
+}
+
+function renderFocalCard(beat, beatIndex){
+  const info=phaseInfo(beat.phase);
+  const badgeStyle=`color:${info.color};background:${info.bg}`;
+
+  const headerHtml=`
+    <div class="focal-header">
+      ${beat.phase ? `<span class="focal-phase-badge" style="${badgeStyle}">${esc(beat.phase)}</span>` : ''}
+      ${beat.label ? `<span class="focal-beat-label">${esc(beat.label)}</span>` : ''}
+    </div>`;
+
+  // SAY → DO → LISTEN → NOTE order (most urgent to background context)
+  const sayHtml    = beat.say      ? renderSaySection(beat, beatIndex)   : '';
+  const doHtml     = beat.do       ? renderDoSection(beat)                : '';
+  const listenHtml = beat.listen   ? renderListenSection(beat)            : '';
+  const mediaHtml  = beat.media    ? renderMediaSection(beat)             : '';  // Phase 4
+  const noteHtml   = beat.note     ? renderNoteSection(beat)              : '';
+  const boardHtml  =                 renderBoardReadout(beat);             // Phase 2
+  const recHtml    = beat.recovery ? renderRecoverySection(beat)          : '';
+
+  return `
+    <div class="beat-focal" id="focal-${esc(beat.id)}">
+      <div class="focal-card">
+        ${headerHtml}
+        ${sayHtml}
+        ${doHtml}
+        ${mediaHtml}
+        ${listenHtml}
+        ${noteHtml}
+        ${boardHtml}
+        ${recHtml}
+      </div>
+    </div>`;
+}
+
+/**
+ * renderBoardReadout(beat) — Phase 2.
+ * Shows a compact, non-interactive summary of what board state this beat
+ * will produce. When no board field, shows a faint "unchanged" note.
+ * All text derived directly from beat.board (cartridge data only).
+ */
+function renderBoardReadout(beat){
+  const board=beat.board;
+  if(!board) return '<div class="board-readout board-readout-unchanged">Board \u2192 unchanged</div>';
+  const mode=board.mode;
+  if(mode==='clear') return '<div class="board-readout">Board \u2192 cleared</div>';
+  if(mode==='tiles'){
+    const parts=[];
+    if(board.level!=null)  parts.push(`Book ${esc(String(board.level))}`);
+    if(board.openDrawer)   parts.push(esc(board.openDrawer));
+    if(board.prePlace&&board.prePlace.length){
+      parts.push(board.prePlace.map(p=>`\u201C${esc(p.word)}\u201D`).join(', '));
+    }
+    if(board.lock) parts.push('\uD83D\uDD12 locked');
+    return `<div class="board-readout">Board \u2192 tiles \u00b7 ${parts.join(' \u00b7 ')}</div>`;
+  }
+  const summary=boardReadoutModeSummary(board);
+  return `<div class="board-readout">Board \u2192 ${summary}</div>`;
+}
+
+/** One-line summary of a student-page mode for the focal-card readout. */
+function boardReadoutModeSummary(board){
+  const m=board.mode, n=a=>(a||[]).length;
+  if(m==='word_frame')     return `word frame \u00b7 ${n(board.words)} words`;
+  if(m==='sight_words')    return `sight words \u00b7 ${n(board.words)} words`;
+  if(m==='phrase_builder') return `phrase builder \u00b7 ${Object.keys(board.columns||{}).length} columns`;
+  if(m==='fill_blanks')    return `fill blanks \u00b7 ${n(board.rows)} rows`;
+  if(m==='sentences')      return `sentences \u00b7 ${n(board.items)} items`;
+  if(m==='story'&&(board.pageType==='worksheet'||board.pageType==='reference_page')) return `${board.pageType==='reference_page'?'reference page':'worksheet'} \u00b7 \u201C${esc(board.title||'')}\u201D`;
+  if(m==='story')          return `story \u00b7 \u201C${esc(board.title||'')}\u201D`;
+  if(m==='matching')       return `matching \u00b7 ${n(board.pairs)} pairs`;
+  return esc(m);
+}
+
+function renderPeripheralBeat(beat, beatIndex){
+  const isPast=beatIndex<activeBeatIndex;
+  const info=phaseInfo(beat.phase);
+  const label=beat.label||beat.id;
+  const checkHtml=isPast ? '<span class="peripheral-check">\u2713</span>' : '';
+  return `
+    <div class="beat-peripheral ${isPast?'beat-past':'beat-future'}"
+         onclick="jumpToBeat('${escJsArg(beat.id)}')"
+         role="button" tabindex="0"
+         title="${esc(label)}">
+      <span class="peripheral-num">${beatIndex+1}</span>
+      <span class="peripheral-phase-dot" style="background:${info.color}"></span>
+      <span class="peripheral-label">${esc(label)}</span>
+      ${checkHtml}
+    </div>`;
+}
+
+/**
+ * renderRail() — Phase 3 updated.
+ * Branches on layoutMode before rendering.
+ * Always calls updateLayoutPicker() and (in rail-focus) renderBoardProxy().
+ */
+function renderRail(){
+  const rail=document.getElementById('rail');
+
+  // Board-dominant: slim strip (or compact preflight if not started)
+  if(layoutMode==='board-dominant'){
+    rail.innerHTML=railState==='preflight'?renderPreflight():renderRailStrip();
+    updateLayoutPicker();
+    return;
+  }
+
+  // Board-only / standard: rail hidden by CSS in board-only, but still rendered
+  // (navigation state stays live; board updates via applyBeatBoard)
+  if(railState==='preflight'){
+    rail.innerHTML=renderPreflight();
+    updateLayoutPicker();
+    return;
+  }
+
+  // Full active rail
+  const progressHtml=renderProgressMap();
+  const beatListHtml=CARTRIDGE.beats.map((beat,i)=>{
+    return i===activeBeatIndex
+      ? renderFocalCard(beat,i)
+      : renderPeripheralBeat(beat,i);
+  }).join('');
+
+  const isFirst=activeBeatIndex===0;
+  const isLast=activeBeatIndex===CARTRIDGE.beats.length-1;
+  const prevDis=isFirst?'disabled':'';
+  const nextCls=isLast?'nav-next nav-done':'nav-next';
+  const nextLbl=isLast?'Done \u2713':'Next \u25B6';
+
+  rail.innerHTML=`
+    <div class="rail-active">
+      ${progressHtml}
+      <div class="rail-scroll" id="rail-scroll">
+        <div class="beat-list">${beatListHtml}</div>
+      </div>
+      <div class="rail-nav">
+        <button class="nav-prev" onclick="goToPrev()" ${prevDis}>\u25C4 Back</button>
+        <button class="${nextCls}" onclick="goToNext()">${nextLbl}</button>
+      </div>
+    </div>`;
+
+  updateLayoutPicker();
+  // Phase 3: sync board proxy when in rail-focus mode
+  if(layoutMode==='rail-focus') renderBoardProxy();
+}
+
+// ================================================================
+// PHASE STUBS — do not implement yet
+// ================================================================
+
+/**
+ * applyBoardState(board) — Phase 2 full implementation.
+ *
+ * Sticky semantics: ONLY called when beat.board is present.
+ * Never call for no-board beats — the board holds previous state.
+ *
+ * prePlace absent (undefined)  → tiles carry over (sticky within tiles mode)
+ * prePlace present (any value) → tiles cleared, then entries placed
+ */
+function applyBoardState(board){
+  if(!board) return; // defensive; navigation guards this
+  const mode=board.mode;
+
+  // ---- Engine-backed modes: tiles & clear ----
+  if(mode==='tiles'||mode==='clear'){
+    boardMode=mode; modeState=null;
+    showEngineSurface();   // un-hide engine; empty the mode surface
+    if(mode==='clear'){
+      tiles=[]; boardLocked=false;
+      syncStudentBoardView({render:false});
+      renderWordPane(); return;
+    }
+    // tiles:
+    // 1. Load Book level (cumulative tile set)
+    if(board.level!=null) setEngineLevel(board.level);
+    // 2. Open specified drawer
+    if(board.openDrawer) switchDrawer(board.openDrawer);
+    // 3. prePlace: only clear+rebuild if field is explicitly declared
+    //    Absent prePlace → tiles carry over (model stays for practice)
+    if(board.prePlace!==undefined){
+      tiles=[];
+      if(Array.isArray(board.prePlace)){
+        board.prePlace.forEach(entry=>prePlaceWord(entry.word,entry.row||0));
+      }
+    }
+    // 4. Lock flag (false if absent)
+    boardLocked=!!board.lock;
+    syncStudentBoardView({render:false});
+    centerTilesForStudentView();
+    renderWordPane(); return;
+  }
+
+  // ---- Student-page modes (non-tiles) ----
+  // Critical: do NOT touch `tiles` / `boardLocked` — the engine simply hides.
+  boardMode=mode;
+  modeState=initModeState(mode,board);
+  syncStudentBoardView({render:false});
+  hideEngineSurface();
+  renderModeSurface();
+}
+
+/** Reveal the tile engine; clear and hide the page-mode surface. */
+function showEngineSurface(){
+  const board=document.getElementById('board');
+  board.classList.remove('mode-active');
+  const ms=document.getElementById('mode-surface');
+  if(ms) ms.innerHTML='';
+}
+/** Hide the tile engine surfaces (tiles persist); the mode surface shows via CSS. */
+function hideEngineSurface(){
+  document.getElementById('board').classList.add('mode-active');
+}
+
+// ================================================================
+// PHASE 4 — STUDENT-PAGE MODE STATE + RENDERERS
+// Each mode keeps its interactive sub-state in `modeState`, mutated by
+// onclick handlers that then call renderModeSurface() to repaint #mode-surface.
+// ================================================================
+
+function shuffle(arr){
+  const a=arr.slice();
+  for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; }
+  return a;
+}
+
+/** Build fresh interactive state for a page mode from its cartridge payload. */
+function initModeState(mode,board){
+  if(mode==='word_frame'){
+    return { mode, words:(board.words||[]).slice(), spot:0 };
+  }
+  if(mode==='phrase_builder'){
+    const cols=board.columns||{};
+    const order=Object.keys(cols);
+    const selected={}; order.forEach(k=>selected[k]=null);
+    return { mode, order, cols, selected };
+  }
+  if(mode==='fill_blanks'){
+    const rows=(board.rows||[]).map(r=>{
+      const parts=String(r).split('___');
+      return { parts, fills:new Array(Math.max(0,parts.length-1)).fill(null) };
+    });
+    return { mode, bank:(board.bank||[]).slice(), rows, sel:null };
+  }
+  if(mode==='sentences'){
+    return { mode, items:(board.items||[]).slice(), spot:0 };
+  }
+  if(mode==='story'){
+    return { mode, title:board.title||'', subtitle:board.subtitle||'', text:board.text||'', pageType:board.pageType||'', images:(board.images||[]).slice() };
+  }
+  if(mode==='matching'){
+    const pairs=(board.pairs||[]).filter(p=>Array.isArray(p)&&p.length>=2);
+    const left=shuffle(pairs.map((p,i)=>({text:String(p[0]),pi:i})));
+    const right=shuffle(pairs.map((p,i)=>({text:String(p[1]),pi:i})));
+    return { mode, left, right, selL:null, selR:null, matched:new Set(), miss:null };
+  }
+  if(mode==='sight_words'){
+    return { mode, words:(board.words||[]).slice(), spot:0, known:new Set(), missed:new Set() };
+  }
+  return { mode };
+}
+
+/** Repaint #mode-surface for the active page mode. */
+function renderModeSurface(){
+  const ms=document.getElementById('mode-surface');
+  if(!ms||!modeState) return;
+  const m=modeState.mode;
+  let html='';
+  if(m==='word_frame')         html=renderWordFrame();
+  else if(m==='phrase_builder')html=renderPhraseBuilder();
+  else if(m==='fill_blanks')   html=renderFillBlanks();
+  else if(m==='sentences')     html=renderSentences();
+  else if(m==='story')         html=renderStory();
+  else if(m==='matching')      html=renderMatching();
+  else if(m==='sight_words')   html=renderSightWords();
+  ms.innerHTML=html;
+}
+
+// ---- word_frame ----
+function renderWordFrame(){
+  const s=modeState, n=s.words.length;
+  if(layoutMode==='board-only'){
+    const word=s.words[s.spot]||'';
+    return `<div class="mode-pane student-reader-pane">
+      <div class="reader-card reader-word ${word?'':'reader-empty'}"><div class="reader-text">${word?esc(word):'No word'}</div></div>
+    </div>`;
+  }
+  const cells=s.words.map((w,i)=>
+    `<div class="wf-word ${i===s.spot?'spot':''}" onclick="wfSpot(${i})">${esc(w)}</div>`).join('');
+  return `<div class="mode-pane">
+    <div class="mode-head">
+      <span class="mode-title">Word frame</span>
+      <div class="mode-stepper">
+        <button class="mode-step-btn" onclick="wfStep(-1)" ${s.spot<=0?'disabled':''}>◄</button>
+        <span class="mode-step-pos">${n?s.spot+1:0} / ${n}</span>
+        <button class="mode-step-btn" onclick="wfStep(1)" ${s.spot>=n-1?'disabled':''}>►</button>
+        <button class="mode-step-btn" onclick="wfSpeak()" title="Speak word">🔊</button>
+      </div>
+    </div>
+    <div class="wf-grid">${cells}</div>
+  </div>`;
+}
+function wfSpot(i){ modeState.spot=i; renderModeSurface(); }
+function wfStep(d){ const s=modeState; s.spot=Math.max(0,Math.min(s.words.length-1,s.spot+d)); renderModeSurface(); }
+function wfSpeak(){ const s=modeState; if(s.words[s.spot]) speakText(s.words[s.spot]); }
+
+// ---- phrase_builder ----
+function renderPhraseBuilder(){
+  const s=modeState;
+  const cols=s.order.map(key=>{
+    const chips=(s.cols[key]||[]).map(chip=>
+      `<div class="pb-chip ${s.selected[key]===chip?'sel':''}" onclick="pbPick('${escJsArg(key)}','${escJsArg(chip)}')">${esc(chip)}</div>`).join('');
+    return `<div class="pb-col"><div class="pb-col-lbl">${esc(key)}</div>${chips}</div>`;
+  }).join('');
+  const anySel=s.order.some(k=>s.selected[k]);
+  const trayInner=anySel
+    ? s.order.map(k=>{
+        const v=s.selected[k];
+        return `<span class="pb-tray-word ${v?'':'placeholder'}">${esc(v|| '·')}</span>`;
+      }).join(' ')
+    : '<span class="pb-tray-empty">Tap a chip in each column to build a sentence</span>';
+  return `<div class="mode-pane">
+    <div class="mode-head"><span class="mode-title">Phrase builder</span>
+      <span class="mode-hint">Tap to set each slot</span></div>
+    <div class="pb-cols">${cols}</div>
+    <div class="pb-tray">${trayInner}</div>
+  </div>`;
+}
+function pbPick(key,chip){
+  const s=modeState;
+  s.selected[key]=(s.selected[key]===chip)?null:chip; // tap again to clear slot
+  renderModeSurface();
+}
+
+// ---- fill_blanks ----
+function renderFillBlanks(){
+  const s=modeState;
+  const rowsHtml=s.rows.map((row,ri)=>{
+    let html='';
+    row.parts.forEach((part,pi)=>{
+      html+=`<span class="fb-text">${esc(part)}</span>`;
+      if(pi<row.parts.length-1){
+        const fill=row.fills[pi];
+        html+=`<span class="fb-blank ${fill?'filled':''}" onclick="fbBlank(${ri},${pi})">${fill?esc(fill):''}</span>`;
+      }
+    });
+    return `<div class="fb-row">${html}</div>`;
+  }).join('');
+  const bankHtml=s.bank.map((chip,i)=>
+    `<div class="fb-chip ${s.sel===i?'sel':''}" onclick="fbChip(${i})">${esc(chip)}</div>`).join('');
+  return `<div class="mode-pane">
+    <div class="mode-head"><span class="mode-title">Fill the blanks</span>
+      <span class="mode-hint">Tap a letter, then a blank · tap a filled blank to clear</span></div>
+    <div class="fb-rows">${rowsHtml}</div>
+    <div class="fb-bank">${bankHtml}</div>
+  </div>`;
+}
+function fbChip(i){ const s=modeState; s.sel=(s.sel===i)?null:i; renderModeSurface(); }
+function fbBlank(ri,pi){
+  const s=modeState, cur=s.rows[ri].fills[pi];
+  if(cur){ s.rows[ri].fills[pi]=null; }          // tap filled → clear (chip "returns")
+  else if(s.sel!=null){ s.rows[ri].fills[pi]=s.bank[s.sel]; s.sel=null; } // place selected
+  renderModeSurface();
+}
+
+// ---- sentences ----
+function splitReadItem(text){
+  const raw=String(text||'');
+  const idx=raw.indexOf(':');
+  if(idx>0 && idx<=18){
+    return { label:raw.slice(0,idx).trim(), body:raw.slice(idx+1).trim() };
+  }
+  return { label:'', body:raw };
+}
+function renderSentences(){
+  const s=modeState, n=s.items.length;
+  if(layoutMode==='board-only'){
+    const item=splitReadItem(s.items[s.spot]||'');
+    const text=item.body||item.label||'No sentence';
+    return `<div class="mode-pane student-reader-pane">
+      <div class="reader-card reader-sentence ${n?'':'reader-empty'}"><div class="reader-text">${esc(text)}</div></div>
+    </div>`;
+  }
+  const items=s.items.map((it,i)=>{
+    const item=splitReadItem(it);
+    const label=item.label?`<span class="sn-label">${esc(item.label)}</span>`:'';
+    return `<div class="sn-item ${i===s.spot?'spot':''}" onclick="snSpot(${i})">${label}${esc(item.body||item.label)}</div>`;
+  }).join('');
+  return `<div class="mode-pane">
+    <div class="mode-head">
+      <span class="mode-title">Sentences</span>
+      <div class="mode-stepper">
+        <button class="mode-step-btn" onclick="snStep(-1)" ${s.spot<=0?'disabled':''}>◄</button>
+        <span class="mode-step-pos">${n?s.spot+1:0} / ${n}</span>
+        <button class="mode-step-btn" onclick="snStep(1)" ${s.spot>=n-1?'disabled':''}>►</button>
+      </div>
+    </div>
+    <div class="sn-list">${items}</div>
+  </div>`;
+}
+function snSpot(i){ modeState.spot=i; renderModeSurface(); }
+function snStep(d){ const s=modeState; s.spot=Math.max(0,Math.min(s.items.length-1,s.spot+d)); renderModeSurface(); }
+
+// ---- story ----
+function renderStory(){
+  const s=modeState;
+  if(s.pageType==='worksheet'||s.pageType==='reference_page'){
+    if(s.images&&s.images.length){
+      const imgs=s.images.map((entry,i)=>{
+        const img=typeof entry==='string' ? {src:entry} : (entry||{});
+        const label=img.label||`${s.pageType==='reference_page'?'Reference page':'Worksheet'} ${i+1}`;
+        const alt=img.alt||label;
+        return `<figure class="worksheet-image-frame">
+          ${label?`<figcaption class="worksheet-image-label">${esc(label)}</figcaption>`:''}
+          <img class="worksheet-image" src="${esc(img.src||'')}" alt="${esc(alt)}" loading="eager">
+        </figure>`;
+      }).join('');
+      return `<div class="story-pane worksheet-pane">
+        <div class="worksheet-images">${imgs}</div>
+        ${s.text?`<div class="worksheet-caption">${esc(s.text)}</div>`:''}
+      </div>`;
+    }
+    if(s.pageType==='reference_page'){
+      return `<div class="story-pane worksheet-pane">
+        <div class="worksheet-card">
+          <div class="worksheet-kicker">Student reference page</div>
+          ${s.title?`<div class="worksheet-title">${esc(s.title)}</div>`:''}
+          ${s.subtitle?`<div class="worksheet-subtitle">${esc(s.subtitle)}</div>`:''}
+          <div class="worksheet-subtitle">${esc(s.text||'Reference page image not provided.')}</div>
+        </div>
+      </div>`;
+    }
+    const lines=Array.from({length:10},(_,i)=>`<div class="worksheet-line" data-num="${i+1}."></div>`).join('');
+    return `<div class="story-pane worksheet-pane">
+    <div class="worksheet-card">
+      <div class="worksheet-kicker">${s.pageType==='reference_page'?'Student reference page':'Student worksheet'}</div>
+      ${s.title?`<div class="worksheet-title">${esc(s.title)}</div>`:''}
+      ${s.subtitle?`<div class="worksheet-subtitle">${esc(s.subtitle)}</div>`:''}
+      ${s.text?`<div class="worksheet-subtitle">${esc(s.text)}</div>`:''}
+      <div class="worksheet-lines">${lines}</div>
+    </div>
+  </div>`;
+  }
+  return `<div class="story-pane">
+    <div class="story-card">
+      ${s.title?`<div class="story-title">${esc(s.title)}</div>`:''}
+      <div class="story-text">${esc(s.text)}</div>
+    </div>
+  </div>`;
+}
+
+// ---- matching ----
+function renderMatching(){
+  const s=modeState;
+  const leftHtml=s.left.map((c,i)=>{
+    const matched=s.matched.has(c.pi);
+    const cls=matched?'matched':(s.selL===i?'sel':(s.miss&&s.miss[0]===i?'miss':''));
+    return `<div class="mt-cell ${cls}" onclick="mtPick('L',${i})">${esc(c.text)}</div>`;
+  }).join('');
+  const rightHtml=s.right.map((c,i)=>{
+    const matched=s.matched.has(c.pi);
+    const cls=matched?'matched':(s.selR===i?'sel':(s.miss&&s.miss[1]===i?'miss':''));
+    return `<div class="mt-cell ${cls}" onclick="mtPick('R',${i})">${esc(c.text)}</div>`;
+  }).join('');
+  const done=s.matched.size===s.left.length&&s.left.length>0;
+  return `<div class="mode-pane">
+    <div class="mode-head"><span class="mode-title">Matching</span>
+      <span class="mode-hint">${done?'All matched ✓':'Tap one from each side'}</span></div>
+    <div class="mt-board">
+      <div class="mt-col">${leftHtml}</div>
+      <div class="mt-col">${rightHtml}</div>
+    </div>
+  </div>`;
+}
+function mtPick(side,i){
+  const s=modeState;
+  const cell=(side==='L'?s.left:s.right)[i];
+  if(s.matched.has(cell.pi)) return;       // already locked
+  if(side==='L') s.selL=(s.selL===i?null:i);
+  else           s.selR=(s.selR===i?null:i);
+  s.miss=null;
+  if(s.selL!=null&&s.selR!=null){
+    if(s.left[s.selL].pi===s.right[s.selR].pi){
+      s.matched.add(s.left[s.selL].pi); s.selL=null; s.selR=null; // correct → lock
+    } else {
+      s.miss=[s.selL,s.selR]; s.selL=null; s.selR=null;           // "not here" → return
+      renderModeSurface();
+      setTimeout(()=>{ if(modeState===s){ s.miss=null; renderModeSurface(); } },350);
+      return;
+    }
+  }
+  renderModeSurface();
+}
+
+// ---- sight_words ----
+function renderSightWords(){
+  const s=modeState, n=s.words.length, current=s.words[s.spot]||'';
+  if(layoutMode==='board-only'){
+    return `<div class="mode-pane student-reader-pane">
+      <div class="reader-card reader-word ${current?'':'reader-empty'}"><div class="reader-text">${current?esc(current):'No sight word'}</div></div>
+    </div>`;
+  }
+  const pills=s.words.map((w,i)=>{
+    const cls=[
+      s.spot===i?'spot':'',
+      s.known&&s.known.has(i)?'known':'',
+      s.missed&&s.missed.has(i)?'missed':''
+    ].filter(Boolean).join(' ');
+    return `<div class="sw-pill ${cls}" onclick="swTap(${i})">${esc(w)}</div>`;
+  }).join('');
+  const missedWords=s.words.filter((_,i)=>s.missed&&s.missed.has(i));
+  const deck=missedWords.length
+    ? missedWords.map(w=>`<span>${esc(w)}</span>`).join('')
+    : '<span>No missed words marked yet</span>';
+  return `<div class="mode-pane">
+    <div class="mode-head">
+      <span class="mode-title">Sight words</span>
+      <div class="mode-stepper">
+        <button class="mode-step-btn" onclick="swStep(-1)" ${s.spot<=0?'disabled':''}>◄</button>
+        <span class="mode-step-pos">${n?s.spot+1:0} / ${n}</span>
+        <button class="mode-step-btn" onclick="swStep(1)" ${s.spot>=n-1?'disabled':''}>►</button>
+      </div>
+    </div>
+    <div class="sw-teacher-current">
+      <div class="sw-current-word">${current?esc(current):'No sight word'}</div>
+      <div class="sw-markers">
+        <button class="sw-mark-btn known" onclick="swMark('known')">Known</button>
+        <button class="sw-mark-btn missed" onclick="swMark('missed')">Needs card</button>
+      </div>
+    </div>
+    <div class="sw-wrap">${pills}</div>
+    <div class="reading-deck"><div class="reading-deck-title">Reading Deck to build</div><div class="reading-deck-list">${deck}</div></div>
+  </div>`;
+}
+function swTap(i){ const s=modeState; s.spot=i; renderModeSurface(); if(s.words[i]) speakText(s.words[i]); }
+function swStep(d){ const s=modeState; s.spot=Math.max(0,Math.min(s.words.length-1,s.spot+d)); renderModeSurface(); }
+function swMark(kind){
+  const s=modeState, i=s.spot;
+  if(!s.words[i]) return;
+  if(!s.known) s.known=new Set();
+  if(!s.missed) s.missed=new Set();
+  if(kind==='known'){
+    s.known.add(i); s.missed.delete(i);
+  } else {
+    s.missed.add(i); s.known.delete(i);
+  }
+  renderModeSurface();
+}
+
+// ================================================================
+// KEYBOARD NAVIGATION
+// Guard: don't fire while focus is inside a form element.
+// ================================================================
+document.addEventListener('keydown', (e)=>{
+  // Fix B: student device. In board-only, a child sits at the Chromebook;
+  // a bumped spacebar must NOT advance/retreat beats. Nav stays live in the
+  // three deliverer-facing layouts.
+  if(layoutMode==='board-only'){
+    if(e.key==='Escape'){
+      e.preventDefault();
+      selectLayout('rail-focus');
+    }
+    return;
+  }
+  if(['INPUT','TEXTAREA','SELECT'].includes(e.target.tagName)) return;
+  if(e.target.isContentEditable) return;
+  if(railState!=='active') return;
+  if(e.key==='ArrowRight'||e.key==='ArrowDown'||e.key===' '){
+    e.preventDefault(); goToNext();
+  } else if(e.key==='ArrowLeft'||e.key==='ArrowUp'){
+    e.preventDefault(); goToPrev();
+  }
+});
+
+// ================================================================
+// BOOT
+// ================================================================
+// Wire tile engine controls
+document.getElementById('lessonSelect').addEventListener('change', renderTray);
+document.getElementById('resetButton').addEventListener('click', ()=>{ tiles=[]; draggedTile=null; renderWordPane(); });
+document.getElementById('speakButton').addEventListener('click', speakAllBoard);
+document.getElementById('cartridgeSelect').addEventListener('change', (e)=>selectCartridge(e.target.value));
+document.querySelectorAll('.drawer-tab').forEach(tab=>{
+  tab.addEventListener('click',(e)=>{ e.preventDefault(); switchDrawer(tab.dataset.drawer); });
+});
+
+// Phase 4: default video speed from cartridge meta (1.5 if absent)
+videoSpeed = (CARTRIDGE.meta && CARTRIDGE.meta.videoSpeedDefault) || 1.5;
+
+// Boot tile engine
+renderAlphabet();
+renderTray();
+renderWordPane();
+
+// Boot rail (shows pre-flight) + init layout picker state
+renderRail();
+updateLayoutPicker();
+setCartridgeStatus(`${CARTRIDGE.beats.length} beats`);
+</script>
+</body>
+</html>

@@ -1,0 +1,501 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "level": 4,
+    "lesson": 6,
+    "title": "Spelling: Schwa",
+    "estMinutes": 50,
+    "author": "Barton Command Center",
+    "videoSpeedDefault": 1.5
+  },
+  "materials": [
+    "Franklin Spelling Ace electronic spell checker",
+    "2 rubber bands",
+    "Level 4 letter tiles: 2 sets of A through Z plus Vowel Y, CH, TH, CK, SH, WH, TCH",
+    "Unit tiles: ALL, ANG, ING, ONG, UNG, ANK, INK, ONK, UNK, OLL, OLD, OLT, OST, ILD, IND",
+    "Binder paper and pencil",
+    "Word frame",
+    "Blank light-colored 5 x 8 index card",
+    "Several blank 3 x 5 index cards",
+    "Book 4 Spelling Rules page"
+  ],
+  "objectives": [
+    "Identify schwa as /uh/ in an unaccented syllable.",
+    "Read schwa in unaccented closed A or O syllables.",
+    "Read schwa in final vowel-L syllables.",
+    "Use an electronic spell checker when spelling an uncertain schwa vowel.",
+    "Read and spell Lesson 6 word, phrase, sentence, and story material."
+  ],
+  "beats": [
+    {
+      "id": "L4.6.prep.01",
+      "phase": "Prep",
+      "label": "Tutor overview",
+      "do": "Set out the electronic spell checker, rubber bands, Level 4 tiles, Units, binder paper, pencil, word frame, blank cards, and the Book 4 Spelling Rules page.",
+      "note": "Tutor-only overview: In most two-syllable words, the first syllable is accented. A or O in an unaccented closed syllable often says /uh/. In final vowel-L syllables, any vowel may say /uh/. For spelling, the student should use the electronic spell checker when the schwa vowel is uncertain."
+    },
+    {
+      "id": "L4.6.review.01",
+      "phase": "Review",
+      "label": "Review prior extra practice",
+      "say": {
+        "text": "Let's take a look at your extra practice page. Go ahead and read the words to me."
+      },
+      "do": "Review Lesson 5 extra practice. If it was not completed at home, complete a prior extra-practice page now.",
+      "board": {
+        "mode": "story",
+        "pageType": "worksheet",
+        "title": "Lesson 5 Extra Practice Review",
+        "subtitle": "Use one of the prior lesson pages if needed.",
+        "text": "Review Lesson 5 Extra Practice before beginning Lesson 6.",
+        "images": [
+          {
+            "src": "assets/worksheets/level4/lesson5_extra_practice_1.png",
+            "label": "Lesson 5 Extra Practice #1",
+            "alt": "Lesson 5 Student Page 57 Extra Practice 1"
+          },
+          {
+            "src": "assets/worksheets/level4/lesson5_extra_practice_2.png",
+            "label": "Lesson 5 Extra Practice #2",
+            "alt": "Lesson 5 Student Page 58 Extra Practice 2"
+          }
+        ]
+      },
+      "recovery": {
+        "trigger": "Student cannot complete the prior extra practice accurately.",
+        "prompts": [
+          "Stop the new lesson.",
+          "Repeat the prior lesson before teaching Lesson 6."
+        ]
+      }
+    },
+    {
+      "id": "L4.6.teach1.01",
+      "phase": "New Teaching 1",
+      "label": "Introduce schwa with O",
+      "say": {
+        "text": [
+          "Today you'll see that sounding out some words can be tricky.",
+          "Look at the second syllable. What vowel is in that syllable? A short O says /oh/, so you might think this says BLOS-SOM. But what sound is it really making in blossom?"
+        ]
+      },
+      "listen": {
+        "expect": [
+          "/uh/",
+          "Short U sound"
+        ]
+      },
+      "do": "Build BLOSSOM. Student divides BLOS-SOM. Use rubber bands to show the first syllable lasts longer and is accented; the O in the unaccented syllable changes to /uh/.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "prePlace": [
+          {
+            "word": "BLOSSOM",
+            "row": 0
+          }
+        ],
+        "lock": false
+      },
+      "note": "Accented vowels say what is expected. The vowel in an unaccented syllable often changes."
+    },
+    {
+      "id": "L4.6.teach1.02",
+      "phase": "New Teaching 1",
+      "label": "Name schwa with A",
+      "say": {
+        "text": [
+          "I'm going to say that exactly as it looks: Tex-ass. Does that sound right?",
+          "An unaccented vowel that says /uh/ is called a schwa. In dictionaries, schwa is shown with an upside-down e."
+        ]
+      },
+      "listen": {
+        "expect": [
+          "Texas",
+          "The A is making schwa."
+        ]
+      },
+      "do": "Build TEXAS. Student divides TEX-AS, says the real word, uses a rubber band to find the accented first syllable, and identifies the A as schwa. Draw or tile an upside-down E as the schwa symbol.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "prePlace": [
+          {
+            "word": "TEXAS",
+            "row": 0
+          }
+        ],
+        "lock": false
+      },
+      "note": "Rule language: A closed A or O in the unaccented syllable changes to schwa."
+    },
+    {
+      "id": "L4.6.teach1.03",
+      "phase": "New Teaching 1",
+      "label": "Why A and O change",
+      "say": {
+        "text": "Watch the size of my mouth as I say /ah/ and /uh/, then /oh/ and /uh/. Which is faster?"
+      },
+      "listen": {
+        "expect": [
+          "/uh/ is faster."
+        ]
+      },
+      "do": "Demonstrate that /uh/ is faster to say than /ah/ or /oh/. Also demonstrate that /ih/ and /eh/ are about as fast as /uh/, so I and E do not usually switch.",
+      "note": "Schwa supports faster speech. Closed A and Closed O switch in unaccented syllables; I and E usually do not."
+    },
+    {
+      "id": "L4.6.teach1.04",
+      "phase": "New Teaching 1",
+      "label": "Practice closed A/O schwa",
+      "say": {
+        "text": "Divide the word, decide which pronunciation sounds right, and put the schwa symbol above the vowel that changed."
+      },
+      "do": "Build MELON, KANSAS, and PILOT. Student divides, reads naturally, identifies schwa, and explains why it changed.",
+      "listen": {
+        "expect": [
+          "A closed A or O in an unaccented syllable changes to schwa.",
+          "Accented vowels do not change."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "lock": false
+      },
+      "note": "Target readings: MEL-un, KAN-sus, PI-lut."
+    },
+    {
+      "id": "L4.6.teach1.05",
+      "phase": "New Teaching 1",
+      "label": "Quick schwa review",
+      "say": {
+        "text": [
+          "Will an accented vowel change to schwa?",
+          "Which syllable is usually unaccented?",
+          "What sound does schwa make?",
+          "How do you double-check?"
+        ]
+      },
+      "listen": {
+        "expect": [
+          "No.",
+          "The last syllable.",
+          "/uh/.",
+          "Look for a closed A or O in an unaccented syllable."
+        ]
+      }
+    },
+    {
+      "id": "L4.6.teach2.01",
+      "phase": "New Teaching 2",
+      "label": "Introduce vowel-L schwa",
+      "say": {
+        "text": "Schwa also affects multi-syllable words that end with a vowel followed by L."
+      },
+      "do": "Build PENCIL. Student divides PEN-CIL, chooses PEN-sul as the natural reading, and identifies I as schwa.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "prePlace": [
+          {
+            "word": "PENCIL",
+            "row": 0
+          }
+        ],
+        "lock": false
+      },
+      "note": "If a multi-syllable word ends with a vowel followed by L, any vowel can change to schwa."
+    },
+    {
+      "id": "L4.6.teach2.02",
+      "phase": "New Teaching 2",
+      "label": "Practice vowel-L schwa",
+      "say": {
+        "text": "Divide each word, choose the natural pronunciation, and put the schwa symbol over the vowel that changed."
+      },
+      "do": "Build NICKEL, CANCEL, EQUAL, and DEVIL. Student divides, reads, marks schwa, and explains vowel-L.",
+      "listen": {
+        "expect": [
+          "Nickel, cancel, equal, devil.",
+          "The word ends in vowel-L."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "lock": false
+      }
+    },
+    {
+      "id": "L4.6.teach2.03",
+      "phase": "New Teaching 2",
+      "label": "Add schwa rule",
+      "do": "Show the Book 4 Spelling Rules page and add the Schwa entries.",
+      "board": {
+        "mode": "story",
+        "pageType": "reference_page",
+        "title": "Spelling Rules - Book 4",
+        "text": "Schwa: Closed A or O (Texas, Blossom); Any Vowel-L (Cancel, Pencil).",
+        "images": [
+          {
+            "src": "assets/reference/level4/book4_spelling_rules_student_page_59.png",
+            "label": "Student Page #59: Spelling Rules - Book 4",
+            "alt": "Book 4 Spelling Rules student page 59 showing Schwa rules"
+          }
+        ],
+        "purpose": "reference"
+      }
+    },
+    {
+      "id": "L4.6.spelltiles.01",
+      "phase": "Tile Spelling",
+      "label": "Spell real words with tiles",
+      "say": {
+        "text": "Words with schwa aren't too hard to read. But spelling them can be tricky. Listen for the schwa sound."
+      },
+      "do": "Teach use of the electronic spell checker with RANDOM: build known sounds and use a schwa marker or question mark for the uncertain vowel, then check spelling. Dictate the remaining real words with tiles.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "vowels",
+        "lock": false
+      },
+      "note": "Words: random, canvas, lemon, travel, evil, legal. Repeat-lesson words: final, human, Boston, gravel, method."
+    },
+    {
+      "id": "L4.6.readtiles.01",
+      "phase": "Tile Reading",
+      "label": "No nonsense schwa reading",
+      "do": "Skip Read Nonsense Words on Tiles.",
+      "note": "The manual states there are no nonsense words with schwa sounds.",
+      "board": {
+        "mode": "clear"
+      }
+    },
+    {
+      "id": "L4.6.spelltiles.02",
+      "phase": "Tile Spelling",
+      "label": "No nonsense schwa spelling",
+      "do": "Skip Spell Nonsense Words with Tiles.",
+      "note": "The manual states there are no nonsense words with schwa sounds."
+    },
+    {
+      "id": "L4.6.words.01",
+      "phase": "Reading",
+      "label": "Read words through word frame",
+      "say": {
+        "text": "Now you're going to read words through the word frame. If you know that word for sure, just say it. If you don't know it, use your pencil to help you divide it."
+      },
+      "do": "Student reads the Lesson 6 word page through the word frame. Optional: mark the vowel that changed to schwa and explain why.",
+      "board": {
+        "mode": "word_frame",
+        "title": "Lesson 6 Read These Words",
+        "words": [
+          "tunnel",
+          "custom",
+          "model",
+          "canvas",
+          "common",
+          "bigot",
+          "channel",
+          "ribbon",
+          "kennel",
+          "mammoth",
+          "apron",
+          "postal",
+          "level",
+          "atom",
+          "gallon",
+          "bacon",
+          "random",
+          "rental",
+          "infant",
+          "canyon",
+          "metal"
+        ]
+      }
+    },
+    {
+      "id": "L4.6.paper.01",
+      "phase": "Paper Spelling",
+      "label": "Spell words on paper",
+      "say": {
+        "text": "Now you'll spell on paper, syllable by syllable. If you hear a schwa and aren't absolutely sure which vowel changed, use your electronic spell checker."
+      },
+      "do": "Dictate real words on paper. Student repeats, taps, writes each syllable, checks uncertain schwa vowels with the spell checker, and double-checks by reading.",
+      "note": "Words: pendant, frugal, common, label, hammock. Repeat-lesson words: bacon, vital, channel, dragon, kingdom. No nonsense words."
+    },
+    {
+      "id": "L4.6.sightread.01",
+      "phase": "Sight Words",
+      "label": "Review sight word reading deck",
+      "say": {
+        "text": "Let's review your Sight Word Reading Deck. Warm up by reading each card, then keep the clue hidden and read them again as fast as you can."
+      },
+      "do": "Use the student's physical Sight Word Reading Deck. Skip if unavailable."
+    },
+    {
+      "id": "L4.6.sightspell.01",
+      "phase": "Sight Words",
+      "label": "Review sight word spelling cards",
+      "say": {
+        "text": "Let's review your tricky sight words."
+      },
+      "do": "For each physical Sight Word Spelling Card: read, explain the red letter, see and spell twice on the wall, see and write twice on the table, and see and write twice on paper. Dictate active sight words later after phrase spelling.",
+      "note": "Retire a card after three correct sessions and replace it from the Sight Word Check List."
+    },
+    {
+      "id": "L4.6.phrases.01",
+      "phase": "Phrases",
+      "label": "Read phrases",
+      "say": {
+        "text": "Now you'll read some phrases. Create sentences, then point to two words that have a vowel making the schwa sound."
+      },
+      "do": "Student reads phrase groups, creates sentences, and identifies two schwa words.",
+      "board": {
+        "mode": "sentences",
+        "title": "Lesson 6 Read These Phrases",
+        "items": [
+          "The tiny infant",
+          "Jason",
+          "The lazy bison",
+          "A crazy felon",
+          "didn't want bacon",
+          "got a mammoth fossil",
+          "went to prison",
+          "wouldn't gallop",
+          "in his jello",
+          "at the bottom",
+          "in Kansas",
+          "in the grass",
+          "to fatten him up.",
+          "by the canvas wagon.",
+          "for a brutal act.",
+          "of the canyon."
+        ]
+      }
+    },
+    {
+      "id": "L4.6.phrases.02",
+      "phase": "Phrases",
+      "label": "Spell phrases on paper",
+      "say": {
+        "text": "Now you're going to write some phrases. Repeat the phrase, write it down, and figure out the tough words syllable by syllable."
+      },
+      "do": "Dictate phrases, then dictate the three active sight words from the spelling deck.",
+      "note": "Phrases: FLANNEL APRON; RELAX IN THE HAMMOCK; WENT TO TRENTON. Repeat-lesson phrases: A SILLY CUSTOM; SUMMON THE FALCON; DUSTY RIBBON."
+    },
+    {
+      "id": "L4.6.sentences.01",
+      "phase": "Sentences",
+      "label": "Read sentences",
+      "say": {
+        "text": "Read that first sentence to yourself. Now read it out loud. Mark each phrase, then reread with phrasing."
+      },
+      "do": "Student reads, marks phrases, rereads with phrasing, and optionally finds one schwa word in each sentence.",
+      "board": {
+        "mode": "sentences",
+        "title": "Lesson 6 Read These Sentences",
+        "items": [
+          "The tiny infant didn't want bacon in his jello to fatten him up.",
+          "A crazy felon went to prison in Kansas for a brutal act.",
+          "Jason got a mammoth fossil at the bottom of the canyon.",
+          "The lazy bison wouldn't gallop in the grass by the canvas wagon.",
+          "Mrs. Wilson will cancel her travel plans in a second.",
+          "The trusty chapel bell will ring at two.",
+          "The evil rascal will demand a ransom.",
+          "Henry got very dizzy in the spiral tunnel."
+        ]
+      }
+    },
+    {
+      "id": "L4.6.sentences.02",
+      "phase": "Sentences",
+      "label": "Spell sentences on paper",
+      "say": {
+        "text": "Now you're going to write three sentences. Repeat the sentence, write it, tap the syllables on long words, and check your sentence."
+      },
+      "do": "Dictate three sentences and guide correction.",
+      "note": "Sentences: MY BEST STUDENT LOST HER FLANNEL APRON. JASON WILL RELAX IN THE HAMMOCK. ETHEL WENT TO TRENTON IN A WAGON."
+    },
+    {
+      "id": "L4.6.stories.01",
+      "phase": "Stories",
+      "label": "Read basic stories",
+      "say": {
+        "text": "Now you're ready to read a story. Preread the story and figure out the tough words. Then read it out loud to me."
+      },
+      "do": "Have the student read the first story aloud. For the second story, have the student read silently and retell in their own words.",
+      "board": {
+        "mode": "story",
+        "title": "Lesson 6 Stories - Basic",
+        "stories": [
+          {
+            "title": "Billy The Kid",
+            "text": "There is a whinny from the paddock. In a jiffy, Jimmy will grab his lasso and his ten-gallon hat.\n\nHe will hop on his pony. They will gallop past the cactus to the summit of a hill.\n\nHe will pretend to spy Billy the Kid and whip the pistol from his belt. Bang!\n\n\"It is fun to pretend,\" said Jimmy."
+          },
+          {
+            "title": "Yodel",
+            "text": "Russell is happy when he can strum his banjo and yodel. Kitty says it is a scandal to sing like that in Boston.\n\nRussell is from Dallas, Texas. Russell says it's a common custom for those from the West to yodel. On the map in the atlas, Russell does find that Boston is very distant from Dallas.\n\nWhy do you think people in Boston do not yodel?"
+          }
+        ],
+        "text": "Read Story #1 aloud. Read Story #2 silently and retell."
+      }
+    },
+    {
+      "id": "L4.6.stories.02",
+      "phase": "Stories",
+      "label": "Read advanced stories",
+      "do": "Use these instead of the basic stories when appropriate for the student.",
+      "board": {
+        "mode": "story",
+        "title": "Lesson 6 Stories - Advanced",
+        "stories": [
+          {
+            "title": "A Nickel",
+            "text": "Once, if you spent a nickel or two, you could get a novel that told of love and lust and scandal.\n\nIn the plot there would be an evil rascal who wasn't very civil. He would lock a pretty damsel in a chapel. There would be a shot from his pistol as he went to rob a bank.\n\nShe would toll the bell as a signal and summon a gallant Texan. He would gallop past the cactus in the canyon and catch that evil devil.\n\nIn the end, the Texan and the damsel would gallop off into the sunset."
+          },
+          {
+            "title": "The Camel",
+            "text": "A camel is an odd mammal. He's shaggy and smelly. He can spit when you don't expect it, and his kick can be fatal. His legs and neck are very long.\n\nA camel has a big hump on his back. He's strong and doesn't have to drink very often. A nomad who had to travel in a dry, hot land could depend on the camel.\n\nIt was a tribal custom to put a heavy pack on the back of a camel. But now, it's just as common for a nomad to put the heavy pack in the back of his truck to make the trip."
+          }
+        ],
+        "text": "Optional advanced connected-text reading."
+      }
+    },
+    {
+      "id": "L4.6.close.01",
+      "phase": "Close",
+      "label": "Wrap up",
+      "say": {
+        "text": "You've done a lot of reading and spelling today. Thank you for working so hard."
+      },
+      "do": "Assign optional extra practice only if the student asks for between-session practice. Always do the first problem together before sending a page home.",
+      "board": {
+        "mode": "story",
+        "pageType": "worksheet",
+        "title": "Lesson 6 Extra Practice",
+        "subtitle": "Rendered from the real Book 4 manual pages before Lesson 7",
+        "text": "Show Lesson 6 Extra Practice #1 or #2. The student completes the selected paper copy outside the app.",
+        "images": [
+          {
+            "src": "assets/worksheets/level4/lesson6_extra_practice_1.png",
+            "label": "Lesson 6 Extra Practice #1",
+            "alt": "Lesson 6 Student Page 67 Extra Practice 1"
+          },
+          {
+            "src": "assets/worksheets/level4/lesson6_extra_practice_2.png",
+            "label": "Lesson 6 Extra Practice #2",
+            "alt": "Lesson 6 Student Page 68 Extra Practice 2"
+          }
+        ]
+      },
+      "note": "Extra Practice #1 answer key: mason closed-o; gravel vowel-L; metal vowel-L; random closed-o; scandal vowel-L; tonsil vowel-L; dragon closed-o; pupil vowel-L; label vowel-L. Misty, lotto, bandit, dentist, and virus have no schwa."
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "level": 2,
+  "lesson": "games",
+  "title": "Level 2 Games",
+  "sections": [
+    {
+      "id": "Part_Intro",
+      "title": "Overview",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "These games can be played anytime during Book 2 (at the end of a lesson, or instead of a lesson if a student is tired). All of these games use words with three sounds and short vowels."
+        }
+      ]
+    },
+    {
+      "id": "Game_A",
+      "title": "A: Rhyming Game",
+      "steps": [
+        {
+          "type": "action",
+          "text": "Bring out the blank tiles. Put out the correct number of tiles for the first word."
+        },
+        {
+          "type": "action",
+          "text": "Tutor touches and says the first word, then touches and says each sound."
+        },
+        {
+          "type": "action",
+          "text": "Student changes the first tile and creates the first rhyming word. Student says the sound of that first tile, then says the new word."
+        },
+        {
+          "type": "action",
+          "text": "Tutor changes the second tile and creates the second rhyming word. Repeat this process for as long as possible."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Good 3-tile rhyming words to start with: FAN, RICH, PIT, DASH, MAD, BILL, LAP, DID, BIG, BUN."
+        }
+      ]
+    },
+    {
+      "id": "Game_B",
+      "title": "B: Building Words",
+      "steps": [
+        {
+          "type": "action",
+          "text": "Bring out the letter tiles the student has already learned. Build a CVC (Consonant-Vowel-Consonant) Real word."
+        },
+        {
+          "type": "action",
+          "text": "Take turns changing just ONE tile to create a new word. Whoever gets stuck first loses."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Variation 1: You must make a NONSENSE word.\nVariation 2: Put down just a beginning Consonant and Vowel. Take turns seeing how many real words you can create by changing just the LAST sound."
+        }
+      ]
+    },
+    {
+      "id": "Game_C",
+      "title": "C: Trail Game Variation",
+      "steps": [
+        {
+          "type": "action",
+          "text": "Build a trail out of letters written on index cards. (Only use letters the student has been taught)."
+        },
+        {
+          "type": "action",
+          "text": "Student pulls a picture from the draw pile, says the name of the picture, and says just its first sound."
+        },
+        {
+          "type": "action",
+          "text": "Student matches the sound to the LETTER in the trail and moves their piece."
+        }
+      ]
+    },
+    {
+      "id": "Game_D",
+      "title": "D: Homonyms Concentration",
+      "steps": [
+        {
+          "type": "action",
+          "text": "Write homonym pairs on index cards (e.g., by-buy, aunt-ant, be-bee, tail-tale, see-sea, right-write, two-too, cent-sent, hear-here)."
+        },
+        {
+          "type": "dialogue",
+          "text": "I'm going to show you pairs of words that sound the same but mean different things. Do you know what these mean?"
+        },
+        {
+          "type": "action",
+          "text": "Play Concentration with the cards. When a match is found, offer bonus points if the student can use the word(s) in a sentence."
+        }
+      ]
+    },
+    {
+      "id": "Game_E",
+      "title": "E: Letter Concentration",
+      "steps": [
+        {
+          "type": "action",
+          "text": "Write each letter and vowel learned on at least two index cards. Shuffle and place face down in rows."
+        },
+        {
+          "type": "dialogue",
+          "text": "Turn over one card and make its sound. Then turn over another card and make its sound."
+        },
+        {
+          "type": "teacher_note",
+          "text": "If the turned-over cards make the same sound, the student keeps the pair. (Note: C and K cards would be considered a pair since they make the same sound)."
+        }
+      ]
+    },
+    {
+      "id": "Game_F",
+      "title": "F: Go Fish",
+      "steps": [
+        {
+          "type": "action",
+          "text": "Write each letter and vowel on at least four index cards. Deal 6 cards to each player."
+        },
+        {
+          "type": "dialogue",
+          "text": "Look at your hand. Ask me: 'Do you have a card that says /xxx/?'"
+        },
+        {
+          "type": "teacher_note",
+          "text": "If the opponent has a card that makes that sound, they hand it over. If not, say 'Go Fish' and the player draws from the deck."
+        }
+      ]
+    },
+    {
+      "id": "Game_G",
+      "title": "G: Phrases on Index Cards",
+      "steps": [
+        {
+          "type": "action",
+          "text": "Write each phrase your student has learned on an index card. Shuffle."
+        },
+        {
+          "type": "action",
+          "text": "Have the student read the phrase and decide if it is a Who, Did What, or Where phrase."
+        },
+        {
+          "type": "action",
+          "text": "Put a Red stripe for 'Who', Blue for 'Did What', and Green for 'Where'."
+        },
+        {
+          "type": "action",
+          "text": "Build a sentence by putting down a red card, a blue card, and a green card. Have the student read it and tell you if it is real or silly."
+        }
+      ]
+    },
+    {
+      "id": "Game_H",
+      "title": "H: Words on Index Cards",
+      "steps": [
+        {
+          "type": "action",
+          "text": "Write real and nonsense words on index cards. Shuffle."
+        },
+        {
+          "type": "action",
+          "text": "Have the student draw a card, read the word, and put it in a 'Real' pile or a 'Nonsense' pile."
+        },
+        {
+          "type": "teacher_note",
+          "text": "To make it more competitive, set a 3-minute timer and count how many they can read accurately. Penalize inaccurate readings by taking away a point."
+        }
+      ]
+    }
+  ]
+}

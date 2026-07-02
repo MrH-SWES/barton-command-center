@@ -1,0 +1,296 @@
+{
+  "level": 1,
+  "lesson": 4,
+  "title": "Breaking CCV Words",
+  "sections": [
+    {
+      "id": "Part_Intro",
+      "title": "Lesson Overview",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "Materials Needed: Colored tiles, three each of five different colors.\n\nOverview: Working with nonsense words that have three sounds (CCV). Consonant-Consonant-Vowel. The first two consonants are Beginning Consonant Blends. Use ONLY short vowel sounds."
+        }
+      ]
+    },
+    {
+      "id": "Part_A",
+      "title": "A: Break Apart CCV Words",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's break a word into sounds. Ready? The first word is SNI."
+        },
+        {
+          "type": "action",
+          "text": "Expected: SNI"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it again ... very slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /ssss/-/nnnn/-/iiii/"
+        },
+        {
+          "type": "dialogue",
+          "text": "How many sounds did you hear in that word?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: 3"
+        },
+        {
+          "type": "dialogue",
+          "text": "Good listening. Pull down the tiles."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "s",
+            "n",
+            "i"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Now touch-and-say each sound."
+        },
+        {
+          "type": "action",
+          "text": "Student touches the first tile and says /s/, touches the second tile and says /n/, then touches the third tile and says /i/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now wash those tiles off."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining words one by one: GRO, TRA, KU, SLA. Use Extra Practice words if student struggles."
+        }
+      ]
+    },
+    {
+      "id": "Part_B",
+      "title": "B: Break-Replace-Remove",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll break a word then I'll change a sound. Ready? The first word is SKA."
+        },
+        {
+          "type": "action",
+          "text": "Expected: SKA"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it again ... very slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /ssss/-/k/-/aaaa/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Pull down the tiles."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "s",
+            "k",
+            "a"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Touch-and-say."
+        },
+        {
+          "type": "action",
+          "text": "Student touches first tile and says /s/, touches second tile and says /k/, touches third tile and says /a/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now watch carefully. I'm going to change this sound to /o/."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "s",
+            "k",
+            "o"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "To figure out the new word, touch-and-say the sounds."
+        },
+        {
+          "type": "action",
+          "text": "Student touches first tile and says /s/, touches second tile and says /k/, touches third tile and says /o/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly blend those sounds into a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /ssss/-/k/-/oooo/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it fast like a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: SKO"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now watch carefully. I'm going to take out this tile."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "k",
+            "o"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Touch-and-say the sounds that are left."
+        },
+        {
+          "type": "action",
+          "text": "Student touches first tile and says /k/, touches second tile and says /o/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly blend."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /k/-/oooo/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it fast like a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: KO"
+        },
+        {
+          "type": "dialogue",
+          "text": "Great. Go ahead and wash off those tiles."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining sets: FRI -> FLI -> FI, PRA -> THRA -> RA, BLO -> BLI -> BI, SPI -> STI -> TI."
+        }
+      ]
+    },
+    {
+      "id": "Part_C",
+      "title": "C: Compare Two Words",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now we're going to compare two words. The first word is SPA."
+        },
+        {
+          "type": "action",
+          "text": "Expected: SPA"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /ssss/-/p/-/aaaa/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Touch-and-say using the first row."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "s",
+            "p",
+            "a"
+          ]
+        },
+        {
+          "type": "action",
+          "text": "Student touches first tile and says /s/, touches second tile and says /p/, touches the third tile and says /a/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Good. The second word is SPI."
+        },
+        {
+          "type": "action",
+          "text": "Expected: SPI"
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /ssss/-/p/-/iiii/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Touch-and-say using the second row."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "s",
+            "p",
+            "i"
+          ]
+        },
+        {
+          "type": "action",
+          "text": "In the second row, student touches first tile and says /s/, touches second tile and says /p/, touches third tile and says /i/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Here's the tough part. Touch-and-say until you find the sounds that are different. SPA. SPI."
+        },
+        {
+          "type": "action",
+          "text": "Expected: The last sounds are different."
+        },
+        {
+          "type": "dialogue",
+          "text": "Good listening. So go ahead and change the last tile in the new word ... to show that it's different."
+        },
+        {
+          "type": "action",
+          "text": "Student changes the last tile in the second row."
+        },
+        {
+          "type": "dialogue",
+          "text": "That's perfect. Now go ahead and wash off those tiles."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining sets from the column. If the task is difficult, use Extra Practice Sets."
+        }
+      ]
+    }
+  ]
+}

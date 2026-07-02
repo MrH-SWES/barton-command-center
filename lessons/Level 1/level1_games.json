@@ -1,0 +1,181 @@
+{
+  "level": 1,
+  "lesson": "games",
+  "title": "Phonemic Awareness Games",
+  "sections": [
+    {
+      "id": "Part_Intro",
+      "title": "Overview",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "These games can be played anytime during Book 1 (at the end of a lesson, or instead of a lesson if a student is tired). All games reinforce phonemic awareness skills using the picture cards provided with the program.\n\nCRITICAL: DO NOT USE LETTERS. Your student should be focused on listening to sounds, not worried about which letters make those sounds."
+        }
+      ]
+    },
+    {
+      "id": "Game_A",
+      "title": "A: Simple Sorting",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "This is a good way to teach your student the names for the pictures. It is also good practice for breaking off the first sound."
+        },
+        {
+          "type": "action",
+          "text": "Shuffle the picture cards."
+        },
+        {
+          "type": "dialogue",
+          "text": "I'm going to show you a card. I want you to say the word, then say just the first sound."
+        },
+        {
+          "type": "action",
+          "text": "Have the student make a pile for each first sound. If the first sound matches the top of an existing pile, they place it there. Otherwise, they start a new pile."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Variation: If your student is in or beyond Lesson 3, you can vary this game by sorting into piles based on the LAST sound in the word."
+        }
+      ]
+    },
+    {
+      "id": "Game_B",
+      "title": "B: Concentration",
+      "steps": [
+        {
+          "type": "action",
+          "text": "Pick two cards that start with the same first sound. Build a deck of 14 to 24 cards (depending on your student) and shuffle them. Lay the cards out in rows and columns face down."
+        },
+        {
+          "type": "dialogue",
+          "text": "We are going to play Concentration. On your turn, turn over one card, say the name of the picture, and then say just the first sound."
+        },
+        {
+          "type": "action",
+          "text": "The player turns over a second card, says the name of the picture, and its first sound."
+        },
+        {
+          "type": "teacher_note",
+          "text": "If the first sounds match, the person gets to keep the cards. (Optional: if the person finds a match, it is still their turn.) Person with the most cards at the end wins."
+        }
+      ]
+    },
+    {
+      "id": "Game_C",
+      "title": "C: Go Fish",
+      "steps": [
+        {
+          "type": "action",
+          "text": "Pick four cards that start with the same first sound. You can have up to 40 cards in one game. Shuffle the cards. Deal 5 to each player. Put the rest in a draw pile."
+        },
+        {
+          "type": "dialogue",
+          "text": "We are going to play Go Fish. Look at your hand, pick a card, figure out its first sound, and ask me: 'Do you have a card that starts with [sound]?'"
+        },
+        {
+          "type": "teacher_note",
+          "text": "If the opponent has a card that starts with that sound, they must give it to the player. The player puts down the match. If the opponent does NOT have a match, they say 'Go Fish' and the player draws from the deck. Whoever has the most matching cards at the end wins."
+        }
+      ]
+    },
+    {
+      "id": "Game_D",
+      "title": "D: Bingo",
+      "steps": [
+        {
+          "type": "action",
+          "text": "Let your student choose a Bingo card. You choose a different Bingo card. Shuffle the picture cards and turn them upside down to create a draw pile. Use blank tiles as chips."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Take turns drawing a picture card. The person who draws a card must say the name of the picture, then its first sound."
+        },
+        {
+          "type": "action",
+          "text": "Both players look at their card. If they find a picture that starts with the same sound, they cover it up with a chip."
+        },
+        {
+          "type": "teacher_note",
+          "text": "The first person who gets 3 across, 3 down, or 3 diagonally wins. Variation: You must get a blackout to win."
+        }
+      ]
+    },
+    {
+      "id": "Game_E",
+      "title": "E: Trail Game",
+      "steps": [
+        {
+          "type": "action",
+          "text": "Make a trail out of face-up picture cards. Make sure each picture starts with a different sound. Shuffle the rest of the cards and place them face down in a Draw pile."
+        },
+        {
+          "type": "action",
+          "text": "Each player picks a colored tile to be their piece. Put the pieces at the beginning of the trail."
+        },
+        {
+          "type": "teacher_note",
+          "text": "First player draws a card, says the word, and makes the first sound. Their piece advances to the picture on the trail that starts with the same sound. Then it is the other player's turn."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Optional: Allow a player's piece to go backwards if they draw a sound that is only behind them on the trail. Whoever lands on the last card in the trail wins."
+        }
+      ]
+    },
+    {
+      "id": "Game_F",
+      "title": "F: Which One Doesn't Match?",
+      "steps": [
+        {
+          "type": "action",
+          "text": "Lay out four pictures in a row. Three should start with the same sound, while one starts with a different sound."
+        },
+        {
+          "type": "dialogue",
+          "text": "Look at these four pictures. Three start with the same sound, but one does not. Which one doesn't match?"
+        },
+        {
+          "type": "teacher_note",
+          "text": "The student must figure out and prove which picture doesn't match. Then switch places and let the student pick four cards for you to solve."
+        }
+      ]
+    },
+    {
+      "id": "Game_G",
+      "title": "G: I Am Thinking",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's play a guessing game. I am thinking of something in this room that starts with /sound/."
+        },
+        {
+          "type": "teacher_note",
+          "text": "The student asks yes/no questions (e.g. 'Is it the XXX?'). You can set a rule that after 3 questions, you give a clue. Then reverse roles."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Variation: Don't limit it to the room. ('I am thinking of a food that starts with /b/'). You can also add syllable counting ('starts with /b/ and has 3 syllables')."
+        }
+      ]
+    },
+    {
+      "id": "Game_H",
+      "title": "H & I: Magazine Activities",
+      "steps": [
+        {
+          "type": "action",
+          "text": "Open a magazine to a page with a photograph."
+        },
+        {
+          "type": "dialogue",
+          "text": "Can you find two things in this picture that start with /sound/?"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Then let your student ask you a similar question. \n\nActivity Extension (Letter Scrapbook): Have your student cut out items from pictures in a magazine. They should paste all of those that start with the same first sound on the same page of a scrapbook."
+        }
+      ]
+    }
+  ]
+}

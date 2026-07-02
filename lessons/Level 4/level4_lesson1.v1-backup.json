@@ -1,0 +1,622 @@
+{
+  "level": 4,
+  "lesson": 1,
+  "title": "Open Syllables",
+  "sections": [
+    {
+      "id": "Part_Intro",
+      "title": "Lesson Overview",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "Materials Needed: New Tiles: Vowel Y (yellow) and a second set of A through Z tiles. Letter Tiles: A through Z plus CH, TH, CK, SH, WH, TCH. Units: ALL, ANG, ING, ONG, UNG, ANK, INK, ONK, UNK, OLL, OLD, OLT, OST, ILD, IND. Binder Paper and Pencil, Word Frame, Blank Colored 5x8 Index Card, Several Blank 3x5 Index Cards."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Overview: Your student knows Closed and Unit syllables. Today you'll teach Open syllables. An Open syllable has just one vowel, but the vowel comes at the end and says its own name (Long sound). Long-U can make two sounds: /ee-oo/ (few) or /oo/ (flu). Y is a vowel when at the end of a word. In a one-syllable word, it makes the Long-I sound. American words don't end in I. No more finger spelling is required unless the student gets stuck."
+        }
+      ]
+    },
+    {
+      "id": "Part_C",
+      "title": "C: Phonemic Awareness Warm-up",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Repeat this nonsense word, then make just its FIRST sound. Ready? FOLT."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Folt, /f/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to the tile that makes that sound."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the F tile."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now I want the UNIT sound at the end. SHOLL."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Sholl, /oll/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to that Unit."
+        },
+        {
+          "type": "action",
+          "text": "Student points to OLL."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now for the MIDDLE sound - the vowel. Ready? PLANCH."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Planch, /a/-Apple."
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to that tile."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the A tile."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Repeat First sound for: CHOLL, ZILD, QUIND. Unit sound for: NOLT, KILD, VOLD, CHIND, JOST. Vowel sound for: SLOTCH, THITCH, SMUTCH, METCH."
+        }
+      ]
+    },
+    {
+      "id": "Part_D",
+      "title": "D: NEW TEACHING #1: Open Syllables",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["n", "o", "d"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What kind of syllable is that - open or closed?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Closed."
+        },
+        {
+          "type": "dialogue",
+          "text": "Is the vowel Long or Short?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Short."
+        },
+        {
+          "type": "dialogue",
+          "text": "Right. Watch this."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["n", "o"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Is it still Closed? How do you know?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: No, it is open because there is nothing closing the vowel in."
+        },
+        {
+          "type": "dialogue",
+          "text": "When a syllable is left open like that, the vowel can shout its own name. It's called an Open syllable. Will the vowel be Long or Short?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Long."
+        },
+        {
+          "type": "dialogue",
+          "text": "So it says?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: No."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["n", "o", "ng"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Is this a Closed, Open, or Unit Syllable?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Unit."
+        },
+        {
+          "type": "dialogue",
+          "text": "And it says... Nong."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["p", "r", "o"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What kind of syllable is this?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Open."
+        },
+        {
+          "type": "dialogue",
+          "text": "And it says?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Pro."
+        },
+        {
+          "type": "dialogue",
+          "text": "So in an Open syllable, what sound does the vowel make - Long or Short?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Long."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["f", "l", "u"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What kind of syllable is this?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Open."
+        },
+        {
+          "type": "dialogue",
+          "text": "And it says?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Flu."
+        },
+        {
+          "type": "dialogue",
+          "text": "What sound does the vowel make? Long or Short?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: /oo/."
+        },
+        {
+          "type": "dialogue",
+          "text": "That's right. It says /oo/, not /ee-oo/. A Long-U can make two different sounds depending on the word. In a word like FEW, it makes /ee-oo/. But after an L or an R, it usually says /oo/."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["f", "l", "u", "b"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What's this word?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Flub. (Closed syllable, short U)."
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and make it an Open syllable."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["f", "l", "u"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What's that word? And what are the 2 sounds a Long-U can make?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Flu. /oo/ and /ee-oo/."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["s", "p", "y"]
+        },
+        {
+          "type": "dialogue",
+          "text": "What's this word? Is it Open, Closed or Unit?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Spy. Open."
+        },
+        {
+          "type": "dialogue",
+          "text": "How did you know?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Only 1 vowel, and it's at the end."
+        },
+        {
+          "type": "dialogue",
+          "text": "So what sound does Vowel-Y make at the end of a one-syllable word?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: /eye/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Why don't they spell it with an I?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: American words don't end in I. Use a Y instead."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Bring out the new Spelling Rules page and review the two new spelling rules: Long I at the end = cry. No Floss on multi-syllable words (introduced shortly)."
+        }
+      ]
+    },
+    {
+      "id": "Part_F",
+      "title": "F: Spell Real Words with Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to spell with tiles... but withOUT finger spelling. The first word is MET. Repeat that word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Met."
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly. Go ahead and pull down the tiles. Double check by blending those sounds."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["m", "e", "t"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Is it Open or Closed?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Closed."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now remove one of those tiles... to make that word say ME."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["m", "e"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Now is it Open or Closed?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Open."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate these words: NOD -> NO, SPIT -> SPY, TRIP -> TRY, FRY, FLY, FLIP, HOT -> HO, HIM -> HI, SLY, STY."
+        }
+      ]
+    },
+    {
+      "id": "Part_G",
+      "title": "G: Read Nonsense Words on Tiles",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["d", "r", "e", "p"]
+        },
+        {
+          "type": "dialogue",
+          "text": "This nonsense word says DREP. Touch and say each sound, slowly blend, then say it fast. Now make it an Open syllable."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": ["d", "r", "e"]
+        },
+        {
+          "type": "dialogue",
+          "text": "Is it Open or Closed? What does it say?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Open. Dre."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Build these word sets for the student to read and alter: PRED -> PRE -> PRU -> PRUP. SCO -> SCA -> SCAV. RU -> RUV. TA -> CHA -> CHY -> QUY. DRU -> DRO -> DUB."
+        }
+      ]
+    },
+    {
+      "id": "Part_H",
+      "title": "H: Spell Nonsense Words with Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll spell nonsense words with tiles... withOUT finger spelling. The first word is RE. Repeat that word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: RE."
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly, bring down the tiles, and double-check by blending."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate these nonsense words: RA, BRO, PRU, CHE, ZY, THO, BLA, FRU."
+        }
+      ]
+    },
+    {
+      "id": "Part_I",
+      "title": "I: Read Words Through Word Frame",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to read words through the word frame. If you know that word for sure, just say it. Otherwise, sound it out."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": [
+            "pro", "try", "go", "fly", "she", "spry", "so", "cry",
+            "sky", "zy", "fru", "plo", "shra", "cho", "re",
+            "be", "twa", "ply", "ho", "sty"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Part_J",
+      "title": "J: Spell Words on Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to spell words on paper. Ready? The first word is HE. Repeat that word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: He"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it again, slowly. Don't use your fingers. Instead, just say-and-write each sound."
+        },
+        {
+          "type": "action",
+          "text": "Student says /h/ and writes H, says /ee/ and writes E."
+        },
+        {
+          "type": "dialogue",
+          "text": "Double check what you wrote."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate Real Words: PRY, GO, SLY, ME. Dictate Nonsense Words: PRU, SHA, BLY, TRO, DRE."
+        }
+      ]
+    },
+    {
+      "id": "Part_K",
+      "title": "K: Read Sight Word List",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's look at some more common Sight words to see which ones we need to practice."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": [
+            "put", "pull", "how", "now", "both", "know", "walk", "their",
+            "once", "her", "none", "these", "two", "come"
+          ]
+        },
+        {
+          "type": "teacher_note",
+          "text": "Tutor makes index cards for misread words. Student puts a visual clue in the corner of each unknown word card. Merge with existing Sight Word Deck and review."
+        }
+      ]
+    },
+    {
+      "id": "Part_L",
+      "title": "L: Review Sight Word Spelling Deck",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's review your tricky Sight words."
+        },
+        {
+          "type": "action",
+          "text": "Tutor holds up first card. 'What's this word? Why is that letter in red?'"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Have the student 'See and spell' twice on the wall, 'See and write' twice on the table, and write on paper while saying letters, underlining the red letter."
+        }
+      ]
+    },
+    {
+      "id": "Part_M",
+      "title": "M: Read Phrases",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll read some phrases. This group tells WHO, DID WHAT, WHERE, and ADD-ON."
+        },
+        {
+          "type": "student_page",
+          "mode": "phrase_builder",
+          "payload": {
+            "who": [
+              "The shy fox",
+              "My bold child",
+              "Chet and Jim",
+              "Their wild colt"
+            ],
+            "did what": [
+              "doesn't come",
+              "won't cry",
+              "had the flu",
+              "will try to be"
+            ],
+            "where": [
+              "by the dry bank",
+              "at the pro shop",
+              "at the mall",
+              "in his stall"
+            ],
+            "add-on": [
+              "but could still stroll.",
+              "when he's lost.",
+              "by two.",
+              "if I'm there."
+            ]
+          }
+        },
+        {
+          "type": "dialogue",
+          "text": "Find one word that's a Closed syllable, and mark it with a breve. Find one Unit syllable, and box it. Find one Open syllable, and mark it with a macron."
+        }
+      ]
+    },
+    {
+      "id": "Part_N",
+      "title": "N: Spell Phrases on Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to write some phrases. The first phrase is GOT TO GO. Repeat that phrase."
+        },
+        {
+          "type": "action",
+          "text": "Expected: GOT TO GO."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now write it down. Double check by reading exactly what you wrote."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate remaining phrases: WHY TRY, FLY ON THE WALL. Also dictate sight words currently being practiced."
+        }
+      ]
+    },
+    {
+      "id": "Part_O",
+      "title": "O: Read Sentences",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now read these sentences. Read the first to yourself, then out loud. Let's mark each phrase."
+        },
+        {
+          "type": "student_page",
+          "mode": "sentence_marking",
+          "payload": [
+            "Their wild colt had the flu in his stall but could still stroll.",
+            "My bold child won't cry at the mall when he's lost.",
+            "The shy fox doesn't come by the dry bank if I'm there.",
+            "Chet and Jim will try to be at the pro shop by two.",
+            "\"Don't cry,\" said Frank, \"it's not so bad.\"",
+            "\"Why don't you try?\" Mrs. Smith says, \"I know you can do it.\"",
+            "My cat is so sly that she can pry the lid off the trash can.",
+            "That hot grill is too small to fry all the fish."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Part_P",
+      "title": "P: Spell Sentences on Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to write three sentences. The first is HE'LL CRY IF HE HAS THE FLU."
+        },
+        {
+          "type": "action",
+          "text": "Expected: HE'LL CRY IF HE HAS THE FLU."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate: MR. SMITH IS SO SHY HE JUST SAYS HI. THE OLD DUCK HID IN A DRY STALL."
+        }
+      ]
+    },
+    {
+      "id": "Part_Q",
+      "title": "Q: Read Two Stories",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're ready to read a story. Preread the story and figure out the tough words. Then read it out loud to me."
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "The Pox",
+            "text": "The doc says I've got some kind of pox. It's not the flu. I've got a mild cold. There's a rash on my neck and a bump or two on my chest. I try my best not to scratch my itch. I'm so hot a fly would fry if he'd land on my skin. I'll have to rest in bed and drink a lot. Mom says no one can come in to be with me. They could catch my pox. \"But Mom,\" I said, \"how did the pox catch me?\""
+          }
+        },
+        {
+          "type": "dialogue",
+          "text": "Here's another story. Read this one to yourself. Then in your own words, tell me what happened."
+        },
+        {
+          "type": "student_page",
+          "mode": "story_reading",
+          "payload": {
+            "title": "Get Help",
+            "text": "Mrs. Hall was spry but she had a fall and couldn't get up. What should she do? She could cry for help, but no one was there. So she did pick up a rock. There was a big crash when the rock hit the glass window. Shy Mr. Smith got up in a flash and he did spy Mrs. Hall there on the grass. He put in a call to 911. They'd act fast! Wasn't that the best thing for him to do?"
+          }
+        }
+      ]
+    }
+  ]
+}

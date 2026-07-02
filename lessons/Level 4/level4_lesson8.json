@@ -1,0 +1,450 @@
+{
+  "schemaVersion": 2,
+  "meta": {
+    "level": 4,
+    "lesson": 8,
+    "title": "Syllable Division Rule #4",
+    "estMinutes": 50,
+    "author": "Barton Command Center",
+    "videoSpeedDefault": 1.5
+  },
+  "materials": [
+    "Franklin Spelling Ace electronic spell checker",
+    "Level 4 letter tiles: 2 sets of A through Z plus Vowel Y, CH, TH, CK, SH, WH, TCH",
+    "Unit tiles: ALL, ANG, ING, ONG, UNG, ANK, INK, ONK, UNK, OLL, OLD, OLT, OST, ILD, IND",
+    "Binder paper and pencil",
+    "Word frame",
+    "Blank light-colored 5 x 8 index card",
+    "Several blank 3 x 5 index cards"
+  ],
+  "objectives": [
+    "Divide compound words with four or more letters between vowels by pulling the two small words apart.",
+    "Apply a 1-3 split when four letters between vowels do not form a compound word.",
+    "Recognize that three-letter blends (beginning with S) stay together in a 1-3 split.",
+    "Read and spell real and nonsense words using Rule #4.",
+    "Read phrases, sentences, and stories containing Lesson 8 patterns."
+  ],
+  "beats": [
+    {
+      "id": "L4.8.prep.01",
+      "phase": "Prep",
+      "label": "Tutor overview",
+      "do": "Set out the Franklin Spelling Ace, the Level 4 tile set, Units, binder paper, pencil, word frame, and blank cards. Keep the Spelling Ace within easy reach of the student at all times.",
+      "note": "Tutor-only overview: Lesson 8 teaches Syllable Division Rule #4. When four letters appear between vowels, the word is almost always a Compound word — divide by pulling the two small words apart. If it is NOT a compound word, do a 1-3 split, which keeps the three-letter blend together. Five-letter spans (e.g., OFFSPRING) are also compound words — divide by separating the two small words."
+    },
+    {
+      "id": "L4.8.review.01",
+      "phase": "Review",
+      "label": "Review prior extra practice",
+      "say": {
+        "text": "Let's take a look at your extra practice page. Go ahead and read the words to me."
+      },
+      "do": "Review Lesson 7 extra practice. If it was not completed at home, complete a prior extra-practice page now.",
+      "board": {
+        "mode": "story",
+        "pageType": "worksheet",
+        "title": "Lesson 7 Extra Practice Review",
+        "subtitle": "Use one of the prior lesson pages if needed.",
+        "text": "Review Lesson 7 Extra Practice before beginning Lesson 8.",
+        "images": [
+          {
+            "src": "assets/worksheets/level4/lesson7_extra_practice_1.png",
+            "label": "Lesson 7 Extra Practice #1",
+            "alt": "Lesson 7 Student Page 76 Extra Practice 1"
+          },
+          {
+            "src": "assets/worksheets/level4/lesson7_extra_practice_2.png",
+            "label": "Lesson 7 Extra Practice #2",
+            "alt": "Lesson 7 Student Page 77 Extra Practice 2"
+          }
+        ]
+      },
+      "recovery": {
+        "trigger": "Student cannot complete the prior extra practice accurately.",
+        "prompts": [
+          "Stop the new lesson.",
+          "Repeat the prior lesson before teaching Lesson 8."
+        ]
+      }
+    },
+    {
+      "id": "L4.8.teach1.01",
+      "phase": "New Teaching 1",
+      "label": "Review Rules #1–3 and introduce Rule #4",
+      "say": {
+        "text": "Before I show you the last way to divide a word, let's review the rules for dividing words that have three letters between the vowels."
+      },
+      "do": "Build CONFLICT. Student divides CON-FLICT and names the 1-2 split. Then build HANDBAG. Student divides HAND-BAG and explains it is a compound word.",
+      "listen": {
+        "expect": [
+          "A 1-2 split.",
+          "It's a compound word — I pulled the two words apart."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [
+          { "word": "CONFLICT", "row": 0 },
+          { "word": "HANDBAG", "row": 1 }
+        ],
+        "lock": false
+      },
+      "note": "The bridge into Rule #4: when there are FOUR letters between the vowels, the word is almost always a compound word. Divide by pulling the two small words apart."
+    },
+    {
+      "id": "L4.8.teach1.02",
+      "phase": "New Teaching 1",
+      "label": "Practice compound words with 4 letters between vowels",
+      "say": {
+        "text": "Most of the time, if there are four letters, it will be a compound word. Let me show you some."
+      },
+      "do": "Build SLINGSHOT, OFFSPRING, and MATCHBOX. For each: student counts letters between vowels, identifies the two small words, and divides by pulling them apart. For OFFSPRING (5 letters), reinforce that compound words keep Floss-rule spelling in each small word.",
+      "listen": {
+        "expect": [
+          "Slingshot: sling and shot.",
+          "Offspring: off and spring — two F's because each small word keeps its own spelling.",
+          "Matchbox: match and box."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      },
+      "note": "In a compound word, spell each small word exactly as it would be spelled alone. OFF keeps the Floss-rule double-F because it is a one-vowel word ending in the Floss pattern."
+    },
+    {
+      "id": "L4.8.teach2.01",
+      "phase": "New Teaching 2",
+      "label": "1-3 split when not a compound word",
+      "say": {
+        "text": "Words with 4 letters between the vowels won't always be compound words. Let me show you what I mean."
+      },
+      "do": "Build INSTRUCT. Ask if it is a compound word (IN is a word, but STRUCT is not). Demonstrate the 1-3 split: IN-STRUCT. Explain the 1-3 split keeps the three-letter blend STR together.",
+      "listen": {
+        "expect": [
+          "It's not a compound word.",
+          "A 1-3 split.",
+          "The three-letter blend is S-T-R."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "prePlace": [
+          { "word": "INSTRUCT", "row": 0 }
+        ],
+        "lock": false
+      },
+      "note": "Rule: if there are 4 letters between vowels and it is NOT a compound word, do a 1-3 split. Three-letter blends begin with S. Students do not need to memorize blends — the rule leads them there automatically."
+    },
+    {
+      "id": "L4.8.teach2.02",
+      "phase": "New Teaching 2",
+      "label": "Practice 1-3 split",
+      "say": {
+        "text": "Let's practice. Is that a compound word? If not, what kind of split will you do?"
+      },
+      "do": "Build ABSTRACT and SUBSCRIPT. For each: student checks for a compound word, then applies the 1-3 split. Identify the three-letter blend in each.",
+      "listen": {
+        "expect": [
+          "Abstract: not a compound word — AB-STRACT, blend is S-T-R.",
+          "Subscript: not a compound word — SUB-SCRIPT, blend is S-C-R."
+        ]
+      },
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      },
+      "note": "Syllable Division Rule #4 summary: 4 letters — check for a compound word first. If compound, pull the two small words apart. If not compound, do a 1-3 split."
+    },
+    {
+      "id": "L4.8.spelltiles.01",
+      "phase": "Tile Spelling",
+      "label": "Spell real words with tiles",
+      "say": {
+        "text": "The first word is dish-cloth. Repeat that word. Tap each syllable on the table. Say just the first syllable, then bring down its tiles. Say the second syllable, and bring down its tiles. Now read each syllable exactly as it looks."
+      },
+      "do": "Dictate real words for tile spelling. Encourage student to use the Franklin Spelling Ace when uncertain. In compound words, each syllable is accented equally.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      },
+      "note": "New Teaching 1 words (compound): DISH-CLOTH, STAND-STILL, LOCK-SMITH. New Teaching 2 words (1-3 split): con-STRUCT, TRAN-script, ob-STRUCT. Repeat-lesson words: SAND-BLAST, GRAND-STAND, un-STRAP, con-SCRIPT, GANG-PLANK."
+    },
+    {
+      "id": "L4.8.readtiles.01",
+      "phase": "Tile Reading",
+      "label": "Read nonsense words on tiles",
+      "say": {
+        "text": "Divide that word into syllables. Say each syllable exactly as it looks. Now say it like a word."
+      },
+      "do": "Build nonsense words for the student to divide and read.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      },
+      "note": "New Teaching 1 words (compound): HAM-THRIFT, GOLD-SLAM, GRAND-SHOT. New Teaching 2 words: con-STRUNG, ren-STRUCT, en-STRAP. Repeat-lesson words: POST-CHILD, ob-SCRIPT, DUST-CRAFT, WING-STRAP, sub-STRUCT."
+    },
+    {
+      "id": "L4.8.spelltiles.02",
+      "phase": "Tile Spelling",
+      "label": "Spell nonsense words with tiles",
+      "say": {
+        "text": "Now it's your turn to spell nonsense words. The first word is Ranch-Box. Repeat that word. Tap each syllable on the table. Say just the first syllable, then bring down its tiles. Say the second syllable, and bring down its tiles."
+      },
+      "do": "Dictate nonsense words with tiles, then move tiles out of the way. They will not be needed during the rest of the lesson.",
+      "board": {
+        "mode": "tiles",
+        "level": 4,
+        "openDrawer": "consonants",
+        "lock": false
+      },
+      "note": "New Teaching 1 words (compound): RANCH-BOX, WIND-BLAST. New Teaching 2 words: in-SCRIPT, con-STRAPT, tran-SPLIT. Repeat-lesson words: ob-STRUNG, SAND-PLANK, POST-SHOT, in-STRIP, GRAND-SMITH."
+    },
+    {
+      "id": "L4.8.words.01",
+      "phase": "Reading",
+      "label": "Read words through word frame",
+      "say": {
+        "text": "Now you're going to read words through the word frame. If you know that word for sure, just say it. If you don't know the word, use your pencil to help you divide it."
+      },
+      "do": "Student reads the Lesson 8 word page through the word frame. Optional: circle each compound word.",
+      "board": {
+        "mode": "word_frame",
+        "title": "Lesson 8 Read These Words",
+        "words": [
+          "handclasp",
+          "crankshaft",
+          "dishcloth",
+          "grandchild",
+          "standstill",
+          "wingspan",
+          "withstand",
+          "obstruct",
+          "spendthrift",
+          "gangplank",
+          "matchbox",
+          "hamstring",
+          "constrict",
+          "grandslam",
+          "wingplan",
+          "sandshop",
+          "handskin",
+          "dustdrop",
+          "hockfling",
+          "repstrap",
+          "unscript"
+        ]
+      }
+    },
+    {
+      "id": "L4.8.paper.01",
+      "phase": "Paper Spelling",
+      "label": "Spell words on paper",
+      "say": {
+        "text": "Now you'll spell on paper, syllable by syllable. The first word is ab-stract. Repeat that word. Tap each syllable on the table. Say the first syllable, and write it down. Now say the second syllable. To double check, read that word."
+      },
+      "do": "Dictate real and nonsense words on paper.",
+      "note": "Real words: HAND-SPRING, GOLD-SMITH, WING-SPAN, BACK-TRACK. Nonsense words (compound): DUST-CRAFT, WIND-SPOT, MATCH-STILL, HAND-PLANK. Repeat-lesson real words: SAND-BLAST, RANCH-HAND, GRAND-SLAM, WITH-STAND, un-STRING. Repeat-lesson nonsense: GRAND-SHOT, WING-SWEPT, GOLD-CRAFT, HAM-THRIFT, POST-CHILD."
+    },
+    {
+      "id": "L4.8.sightread.01",
+      "phase": "Sight Words",
+      "label": "Read new Sight Word list",
+      "say": {
+        "text": "Let's look at some more common sight words to see which ones we need to practice."
+      },
+      "do": "Give the student the Lesson 8: Read These Sight Words page. Use the word frame across each column. Record correct and incorrect responses. Make an index card for each missed word and have the student add a clue in the lower-left corner. Review the new and existing Reading Deck.",
+      "board": {
+        "mode": "sentences",
+        "title": "Lesson 8 Sight Words #6",
+        "items": [
+          "our",
+          "please",
+          "month",
+          "change",
+          "through",
+          "gone",
+          "other",
+          "cover",
+          "strange",
+          "people",
+          "look",
+          "which",
+          "listen",
+          "right"
+        ]
+      },
+      "note": "Merge any new cards with the existing Reading Deck. Student reads each card with thumb over the clue, then runs through the deck without clues as fast as possible."
+    },
+    {
+      "id": "L4.8.sightspell.01",
+      "phase": "Sight Words",
+      "label": "Review sight word spelling deck",
+      "say": {
+        "text": "Let's review your tricky sight words."
+      },
+      "do": "For each physical Sight Word Spelling Card: read it, explain the red letter, see and spell twice on the wall, see and write twice on the table, and see and write twice on paper. Dictate the three active sight words at the end of phrase spelling.",
+      "note": "Retire a card after three correct sessions, then use the Sight Word Check List to find a replacement."
+    },
+    {
+      "id": "L4.8.phrases.01",
+      "phase": "Phrases",
+      "label": "Read phrases",
+      "say": {
+        "text": "Now you'll read some phrases. Read each group, create sentences, then point to two compound words."
+      },
+      "do": "Student reads Who, Did What, Where, and Add-On phrases; creates sentences; then identifies two compound words.",
+      "board": {
+        "mode": "sentences",
+        "title": "Lesson 8 Read These Phrases",
+        "items": [
+          "My grandchild",
+          "Your stepson",
+          "Our offspring",
+          "Alfred's dishcloth",
+          "hit a grandslam",
+          "did pull a hamstring",
+          "was so filthy",
+          "will construct",
+          "into the grandstand",
+          "from a handstand",
+          "beyond Flagstaff",
+          "in the kitchen",
+          "in our new hockshop.",
+          "on the hilltop.",
+          "that I did confront him.",
+          "only once."
+        ]
+      }
+    },
+    {
+      "id": "L4.8.phrases.02",
+      "phase": "Phrases",
+      "label": "Spell phrases on paper",
+      "say": {
+        "text": "Now you're going to write some phrases. Repeat the phrase, write it down, and figure out the tough words syllable by syllable."
+      },
+      "do": "Dictate phrases, then dictate the three active sight words from the spelling deck.",
+      "note": "Phrases: HAD A SLINGSHOT; HER OFFSPRING; THE WINDSWEPT HILLTOP. Repeat-lesson phrases: THE LOCKSMITH WILL FIX; COMPLEX HANDCLASP; HANDSTAND DID ENCHANT."
+    },
+    {
+      "id": "L4.8.sentences.01",
+      "phase": "Sentences",
+      "label": "Read sentences",
+      "say": {
+        "text": "Read that first sentence to yourself. Now read it out loud. Let's mark each phrase. Mark the WHO phrase, the DID WHAT phrase, the WHERE phrase, and the ADD-ON phrase. Now read that sentence with phrasing. Put a small pause between each phrase."
+      },
+      "do": "Student reads, marks phrases, and rereads with phrasing. Optional: circle each compound word.",
+      "board": {
+        "mode": "sentences",
+        "title": "Lesson 8 Read These Sentences",
+        "items": [
+          "My grandchild hit a grandslam into the grandstand only once.",
+          "Your stepson did pull a hamstring from a handstand on the hilltop.",
+          "His dishcloth was so filthy that I did confront him in the kitchen.",
+          "Our offspring will construct a new hockshop beyond Flagstaff.",
+          "Their vocal bulldog did obstruct the path of the postman.",
+          "Mrs. Trotsky will instruct her pupil how to unstring a tennis racket.",
+          "The locksmith will fix the matchbox truck.",
+          "Her handstand did enchant the children."
+        ]
+      }
+    },
+    {
+      "id": "L4.8.sentences.02",
+      "phase": "Sentences",
+      "label": "Spell sentences on paper",
+      "say": {
+        "text": "Now you're going to write three sentences. Repeat the sentence, write it, tap the syllables on long words, and check your sentence."
+      },
+      "do": "Dictate three sentences and guide correction.",
+      "note": "Sentences: THE LOCKSMITH WILL FIX THE MATCHBOX TRUCK. HER HANDSTAND DID ENCHANT THE CHILDREN. HIS COMPLEX HANDCLASP WAS SILLY. Repeat-lesson sentences: THE LOCKSMITH WILL FIX THE MATCHBOX TRUCK. HER HANDSTAND DID ENCHANT THE CHILDREN. HIS COMPLEX HANDCLASP WAS SILLY."
+    },
+    {
+      "id": "L4.8.stories.01",
+      "phase": "Stories",
+      "label": "Read basic stories",
+      "say": {
+        "text": "Now you're ready to read a story. Preread the story and figure out the tough words. Then read it out loud to me."
+      },
+      "do": "Have the student read the first story aloud. For the second story, have the student read silently and retell in their own words.",
+      "board": {
+        "mode": "story",
+        "title": "Lesson 8 Stories — Basic",
+        "stories": [
+          {
+            "title": "A Problem",
+            "text": "Mr. Stockton has a plan to construct a cabin, but he has a problem.\n\nTo get access to his lot, Mr. Stockton will have to blacktop a path on land that does not belong to him.\n\nSome people think this is not the right thing to do. They do not want the path. So they'll try to obstruct his plan.\n\nWhat should Mr. Stockton do?"
+          },
+          {
+            "title": "The Gift",
+            "text": "Jenny is through with her dishcloth and her dustcloth. She's done with these humdrum tasks. She is so happy she could do a handstand. Now there is nothing left to obstruct her plans.\n\nShe hasn't been on a big ship before. What a thrill it will be to walk up that gangplank! It will be strange to look back from the windswept deck to her children.\n\nThey'll grin and yell, \"Have fun!\" Jenny will say, \"Thank you for this gift!\""
+          }
+        ],
+        "text": "Read Story #1 aloud. Read Story #2 silently and retell."
+      }
+    },
+    {
+      "id": "L4.8.stories.02",
+      "phase": "Stories",
+      "label": "Read advanced stories",
+      "do": "Use these instead of the basic stories when appropriate for the student.",
+      "board": {
+        "mode": "story",
+        "title": "Lesson 8 Stories — Advanced",
+        "stories": [
+          {
+            "title": "The Trust",
+            "text": "The ranchman was happy to get the transcript from the bank. He must instruct them to change his trust. His grandchild, Penny, is a spendthrift. She is bankrupt and can't get credit.\n\nIf his gift is in one lump sum, it will be gone in a month. So he will construct a plan that will limit her access to the fund. Penny should be told that Grandpa didn't do this to punish her. He has done this to help her."
+          },
+          {
+            "title": "A Wedding Ring",
+            "text": "Tom and Sally went to visit Mr. Jackson. He did instruct them about the cost of a fancy ring with a ruby.\n\nMr. Jackson is a goldsmith. He can construct a ring that does not look common.\n\nTom is not a spendthrift. He does love Sally, and he does want to please her with this wedding ring."
+          }
+        ],
+        "text": "Optional advanced connected-text reading."
+      }
+    },
+    {
+      "id": "L4.8.close.01",
+      "phase": "Close",
+      "label": "Wrap up",
+      "say": {
+        "text": "You've done a lot of reading and spelling today. Thank you for working so hard."
+      },
+      "do": "Assign optional extra practice only if the student asks for between-session practice. Always do the first problem together before sending a page home.",
+      "board": {
+        "mode": "story",
+        "pageType": "worksheet",
+        "title": "Lesson 8 Extra Practice",
+        "subtitle": "Rendered from the real Book 4 manual pages before Lesson 9",
+        "text": "Show Lesson 8 Extra Practice #1 or #2. The student completes the selected paper copy outside the app.",
+        "images": [
+          {
+            "src": "assets/worksheets/level4/lesson8_extra_practice_1.png",
+            "label": "Lesson 8 Extra Practice #1",
+            "alt": "Lesson 8 Student Page 86 Extra Practice 1"
+          },
+          {
+            "src": "assets/worksheets/level4/lesson8_extra_practice_2.png",
+            "label": "Lesson 8 Extra Practice #2",
+            "alt": "Lesson 8 Student Page 87 Extra Practice 2"
+          }
+        ]
+      },
+      "note": "Extra Practice #1 asks the student to divide real words into syllables using Rule #4. Extra Practice #2 asks the student to create compound words by drawing lines between two columns."
+    }
+  ]
+}

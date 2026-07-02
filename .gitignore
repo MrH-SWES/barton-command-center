@@ -9,3 +9,11 @@ assets/videos/
 
 # Raw scrape/download working files
 _raw_data/
+
+# Local recovery / smoke-test artifacts
+.chrome-smoke-cache/
+.chrome-smoke-profile/
+__render_check_l8_l10/
+dev-server*.log
+*.zip
+*.mp4

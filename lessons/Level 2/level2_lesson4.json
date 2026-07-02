@@ -1,0 +1,657 @@
+{
+  "level": 2,
+  "lesson": 4,
+  "title": "U, W, X, Y, QU",
+  "sections": [
+    {
+      "id": "Part_Intro",
+      "title": "Lesson Overview",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "Materials Needed: New Tiles: U, W, X, Y, QU. Known Letter Tiles: A, I, O and all previously taught consonants. Binder paper and pencil, Word Frame, Blank card. Note: QU is taught as a single tile because Q never goes anywhere without U. X makes two sounds (/k/ and /s/ together) but is treated as one unit for spelling."
+        }
+      ]
+    },
+    {
+      "id": "Part_A",
+      "title": "A: Review Known Letters and Sounds",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Before teaching the new sounds, let's review the ones you learned last time. Which ones are the vowels?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: A, I, and O"
+        },
+        {
+          "type": "dialogue",
+          "text": "Go ahead and tap each vowel's keyword and sound."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student taps Apple Apple /a/ /a/ /a/, Itchy Itchy /i/ /i/ /i/, and Olive Olive /o/ /o/ /o/"
+        },
+        {
+          "type": "action",
+          "text": "Tutor points to each of the consonant tiles. Tell me the name and the sound of this letter."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Student says the name of each letter and its sound."
+        }
+      ]
+    },
+    {
+      "id": "Part_C",
+      "title": "C: Phonemic Awareness Warm-up",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Let's try a quick warm-up. I'll say a nonsense word, you repeat it. Ready? VUP."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Vup"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say just the FIRST sound in that word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /v/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to the letter that makes that sound."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the V tile."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Repeat FIRST sound for: WAB, QUIM, YOP. Switch to LAST sound for: TUX, BUB, MIQ (make up /k/ sound for Q). Then MIDDLE sound for: YUM, WAX, QUIG."
+        }
+      ]
+    },
+    {
+      "id": "Part_D",
+      "title": "D: Teach New Vowel Sound",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "u"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Tell me the name of this letter."
+        },
+        {
+          "type": "action",
+          "text": "Expected: U"
+        },
+        {
+          "type": "dialogue",
+          "text": "Is it a vowel or a consonant?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: A vowel"
+        },
+        {
+          "type": "dialogue",
+          "text": "The most common sound that U makes is /u/. Repeat that sound."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /u/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now I'll help you create a picture in your head to make it easy to remember. Close your eyes. Picture yourself standing outside on a cloudy day. Suddenly, you feel a drop of water. You look up at the sky. The rain is starting. What direction are you looking?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: Up"
+        },
+        {
+          "type": "dialogue",
+          "text": "Right. That's the word we want. UP. Say that word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Up"
+        },
+        {
+          "type": "dialogue",
+          "text": "The word UP only has one syllable. But we can still tap it. We'll use a hand motion. Point your thumb up in the air and say /u/."
+        },
+        {
+          "type": "action",
+          "text": "Tutor points thumb up and says /u/."
+        },
+        {
+          "type": "dialogue",
+          "text": "That's the sound you should make whenever you see the letter U. You say: Up, Up, /u/ /u/ /u/. You try it."
+        },
+        {
+          "type": "action",
+          "text": "Student points up and says: Up, Up, /u/ /u/ /u/."
+        }
+      ]
+    },
+    {
+      "id": "Part_E",
+      "title": "E: Teach Consonants & Digraph QU",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're ready to learn the next set of letters."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "w"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Tell me the name of this letter and the sound it makes."
+        },
+        {
+          "type": "action",
+          "text": "Expected: W, /w/ (Keyword: Wind)"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "x"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "This is X. X is special. It actually makes two sounds mashed together: /k/ and /s/. Like at the end of the word Fox. Say /ks/."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /ks/ (Keyword: Fox)"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "y"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Tell me the name of this letter and the sound it makes."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Y, /y/ (Keyword: Yo-yo)"
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "qu"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "This tile has two letters on it: Q and U. In English, Q never goes anywhere without U. They are a team. Together, they make the sound /kw/. Repeat that sound."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /kw/ (Keyword: Queen)"
+        }
+      ]
+    },
+    {
+      "id": "Part_F",
+      "title": "F: Read Sounds on Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Before you spell with those letters, let's run through them one more time. Tap the U vowel for me."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Up, Up, /u/ /u/ /u/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now the O."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Olive, Olive, /o/ /o/ /o/"
+        },
+        {
+          "type": "action",
+          "text": "Tutor points to W, X, Y, and QU. Student says the name of the letters and makes their sounds."
+        }
+      ]
+    },
+    {
+      "id": "Part_G",
+      "title": "G: Spell Sounds with Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "I'm going to make the sound. You repeat the sound. /kw/"
+        },
+        {
+          "type": "action",
+          "text": "Expected: /kw/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Point to the tile that says /kw/."
+        },
+        {
+          "type": "action",
+          "text": "Student points to the QU tile."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining sounds: /w/, /y/, /ks/ (for X), /u/, /i/, /a/, /o/."
+        }
+      ]
+    },
+    {
+      "id": "Part_H",
+      "title": "H: Read Real Words with Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're ready to take those sounds and blend them into words. Here's how that works."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "w",
+            "a",
+            "g"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Let's figure out the vowel first. Tap its keyword, then its sound."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Apple, Apple, /a/ /a/ /a/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now touch-and-say each sound."
+        },
+        {
+          "type": "action",
+          "text": "Student touches first tile and says /w/, touches second tile and says /a/, touches third tile and says /g/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Next, slowly drag your finger underneath that word while you run those sounds together."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /w/-/aaaa/-/g/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it fast like a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Wag"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Change one tile at a time to build these words: WIG, WIN, TIN, TAX, WAX, YAM, YUM, YUK, MUG, BUG, JUG."
+        }
+      ]
+    },
+    {
+      "id": "Part_I",
+      "title": "I: Spell Real Words with Fingers, then Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now let's do the opposite. I'll say a word, and YOU break it into the sounds. The first word is QUIT."
+        },
+        {
+          "type": "action",
+          "text": "Expected: QUIT"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it again, very slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /kw/-/iiii/-/t/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Use your fingers to break it into sounds."
+        },
+        {
+          "type": "action",
+          "text": "Student raises thumb while saying /kw/, index finger while saying /i/, middle finger while saying /t/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Pull down a tile for each finger, while making its sound."
+        },
+        {
+          "type": "action",
+          "text": "Student pulls down QU, then I, then T."
+        },
+        {
+          "type": "dialogue",
+          "text": "To see if that's right, slowly blend those tiles together."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /kw/-/iiii/-/t/ ... Quit."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining words, having the student change one tile at a time: QUIZ, WIN, YUM, YAP, BOX, FOX, FIX, MIX."
+        }
+      ]
+    },
+    {
+      "id": "Part_J",
+      "title": "J: Read Nonsense Words with Tiles",
+      "steps": [
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "w",
+            "u",
+            "p"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Now I'm going to build a nonsense word. Figure out the vowel first. Tap its keyword, then its sound."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Up, Up, /u/ /u/ /u/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now touch-and-say each tile."
+        },
+        {
+          "type": "action",
+          "text": "Student touches W and says /w/, touches U and says /u/, touches P and says /p/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly blend those sounds together."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /w/-/uuuu/-/p/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it fast like a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Wup"
+        },
+        {
+          "type": "teacher_note",
+          "text": "Build these words one by one: YUX, QUIG, VUX, YOD."
+        }
+      ]
+    },
+    {
+      "id": "Part_K",
+      "title": "K: Spell Nonsense Words with Fingers, then Tiles",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll spell some nonsense words. The first word is YUX."
+        },
+        {
+          "type": "action",
+          "text": "Expected: YUX"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /y/-/uuuu/-/ks/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Use your fingers to break it into sounds, then pull down a tile for each finger."
+        },
+        {
+          "type": "action",
+          "text": "Student spells on fingers, then pulls down Y, U, X."
+        },
+        {
+          "type": "dialogue",
+          "text": "Double-check by blending those sounds together."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /y/-/uuuu/-/ks/ ... Yux."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate these words: WAM, QUIB, YIF, NOX."
+        }
+      ]
+    },
+    {
+      "id": "Part_L",
+      "title": "L: Read Words Through Word Frame",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to read words using a word frame. If you know that word for sure, just say it. Otherwise, touch-and-say each sound, then blend them together."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": [
+            "cup",
+            "win",
+            "fax",
+            "yak",
+            "quit",
+            "gum",
+            "box",
+            "mud",
+            "wax",
+            "quiz",
+            "yap",
+            "rug",
+            "fox",
+            "web",
+            "yum",
+            "six",
+            "quip",
+            "cut",
+            "wig",
+            "mix"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "Part_M",
+      "title": "M: Spell Words with Fingers, then Paper",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to spell words on paper. The first word is TUB. Repeat that word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: Tub"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it again, slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /t/-/uuuu/-/b/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Use your fingers to break it into sounds. Then tell me what letter you need."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /t/-T, /u/-Up-U, /b/-B."
+        },
+        {
+          "type": "dialogue",
+          "text": "Make each sound while you write down its letter."
+        },
+        {
+          "type": "action",
+          "text": "Student writes T, U, B on paper."
+        },
+        {
+          "type": "dialogue",
+          "text": "Double-check what you wrote by blending the sounds together."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate real words: FIX, WAG, YUM, QUIT. Dictate nonsense words: WUX, YIP, QUAB, ZUX, FUB."
+        }
+      ]
+    },
+    {
+      "id": "Part_N",
+      "title": "N: Read Phrases",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "You now can read enough words to read phrases. Read the phrases on this page."
+        },
+        {
+          "type": "student_page",
+          "mode": "phrase_builder",
+          "payload": {
+            "who": [
+              "a bad bug",
+              "a fat fox",
+              "the big yak",
+              "a sad pup",
+              "six pigs"
+            ],
+            "did what": [
+              "hid in a box",
+              "can quit",
+              "had a yam",
+              "bit a cop",
+              "got mad"
+            ],
+            "where": [
+              "in the mud",
+              "on a rug",
+              "in the tub",
+              "at the cab",
+              "on top of it"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "Part_O",
+      "title": "O: Read Sentences",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now let's look at some sentences. Read the first sentence to yourself, then read it out loud."
+        },
+        {
+          "type": "student_page",
+          "mode": "sentence_marking",
+          "payload": [
+            "A bad bug hid in a box.",
+            "A fat fox got mad in the mud.",
+            "The big yak had a yam on a rug.",
+            "A sad pup hid in the tub.",
+            "Six pigs bit a cop at the cab.",
+            "Rob can quit his job.",
+            "A bug is in the mud.",
+            "The fox sat on a big log.",
+            "A man hid the wax in a box.",
+            "Tim had a quiz in a cab."
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "How many phrases in that sentence? Mark each phrase for me. 'A bad bug' is the WHO, and 'hid in a box' is the DID WHAT."
+        },
+        {
+          "type": "action",
+          "text": "Student marks the phrases and reads the sentence with phrasing."
+        }
+      ]
+    },
+    {
+      "id": "Part_P",
+      "title": "P: Read Longer Words Together",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Nonsense words are the first syllables of longer words. Read just the first syllable on your page."
+        },
+        {
+          "type": "student_page",
+          "mode": "word_frame",
+          "payload": [
+            "pub",
+            "sub",
+            "sud",
+            "mag",
+            "max",
+            "vul",
+            "lux",
+            "rad",
+            "num",
+            "wal"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "That's the first syllable in the word Public. Say that word. Can you think of any other words that start with PUB?"
+        },
+        {
+          "type": "teacher_note",
+          "text": "If the student struggles to think of words, change the directions to: 'Some of these words are real, some are nonsense. Tell me if it's real or nonsense.'"
+        }
+      ]
+    }
+  ]
+}

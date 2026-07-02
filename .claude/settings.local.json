@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(///Files/StaffHome/whenderson/Desktop/Barton/**)",
+      "Bash(PYTHONIOENCODING=utf-8 python validate_cartridge.py sample_lesson.json)",
+      "Bash(echo \"EXIT:$?\")"
+    ]
+  }
+}

@@ -1,0 +1,296 @@
+{
+  "level": 1,
+  "lesson": 3,
+  "title": "Breaking VCC Words",
+  "sections": [
+    {
+      "id": "Part_Intro",
+      "title": "Lesson Overview",
+      "steps": [
+        {
+          "type": "teacher_note",
+          "text": "Materials Needed: Colored tiles, three each of five different colors.\n\nOverview: Working with nonsense words that have three sounds (VCC). Vowel-Consonant-Consonant. The last two consonants are Ending Consonant Blends. Use ONLY short vowel sounds."
+        }
+      ]
+    },
+    {
+      "id": "Part_A",
+      "title": "A: Break Apart VCC Words",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you're going to break apart a slightly tougher word. Ready? The first word is IZM."
+        },
+        {
+          "type": "action",
+          "text": "Expected: IZM"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it again ... very slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /iiii/-/zzzz/-/mmmm/"
+        },
+        {
+          "type": "dialogue",
+          "text": "How many sounds did you hear?"
+        },
+        {
+          "type": "action",
+          "text": "Expected: 3"
+        },
+        {
+          "type": "dialogue",
+          "text": "So pull down 3 tiles."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "i",
+            "z",
+            "m"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Touch-and-say each sound."
+        },
+        {
+          "type": "action",
+          "text": "Student touches the first tile and says /i/, touches the second tile and says /z/, then touches the third tile and says /m/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now wash those tiles off."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining words one by one: USK, IKT, OND, ILT, UNT. Use Extra Practice words if student struggles."
+        }
+      ]
+    },
+    {
+      "id": "Part_B",
+      "title": "B: Break-Replace-Remove",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now you'll break a word then I'll change a sound. Ready? The first word is IST."
+        },
+        {
+          "type": "action",
+          "text": "Expected: IST"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it again ... very slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /iiii/-/ssss/-/t/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Pull down the tiles."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "i",
+            "s",
+            "t"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Touch-and-say."
+        },
+        {
+          "type": "action",
+          "text": "Student touches first tile and says /i/, touches second tile and says /s/, touches third tile and says /t/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Now watch carefully. I'm going to change this sound to /o/."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "o",
+            "s",
+            "t"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "To figure out the new word, touch-and-say the sounds."
+        },
+        {
+          "type": "action",
+          "text": "Student touches first tile and says /o/, touches second tile and says /s/, touches third tile and says /t/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly blend those sounds into a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /oooo/-/ssss/-/t/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it fast like a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: OST"
+        },
+        {
+          "type": "dialogue",
+          "text": "Here's the new step. Watch carefully. I'm going to take out this tile."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "o",
+            "s"
+          ]
+        },
+        {
+          "type": "dialogue",
+          "text": "Touch-and-say the sounds that are left."
+        },
+        {
+          "type": "action",
+          "text": "Student touches first tile and says /o/, touches second tile and says /s/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly blend."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /oooo/-/ssss/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Now say it fast like a word."
+        },
+        {
+          "type": "action",
+          "text": "Expected: OS"
+        },
+        {
+          "type": "dialogue",
+          "text": "Great. Go ahead and wash off those tiles."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining sets: IMP -> ISP -> IP, INT -> UNT -> UN, ILSH -> ILT -> IL, UPT -> UKT -> UT."
+        }
+      ]
+    },
+    {
+      "id": "Part_C",
+      "title": "C: Compare Two Words",
+      "steps": [
+        {
+          "type": "dialogue",
+          "text": "Now we're going to compare two words. The first word is INT."
+        },
+        {
+          "type": "action",
+          "text": "Expected: INT"
+        },
+        {
+          "type": "dialogue",
+          "text": "Say it slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /iiii/-/nnnn/-/t/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Touch-and-say using the first row."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "i",
+            "n",
+            "t"
+          ]
+        },
+        {
+          "type": "action",
+          "text": "Student touches first tile and says /i/, touches second tile and says /n/, touches the third tile and says /t/."
+        },
+        {
+          "type": "dialogue",
+          "text": "Good. The second word is UNT."
+        },
+        {
+          "type": "action",
+          "text": "Expected: UNT"
+        },
+        {
+          "type": "dialogue",
+          "text": "Slowly."
+        },
+        {
+          "type": "action",
+          "text": "Expected: /uuuu/-/nnnn/-/t/"
+        },
+        {
+          "type": "dialogue",
+          "text": "Touch-and-say using the second row."
+        },
+        {
+          "type": "board_action",
+          "command": "spawn_tiles",
+          "payload": [
+            "u",
+            "n",
+            "t"
+          ]
+        },
+        {
+          "type": "action",
+          "text": "Student touches first tile and says /u/, touches second tile and says /n/, touches third tile and says /t/ in the second row."
+        },
+        {
+          "type": "dialogue",
+          "text": "Here's the tough part. Touch-and-say until you find the sound that's different. INT. UNT."
+        },
+        {
+          "type": "action",
+          "text": "Expected: The first sounds are different."
+        },
+        {
+          "type": "dialogue",
+          "text": "Good listening. So go ahead and change the first tile in the new word ... to show that it's different."
+        },
+        {
+          "type": "action",
+          "text": "Student changes the FIRST tile in the second row."
+        },
+        {
+          "type": "dialogue",
+          "text": "That's perfect. Now go ahead and wash off those tiles."
+        },
+        {
+          "type": "teacher_note",
+          "text": "Dictate the remaining sets: ILK & ILM, UPT & OPT, UST & UNT, IND & OND."
+        }
+      ]
+    }
+  ]
+}
