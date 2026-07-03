@@ -410,7 +410,7 @@
       "say": {
         "text": "Spell each word with tiles. Say it slowly, pull down the tiles, double check by blending, then change one tile when I ask."
       },
-      "do": "Dictate these lesson words and changes: NOD to NO, SPIT to SPY, SKY, TRIP to TRY, FRY, FLY, FLIP.",
+      "do": "Dictate these lesson words and changes: NOD to NO, SPIT to SPY, SKY, TRIP to TRY, FRY, FLY, FLIP. If repeating the lesson, dictate HOT to HO, HIM to HI, SHIP, SLY.",
       "listen": {
         "expect": ["nod/no", "spit/spy", "sky", "trip/try", "fry", "fly", "flip"],
         "hint": "Student spells with tiles and identifies Open or Closed when asked."
@@ -537,7 +537,7 @@
         "expect": ["he", "/h/ /ee/"],
         "hint": "Student says each sound and writes each letter."
       },
-      "do": "Hand the student paper and pencil. Dictate HE, PRY, FLU, and BY.",
+      "do": "Hand the student paper and pencil. Dictate HE, PRY, FLU, and BY. Repeat-lesson alternatives: PRY, GO, SLY, I, ME.",
       "board": {
         "mode": "clear"
       },
@@ -691,7 +691,7 @@
       "say": {
         "text": ["Now you're going to write some phrases.", "The first phrase is GOT TO GO. Repeat that phrase.", "Now write it down. Use finger spelling for the tough words.", "Double check by reading exactly what you wrote.", "Any word that you want help checking?"]
       },
-      "do": "Dictate GOT TO GO, WHY TRY, and FLY ON THE WALL. Then dictate each current Sight Word Spelling Deck word; if correct, put a check mark on that card.",
+      "do": "Dictate GOT TO GO, WHY TRY, and FLY ON THE WALL. Then dictate each current Sight Word Spelling Deck word; if correct, put a check mark on that card. Repeat-lesson phrases: HAS THE FLU, IS SO SHY, HID IN A DRY STALL.",
       "listen": {
         "expect": ["got to go", "why try", "fly on the wall"],
         "hint": "Student reads exactly what was written to double check."
@@ -728,8 +728,8 @@
       "id": "L4.1.sentread.02",
       "phase": "Sentences",
       "label": "Phrasing suggestions",
-      "do": "Use these phrase breaks if needed: Their wild colt / had the flu / in his stall / but could still stroll. My bold child / won't cry / at the mall / when he's lost. The shy fox / doesn't come / by the dry bank / if I'm there. Chet and Jim / will try to be / at the pro shop / by two.",
-      "note": "For remaining sentences, guide phrasing by meaning and punctuation."
+      "do": "Use these phrase breaks if needed: Their wild colt / had the flu / in his stall / but could still stroll. My bold child / won't cry / at the mall / when he's lost. The shy fox / doesn't come / by the dry bank / if I'm there. Chet and Jim / will try to be / at the pro shop / by two. \"Don't cry,\" / said Frank, / \"it's not so bad.\" \"Why don't you try?\" / Mrs. Smith says, / \"I know you can do it.\" My cat / is so sly / that she can pry the lid / off the trash can. That hot grill / is too small / to fry / all the fish.",
+      "note": "These are the manual's phrasing suggestions for all eight sentences on Student Page #8."
     },
     {
       "id": "L4.1.sentspell.01",
@@ -738,7 +738,7 @@
       "say": {
         "text": ["Now you're going to write three sentences.", "The first sentence is I'VE GOT TO GO TO THE BANK. Repeat that sentence.", "Go ahead and write that sentence. Use finger spelling on the tough words.", "Check your sentence by reading exactly what you wrote.", "Does it start with a capital and end with punctuation?", "Any word that you want help checking?"]
       },
-      "do": "Dictate these sentences: I'VE GOT TO GO TO THE BANK. WHY TRY IF IT DOESN'T HELP? IT CAN'T BE A FLY ON THE WALL. Use guided discovery for errors.",
+      "do": "Dictate these sentences: I'VE GOT TO GO TO THE BANK. WHY TRY IF IT DOESN'T HELP? IT CAN'T BE A FLY ON THE WALL. Use guided discovery for errors. Repeat-lesson sentences: HE'LL CRY IF HE HAS THE FLU. MR. SMITH IS SO SHY HE JUST SAYS HI. THE COLD DUCK HID IN A DRY STALL.",
       "listen": {
         "expect": ["I've got to go to the bank.", "Why try if it doesn't help?", "It can't be a fly on the wall."],
         "hint": "Student repeats, writes, checks capitalization/punctuation, and reads exactly what was written."
