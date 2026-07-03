@@ -91,6 +91,10 @@ Use this mapping consistently:
 - Struggle guidance, prompts, reteach jumps -> `recovery`
 - Student-facing surface state -> `board`
 - Video or timed media -> `media`
+- FOR A REPEAT LESSON alternatives -> append to the same beat's `do`
+  (e.g. "Repeat-lesson alternatives: ..."); do not create a separate beat.
+  If OCR variants disagree on a repeat item and no PDF page is available to
+  resolve it, omit that item and record the gap in the report — never guess.
 
 Keep `say` student-facing. Do not bury procedure in `say` unless the tutor should actually say it.
 
@@ -238,6 +242,11 @@ Also rerun validation on previous gold lessons:
 python validate_cartridge.py "lessons/Level 4/level4_lesson1.json"
 python validate_cartridge.py "lessons/Level 4/level4_lesson2.json"
 ```
+
+The validator also enforces the runtime contract beyond field presence: it
+errors on v1 shapes (`sections`/`steps`), stale v1 beat fields, wrong payload
+types, and empty story text, and it warns on unknown fields, empty payload
+lists, placeholder markers (TODO/TBD/etc.), and media files missing from disk.
 
 Before reporting success, confirm:
 

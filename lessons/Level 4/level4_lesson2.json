@@ -640,7 +640,7 @@
           "Now double-check by reading each syllable exactly as it looks."
         ]
       },
-      "do": "Model the new multi-syllable spelling procedure with RO-BOT. Then dictate NA-VY, PRE-TEND, MEM-O, SOL-ID, and PUN-ISH.",
+      "do": "Model the new multi-syllable spelling procedure with RO-BOT. Then dictate NA-VY, PRE-TEND, MEM-O, SOL-ID, and PUN-ISH. Repeat-lesson alternatives: FRO-ZEN, CAB-IN, E-LECT, TI-DY, RAD-ISH.",
       "listen": {
         "expect": [
           "robot",
@@ -673,7 +673,7 @@
           "Now say it like a word."
         ]
       },
-      "do": "Build each nonsense word for the student to divide and read: STRIDY to STRI-DY, RADIN to RA-DIN, FOPUS to FO-PUS, and FLENY to FLE-NY.",
+      "do": "Build each nonsense word for the student to divide and read: STRIDY to STRI-DY, RADIN to RA-DIN, FOPUS to FO-PUS, and FLENY to FLE-NY. If repeating the lesson, build STUDISH to STU-DISH, PRISIS to PRI-SIS, THEPID to THE-PID, MAZY to MA-ZY, SPANENT to SPA-NENT.",
       "listen": {
         "expect": [
           "Student divides and reads each nonsense word."
@@ -708,7 +708,7 @@
           "Now double-check by reading each syllable. Now say it fast like a word."
         ]
       },
-      "do": "Model DE-NIT. Then dictate RO-MAX, SU-PIN, LA-TOP, and CAB-IT.",
+      "do": "Model DE-NIT. Then dictate RO-MAX, SU-PIN, LA-TOP, and CAB-IT. Repeat-lesson alternatives: MA-LEST, HOV-AD, ZE-VAMP, DEL-ENT, FI-KISH.",
       "listen": {
         "expect": [
           "denit",
@@ -798,7 +798,7 @@
           "Now read that word."
         ]
       },
-      "do": "Model O-MIT. Then dictate BO-GUS, GRA-VY, PUN-ISH, and STE-VEN.",
+      "do": "Model O-MIT. Then dictate BO-GUS, GRA-VY, PUN-ISH, and STE-VEN. Repeat-lesson alternatives: FIN-ISH, RO-DENT, MEN-U, LA-DY, MO-MENT.",
       "listen": {
         "expect": [
           "omit",
@@ -828,7 +828,7 @@
       "say": {
         "text": "Now spell these nonsense words on paper. Repeat the word, tap each syllable, write one syllable at a time, then read the word."
       },
-      "do": "Dictate PRO-LID, TRIV-US, RE-MENT, LAV-IT, and RU-VAMP.",
+      "do": "Dictate PRO-LID, TRIV-US, RE-MENT, LAV-IT, and RU-VAMP. Repeat-lesson alternatives: TO-VID, DRAG-OP, MU-CON, STRI-VET, FREB-UT.",
       "listen": {
         "expect": [
           "prolid",
@@ -960,7 +960,7 @@
           "Any word that you want help checking?"
         ]
       },
-      "do": "Dictate BEGAN TO STUDY, THE POLO PONY, and THE MOTEL UNIT. Then dictate each current Sight Word Spelling Deck word; if correct, put a check mark on that card.",
+      "do": "Dictate BEGAN TO STUDY, THE POLO PONY, and THE MOTEL UNIT. Then dictate each current Sight Word Spelling Deck word; if correct, put a check mark on that card. Repeat-lesson phrases: REJECT THE PRESENT, LIMIT HIS CREDIT, ELECT A LADY.",
       "listen": {
         "expect": [
           "began to study",
@@ -1009,8 +1009,8 @@
       "id": "L4.2.sentread.02",
       "phase": "Sentences",
       "label": "Phrasing suggestions",
-      "do": "Use these phrase breaks if needed: Mrs. Helen Davis / began a trip / in the humid city / of Fremont. A crazy pilot / will hijack a camel / behind a tiny wall / for his son, David. The Roman / did visit a hotel / in Reno / in the spring. The Spanish lady / did her desk duty / in a British city / for the navy.",
-      "note": "For remaining sentences, guide phrasing by meaning and punctuation."
+      "do": "Use these phrase breaks if needed: Mrs. Helen Davis / began a trip / in the humid city / of Fremont. A crazy pilot / will hijack a camel / behind a tiny wall / for his son, David. The Roman / did visit a hotel / in Reno / in the spring. The Spanish lady / did her desk duty / in a British city / for the navy. A fly / shouldn't go / beyond the hazy sky, / or he could vanish. The icy drink / was so cold / that Tony couldn't help / but relax. We / predict he'll get a bonus / when his talent rating / goes up. Venus / is a planet, / not a comet.",
+      "note": "These are the manual's phrasing suggestions for all eight sentences on Student Page #18."
     },
     {
       "id": "L4.2.sentspell.01",
@@ -1026,7 +1026,7 @@
           "Any word that you want help checking?"
         ]
       },
-      "do": "Dictate these sentences: DAVID BEGAN TO STUDY SPANISH. THE POLO PONY WAS WILD FOR A MOMENT. THE MOTEL UNIT WAS NOT TIDY. Use guided discovery for errors.",
+      "do": "Dictate these sentences: DAVID BEGAN TO STUDY SPANISH. THE POLO PONY WAS WILD FOR A MOMENT. THE MOTEL UNIT WAS NOT TIDY. Use guided discovery for errors. Repeat-lesson sentences: JANET MUST REJECT THE LAVISH PRESENT. WE MUST LIMIT HIS CREDIT. THE NAVY WILL ELECT A LADY TO FLY SOLO.",
       "listen": {
         "expect": [
           "David began to study Spanish.",
